@@ -249,7 +249,7 @@ const STEPS = [
 export default function Home(): React.ReactElement {
   return (
     <Layout
-      title="From a conversation to a signed document"
+      title="From conversation to signed document"
       description="Deal Desk turns a call, a transcript or a few notes into a priced, branded proposal your customer can sign on the spot.">
       {/* ---------------- masthead: the head of a proposal ---------------- */}
       <header className={styles.masthead}>
@@ -257,8 +257,11 @@ export default function Home(): React.ReactElement {
           <div className={styles.coverGrid}>
             <div>
               <span className={styles.eyebrow}>Call. Scope. Price. Sign.</span>
+              {/* Three lines at full size, which the longer phrasing could not manage beside two
+                  panels of art. Dropping the articles also makes it read more like the product's
+                  own vernacular: a job moving through stages, not a sentence about one. */}
               <h1 className={styles.title}>
-                From a conversation to a <span className={styles.sig}>signed document</span>, in
+                From conversation, to <span className={styles.sig}>signed document</span>, in
                 one sitting.
               </h1>
               <div className={styles.rule} />

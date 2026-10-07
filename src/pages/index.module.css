@@ -281,9 +281,17 @@
      only because the transcript hangs LEFT by exactly one gutter — the gap is empty space,
      so borrowing it costs the headline nothing, and tying the overhang to the same variable
      means it can never grow into the text column at a narrower width. */
-  --cover-gap: clamp(1.2rem, 2.6vw, 2.4rem);
+  --cover-gap: clamp(1.4rem, 3.6vw, 4rem);
+  /* The overhang was exactly one gap, which put the transcript's edge flush against the text
+     column -- so widening the gap moved the panel with it and the headline never gained any
+     air. Holding this much of the gap back is what actually buys clearance beside the comma. */
+  --cover-clear: clamp(0.8rem, 2vw, 2.4rem);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 28rem);
+  /* 26rem, not 27: the text column needs ~550px for three lines. Careful -- a canvas
+     measureText() check under-reports this headline by 3%, because canvas ignores the
+     font-stretch: 103% on .title. Measure rendered line boxes (Range.getClientRects), not
+     the font metrics, or the column looks 11px wider than it really is. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 26rem);
   gap: var(--cover-gap);
   align-items: center;
 }
@@ -363,7 +371,7 @@
 .transcript {
   position: absolute;
   z-index: 1;
-  left: calc(-1 * var(--cover-gap));
+  left: calc(-1 * max(0px, var(--cover-gap) - var(--cover-clear)));
   top: 6%;
   width: 66%;
   padding: 14px 15px 15px;

@@ -6,6 +6,12 @@ import styles from './index.module.css';
 const APP = 'https://app.dealdesk.studio';
 const SIGNUP = `${APP}/login?signup=1`;
 
+const Tick = () => (
+  <svg viewBox="0 0 16 16" aria-hidden="true">
+    <path d="M2.5 8.5l4 4 7-9" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 /** The thing the product makes, shown rather than described — a visitor should see the output
  *  before reading about the input. Hand-built, not a screenshot: sharp at any density, follows
  *  the theme, and cannot go stale when the app changes.
@@ -50,9 +56,9 @@ function ProposalDoc() {
             </div>
             <small>Maya Torres · Owner</small>
           </div>
-          <div>
-            <div className={styles.docSignLine} />
-            <small>For Greenline Studio</small>
+          <div style={{alignSelf: 'end'}}>
+            <span className={styles.docStamp}>SIGNED</span>
+            <small>Oct 7, 2026</small>
           </div>
         </div>
         <div className={styles.docSealed}>
@@ -72,12 +78,15 @@ function SignatureBlock() {
     const el = ref.current;
     if (!el || signed) return;
     if (typeof IntersectionObserver === 'undefined') return setSigned(true);
-    // A throttled or backgrounded tab can defer the observer indefinitely. If the block is already
-    // on screen by geometry, sign it rather than leaving a blank line forever.
-    const t = window.setTimeout(() => {
+    // A throttled or backgrounded tab can defer the observer indefinitely, leaving a blank line
+    // where the signature should be. A scroll listener is the belt to the observer's braces --
+    // the same pairing the app needed after rAF alone dropped the first canvas stroke.
+    const check = () => {
       const r = el.getBoundingClientRect();
-      if (r.top < window.innerHeight && r.bottom > 0) setSigned(true);
-    }, 1200);
+      if (r.top < window.innerHeight * 0.9 && r.bottom > 0) setSigned(true);
+    };
+    const t = window.setTimeout(check, 1200);
+    window.addEventListener('scroll', check, {passive: true});
     const io = new IntersectionObserver(
       ([e]) => {
         if (e.isIntersecting) {
@@ -90,6 +99,7 @@ function SignatureBlock() {
     io.observe(el);
     return () => {
       window.clearTimeout(t);
+      window.removeEventListener('scroll', check);
       io.disconnect();
     };
   }, [signed]);
@@ -104,6 +114,36 @@ function SignatureBlock() {
     </div>
   );
 }
+
+const CAPS = [
+  {
+    t: 'Professional proposals',
+    d: 'Branded, accurate, ready to send.',
+    icon: 'M4 2h9l5 5v13a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1zm9 1.5V7h3.5M6.5 11h9M6.5 14h9M6.5 17h5',
+  },
+  {
+    t: 'Built-in pricing',
+    d: 'Turn scope into line items in seconds.',
+    icon: 'M11 1v20M15.5 5.5H8.75a3.25 3.25 0 000 6.5h4.5a3.25 3.25 0 010 6.5H6',
+  },
+  {
+    t: 'Customer signature',
+    d: 'Sign on the spot from any device.',
+    icon: 'M2 17c4-10 6-13 8-12s1 8-1 11c-2 3-4 2-3-2 2-7 7-12 11-12 3 0 3 4 1 7M14 19h7',
+  },
+  {
+    t: 'Sealed PDF',
+    d: 'Tamper-evident, with an audit trail.',
+    icon: 'M11 1l8 3v7c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V4l8-3zM7.5 11l2.5 2.5L15 8.5',
+  },
+];
+
+const FLOW = [
+  {t: 'Capture', d: 'Call, transcript or notes.'},
+  {t: 'Generate', d: 'Scope, pricing and proposal.'},
+  {t: 'Send & sign', d: 'Customer signs in minutes.'},
+  {t: 'Seal', d: 'Receive a certified PDF.'},
+];
 
 const ITEMS = [
   {
@@ -161,35 +201,75 @@ const STEPS = [
 export default function Home(): React.ReactElement {
   return (
     <Layout
-      title="Quote the job before you leave it"
+      title="From a conversation to a signed document"
       description="Deal Desk turns a call, a transcript or a few notes into a priced, branded proposal your customer can sign on the spot.">
       {/* ---------------- masthead: the head of a proposal ---------------- */}
       <header className={styles.masthead}>
         <div className={styles.sheet}>
           <div className={styles.coverGrid}>
             <div>
-              <h1 className={styles.title}>Quote the job before you leave it.</h1>
+              <span className={styles.eyebrow}>Call. Scope. Price. Sign.</span>
+              <h1 className={styles.title}>
+                From a conversation to a <span className={styles.sig}>signed document</span>, in
+                one sitting.
+              </h1>
               <div className={styles.rule} />
               <p className={styles.lede}>
-                You priced the job standing in their garden. Deal Desk writes the proposal before
-                you are back in the truck.
+                Turn a call, a transcript or a few notes into a priced proposal your customer
+                can sign — and get back a sealed PDF with evidence of the agreement.
               </p>
               <div className={styles.actions}>
                 <Link className={styles.go} to={SIGNUP}>Start free</Link>
                 <Link className={styles.alt} to="/how-it-works">See how it works</Link>
               </div>
-              <p className={styles.terms} style={{marginTop: '1.4rem'}}>
-                Free to draft, for good. <b>$9</b> when you send a deal. No card to start.
-              </p>
+              <ul className={styles.assurances}>
+                {['No credit card', 'Free to draft', 'Ready in minutes'].map((a) => (
+                  <li key={a}><Tick />{a}</li>
+                ))}
+              </ul>
             </div>
             <div className={styles.coverArt}>
               <ProposalDoc />
             </div>
           </div>
+
+          <div className={styles.caps}>
+            {CAPS.map((c) => (
+              <div key={c.t} className={styles.cap}>
+                <svg viewBox="0 0 22 22" aria-hidden="true">
+                  <path d={c.icon} fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <h2 className={styles.capH}>{c.t}</h2>
+                <p className={styles.capP}>{c.d}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </header>
 
       {/* ---------------- the sequence ---------------- */}
+      <section className={styles.section}>
+        <div className={styles.sheet}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}>A faster way to close</h2>
+            <p className={styles.note}>
+              Everything between a call and a sealed PDF, without the busywork.
+            </p>
+          </div>
+          <div className={styles.flow}>
+            {FLOW.map((f, i) => (
+              <div key={f.t} className={styles.flowStep}>
+                <span className={styles.flowN}>{i + 1}</span>
+                <div>
+                  <div className={styles.flowH}>{f.t}</div>
+                  <p className={styles.flowP}>{f.d}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className={styles.section}>
         <div className={styles.sheet}>
           <div className={styles.sectionHead}>
@@ -241,16 +321,14 @@ export default function Home(): React.ReactElement {
           <div className={styles.evidence}>
             <div>
               <p className={styles.body}>
-                Every sealed proposal carries a Certificate of Completion on its own page, and the
-                file itself is signed with an Ed25519 key. Anyone holding a copy can check it
-                against the published public key and confirm it is byte-for-byte the original.
-                Change one character and verification fails.
+                Every sealed proposal carries a Certificate of Completion and an Ed25519
+                signature. Anyone can check a copy against the published key. Change one
+                character and it fails.
               </p>
               <p className={styles.body}>
-                We also say plainly what it is not. A signature witnessed on your own phone proves
-                possession of your session, and the certificate records exactly that rather than
-                implying something stronger. For an agreement likely to be contested, send a
-                DocuSign envelope instead.
+                And we say what it is not: a signature taken on your own phone proves possession
+                of your session, and the certificate says so. For a deal likely to be contested,
+                send a DocuSign envelope.
               </p>
             </div>
             <div className={styles.receipt}>

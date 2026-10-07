@@ -29,77 +29,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
+  /* ---- ink ---- */
   --ink: #0b1f3a;        /* document ink */
-  --ink-soft: #46586b;   /* secondary text */
-  --ink-faint: #76889a;  /* meta */
-  --paper: #ffffff;
-  --field: #f1f4f5;      /* the pale fill of a form field; a cool grey, never cream */
-  --desk: #e9edef;       /* the surface the document lies on */
-  --rule: #dce3e8;       /* hairline: always a table row or a signature line */
-  --rule-firm: #0b1f3a;  /* the heavy rule under a document masthead */
-  --accent: #0d667b;     /* the one strong colour */
-  --accent-deep: #094f60;
-  --mark: #13b5c6;       /* tiny marks only: a tick, a focus ring */
+  --ink-soft: #53657a;   /* slate: secondary text */
+  --ink-faint: #8192a3;  /* metadata */
+
+  /* ---- paper ----
+     Three levels, so the page has depth without anything needing a shadow:
+     the desk it lies on, the warm sheet, and the white panels of an actual document. */
+  --desk: #eeeae2;
+  --paper: #faf8f4;
+  --panel: #ffffff;
+  --field: #f3f0ea;
+  --rule: #d8dee5;
+  --rule-firm: #0b1f3a;
+
+  /* ---- signature ink ----
+     ★ The accent is not a brand colour looking for somewhere to sit. It is the colour of a
+     signature, a stamp, an approval — so it appears on ACTIONS and on COMPLETED-DOCUMENT
+     ideas and almost nowhere else: the primary control, the word "signed", signature lines,
+     ticks, SIGNED marks, the step numbers of the process that ends in a signature.
+     Teal was dropped for exactly this reason: it meant nothing here, and navy+teal+grotesque
+     is the house style of every generated B2B page. */
+  --ink-sig: #d43c22;
+  --ink-sig-deep: #b02f18;
+  --ink-sig-bright: #ff6b5c;   /* the app's coral: decorative fills only, it fails contrast for text */
+  --ink-sig-wash: #fceeea;
+
+  --ok: #15704a;
+  --ok-wash: #e7f3ec;
 
   --sans: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --measure: 64ch;       /* body line length stays under 80 characters */
+  --measure: 62ch;
   --gutter: clamp(20px, 5vw, 56px);
 
   /* ---- Infima ---- */
-  --ifm-color-primary: #0d667b;
-  --ifm-color-primary-dark: #0c5c6f;
-  --ifm-color-primary-darker: #0b5668;
-  --ifm-color-primary-darkest: #094756;
-  --ifm-color-primary-light: #0e7087;
-  --ifm-color-primary-lighter: #0f768e;
-  --ifm-color-primary-lightest: #118aa5;
+  --ifm-color-primary: #b02f18;
+  --ifm-color-primary-dark: #9c2a15;
+  --ifm-color-primary-darker: #922713;
+  --ifm-color-primary-darkest: #78200f;
+  --ifm-color-primary-light: #c4361b;
+  --ifm-color-primary-lighter: #d43c22;
+  --ifm-color-primary-lightest: #e05a3f;
 
   --ifm-font-family-base: var(--sans);
   --ifm-font-family-monospace: var(--mono);
   --ifm-heading-font-weight: 700;
   --ifm-heading-color: var(--ink);
-  --ifm-font-color-base: #33475c;
-  --ifm-background-color: #ffffff;
+  --ifm-font-color-base: #3c4f63;
+  --ifm-background-color: var(--paper);
 
   --ifm-navbar-height: 62px;
-  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-background-color: var(--paper);
   --ifm-navbar-shadow: none;
-  --ifm-footer-background-color: #ffffff;
+  --ifm-footer-background-color: var(--paper);
 
   --ifm-code-font-size: 92%;
   --ifm-global-radius: 4px;
-  --docusaurus-highlighted-code-line-bg: rgba(13, 102, 123, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(227, 74, 47, 0.1);
 }
 
 [data-theme='dark'] {
-  --ink: #e8eef4;
-  --ink-soft: #a9bccd;
-  --ink-faint: #76899c;
-  --paper: #0c1824;
-  --field: #111f2d;
-  --desk: #070f18;
-  --rule: #203140;
-  --rule-firm: #cfdae4;
-  --accent: #3fb6cc;
-  --accent-deep: #68cadd;
-  --mark: #3fb6cc;
+  --ink: #eef2f6;
+  --ink-soft: #a8b9c9;
+  --ink-faint: #74879a;
+  --desk: #060e18;
+  --paper: #0d1c2b;
+  --panel: #122536;
+  --field: #122536;
+  --rule: #223548;
+  --rule-firm: #d4dde6;
 
-  --ifm-color-primary: #3fb6cc;
-  --ifm-color-primary-dark: #2ba6bd;
-  --ifm-color-primary-darker: #299eb4;
-  --ifm-color-primary-darkest: #228294;
-  --ifm-color-primary-light: #57c0d3;
-  --ifm-color-primary-lighter: #63c5d7;
-  --ifm-color-primary-lightest: #86d4e2;
+  --ink-sig: #f2603f;
+  --ink-sig-deep: #ff7a5c;
+  --ink-sig-wash: rgba(227, 74, 47, 0.14);
 
-  --ifm-background-color: #0c1824;
-  --ifm-background-surface-color: #111f2d;
-  --ifm-heading-color: #e8eef4;
-  --ifm-font-color-base: #b3c6d6;
-  --ifm-navbar-background-color: #0c1824;
-  --ifm-footer-background-color: #0c1824;
+  --ok: #69c998;
+  --ok-wash: rgba(21, 112, 74, 0.2);
+
+  --ifm-color-primary: #f2603f;
+  --ifm-color-primary-dark: #ef4a25;
+  --ifm-color-primary-darker: #e4421d;
+  --ifm-color-primary-darkest: #bc3718;
+  --ifm-color-primary-light: #f57659;
+  --ifm-color-primary-lighter: #f78067;
+  --ifm-color-primary-lightest: #faa894;
+
+  --ifm-background-color: var(--paper);
+  --ifm-background-surface-color: var(--panel);
+  --ifm-heading-color: #eef2f6;
+  --ifm-font-color-base: #b8c8d6;
+  --ifm-navbar-background-color: var(--paper);
+  --ifm-footer-background-color: var(--paper);
 }
 
 html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -114,7 +137,7 @@ body { background: var(--desk); }
   background: var(--paper);
   border-left: 1px solid var(--rule);
   border-right: 1px solid var(--rule);
-  box-shadow: 0 0 0 1px rgba(16, 24, 32, 0.012), 0 2px 28px rgba(16, 24, 32, 0.05);
+  box-shadow: 0 1px 30px rgba(32, 24, 16, 0.07);
   max-width: 1320px;
   width: 100%;
   margin: 0 auto;
@@ -148,20 +171,25 @@ h1, h2, h3, h4 { letter-spacing: -0.021em; }
 .navbar__link { font-weight: 450; font-size: 0.92rem; color: var(--ink-soft); }
 .navbar__link:hover { color: var(--ink); }
 .navbar-cta {
-  background: var(--accent);
+  background: var(--ink-sig);
   color: #fff !important;
   padding: 0.42rem 0.95rem;
   border-radius: 4px;
   font-weight: 600;
   margin-left: 0.5rem;
 }
-.navbar-cta:hover { background: var(--accent-deep); color: #fff !important; }
-[data-theme='dark'] .navbar-cta { color: #06202a !important; }
-[data-theme='dark'] .navbar-cta:hover { color: #06202a !important; }
+.navbar-cta:hover { background: var(--ink-sig-deep); color: #fff !important; }
+
+
 
 /* ---- footer: the foot of a document. A rule and small type, not a dark slab ---- */
 .footer {
   background: var(--paper);
+  /* width:100% is required, not cosmetic. The footer is a flex item in a column, and `margin: 0
+     auto` on a flex item CANCELS cross-axis stretch -- it collapsed to its content width (416px
+     of squashed link columns) until this was added. .main-wrapper only escaped the same fate
+     because it already carried width:100%. */
+  width: 100%;
   max-width: 1320px;
   margin: 0 auto;
   border-top: 1px solid var(--rule);
@@ -178,7 +206,7 @@ h1, h2, h3, h4 { letter-spacing: -0.021em; }
   margin-bottom: 0.5rem;
 }
 .footer__link-item { color: var(--ink-soft); }
-.footer__link-item:hover { color: var(--accent); text-decoration: underline; }
+.footer__link-item:hover { color: var(--ink-sig); text-decoration: underline; }
 .footer__copyright {
   max-width: 1180px;
   margin: 0 auto;
@@ -192,7 +220,7 @@ h1, h2, h3, h4 { letter-spacing: -0.021em; }
 /* ---- docs & blog ---- */
 .menu__link--active:not(.menu__link--sublist) {
   background: transparent;
-  box-shadow: inset 2px 0 0 var(--accent);
+  box-shadow: inset 2px 0 0 var(--ink-sig);
   font-weight: 600;
 }
 .pagination-nav__link { border-radius: 4px; border-color: var(--rule); }
@@ -200,7 +228,7 @@ article a { text-underline-offset: 2px; }
 .markdown table { font-variant-numeric: tabular-nums; }
 
 :where(a, button, input, textarea, summary, [tabindex]):focus-visible {
-  outline: 2px solid var(--mark);
+  outline: 2px solid var(--ink-sig);
   outline-offset: 2px;
   border-radius: 2px;
 }

@@ -25,8 +25,8 @@
   align-items: end;
 }
 .title {
-  font-size: clamp(2.5rem, 6.4vw, 4.5rem);
-  line-height: 0.98;
+  font-size: clamp(2.15rem, 4.1vw, 3.5rem);
+  line-height: 1.03;
   font-weight: 800;
   font-stretch: 103%;
   letter-spacing: -0.038em;
@@ -77,9 +77,9 @@
   text-decoration: none;
   transition: background 0.14s ease, border-color 0.14s ease, color 0.14s ease;
 }
-.go { background: var(--accent); color: #fff; }
-.go:hover { background: var(--accent-deep); color: #fff; text-decoration: none; }
-.alt { color: var(--ink); border: 1px solid var(--rule); background: var(--paper); }
+.go { background: var(--ink-sig); color: #fff; }
+.go:hover { background: var(--ink-sig-deep); color: #fff; text-decoration: none; }
+.alt { color: var(--ink); border: 1px solid var(--rule); background: var(--panel); }
 .alt:hover { color: var(--ink); border-color: var(--ink); text-decoration: none; }
 
 /* ============================= section scaffold ============================= */
@@ -133,7 +133,7 @@
   content: counter(step, decimal-leading-zero);
   font-family: var(--mono);
   font-size: 0.78rem;
-  color: var(--accent);
+  color: var(--ink-sig);
   padding-top: 0.26rem;
 }
 .stepH { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 0.3rem; }
@@ -141,7 +141,7 @@
 
 /* ============================= evidence ============================= */
 .evidence { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 24rem); gap: clamp(1.6rem, 5vw, 3.6rem); align-items: start; }
-.receipt { border: 1px solid var(--rule); background: var(--field); padding: 18px 20px 20px; }
+.receipt { border: 1px solid var(--rule); background: var(--panel); padding: 18px 20px 20px; }
 .receiptHead {
   font-family: var(--mono);
   font-size: 0.72rem;
@@ -160,12 +160,11 @@
   gap: 8px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #13593a;
-  background: #e8f5ec;
-  border: 1px solid #b4d9c2;
+  color: var(--ok);
+  background: var(--ok-wash);
+  border: 1px solid rgba(21, 112, 74, 0.22);
   padding: 9px 11px;
 }
-[data-theme='dark'] .verdict { color: #8fdcae; background: rgba(19, 89, 58, 0.22); border-color: rgba(143, 220, 174, 0.3); }
 .tick { width: 15px; height: 15px; flex: none; }
 
 /* ============================= price table =============================
@@ -279,13 +278,13 @@
    competing marks would spend that moment twice. */
 .coverGrid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 27rem);
+  grid-template-columns: minmax(0, 1.22fr) minmax(0, 24rem);
   gap: clamp(1.8rem, 5vw, 4rem);
   align-items: center;
 }
 .paperDoc {
   border: 1px solid var(--rule);
-  background: var(--paper);
+  background: var(--panel);
   box-shadow: 0 1px 2px rgba(16, 24, 32, 0.05), 0 18px 44px rgba(16, 24, 32, 0.07);
 }
 .docTop {
@@ -301,7 +300,7 @@
 }
 .docBody { padding: 20px 22px 18px; }
 .docHead { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
-.docMark { width: 62px; height: 13px; background: var(--accent); margin-bottom: 11px; }
+.docMark { width: 62px; height: 13px; background: var(--ink-sig); margin-bottom: 11px; }
 .docTitle { font-size: 1.05rem; font-weight: 800; letter-spacing: -0.028em; color: var(--ink); }
 .docMeta { font-family: var(--mono); font-size: 0.6rem; line-height: 1.85; text-align: right; color: var(--ink-faint); }
 .docMeta b { color: var(--ink); font-weight: 500; margin-left: 9px; }
@@ -310,7 +309,7 @@
 .docTable { width: 100%; border-collapse: collapse; display: table; font-size: 0.72rem; }
 .docTable td { padding: 5px 0; border-bottom: 1px solid var(--rule); color: var(--ink); }
 .docTable td:last-child { text-align: right; }
-.docTable .off td { color: var(--accent); }
+.docTable .off td { color: var(--ink-sig); }
 .docTable .sum td { font-weight: 700; border-bottom: 0; padding-top: 7px; }
 .docSign { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px; }
 .docSignLine { height: 26px; border-bottom: 1.5px solid var(--ink); position: relative; }
@@ -344,4 +343,98 @@
   .coverGrid { grid-template-columns: minmax(0, 1fr); }
   /* The artifact leads on a phone: see the thing, then read about it. */
   .coverArt { order: -1; max-width: 420px; }
+}
+
+
+/* ============================= hero: eyebrow and assurances =============================
+   The eyebrow is the only all-caps label on the page and it earns it: it IS the product in
+   four words, and it is the sequence the whole page then follows. */
+.eyebrow {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--ink-sig);
+  margin-bottom: 0.9rem;
+}
+/* "signed document" in signature ink. The accent exists to mark signing, so the one place a
+   headline carries it is the word about signing. */
+.sig { color: var(--ink-sig); }
+
+.assurances {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.4rem;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+.assurances li { display: flex; align-items: center; gap: 0.42rem; }
+.assurances svg { width: 13px; height: 13px; flex: none; color: var(--ink-sig); }
+
+/* ============================= capability row ============================= */
+.caps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 2.2rem);
+  padding-top: clamp(1.6rem, 4vw, 2.4rem);
+  margin-top: clamp(1.6rem, 4vw, 2.4rem);
+  border-top: 1px solid var(--rule);
+}
+.cap svg { width: 20px; height: 20px; color: var(--ink-sig); margin-bottom: 0.6rem; display: block; }
+.capH { font-size: 0.95rem; font-weight: 700; color: var(--ink); margin: 0 0 0.22rem; letter-spacing: -0.015em; }
+.capP { font-size: 0.88rem; line-height: 1.5; color: var(--ink-soft); margin: 0; }
+
+/* ============================= process strip =============================
+   A real sequence ending in a signature, so the numbers are earned and they carry the
+   signature ink. Rules between them read as a progression rather than four boxes. */
+.flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 2rem);
+  padding: clamp(1.4rem, 3vw, 2rem) clamp(1.2rem, 3vw, 2rem);
+  background: var(--field);
+  border: 1px solid var(--rule);
+}
+.flowStep { display: flex; gap: 0.75rem; align-items: flex-start; }
+.flowN {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--ink-sig);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.flowH { font-size: 0.93rem; font-weight: 700; color: var(--ink); margin: 0 0 0.15rem; }
+.flowP { font-size: 0.84rem; line-height: 1.45; color: var(--ink-soft); margin: 0; }
+
+/* The proposal's SIGNED mark: the clearest possible use of the accent. */
+.docStamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--ink-sig);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .caps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.6rem; }
+  .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.3rem; }
+}
+@media (max-width: 560px) {
+  .caps, .flow { grid-template-columns: minmax(0, 1fr); }
 }

@@ -18,7 +18,7 @@
 .lede { font-size: 1.07rem; line-height: 1.62; color: var(--ink-soft); margin: 0 auto; max-width: 40em; }
 /* One word in the headline carries the accent, flat. The gradient version went teal-to-cyan
    through a muddy middle that looked washed out at display size. */
-.grad { color: var(--accent); }
+.grad { color: var(--ink-sig); }
 [data-theme='dark'] .grad { color: #3fc8d8; }
 .kicker {
   display: block;
@@ -26,7 +26,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.17em;
   text-transform: uppercase;
-  color: var(--mark);
+  color: var(--ink-sig);
   margin-bottom: 0.7rem;
 }
 
@@ -51,7 +51,7 @@
   
 }
 .featured {
-  border-color: var(--mark);
+  border-color: var(--ink-sig);
   
 }
 .tag {
@@ -59,8 +59,8 @@
   top: -11px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--accent);
-  color: #fff;
+  background: var(--ink-sig);
+  color: var(--on-sig);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -74,14 +74,14 @@
   font-size: 0.74rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--ink-sig);
   margin-bottom: 0.8rem;
 }
-[data-theme='dark'] .planName { color: var(--mark); }
+[data-theme='dark'] .planName { color: var(--ink-sig); }
 .planPrice { font-size: 2.6rem; font-weight: 800; letter-spacing: -0.045em; color: var(--ink); line-height: 1; }
 .planPrice span { font-size: 0.85rem; font-weight: 500; color: var(--ink-soft); letter-spacing: 0; }
-.planPer { font-size: 0.9rem; font-weight: 600; color: var(--accent); margin: 0.6rem 0 0.9rem; }
-[data-theme='dark'] .planPer { color: var(--mark); }
+.planPer { font-size: 0.9rem; font-weight: 600; color: var(--ink-sig); margin: 0.6rem 0 0.9rem; }
+[data-theme='dark'] .planPer { color: var(--ink-sig); }
 .planBlurb { font-size: 0.93rem; line-height: 1.55; color: var(--ink-soft); margin: 0 0 0.9rem; }
 .planSeats {
   font-size: 0.8rem;
@@ -105,8 +105,8 @@
   top: 6px;
   width: 11px;
   height: 6px;
-  border-left: 2px solid var(--mark);
-  border-bottom: 2px solid var(--mark);
+  border-left: 2px solid var(--ink-sig);
+  border-bottom: 2px solid var(--ink-sig);
   transform: rotate(-45deg);
 }
 .fine { text-align: center; font-size: 0.85rem; color: var(--ink-soft); margin: 1.8rem 0 0; }
@@ -121,11 +121,11 @@
   text-decoration: none;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
-.btnPrimary { background: var(--accent); color: #fff;  }
-.btnPrimary:hover { color: #fff; text-decoration: none;  }
+.btnPrimary { background: var(--ink-sig); color: var(--on-sig);  }
+.btnPrimary:hover { color: var(--on-sig); text-decoration: none;  }
 .btnGhost { color: var(--ink); border: 1px solid var(--rule); background: var(--paper); }
-.btnGhost:hover { text-decoration: none; color: var(--accent); border-color: var(--mark);  }
-[data-theme='dark'] .btnGhost:hover { color: var(--mark); }
+.btnGhost:hover { text-decoration: none; color: var(--ink-sig); border-color: var(--ink-sig);  }
+[data-theme='dark'] .btnGhost:hover { color: var(--ink-sig); }
 .btnOnDark {
   display: inline-block;
   background: #fff;
@@ -195,7 +195,7 @@
   height: 20px;
   border-radius: 50%;
   background: var(--field);
-  color: var(--accent);
+  color: var(--ink-sig);
   font-weight: 700;
   display: inline-flex;
   align-items: center;

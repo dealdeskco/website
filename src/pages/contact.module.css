@@ -20,7 +20,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.17em;
   text-transform: uppercase;
-  color: var(--mark);
+  color: var(--ink-sig);
   margin-bottom: 0.7rem;
 }
 .h1 {
@@ -61,7 +61,7 @@
 .field textarea { resize: vertical; min-height: 110px; line-height: 1.55; }
 .field input:focus,
 .field textarea:focus {
-  border-color: var(--mark);
+  border-color: var(--ink-sig);
   box-shadow: 0 0 0 3px rgba(13, 125, 147, 0.14);
 }
 
@@ -77,8 +77,8 @@
 .submit {
   font: inherit;
   font-weight: 650;
-  color: #fff;
-  background: var(--accent);
+  color: var(--on-sig);
+  background: var(--ink-sig);
   border: 0;
   border-radius: 4px;
   padding: 0.82rem 1.5rem;

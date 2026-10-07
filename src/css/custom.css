@@ -52,10 +52,17 @@
      ticks, SIGNED marks, the step numbers of the process that ends in a signature.
      Teal was dropped for exactly this reason: it meant nothing here, and navy+teal+grotesque
      is the house style of every generated B2B page. */
-  --ink-sig: #d43c22;
-  --ink-sig-deep: #b02f18;
-  --ink-sig-bright: #ff6b5c;   /* the app's coral: decorative fills only, it fails contrast for text */
-  --ink-sig-wash: #fceeea;
+  /* Signature ink. Rose, not orange: carmine and madder are what red document ink actually
+     was -- ledger rules, legal marginalia, the stamp -- so the colour is closer to the thing
+     it is pretending to be. It also clears both jobs the accent has to do, which neither the
+     app's coral nor the vermilion did: 4.95:1 as text on the paper, 5.25:1 under a white
+     label. (Coral is 2.64:1 as text, so it could never carry the word "signed document";
+     the vermilion was 4.43:1, a hair under the 4.5 minimum.) */
+  --ink-sig: #c1395a;
+  --ink-sig-deep: #a52c49;
+  --ink-sig-wash: #fbeef1;
+  /* The label that sits ON the accent. It is not always white -- see the dark theme. */
+  --on-sig: #ffffff;
 
   --ok: #15704a;
   --ok-wash: #e7f3ec;
@@ -109,9 +116,14 @@
   --rule: #223548;
   --rule-firm: #d4dde6;
 
-  --ink-sig: #f2603f;
-  --ink-sig-deep: #ff7a5c;
-  --ink-sig-wash: rgba(227, 74, 47, 0.14);
+  /* A dark ground needs a lighter accent to stay readable as text, and a lighter accent
+     cannot also carry a white label -- the old dark CTA was 3.22:1, which is why the label
+     is ink here. One colour, both jobs: 4.76:1 as text on the dark paper, 4.56:1 under an
+     ink label. */
+  --ink-sig: #e2566f;
+  --ink-sig-deep: #f2708a;
+  --ink-sig-wash: rgba(226, 86, 111, 0.15);
+  --on-sig: #0b1f3a;
 
   --ok: #69c998;
   --ok-wash: rgba(21, 112, 74, 0.2);
@@ -184,13 +196,13 @@ h1, h2, h3, h4 { letter-spacing: -0.021em; }
 .navbar__link:hover { color: var(--ink); }
 .navbar-cta {
   background: var(--ink-sig);
-  color: #fff !important;
+  color: var(--on-sig) !important;
   padding: 0.42rem 0.95rem;
   border-radius: 4px;
   font-weight: 600;
   margin-left: 0.5rem;
 }
-.navbar-cta:hover { background: var(--ink-sig-deep); color: #fff !important; }
+.navbar-cta:hover { background: var(--ink-sig-deep); color: var(--on-sig) !important; }
 
 
 

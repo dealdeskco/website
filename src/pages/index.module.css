@@ -77,8 +77,8 @@
   text-decoration: none;
   transition: background 0.14s ease, border-color 0.14s ease, color 0.14s ease;
 }
-.go { background: var(--ink-sig); color: #fff; }
-.go:hover { background: var(--ink-sig-deep); color: #fff; text-decoration: none; }
+.go { background: var(--ink-sig); color: var(--on-sig); }
+.go:hover { background: var(--ink-sig-deep); color: var(--on-sig); text-decoration: none; }
 .alt { color: var(--ink); border: 1px solid var(--rule); background: var(--panel); }
 .alt:hover { color: var(--ink); border-color: var(--ink); text-decoration: none; }
 
@@ -483,7 +483,7 @@
   height: 25px;
   border-radius: 50%;
   background: var(--ink-sig);
-  color: #fff;
+  color: var(--on-sig);
   font-size: 0.82rem;
   font-weight: 700;
   display: flex;

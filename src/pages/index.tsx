@@ -6,6 +6,64 @@ import styles from './index.module.css';
 const APP = 'https://app.dealdesk.studio';
 const SIGNUP = `${APP}/login?signup=1`;
 
+/** The thing the product makes, shown rather than described — a visitor should see the output
+ *  before reading about the input. Hand-built, not a screenshot: sharp at any density, follows
+ *  the theme, and cannot go stale when the app changes.
+ *  Its signature is ALREADY DRAWN. The one that animates is at the foot of the page, and two
+ *  competing marks would spend that moment twice. */
+function ProposalDoc() {
+  return (
+    <div className={styles.paperDoc} aria-hidden="true">
+      <div className={styles.docTop}>
+        <span>Harbor &amp; Vine Weddings</span>
+        <span>DD-2026-0042</span>
+      </div>
+      <div className={styles.docBody}>
+        <div className={styles.docHead}>
+          <div>
+            <div className={styles.docMark} />
+            <div className={styles.docTitle}>PROPOSAL</div>
+          </div>
+          <div className={styles.docMeta}>
+            <div>Date<b>Oct 7, 2026</b></div>
+            <div>Valid until<b>Nov 6, 2026</b></div>
+            <div>Prepared by<b>M. Okafor</b></div>
+          </div>
+        </div>
+        <div className={styles.docRule} />
+        <div className={styles.docLabel}>Commercial terms</div>
+        <table className={styles.docTable}>
+          <tbody>
+            <tr><td>Design &amp; installation — Phase 1</td><td>$18,000</td></tr>
+            <tr><td>Irrigation &amp; lighting</td><td>$6,400</td></tr>
+            <tr className={styles.off}><td>First-year discount (10%)</td><td>−$2,440</td></tr>
+            <tr className={styles.sum}><td>Total</td><td>$21,960</td></tr>
+          </tbody>
+        </table>
+        <div className={styles.docLabel} style={{marginTop: '14px'}}>Acceptance</div>
+        <div className={styles.docSign}>
+          <div>
+            <div className={styles.docSignLine}>
+              <svg className={styles.docInk} viewBox="0 0 120 26">
+                <path d="M3 20c6-13 10-17 13-16s2 10-1 15c-3 4-6 3-5-3 1-9 9-17 15-17 5 0 5 5 2 9-2 4-6 6-8 4-2-2 1-6 6-8 8-3 14 1 17 1 3 0 5-1 7-4M78 17c8-3 17-5 26-4" />
+              </svg>
+            </div>
+            <small>Maya Torres · Owner</small>
+          </div>
+          <div>
+            <div className={styles.docSignLine} />
+            <small>For Greenline Studio</small>
+          </div>
+        </div>
+        <div className={styles.docSealed}>
+          <span className={styles.docSealDot} />
+          Sealed · verify 8H0dmfuGIn1Q
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /** The only motion on the page: the signature draws itself once, when it is reached. */
 function SignatureBlock() {
   const ref = useRef<HTMLDivElement>(null);
@@ -108,35 +166,24 @@ export default function Home(): React.ReactElement {
       {/* ---------------- masthead: the head of a proposal ---------------- */}
       <header className={styles.masthead}>
         <div className={styles.sheet}>
-          <div className={styles.mastGrid}>
-            <h1 className={styles.title}>Quote the job before you leave it.</h1>
-            <dl className={styles.meta}>
-              <div className={styles.metaRow}><dt>Prepared for</dt><dd><b>People who quote work</b></dd></div>
-              <div className={styles.metaRow}><dt>Drafting</dt><dd><b>Free, unlimited</b></dd></div>
-              <div className={styles.metaRow}><dt>Per deal sent</dt><dd><b>$9.00</b></dd></div>
-              <div className={styles.metaRow}><dt>Card required</dt><dd><b>No</b></dd></div>
-            </dl>
-          </div>
-          <div className={styles.rule} />
-
-          <div className={styles.intro}>
-            <div className={styles.introGrid}>
+          <div className={styles.coverGrid}>
             <div>
+              <h1 className={styles.title}>Quote the job before you leave it.</h1>
+              <div className={styles.rule} />
               <p className={styles.lede}>
-                You worked out the price standing in their garden. Then the proposal sat in a
-                half-finished document for four days while the customer cooled off and rang
-                somebody else. Deal Desk writes it from the conversation you already had, so the
-                quote goes out the same day.
+                You priced the job standing in their garden. Deal Desk writes the proposal before
+                you are back in the truck.
               </p>
               <div className={styles.actions}>
                 <Link className={styles.go} to={SIGNUP}>Start free</Link>
                 <Link className={styles.alt} to="/how-it-works">See how it works</Link>
               </div>
+              <p className={styles.terms} style={{marginTop: '1.4rem'}}>
+                Free to draft, for good. <b>$9</b> when you send a deal. No card to start.
+              </p>
             </div>
-            <p className={styles.terms}>
-              Built for the person who does the work and quotes it — the landscaper, the trainer,
-              the planner, the one-person consultancy. <b>Not</b> for a sales ops department.
-            </p>
+            <div className={styles.coverArt}>
+              <ProposalDoc />
             </div>
           </div>
         </div>
@@ -148,7 +195,7 @@ export default function Home(): React.ReactElement {
           <div className={styles.sectionHead}>
             <h2 className={styles.h2}>Three steps, one sitting</h2>
             <p className={styles.note}>
-              Most of a quote is re-typing what you already decided. That part is the part that goes.
+              The part that takes the time is re-typing what you already decided.
             </p>
           </div>
           <div className={styles.steps}>
@@ -170,8 +217,7 @@ export default function Home(): React.ReactElement {
           <div className={styles.sectionHead}>
             <h2 className={styles.h2}>What is included</h2>
             <p className={styles.note}>
-              A real document, properly executed — not a shared link that expires, and not a PDF
-              with a typed name at the bottom.
+              A real document, properly executed. Not a link that expires.
             </p>
           </div>
           <div className={styles.items}>
@@ -232,8 +278,8 @@ export default function Home(): React.ReactElement {
           <div className={styles.sectionHead}>
             <h2 className={styles.h2}>Draft free. Pay only when you send</h2>
             <p className={styles.note}>
-              A deal costs money when it goes out for signature — never when it is drafted,
-              previewed or redone. A given deal is charged once, however many times you correct it.
+              Charged when a deal goes out, never when it is drafted. Once per deal, however
+              many times you fix it.
             </p>
           </div>
           <table className={styles.priceTable}>
@@ -250,19 +296,19 @@ export default function Home(): React.ReactElement {
                 <td className={styles.planCell}>Pay per deal<small>No subscription. Start here.</small></td>
                 <td className={styles.figure}>$0</td>
                 <td className={styles.figure}>$9</td>
-                <td>1</td>
+                <td className={styles.seats}>1</td>
               </tr>
               <tr>
                 <td className={styles.planCell}>Pro<small>10 deals included each month</small></td>
                 <td className={styles.figure}>$49</td>
                 <td className={styles.figure}>$5<span>after 10</span></td>
-                <td>5</td>
+                <td className={styles.seats}>5</td>
               </tr>
               <tr>
                 <td className={styles.planCell}>Team<small>50 deals included each month</small></td>
                 <td className={styles.figure}>$149</td>
                 <td className={styles.figure}>$3<span>after 50</span></td>
-                <td>Unlimited</td>
+                <td className={styles.seats}>Unlimited</td>
               </tr>
             </tbody>
           </table>

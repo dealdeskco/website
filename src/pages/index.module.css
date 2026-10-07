@@ -46,7 +46,7 @@
 }
 .metaRow:first-child { border-top: 1px solid var(--rule); }
 .metaRow b { color: var(--ink); font-weight: 500; }
-.rule { height: 3px; background: var(--rule-firm); margin-top: clamp(1.4rem, 3vw, 2.2rem); }
+.rule { height: 3px; background: var(--rule-firm); margin: clamp(1.1rem, 2.4vw, 1.7rem) 0 clamp(1.1rem, 2.4vw, 1.6rem); }
 
 /* ============================= intro ============================= */
 .intro { padding: clamp(1.4rem, 3.5vw, 2.4rem) 0 0; }
@@ -168,25 +168,49 @@
 [data-theme='dark'] .verdict { color: #8fdcae; background: rgba(19, 89, 58, 0.22); border-color: rgba(143, 220, 174, 0.3); }
 .tick { width: 15px; height: 15px; flex: none; }
 
-/* ============================= price table ============================= */
-/* display:table is load-bearing. Docusaurus's base stylesheet sets `table { display: block;
-   overflow: auto }` so that wide markdown tables scroll, which silently turns this one into a
-   content-sized scrolling block with the right-hand columns clipped off. */
-.priceTable { width: 100%; border-collapse: collapse; display: table; table-layout: auto; }
-.priceTable th, .priceTable td { padding: 0.85rem 0.6rem; border-bottom: 1px solid var(--rule); text-align: right; }
-.priceTable th:first-child, .priceTable td:first-child { text-align: left; padding-left: 0; }
-.priceTable td:last-child, .priceTable th:last-child { padding-right: 0; }
+/* ============================= price table =============================
+   Docusaurus's base stylesheet dresses every table: `display:block; overflow:auto` so wide
+   markdown tables scroll, a border on every cell, and zebra striping on even rows. All three
+   have to be undone explicitly or this reads as a pasted markdown table rather than a rate card.
+   A rate card wants horizontal rules only, figures right-aligned, and no fill. */
+.priceTable {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0;
+}
+.priceTable th,
+.priceTable td {
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  background: transparent;
+  padding: 1rem 1rem 1rem 0;
+  text-align: right;
+  vertical-align: baseline;
+}
+.priceTable tbody tr,
+.priceTable tbody tr:nth-child(2n) { background: transparent; }
+.priceTable th:first-child,
+.priceTable td:first-child { text-align: left; width: 42%; }
+.priceTable th:last-child,
+.priceTable td:last-child { padding-right: 0; width: 15%; }
 .priceTable thead th {
   font-family: var(--mono);
-  font-size: 0.72rem;
-  font-weight: 500;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
   color: var(--ink-faint);
   padding-top: 0;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--rule);
 }
-.planCell { font-weight: 650; color: var(--ink); font-size: 1rem; }
-.planCell small { display: block; font-weight: 400; font-size: 0.86rem; color: var(--ink-soft); margin-top: 2px; }
-.figure { font-size: 1.28rem; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; }
-.figure span { font-size: 0.78rem; font-weight: 400; color: var(--ink-faint); margin-left: 3px; letter-spacing: 0; }
+.planCell { font-weight: 700; color: var(--ink); font-size: 1.02rem; letter-spacing: -0.018em; }
+.planCell small { display: block; font-weight: 400; font-size: 0.88rem; color: var(--ink-soft); margin-top: 3px; letter-spacing: 0; }
+.figure { font-size: 1.32rem; font-weight: 700; color: var(--ink); letter-spacing: -0.025em; white-space: nowrap; }
+.figure span { font-size: 0.76rem; font-weight: 400; color: var(--ink-faint); margin-left: 4px; letter-spacing: 0; }
+.seats { font-size: 0.98rem; color: var(--ink-soft); white-space: nowrap; }
+/* The last rule is the one a total sits under. */
 .priceTable tbody tr:last-child td { border-bottom: 2px solid var(--rule-firm); }
 
 /* ============================= signature block =============================
@@ -243,4 +267,81 @@
   .priceTable td { border: 0; padding: 0; }
   .priceTable td:nth-child(2) { grid-row: 1; grid-column: 2; }
   .priceTable td:nth-child(3) { grid-column: 1 / -1; text-align: left; font-size: 0.88rem; color: var(--ink-soft); }
+}
+
+/* ============================= the proposal, in the cover =============================
+   Showing the artifact beats describing it: a visitor should see what comes out before
+   reading what goes in. Hand-built rather than a screenshot so it stays sharp at any
+   density, follows the theme, and cannot go stale when the app changes.
+
+   Rebuilt flat for this design: no perspective tilt, no coloured shadow, and its signature
+   is already drawn — the one that ANIMATES is the one at the foot of the page, and two
+   competing marks would spend that moment twice. */
+.coverGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 27rem);
+  gap: clamp(1.8rem, 5vw, 4rem);
+  align-items: center;
+}
+.paperDoc {
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  box-shadow: 0 1px 2px rgba(16, 24, 32, 0.05), 0 18px 44px rgba(16, 24, 32, 0.07);
+}
+.docTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 9px 14px;
+  background: var(--field);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  color: var(--ink-faint);
+}
+.docBody { padding: 20px 22px 18px; }
+.docHead { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+.docMark { width: 62px; height: 13px; background: var(--accent); margin-bottom: 11px; }
+.docTitle { font-size: 1.05rem; font-weight: 800; letter-spacing: -0.028em; color: var(--ink); }
+.docMeta { font-family: var(--mono); font-size: 0.6rem; line-height: 1.85; text-align: right; color: var(--ink-faint); }
+.docMeta b { color: var(--ink); font-weight: 500; margin-left: 9px; }
+.docRule { height: 2px; background: var(--rule-firm); margin: 13px 0 14px; }
+.docLabel { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-bottom: 7px; }
+.docTable { width: 100%; border-collapse: collapse; display: table; font-size: 0.72rem; }
+.docTable td { padding: 5px 0; border-bottom: 1px solid var(--rule); color: var(--ink); }
+.docTable td:last-child { text-align: right; }
+.docTable .off td { color: var(--accent); }
+.docTable .sum td { font-weight: 700; border-bottom: 0; padding-top: 7px; }
+.docSign { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px; }
+.docSignLine { height: 26px; border-bottom: 1.5px solid var(--ink); position: relative; }
+.docSign small { display: block; font-family: var(--mono); font-size: 0.56rem; color: var(--ink-faint); margin-top: 4px; }
+.docInk {
+  position: absolute;
+  left: 1px;
+  bottom: 0;
+  width: 78px;
+  height: 24px;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.docSealed {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--ink-faint);
+}
+.docSealDot { width: 6px; height: 6px; border-radius: 50%; background: #1a7f4b; flex: none; }
+
+@media (max-width: 900px) {
+  .coverGrid { grid-template-columns: minmax(0, 1fr); }
+  /* The artifact leads on a phone: see the thing, then read about it. */
+  .coverArt { order: -1; max-width: 420px; }
 }

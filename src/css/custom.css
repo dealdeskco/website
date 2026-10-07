@@ -41,6 +41,7 @@
   --paper: #faf8f4;
   --panel: #ffffff;
   --field: #f3f0ea;
+  --recess: #efebe3;   /* a surface lying behind the paper, never on top of it */
   --rule: #d8dee5;
   --rule-firm: #0b1f3a;
 
@@ -84,7 +85,7 @@
   --ifm-navbar-height: 62px;
   --ifm-navbar-background-color: var(--paper);
   --ifm-navbar-shadow: none;
-  --ifm-footer-background-color: var(--paper);
+  --ifm-footer-background-color: var(--desk);
 
   /* ★ 17px base, not 16. The audience is tradespeople and owner-operators, often reading on a
      phone outdoors and often over 45. Nothing in the interface goes below ~15px, and the small
@@ -104,6 +105,7 @@
   --paper: #0d1c2b;
   --panel: #122536;
   --field: #122536;
+  --recess: #0a1724;
   --rule: #223548;
   --rule-firm: #d4dde6;
 
@@ -127,7 +129,7 @@
   --ifm-heading-color: #eef2f6;
   --ifm-font-color-base: #b8c8d6;
   --ifm-navbar-background-color: var(--paper);
-  --ifm-footer-background-color: var(--paper);
+  --ifm-footer-background-color: var(--desk);
 }
 
 html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -194,19 +196,21 @@ h1, h2, h3, h4 { letter-spacing: -0.021em; }
 
 /* ---- footer: the foot of a document. A rule and small type, not a dark slab ---- */
 .footer {
-  background: var(--paper);
+  /* The sheet of paper ENDS at the footer. Below that line the page is desk, edge to edge, so
+     the footer reads as the surface the document was lying on rather than as its last section.
+     That means no 1320 column here -- the desk has no edges -- while the links inside keep the
+     content measure so they still line up with the page above. */
+  background: var(--desk);
   /* width:100% is required, not cosmetic. The footer is a flex item in a column, and `margin: 0
      auto` on a flex item CANCELS cross-axis stretch -- it collapsed to its content width (416px
      of squashed link columns) until this was added. .main-wrapper only escaped the same fate
      because it already carried width:100%. */
   width: 100%;
-  max-width: 1320px;
-  margin: 0 auto;
   border-top: 1px solid var(--rule);
   padding: 2.6rem var(--gutter) 2.2rem;
   font-size: 0.98rem;
 }
-.footer__links { max-width: 1180px; margin: 0 auto 1.6rem; }
+.footer__links { max-width: calc(1180px - 2 * var(--gutter)); margin: 0 auto 1.6rem; }
 .footer__title {
   font-size: 0.93rem;
   font-weight: 600;
@@ -218,7 +222,7 @@ h1, h2, h3, h4 { letter-spacing: -0.021em; }
 .footer__link-item { color: var(--ink-soft); }
 .footer__link-item:hover { color: var(--ink-sig); text-decoration: underline; }
 .footer__copyright {
-  max-width: 1180px;
+  max-width: calc(1180px - 2 * var(--gutter));
   margin: 0 auto;
   padding-top: 1.4rem;
   border-top: 1px solid var(--rule);

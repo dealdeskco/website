@@ -277,9 +277,14 @@
    is already drawn — the one that ANIMATES is the one at the foot of the page, and two
    competing marks would spend that moment twice. */
 .coverGrid {
+  /* Two panels need more width than one did, and the headline needs 3 lines not 5. Both fit
+     only because the transcript hangs LEFT by exactly one gutter — the gap is empty space,
+     so borrowing it costs the headline nothing, and tying the overhang to the same variable
+     means it can never grow into the text column at a narrower width. */
+  --cover-gap: clamp(1.2rem, 2.6vw, 2.4rem);
   display: grid;
-  grid-template-columns: minmax(0, 1.22fr) minmax(0, 24rem);
-  gap: clamp(1.8rem, 5vw, 4rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 28rem);
+  gap: var(--cover-gap);
   align-items: center;
 }
 .paperDoc {
@@ -308,8 +313,15 @@
 .docMeta b { color: var(--ink); font-weight: 500; margin-left: 9px; }
 .docRule { height: 2px; background: var(--rule-firm); margin: 13px 0 14px; }
 .docLabel { font-family: var(--mono); font-size: 0.65rem; color: var(--ink-faint); margin-bottom: 7px; }
-.docTable { width: 100%; border-collapse: collapse; display: table; font-size: 0.76rem; }
-.docTable td { padding: 5px 0; border-bottom: 1px solid var(--rule); color: var(--ink); }
+.docTable { width: 100%; border-collapse: collapse; display: table; font-size: 0.76rem; border: 0; }
+.docTable tr, .docTable tr:nth-child(2n) { background: none; border: 0; }
+.docTable td {
+  padding: 5px 0;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  background: none;
+  color: var(--ink);
+}
 .docTable td:last-child { text-align: right; }
 .docTable .off td { color: var(--ink-sig); }
 .docTable .sum td { font-weight: 700; border-bottom: 0; padding-top: 7px; }
@@ -320,7 +332,7 @@
   position: absolute;
   left: 1px;
   bottom: 0;
-  width: 78px;
+  width: 94%;
   height: 24px;
   fill: none;
   stroke: var(--ink);
@@ -341,10 +353,65 @@
 }
 .docSealDot { width: 6px; height: 6px; border-radius: 50%; background: #1a7f4b; flex: none; }
 
+/* ===================== the cover stage: conversation -> document =====================
+   Two panels, overlapped, with the arrow between them. The transcript is positioned out of
+   flow so the stage's height is the document's height — the document is the subject and the
+   transcript is context behind it, never the thing that sets the layout. */
+.coverStage { position: relative; }
+.coverDoc { position: relative; z-index: 2; width: 80%; margin-left: 20%; }
+
+.transcript {
+  position: absolute;
+  z-index: 1;
+  left: calc(-1 * var(--cover-gap));
+  top: 6%;
+  width: 66%;
+  padding: 14px 15px 15px;
+  background: var(--recess);
+  border: 1px solid var(--rule);
+  box-shadow: 0 1px 2px rgba(16, 24, 32, 0.04), 0 12px 30px rgba(16, 24, 32, 0.06);
+}
+.trTitle { font-size: 0.74rem; font-weight: 700; color: var(--ink); letter-spacing: -0.015em; }
+.trTabs {
+  display: flex;
+  gap: 11px;
+  margin: 9px 0 0;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.58rem;
+  color: var(--ink-faint);
+}
+.trTabOn { color: var(--ink); font-weight: 600; box-shadow: inset 0 -2px 0 var(--ink-sig); padding-bottom: 7px; margin-bottom: -7px; }
+.trLines { display: grid; gap: 11px; padding-top: 11px; }
+.trLine { display: grid; grid-template-columns: 7px 1fr; gap: 8px; }
+.trDotThem, .trDotYou { width: 7px; height: 7px; border-radius: 50%; margin-top: 5px; }
+.trDotThem { background: var(--ink); }
+.trDotYou { background: var(--ink-sig); }
+.trWho { font-family: var(--mono); font-size: 0.56rem; color: var(--ink-faint); }
+.trWho b { color: var(--ink-sig); font-weight: 500; margin-right: 7px; }
+.trLines p { margin: 2px 0 0; font-size: 0.63rem; line-height: 1.5; color: var(--ink-soft); }
+
+/* Sits above both panels, bridging them. */
+.flowArrow {
+  position: absolute;
+  z-index: 3;
+  left: 2%;
+  bottom: -3%;
+  width: 27%;
+  height: auto;
+  color: var(--ink-sig);
+  fill: none;
+}
+
 @media (max-width: 900px) {
   .coverGrid { grid-template-columns: minmax(0, 1fr); }
   /* The artifact leads on a phone: see the thing, then read about it. */
-  .coverArt { order: -1; max-width: 420px; }
+  .coverArt { order: -1; max-width: 480px; }
+  /* The overhang borrows the grid gap, and stacked there is no gap to borrow — a negative
+     offset here would hang off the gutter and give the page a horizontal scrollbar. Same
+     proportion of the transcript stays visible, taken from the inset instead. */
+  .transcript { left: 0; top: 4%; width: 64%; }
+  .coverDoc { width: 76%; margin-left: 24%; }
 }
 
 

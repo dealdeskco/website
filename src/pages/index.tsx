@@ -12,6 +12,54 @@ const Tick = () => (
   </svg>
 );
 
+/** The INPUT, shown behind the output. The hero now reads left-to-right as the product's
+ *  whole claim — a conversation becomes a signed document — rather than asking the visitor
+ *  to infer the input from a finished PDF. Same job in both panels on purpose: the courtyard
+ *  the customer describes here is the one priced and signed on the right. */
+function CallTranscript() {
+  return (
+    <div className={styles.transcript} aria-hidden="true">
+      <div className={styles.trTitle}>Call transcript</div>
+      <div className={styles.trTabs}>
+        <span className={styles.trTabOn}>Transcript</span>
+        <span>Summary</span>
+        <span>Action items</span>
+      </div>
+      <div className={styles.trLines}>
+        {[
+          {t: '00:12', who: 'Customer', them: true,
+           q: 'We\u2019re redoing the courtyard before the spring bookings. Can you take the planting and the lighting?'},
+          {t: '01:40', who: 'You', them: false,
+           q: 'Yes \u2014 phase one design and installation, plus irrigation and path lighting.'},
+          {t: '03:05', who: 'Customer', them: true,
+           q: 'Looks good. Please send the proposal.'},
+        ].map((l) => (
+          <div key={l.t} className={styles.trLine}>
+            <span className={l.them ? styles.trDotThem : styles.trDotYou} />
+            <div>
+              <div className={styles.trWho}><b>{l.t}</b>{l.who}</div>
+              <p>{l.q}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/** Hand-drawn rather than a glyph: a typeset arrow would sit on the baseline of nothing.
+ *  Signature ink, because this IS the product's one action. */
+function FlowArrow() {
+  return (
+    <svg className={styles.flowArrow} viewBox="0 0 120 54" aria-hidden="true">
+      <path d="M4 6C10 34 34 48 92 44" fill="none" stroke="currentColor" strokeWidth="5"
+            strokeLinecap="round" />
+      <path d="M74 32l20 12-22 9" fill="none" stroke="currentColor" strokeWidth="5"
+            strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 /** The thing the product makes, shown rather than described — a visitor should see the output
  *  before reading about the input. Hand-built, not a screenshot: sharp at any density, follows
  *  the theme, and cannot go stale when the app changes.
@@ -51,7 +99,7 @@ function ProposalDoc() {
           <div>
             <div className={styles.docSignLine}>
               <svg className={styles.docInk} viewBox="0 0 120 26">
-                <path d="M3 20c6-13 10-17 13-16s2 10-1 15c-3 4-6 3-5-3 1-9 9-17 15-17 5 0 5 5 2 9-2 4-6 6-8 4-2-2 1-6 6-8 8-3 14 1 17 1 3 0 5-1 7-4M78 17c8-3 17-5 26-4" />
+                <path d="M4 21c4-12 8-18 11-17 3 1 2 11-1 15-3 4-6 3-5-2 2-11 11-18 18-17 5 1 5 6 1 10-4 4-8 5-10 3-2-2 3-6 9-7 13-3 22 5 33 3 8-1 13-5 17-10-5 8-11 13-20 14" />
               </svg>
             </div>
             <small>Maya Torres · Owner</small>
@@ -229,7 +277,13 @@ export default function Home(): React.ReactElement {
               </ul>
             </div>
             <div className={styles.coverArt}>
-              <ProposalDoc />
+              <div className={styles.coverStage}>
+                <CallTranscript />
+                <FlowArrow />
+                <div className={styles.coverDoc}>
+                  <ProposalDoc />
+                </div>
+              </div>
             </div>
           </div>
 

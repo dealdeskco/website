@@ -1,9 +1,7 @@
 .wrap {
   padding: clamp(2.6rem, 6vw, 4.6rem) 0 clamp(3rem, 6vw, 5rem);
-  background: linear-gradient(180deg, var(--dd-tint) 0%, rgba(255, 255, 255, 0) 55%);
 }
 [data-theme='dark'] .wrap {
-  background: linear-gradient(180deg, rgba(19, 181, 198, 0.09) 0%, rgba(8, 22, 39, 0) 55%);
 }
 .inner {
   width: 100%;
@@ -18,11 +16,11 @@
 
 .kicker {
   display: block;
-  font-family: var(--dd-mono);
+  font-family: var(--mono);
   font-size: 0.72rem;
   letter-spacing: 0.17em;
   text-transform: uppercase;
-  color: var(--dd-ocean);
+  color: var(--mark);
   margin-bottom: 0.7rem;
 }
 .h1 {
@@ -31,31 +29,31 @@
   font-weight: 800;
   letter-spacing: -0.035em;
   margin: 0 0 0.9rem;
-  color: var(--dd-ink);
+  color: var(--ink);
 }
-.lede { font-size: 1.04rem; line-height: 1.62; color: var(--dd-muted); margin: 0 0 1.1rem; }
-.small { font-size: 0.9rem; line-height: 1.6; color: var(--dd-muted); margin: 0; }
+.lede { font-size: 1.04rem; line-height: 1.62; color: var(--ink-soft); margin: 0 0 1.1rem; }
+.small { font-size: 0.9rem; line-height: 1.6; color: var(--ink-soft); margin: 0; }
 
 .card {
-  background: var(--dd-panel);
-  border: 1px solid var(--dd-line);
-  border-radius: var(--dd-radius);
-  box-shadow: var(--dd-shadow);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  
   padding: clamp(22px, 3vw, 30px);
 }
 .form { display: grid; gap: 15px; }
 .field { display: grid; gap: 6px; }
-.field > span { font-size: 0.86rem; font-weight: 600; color: var(--dd-ink); }
-.field > span em { font-style: normal; font-weight: 400; color: var(--dd-muted); }
+.field > span { font-size: 0.86rem; font-weight: 600; color: var(--ink); }
+.field > span em { font-style: normal; font-weight: 400; color: var(--ink-soft); }
 .field input,
 .field textarea {
   width: 100%;
   font: inherit;
   font-size: 0.97rem;
-  color: var(--dd-ink);
+  color: var(--ink);
   background: var(--ifm-background-color);
-  border: 1px solid var(--dd-line);
-  border-radius: 10px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
   padding: 10px 12px;
   outline: none;
   transition: border-color 0.14s ease, box-shadow 0.14s ease;
@@ -63,8 +61,8 @@
 .field textarea { resize: vertical; min-height: 110px; line-height: 1.55; }
 .field input:focus,
 .field textarea:focus {
-  border-color: var(--dd-ocean);
-  box-shadow: 0 0 0 3px rgba(19, 181, 198, 0.16);
+  border-color: var(--mark);
+  box-shadow: 0 0 0 3px rgba(13, 125, 147, 0.14);
 }
 
 /* Honeypot: off-screen rather than display:none, because some bots skip hidden inputs. */
@@ -80,15 +78,15 @@
   font: inherit;
   font-weight: 650;
   color: #fff;
-  background: var(--dd-grad);
+  background: var(--accent);
   border: 0;
-  border-radius: 999px;
+  border-radius: 4px;
   padding: 0.82rem 1.5rem;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(13, 102, 123, 0.28);
+  
   transition: transform 0.15s ease, filter 0.15s ease;
 }
-.submit:hover:not(:disabled) { transform: translateY(-2px); filter: saturate(1.1); }
+.submit:hover:not(:disabled) {  filter: saturate(1.1); }
 .submit:disabled { opacity: 0.65; cursor: default; }
 
 .err {
@@ -96,11 +94,11 @@
   color: #a3271a;
   background: #fdecea;
   border: 1px solid #f1a9a0;
-  border-radius: 10px;
+  border-radius: 4px;
   padding: 10px 12px;
 }
 [data-theme='dark'] .err { background: rgba(163, 39, 26, 0.18); border-color: rgba(241, 169, 160, 0.4); color: #ffb4a8; }
-.privacy { font-size: 0.82rem; color: var(--dd-muted); margin: 0; text-align: center; }
+.privacy { font-size: 0.82rem; color: var(--ink-soft); margin: 0; text-align: center; }
 
 .done { text-align: center; padding: 20px 0 10px; }
 .doneTick {
@@ -116,8 +114,8 @@
   font-size: 22px;
   margin-bottom: 14px;
 }
-.done h2 { font-size: 1.25rem; font-weight: 700; margin: 0 0 0.4rem; color: var(--dd-ink); }
-.done p { font-size: 0.96rem; color: var(--dd-muted); margin: 0; }
+.done h2 { font-size: 1.25rem; font-weight: 700; margin: 0 0 0.4rem; color: var(--ink); }
+.done p { font-size: 0.96rem; color: var(--ink-soft); margin: 0; }
 
 @media (max-width: 860px) {
   .inner { grid-template-columns: 1fr; }

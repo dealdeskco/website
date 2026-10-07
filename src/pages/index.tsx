@@ -1,295 +1,292 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 
 const APP = 'https://app.dealdesk.studio';
 const SIGNUP = `${APP}/login?signup=1`;
 
-/** The document mock in the hero. Deliberately hand-built rather than a screenshot: it stays
- *  sharp at any density, re-colours with the theme, and never goes stale when the app changes. */
-function ProposalMock() {
+/** The only motion on the page: the signature draws itself once, when it is reached. */
+function SignatureBlock() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [signed, setSigned] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || signed) return;
+    if (typeof IntersectionObserver === 'undefined') return setSigned(true);
+    // A throttled or backgrounded tab can defer the observer indefinitely. If the block is already
+    // on screen by geometry, sign it rather than leaving a blank line forever.
+    const t = window.setTimeout(() => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) setSigned(true);
+    }, 1200);
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          setSigned(true);
+          io.disconnect();
+        }
+      },
+      {threshold: 0.6},
+    );
+    io.observe(el);
+    return () => {
+      window.clearTimeout(t);
+      io.disconnect();
+    };
+  }, [signed]);
+
   return (
-    <div className={styles.mock} aria-hidden="true">
-      <div className={styles.mockBar}>
-        <span /><span /><span />
-        <em>PROPOSAL · DD-2026-0042</em>
-      </div>
-      <div className={styles.mockBody}>
-        <div className={styles.mockHead}>
-          <div>
-            <div className={styles.mockLogo} />
-            <div className={styles.mockH1}>PROPOSAL</div>
-          </div>
-          <div className={styles.mockMeta}>
-            <div><span>CUSTOMER</span><b>Harbor &amp; Vine</b></div>
-            <div><span>DATE</span><b>Oct 7, 2026</b></div>
-            <div><span>VALID UNTIL</span><b>Nov 6, 2026</b></div>
-          </div>
-        </div>
-        <div className={styles.mockRule} />
-        <div className={styles.mockSection}>COMMERCIAL TERMS</div>
-        <table className={styles.mockTable}>
-          <tbody>
-            <tr><td>Design &amp; installation — Phase 1</td><td>$18,000</td></tr>
-            <tr><td>Irrigation &amp; lighting</td><td>$6,400</td></tr>
-            <tr className={styles.mockDisc}><td>First-year discount (10%)</td><td>−$2,440</td></tr>
-            <tr className={styles.mockTotal}><td>Total</td><td>$21,960</td></tr>
-          </tbody>
-        </table>
-        <div className={styles.mockSection}>ACCEPTANCE</div>
-        <div className={styles.mockSign}>
-          <div>
-            <div className={styles.mockSigLine}>
-              <svg viewBox="0 0 150 40" className={styles.mockInk}><path d="M4 30C14 10 22 34 32 18s16 16 26 2 18 14 28-2 16 10 26-4 18 6 26-6" /></svg>
-            </div>
-            <small>Maya Torres · Owner</small>
-          </div>
-          <div>
-            <div className={styles.mockSigLine} />
-            <small>Signature</small>
-          </div>
-        </div>
-        <div className={styles.mockSealed}>
-          <span className={styles.mockSealDot} />
-          Sealed · verification id <code>8H0dmfuGIn1Q</code>
-        </div>
-      </div>
+    <div className={styles.signWell} ref={ref} data-signed={signed ? 'true' : 'false'}>
+      <svg className={styles.signInk} viewBox="0 0 300 74" aria-hidden="true">
+        <path d="M8 56c14-28 23-40 30-39s4 22-3 33c-6 10-13 7-11-6 3-20 21-39 34-39 10 0 10 10 4 20-5 9-14 14-18 10-5-5 3-14 14-18 18-6 30 2 38 2 6 0 10-3 14-9 3-5 8-5 9 2 1 8-3 16-8 20-4 4-8 2-7-4 2-9 13-19 26-19 11 0 15 7 21 7 5 0 9-3 13-8M196 46c18-6 39-10 58-9" />
+      </svg>
+      <div className={styles.signLine} />
+      <div className={styles.signCap}>Authorised signature</div>
     </div>
   );
 }
 
-const STEPS = [
+const ITEMS = [
   {
-    n: '01',
-    t: 'Talk, paste, or dictate',
-    d: 'Drop in call notes, a meeting transcript, or just describe the job out loud. No forms to fill in first — the messy version is the input.',
+    name: 'Draft from a conversation',
+    desc: 'Paste call notes, a transcript or an email thread. Or hold the microphone and describe the job out loud on the drive back. Scope, line items, discounts and terms come back filled in.',
+    col: 'every plan',
   },
   {
-    n: '02',
-    t: 'Get a priced draft',
-    d: 'Scope, line items, discounts, terms and both signature blocks come back filled in and on your letterhead. Change anything you like.',
+    name: 'Your letterhead',
+    desc: 'Your logo, your colour, your signatory, your terms language — on the document and on the email that delivers it. Your customer sees your business, not ours.',
+    col: 'every plan',
   },
   {
-    n: '03',
-    t: 'Get it signed',
-    d: 'Hand them your phone and take a signature on the spot, or email a single-use signing link. You get a sealed PDF either way.',
+    name: 'Signature in the room',
+    desc: 'Tap the signature line and the pad fills the screen, the way a card terminal does. Finger, stylus or mouse.',
+    col: 'every plan',
+  },
+  {
+    name: 'Signature from anywhere',
+    desc: 'A single-use link that expires in 72 hours. Your customer signs on their own device, optionally behind a one-time code sent to their email.',
+    col: 'every plan',
+  },
+  {
+    name: 'Certificate of Completion',
+    desc: 'Who signed, when, from where, how they were identified, and the stroke dynamics of the signature — not just a picture of it. Printed on its own page.',
+    col: 'every plan',
+  },
+  {
+    name: 'Cryptographic seal',
+    desc: 'The finished PDF is signed with an Ed25519 key. Anyone can check a copy is byte-for-byte the original against the published public key.',
+    col: 'every plan',
+  },
+  {
+    name: 'DocuSign envelopes',
+    desc: 'For a high-value or likely-contested agreement, send a real envelope instead. The two interlock so a document cannot be executed twice.',
+    col: 'Team',
   },
 ];
 
-const FEATURES = [
+const STEPS = [
   {
-    t: 'Your brand, not ours',
-    d: 'Your logo, your colour, your signatory, your terms language. The proposal looks like it came from your business, and so does the email that delivers it.',
+    h: 'Talk, paste or dictate',
+    p: 'No template to choose and no form to complete first. Half-sentences, crossed-out numbers and "roughly 18k for phase one" are exactly what it expects.',
   },
   {
-    t: 'Sign in the room',
-    d: 'Tap the signature line and the pad fills the screen, the way a card terminal does. Finger, stylus or mouse. The deal closes before you leave the driveway.',
+    h: 'Read a real draft',
+    p: 'Priced, on your letterhead, with both signature blocks in place. Everything is editable and nothing is locked. Required fields are checked before you can export.',
   },
   {
-    t: 'Or sign from anywhere',
-    d: 'Send a single-use link that expires in 72 hours. Your customer signs on their own device, optionally behind a one-time code sent to their email.',
-  },
-  {
-    t: 'Every signature is evidenced',
-    d: 'A Certificate of Completion records who signed, when, from where, how they were identified, and even the stroke dynamics of the signature itself.',
-  },
-  {
-    t: 'Tamper-evident by default',
-    d: 'The finished PDF is sealed with an Ed25519 signature. Anyone can verify a copy is byte-for-byte the original — without taking our word for it.',
-  },
-  {
-    t: 'Pay when you get paid',
-    d: 'Drafting is free and unlimited. You are charged only when a deal is actually sent. No seat minimums, no annual contract, no setup call.',
+    h: 'Take the signature',
+    p: 'In the room on your phone, or by a single-use link to theirs. Either way you get a sealed PDF with an audit record behind it.',
   },
 ];
 
 export default function Home(): React.ReactElement {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="Proposals that close themselves"
-      description={siteConfig.tagline as string}>
-      {/* ---------------- hero ---------------- */}
-      <header className={styles.hero}>
-        <div className={styles.heroGlow} aria-hidden="true" />
-        <div className={styles.container}>
-          <div className={styles.heroGrid}>
-            <div className={styles.heroCopy}>
-              <span className={styles.eyebrow}>Conversations in. Deals out.</span>
-              <h1 className={styles.h1}>
-                The proposal is written<br />
-                <span className={styles.grad}>before you get back to the truck.</span>
-              </h1>
-              <p className={styles.lede}>
-                Deal Desk turns a call, a transcript, or a few scribbled notes into a priced,
-                branded proposal your customer can sign on the spot. Built for the people who
-                actually quote the work — not for a sales ops department.
-              </p>
-              <div className={styles.ctaRow}>
-                <Link className={styles.btnPrimary} to={SIGNUP}>Start free — no card</Link>
-                <Link className={styles.btnGhost} to="/how-it-works">See how it works</Link>
-              </div>
-              <p className={styles.heroNote}>
-                Free to draft, forever. You pay <b>$9</b> only when you send a deal.
-              </p>
-            </div>
-            <div className={styles.heroArt}>
-              <ProposalMock />
-            </div>
+      title="Quote the job before you leave it"
+      description="Deal Desk turns a call, a transcript or a few notes into a priced, branded proposal your customer can sign on the spot.">
+      {/* ---------------- masthead: the head of a proposal ---------------- */}
+      <header className={styles.masthead}>
+        <div className={styles.sheet}>
+          <div className={styles.mastGrid}>
+            <h1 className={styles.title}>Quote the job before you leave it.</h1>
+            <dl className={styles.meta}>
+              <div className={styles.metaRow}><dt>Prepared for</dt><dd><b>People who quote work</b></dd></div>
+              <div className={styles.metaRow}><dt>Drafting</dt><dd><b>Free, unlimited</b></dd></div>
+              <div className={styles.metaRow}><dt>Per deal sent</dt><dd><b>$9.00</b></dd></div>
+              <div className={styles.metaRow}><dt>Card required</dt><dd><b>No</b></dd></div>
+            </dl>
           </div>
+          <div className={styles.rule} />
         </div>
       </header>
 
-      {/* ---------------- the problem ---------------- */}
-      <section className={styles.strip}>
-        <div className={styles.container}>
-          <div className={styles.stripGrid}>
+      <section className={styles.intro}>
+        <div className={styles.sheet}>
+          <div className={styles.introGrid}>
             <div>
-              <h2 className={styles.h2}>Quoting is where good weeks go to die.</h2>
-              <p className={styles.body}>
-                You had the conversation. You know the scope, the price, and roughly what they will
-                push back on. Then the proposal sits in a half-finished document for four days
-                while the customer cools off and calls someone else.
+              <p className={styles.lede}>
+                You worked out the price standing in their garden. Then the proposal sat in a
+                half-finished document for four days while the customer cooled off and rang
+                somebody else. Deal Desk writes it from the conversation you already had, so the
+                quote goes out the same day.
               </p>
-              <p className={styles.body}>
-                The bottleneck was never the deciding. It was the typing.
-              </p>
+              <div className={styles.actions}>
+                <Link className={styles.go} to={SIGNUP}>Start free</Link>
+                <Link className={styles.alt} to="/how-it-works">See how it works</Link>
+              </div>
             </div>
-            <ul className={styles.painList}>
-              <li><b>Three days</b> is the average gap between a site visit and a sent quote.</li>
-              <li><b>Every re-type</b> is a chance to get a number wrong in a document that binds you.</li>
-              <li><b>Momentum decays.</b> The proposal you send today beats the better one you send Friday.</li>
-            </ul>
+            <p className={styles.terms}>
+              Built for the person who does the work and quotes it — the landscaper, the trainer,
+              the planner, the one-person consultancy. <b>Not</b> for a sales ops department.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ---------------- how it works ---------------- */}
+      {/* ---------------- the sequence ---------------- */}
       <section className={styles.section}>
-        <div className={styles.container}>
+        <div className={styles.sheet}>
           <div className={styles.sectionHead}>
-            <span className={styles.kicker}>How it works</span>
-            <h2 className={styles.h2}>Three steps, one sitting.</h2>
+            <h2 className={styles.h2}>Three steps, one sitting</h2>
+            <p className={styles.note}>
+              Most of a quote is re-typing what you already decided. That part is the part that goes.
+            </p>
           </div>
           <div className={styles.steps}>
             {STEPS.map((s) => (
-              <div key={s.n} className={styles.step}>
-                <span className={styles.stepN}>{s.n}</span>
-                <h3 className={styles.h3}>{s.t}</h3>
-                <p className={styles.bodySm}>{s.d}</p>
+              <div key={s.h} className={styles.step}>
+                <div>
+                  <h3 className={styles.stepH}>{s.h}</h3>
+                  <p className={styles.stepP}>{s.p}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ---------------- features ---------------- */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className={styles.container}>
-          <div className={styles.sectionHead}>
-            <span className={styles.kicker}>What you get</span>
-            <h2 className={styles.h2}>A real document, properly executed.</h2>
-            <p className={styles.sectionSub}>
-              Not a shared link that expires, and not a PDF with a typed name at the bottom.
-            </p>
-          </div>
-          <div className={styles.cards}>
-            {FEATURES.map((f) => (
-              <div key={f.t} className={styles.card}>
-                <h3 className={styles.h3}>{f.t}</h3>
-                <p className={styles.bodySm}>{f.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---------------- trust / seal ---------------- */}
+      {/* ---------------- what you get, as line items ---------------- */}
       <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.splitGrid}>
-            <div>
-              <span className={styles.kicker}>Evidence, not vibes</span>
-              <h2 className={styles.h2}>You can prove what was signed.</h2>
-              <p className={styles.body}>
-                Every sealed proposal carries a Certificate of Completion on its own page: who
-                signed, when, from what address, how their identity was established, and the
-                stroke dynamics of the signature. Then the whole file is signed with an Ed25519
-                key.
-              </p>
-              <p className={styles.body}>
-                Anyone holding a copy can check it against the published public key and confirm it
-                is byte-for-byte the original. Change a single character and verification fails.
-              </p>
-              <p className={styles.bodySm}>
-                We also tell you plainly what this is <em>not</em>: a signature witnessed on your
-                own phone proves possession of your session, and the certificate says exactly
-                that rather than dressing it up.
-              </p>
-            </div>
-            <div className={styles.verifyCard}>
-              <div className={styles.verifyHead}>Verify a document</div>
-              <dl className={styles.verifyRows}>
-                <dt>Document</dt><dd>DD-2026-0042</dd>
-                <dt>Sealed</dt><dd>Oct 7, 2026</dd>
-                <dt>Algorithm</dt><dd>ed25519</dd>
-                <dt>SHA-256</dt><dd className={styles.hash}>8494c5e6…1f567c0c</dd>
-              </dl>
-              <div className={styles.verifyOk}>
-                <span className={styles.tick}>✓</span> Match — byte-for-byte the sealed document.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ---------------- pricing teaser ---------------- */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className={styles.container}>
+        <div className={styles.sheet}>
           <div className={styles.sectionHead}>
-            <span className={styles.kicker}>Pricing</span>
-            <h2 className={styles.h2}>Free until it earns its keep.</h2>
-            <p className={styles.sectionSub}>
-              Draft as many proposals as you like. You are charged when a deal is <b>sent</b> —
-              never when it is drafted, previewed or regenerated.
+            <h2 className={styles.h2}>What is included</h2>
+            <p className={styles.note}>
+              A real document, properly executed — not a shared link that expires, and not a PDF
+              with a typed name at the bottom.
             </p>
           </div>
-          <div className={styles.priceRow}>
-            <div className={styles.priceCard}>
-              <div className={styles.priceName}>Pay per deal</div>
-              <div className={styles.priceBig}>$9<span>/ sent deal</span></div>
-              <p className={styles.bodySm}>No monthly fee. One user. Start here.</p>
-            </div>
-            <div className={`${styles.priceCard} ${styles.priceFeatured}`}>
-              <span className={styles.priceTag}>Most popular</span>
-              <div className={styles.priceName}>Pro</div>
-              <div className={styles.priceBig}>$49<span>/ month</span></div>
-              <p className={styles.bodySm}>10 deals included, then $5 each. Up to 5 users.</p>
-            </div>
-            <div className={styles.priceCard}>
-              <div className={styles.priceName}>Team</div>
-              <div className={styles.priceBig}>$149<span>/ month</span></div>
-              <p className={styles.bodySm}>50 deals included, then $3 each. Unlimited users.</p>
-            </div>
-          </div>
-          <div className={styles.center}>
-            <Link className={styles.btnGhost} to="/pricing">Full pricing &amp; what counts as a send →</Link>
+          <div className={styles.items}>
+            {ITEMS.map((it) => (
+              <div key={it.name} className={styles.item}>
+                <div className={styles.itemName}>{it.name}</div>
+                <div className={styles.itemDesc}>{it.desc}</div>
+                <div className={styles.itemCol}>{it.col}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ---------------- final CTA ---------------- */}
-      <section className={styles.finalCta}>
-        <div className={styles.container}>
-          <h2 className={styles.ctaH}>Send the next one the same day.</h2>
-          <p className={styles.ctaP}>
+      {/* ---------------- evidence ---------------- */}
+      <section className={styles.section}>
+        <div className={styles.sheet}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}>You can prove what was signed</h2>
+          </div>
+          <div className={styles.evidence}>
+            <div>
+              <p className={styles.body}>
+                Every sealed proposal carries a Certificate of Completion on its own page, and the
+                file itself is signed with an Ed25519 key. Anyone holding a copy can check it
+                against the published public key and confirm it is byte-for-byte the original.
+                Change one character and verification fails.
+              </p>
+              <p className={styles.body}>
+                We also say plainly what it is not. A signature witnessed on your own phone proves
+                possession of your session, and the certificate records exactly that rather than
+                implying something stronger. For an agreement likely to be contested, send a
+                DocuSign envelope instead.
+              </p>
+            </div>
+            <div className={styles.receipt}>
+              <div className={styles.receiptHead}>dealdesk.studio/verify/8H0dmfuGIn1Q</div>
+              <dl className={styles.receiptRows}>
+                <div className={styles.receiptRow}><dt>Document</dt><dd>DD-2026-0042</dd></div>
+                <div className={styles.receiptRow}><dt>Sealed</dt><dd>2026-10-07</dd></div>
+                <div className={styles.receiptRow}><dt>Algorithm</dt><dd>ed25519</dd></div>
+                <div className={styles.receiptRow}><dt>SHA-256</dt><dd>8494c5e6…1f567c0c</dd></div>
+              </dl>
+              <p className={styles.verdict}>
+                <svg className={styles.tick} viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M2 8.5l4 4 8-9" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                Byte-for-byte the sealed document
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------- price, as a table ---------------- */}
+      <section className={styles.section}>
+        <div className={styles.sheet}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}>Draft free. Pay only when you send</h2>
+            <p className={styles.note}>
+              A deal costs money when it goes out for signature — never when it is drafted,
+              previewed or redone. A given deal is charged once, however many times you correct it.
+            </p>
+          </div>
+          <table className={styles.priceTable}>
+            <thead>
+              <tr>
+                <th scope="col">Plan</th>
+                <th scope="col">Monthly</th>
+                <th scope="col">Per deal sent</th>
+                <th scope="col">Users</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className={styles.planCell}>Pay per deal<small>No subscription. Start here.</small></td>
+                <td className={styles.figure}>$0</td>
+                <td className={styles.figure}>$9</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td className={styles.planCell}>Pro<small>10 deals included each month</small></td>
+                <td className={styles.figure}>$49</td>
+                <td className={styles.figure}>$5<span>after 10</span></td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td className={styles.planCell}>Team<small>50 deals included each month</small></td>
+                <td className={styles.figure}>$149</td>
+                <td className={styles.figure}>$3<span>after 50</span></td>
+                <td>Unlimited</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className={styles.terms} style={{marginTop: '1rem'}}>
+            Prices in USD, taxes may apply. <Link to="/pricing">Full pricing and what counts as a send</Link>
+          </p>
+        </div>
+      </section>
+
+      {/* ---------------- close: a signature block ---------------- */}
+      <section className={styles.close}>
+        <div className={styles.sheet}>
+          <h2 className={styles.closeH}>Send the next one the same day.</h2>
+          <p className={styles.closeP}>
             Set up your letterhead once. Every proposal after that is a conversation away.
           </p>
-          <div className={styles.ctaRowCenter}>
-            <Link className={styles.btnPrimaryLg} to={SIGNUP}>Start free</Link>
-            <Link className={styles.btnOnDark} to="/contact">Talk to us</Link>
+          <div className={styles.signRow}>
+            <SignatureBlock />
+            <div className={styles.closeActions}>
+              <Link className={styles.go} to={SIGNUP}>Start free</Link>
+              <Link className={styles.alt} to="/contact">Talk to us</Link>
+            </div>
           </div>
         </div>
       </section>

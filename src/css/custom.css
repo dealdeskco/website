@@ -1,41 +1,52 @@
 /**
- * Deal Desk Studio — brand.
+ * Deal Desk Studio.
  *
- * The palette is taken verbatim from the application (index.html :root) so the site and the
- * product read as one thing. A visitor moving from dealdesk.studio to app.dealdesk.studio should
- * not see the colours or type shift under them.
+ * CONCEPT: the site is shaped like the document the product makes.
+ *
+ * Deal Desk turns a conversation into a proposal — a ruled page with line items, right-aligned
+ * figures, a total and a signature block. So the page uses the same devices: rules that are
+ * actually table rows, figures that are actually tabular, a signature line that is actually a
+ * signature line. The structure encodes the content instead of decorating it.
+ *
+ * What that rules OUT, deliberately:
+ *   - Content chopped into identical rounded cards with one shadow under each. Features here are
+ *     LINE ITEMS in a ruled table, because that is what this product produces.
+ *   - Tracked-out all-caps eyebrows above every heading. A document has a masthead, not a label
+ *     on each paragraph.
+ *   - Monospace as a decorative texture on every label. Mono IS used, but only for document
+ *     METADATA -- document numbers, dates, hashes, plan codes -- where a real proposal would set
+ *     it that way and where tabular alignment matters. Three voices, each with a job:
+ *       Archivo 700-800  display, the brand
+ *       Archivo 400-600  text and UI, usability
+ *       IBM Plex Mono    proposal metadata
+ *   - One word of a headline tinted. The headline is one voice.
+ *   - Hover lift on every card, and entrance animations per section. There is exactly one piece
+ *     of motion on the page: the signature drawing itself, once.
+ *
+ * Palette is taken from the application so the site and the product are visibly one thing.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  /* ---- brand constants: these never change ---- */
-  --dd-navy: #0b1f3a;
-  --dd-teal: #0d667b;
-  --dd-ocean: #13b5c6;
-  --dd-sky: #aee7ee;
-  --dd-coral: #ff6b5c;
+  --ink: #0b1f3a;        /* document ink */
+  --ink-soft: #46586b;   /* secondary text */
+  --ink-faint: #76889a;  /* meta */
+  --paper: #ffffff;
+  --field: #f3f6f7;      /* the pale fill of a form field; a cool grey, never cream */
+  --rule: #dce3e8;       /* hairline: always a table row or a signature line */
+  --rule-firm: #0b1f3a;  /* the heavy rule under a document masthead */
+  --accent: #0d667b;     /* the one strong colour */
+  --accent-deep: #094f60;
+  --mark: #13b5c6;       /* tiny marks only: a tick, a focus ring */
 
-  --dd-ink: #0b1f3a;
-  --dd-muted: #5a6b7e;
-  --dd-line: #e2e8ee;
-  --dd-bg: #fafbfc;
-  --dd-panel: #ffffff;
-  --dd-stage: #eef3f6;
-  --dd-tint: #eefafb;
+  --sans: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --dd-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --dd-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --measure: 64ch;       /* body line length stays under 80 characters */
+  --gutter: clamp(20px, 5vw, 56px);
 
-  /* The signature gradient, taken from the logo mark: navy resolving into ocean. */
-  --dd-grad: linear-gradient(118deg, var(--dd-navy) 0%, var(--dd-teal) 48%, var(--dd-ocean) 100%);
-
-  --dd-shadow-sm: 0 1px 2px rgba(11, 31, 58, 0.06), 0 2px 8px rgba(11, 31, 58, 0.04);
-  --dd-shadow: 0 4px 14px rgba(11, 31, 58, 0.08), 0 16px 48px rgba(11, 31, 58, 0.08);
-  --dd-shadow-lg: 0 24px 70px rgba(11, 31, 58, 0.16);
-  --dd-radius: 14px;
-
-  /* ---- Infima mapping ---- */
+  /* ---- Infima ---- */
   --ifm-color-primary: #0d667b;
   --ifm-color-primary-dark: #0c5c6f;
   --ifm-color-primary-darker: #0b5668;
@@ -44,130 +55,130 @@
   --ifm-color-primary-lighter: #0f768e;
   --ifm-color-primary-lightest: #118aa5;
 
-  --ifm-font-family-base: var(--dd-sans);
-  --ifm-font-family-monospace: var(--dd-mono);
+  --ifm-font-family-base: var(--sans);
+  --ifm-font-family-monospace: var(--mono);
   --ifm-heading-font-weight: 700;
-  --ifm-heading-color: var(--dd-ink);
-  --ifm-font-color-base: #26384a;
+  --ifm-heading-color: var(--ink);
+  --ifm-font-color-base: #33475c;
   --ifm-background-color: #ffffff;
 
-  --ifm-navbar-height: 68px;
-  --ifm-navbar-background-color: rgba(255, 255, 255, 0.86);
-  --ifm-navbar-shadow: inset 0 -1px 0 var(--dd-line);
-  --ifm-footer-background-color: var(--dd-navy);
+  --ifm-navbar-height: 62px;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: none;
+  --ifm-footer-background-color: #ffffff;
 
-  --ifm-code-font-size: 93%;
-  --docusaurus-highlighted-code-line-bg: rgba(19, 181, 198, 0.12);
-  --ifm-global-radius: 10px;
+  --ifm-code-font-size: 92%;
+  --ifm-global-radius: 4px;
+  --docusaurus-highlighted-code-line-bg: rgba(13, 102, 123, 0.1);
 }
 
 [data-theme='dark'] {
-  --dd-ink: #e9f1f6;
-  --dd-muted: #9bb0c2;
-  --dd-line: #1e3148;
-  --dd-bg: #081627;
-  --dd-panel: #0e2237;
-  --dd-stage: #0a1b2d;
-  --dd-tint: #0e2b35;
+  --ink: #e8eef4;
+  --ink-soft: #a9bccd;
+  --ink-faint: #76899c;
+  --paper: #0c1824;
+  --field: #111f2d;
+  --rule: #203140;
+  --rule-firm: #cfdae4;
+  --accent: #3fb6cc;
+  --accent-deep: #68cadd;
+  --mark: #3fb6cc;
 
-  --ifm-color-primary: #13b5c6;
-  --ifm-color-primary-dark: #11a3b2;
-  --ifm-color-primary-darker: #109aa8;
-  --ifm-color-primary-darkest: #0d7f8b;
-  --ifm-color-primary-light: #2bbfce;
-  --ifm-color-primary-lighter: #38c4d2;
-  --ifm-color-primary-lightest: #5fd0db;
+  --ifm-color-primary: #3fb6cc;
+  --ifm-color-primary-dark: #2ba6bd;
+  --ifm-color-primary-darker: #299eb4;
+  --ifm-color-primary-darkest: #228294;
+  --ifm-color-primary-light: #57c0d3;
+  --ifm-color-primary-lighter: #63c5d7;
+  --ifm-color-primary-lightest: #86d4e2;
 
-  --ifm-background-color: #081627;
-  --ifm-background-surface-color: #0e2237;
-  --ifm-heading-color: #e9f1f6;
-  --ifm-font-color-base: #c3d4e1;
-  --ifm-navbar-background-color: rgba(8, 22, 39, 0.86);
-  --ifm-navbar-shadow: inset 0 -1px 0 #16293d;
-  --docusaurus-highlighted-code-line-bg: rgba(19, 181, 198, 0.18);
+  --ifm-background-color: #0c1824;
+  --ifm-background-surface-color: #111f2d;
+  --ifm-heading-color: #e8eef4;
+  --ifm-font-color-base: #b3c6d6;
+  --ifm-navbar-background-color: #0c1824;
+  --ifm-footer-background-color: #0c1824;
 }
 
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 body {
-  font-family: var(--dd-sans);
-  letter-spacing: -0.009em;
+  font-family: var(--sans);
+  /* Figures are tabular everywhere. This is a product about prices in columns; numerals that
+     change width between $18,000 and $21,960 make a total look hand-set. */
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
 }
 
-h1, h2, h3, h4 {
-  letter-spacing: -0.028em;
-}
+h1, h2, h3, h4 { letter-spacing: -0.021em; }
 
-/* ---- navbar ---- */
+/* ---- navbar: a document header, ruled, not a floating translucent bar ---- */
 .navbar {
-  backdrop-filter: saturate(180%) blur(12px);
-  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 var(--gutter);
 }
-.navbar__brand { gap: 0.2rem; }
-.navbar__logo { height: 30px; }
-.navbar__title {
-  font-weight: 800;
-  font-size: 1.07rem;
-  letter-spacing: -0.03em;
-  color: var(--dd-ink);
-}
-.navbar__link { font-weight: 500; font-size: 0.935rem; }
-
-/* The only filled control in the bar. Everything else stays quiet so this reads as the next step. */
+.navbar__inner { max-width: 1180px; margin: 0 auto; }
+.navbar__brand { gap: 0.45rem; }
+.navbar__logo { height: 26px; }
+.navbar__title { font-weight: 700; font-size: 1.01rem; letter-spacing: -0.03em; color: var(--ink); }
+.navbar__link { font-weight: 450; font-size: 0.92rem; color: var(--ink-soft); }
+.navbar__link:hover { color: var(--ink); }
 .navbar-cta {
-  background: var(--dd-grad);
+  background: var(--accent);
   color: #fff !important;
-  padding: 0.46rem 1.05rem;
-  border-radius: 999px;
+  padding: 0.42rem 0.95rem;
+  border-radius: 4px;
   font-weight: 600;
-  margin-left: 0.35rem;
-  box-shadow: 0 2px 10px rgba(13, 102, 123, 0.3);
-  transition: transform 0.14s ease, box-shadow 0.14s ease, filter 0.14s ease;
+  margin-left: 0.5rem;
 }
-.navbar-cta:hover {
-  color: #fff !important;
-  transform: translateY(-1px);
-  filter: saturate(1.1);
-  box-shadow: 0 6px 18px rgba(13, 102, 123, 0.34);
-}
+.navbar-cta:hover { background: var(--accent-deep); color: #fff !important; }
+[data-theme='dark'] .navbar-cta { color: #06202a !important; }
+[data-theme='dark'] .navbar-cta:hover { color: #06202a !important; }
 
-/* ---- footer ---- */
-.footer--dark {
-  --ifm-footer-background-color: var(--dd-navy);
-  --ifm-footer-color: #a9bed0;
-  --ifm-footer-link-color: #cfe0ec;
-  --ifm-footer-title-color: #ffffff;
-  border-top: 3px solid var(--dd-ocean);
+/* ---- footer: the foot of a document. A rule and small type, not a dark slab ---- */
+.footer {
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+  padding: 2.6rem var(--gutter) 2.2rem;
+  font-size: 0.875rem;
 }
+.footer__links { max-width: 1180px; margin: 0 auto 1.6rem; }
 .footer__title {
-  font-size: 0.76rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.72;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
 }
-.footer__link-item:hover { color: var(--dd-ocean); }
-.footer__copyright { font-size: 0.84rem; opacity: 0.66; margin-top: 0.4rem; }
+.footer__link-item { color: var(--ink-soft); }
+.footer__link-item:hover { color: var(--accent); text-decoration: underline; }
+.footer__copyright {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-faint);
+  font-size: 0.82rem;
+  text-align: left;
+}
 
-/* ---- docs & blog polish ---- */
+/* ---- docs & blog ---- */
 .menu__link--active:not(.menu__link--sublist) {
-  background: var(--dd-tint);
+  background: transparent;
+  box-shadow: inset 2px 0 0 var(--accent);
   font-weight: 600;
 }
-.table-of-contents__link--active { font-weight: 600; }
+.pagination-nav__link { border-radius: 4px; border-color: var(--rule); }
 article a { text-underline-offset: 2px; }
-.pagination-nav__link { border-radius: var(--dd-radius); border-color: var(--dd-line); }
+.markdown table { font-variant-numeric: tabular-nums; }
 
-/* A focus ring that is actually visible on both themes. */
-:where(a, button, [tabindex]):focus-visible {
-  outline: 2px solid var(--dd-ocean);
+:where(a, button, input, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--mark);
   outline-offset: 2px;
-  border-radius: 6px;
+  border-radius: 2px;
 }
 
-/* Honour a reduced-motion preference, including the landing page animations. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;

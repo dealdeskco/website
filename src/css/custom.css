@@ -63,6 +63,8 @@
   --ink-sig-wash: #fbeef1;
   /* The label that sits ON the accent. It is not always white -- see the dark theme. */
   --on-sig: #ffffff;
+  --slab: #0b1f3a;       /* an inverted block: dark in both themes */
+  --on-slab: #ffffff;
 
   --ok: #15704a;
   --ok-wash: #e7f3ec;
@@ -74,13 +76,16 @@
   --gutter: clamp(20px, 5vw, 56px);
 
   /* ---- Infima ---- */
-  --ifm-color-primary: #b02f18;
-  --ifm-color-primary-dark: #9c2a15;
-  --ifm-color-primary-darker: #922713;
-  --ifm-color-primary-darkest: #78200f;
-  --ifm-color-primary-light: #c4361b;
-  --ifm-color-primary-lighter: #d43c22;
-  --ifm-color-primary-lightest: #e05a3f;
+  /* Infima's primary drives everything the theme renders rather than the pages do -- blog
+     titles, doc links, sidebar active states, tags. It was still the old vermilion, which is
+     why those surfaces stayed orange after the accent moved to rose. */
+  --ifm-color-primary: #a52c49;
+  --ifm-color-primary-dark: #942842;
+  --ifm-color-primary-darker: #8b263e;
+  --ifm-color-primary-darkest: #731f33;
+  --ifm-color-primary-light: #b63050;
+  --ifm-color-primary-lighter: #c1395a;
+  --ifm-color-primary-lightest: #cf5172;
 
   --ifm-font-family-base: var(--sans);
   --ifm-font-family-monospace: var(--mono);
@@ -124,17 +129,19 @@
   --ink-sig-deep: #f2708a;
   --ink-sig-wash: rgba(226, 86, 111, 0.15);
   --on-sig: #0b1f3a;
+  --slab: #122536;
+  --on-slab: #eef2f6;
 
   --ok: #69c998;
   --ok-wash: rgba(21, 112, 74, 0.2);
 
-  --ifm-color-primary: #f2603f;
-  --ifm-color-primary-dark: #ef4a25;
-  --ifm-color-primary-darker: #e4421d;
-  --ifm-color-primary-darkest: #bc3718;
-  --ifm-color-primary-light: #f57659;
-  --ifm-color-primary-lighter: #f78067;
-  --ifm-color-primary-lightest: #faa894;
+  --ifm-color-primary: #e2566f;
+  --ifm-color-primary-dark: #dc3d5a;
+  --ifm-color-primary-darker: #d53351;
+  --ifm-color-primary-darkest: #b02a43;
+  --ifm-color-primary-light: #e86f84;
+  --ifm-color-primary-lighter: #eb7c8f;
+  --ifm-color-primary-lightest: #f3a7b4;
 
   --ifm-background-color: var(--paper);
   --ifm-background-surface-color: var(--panel);
@@ -205,6 +212,26 @@ h1, h2, h3, h4 { letter-spacing: -0.021em; }
 .navbar-cta:hover { background: var(--ink-sig-deep); color: var(--on-sig) !important; }
 
 
+
+/* ---- admonitions: Infima ships saturated stock greens and blues that land on a help page
+   like a highlighter on a work order. Reuse the document palette instead: the same green the
+   SIGNED stamp and the verification chip already use, signature ink for a caution. ---- */
+.theme-admonition {
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--ink-faint);
+  border-radius: 0;
+  background: var(--field);
+  color: var(--ink);
+  box-shadow: none;
+}
+.theme-admonition a { color: var(--ink-sig); }
+.theme-admonition-tip,
+.theme-admonition-success { border-left-color: var(--ok); }
+.theme-admonition-warning,
+.theme-admonition-danger,
+.theme-admonition-caution { border-left-color: var(--ink-sig); }
+.theme-admonition-note,
+.theme-admonition-info { border-left-color: var(--ink-soft); }
 
 /* ---- footer: the foot of a document. A rule and small type, not a dark slab ---- */
 .footer {

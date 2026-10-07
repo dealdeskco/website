@@ -63,6 +63,9 @@ const config: Config = {
       'classic',
       {
         docs: {
+          // Not /docs. "Docs" is developer vocabulary; the audience here quotes building work
+          // for a living and would reasonably read it as something written for programmers.
+          routeBasePath: 'help',
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/dealdeskco/website/tree/main/',
         },
@@ -99,7 +102,7 @@ const config: Config = {
       items: [
         {to: '/how-it-works', label: 'How it works', position: 'left'},
         {to: '/pricing', label: 'Pricing', position: 'left'},
-        {to: '/docs/intro', label: 'Docs', position: 'left'},
+        {to: '/help/intro', label: 'Help', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {href: `${APP}/login`, label: 'Sign in', position: 'right'},
         {
@@ -124,7 +127,7 @@ const config: Config = {
         {
           title: 'Learn',
           items: [
-            {label: 'Docs', to: '/docs/intro'},
+            {label: 'Help', to: '/help/intro'},
             {label: 'Blog', to: '/blog'},
           ],
         },

@@ -18,6 +18,9 @@
   justify-content: center;
   padding: clamp(2rem, 5vw, 3.4rem) 0;
 }
+/* A full-viewport cover earns its place on the landing page, where the job is to make one
+   claim. On a page someone arrived at to read a number, it just buries the number. */
+.mastShort { min-height: 0; padding-bottom: 0; }
 .mastGrid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 272px;
@@ -413,8 +416,9 @@
 
 @media (max-width: 900px) {
   .coverGrid { grid-template-columns: minmax(0, 1fr); }
-  /* The artifact leads on a phone: see the thing, then read about it. */
-  .coverArt { order: -1; max-width: 480px; }
+  /* Copy leads on a phone. The artifact only makes sense once you know what it is, so the
+     claim comes first and the picture confirms it. */
+  .coverArt { max-width: 480px; margin-top: 2rem; }
   /* The overhang borrows the grid gap, and stacked there is no gap to borrow — a negative
      offset here would hang off the gutter and give the page a horizontal scrollbar. Same
      proportion of the transcript stays visible, taken from the inset instead. */

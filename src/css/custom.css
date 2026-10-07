@@ -1,0 +1,178 @@
+/**
+ * Deal Desk Studio — brand.
+ *
+ * The palette is taken verbatim from the application (index.html :root) so the site and the
+ * product read as one thing. A visitor moving from dealdesk.studio to app.dealdesk.studio should
+ * not see the colours or type shift under them.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ---- brand constants: these never change ---- */
+  --dd-navy: #0b1f3a;
+  --dd-teal: #0d667b;
+  --dd-ocean: #13b5c6;
+  --dd-sky: #aee7ee;
+  --dd-coral: #ff6b5c;
+
+  --dd-ink: #0b1f3a;
+  --dd-muted: #5a6b7e;
+  --dd-line: #e2e8ee;
+  --dd-bg: #fafbfc;
+  --dd-panel: #ffffff;
+  --dd-stage: #eef3f6;
+  --dd-tint: #eefafb;
+
+  --dd-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --dd-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* The signature gradient, taken from the logo mark: navy resolving into ocean. */
+  --dd-grad: linear-gradient(118deg, var(--dd-navy) 0%, var(--dd-teal) 48%, var(--dd-ocean) 100%);
+
+  --dd-shadow-sm: 0 1px 2px rgba(11, 31, 58, 0.06), 0 2px 8px rgba(11, 31, 58, 0.04);
+  --dd-shadow: 0 4px 14px rgba(11, 31, 58, 0.08), 0 16px 48px rgba(11, 31, 58, 0.08);
+  --dd-shadow-lg: 0 24px 70px rgba(11, 31, 58, 0.16);
+  --dd-radius: 14px;
+
+  /* ---- Infima mapping ---- */
+  --ifm-color-primary: #0d667b;
+  --ifm-color-primary-dark: #0c5c6f;
+  --ifm-color-primary-darker: #0b5668;
+  --ifm-color-primary-darkest: #094756;
+  --ifm-color-primary-light: #0e7087;
+  --ifm-color-primary-lighter: #0f768e;
+  --ifm-color-primary-lightest: #118aa5;
+
+  --ifm-font-family-base: var(--dd-sans);
+  --ifm-font-family-monospace: var(--dd-mono);
+  --ifm-heading-font-weight: 700;
+  --ifm-heading-color: var(--dd-ink);
+  --ifm-font-color-base: #26384a;
+  --ifm-background-color: #ffffff;
+
+  --ifm-navbar-height: 68px;
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.86);
+  --ifm-navbar-shadow: inset 0 -1px 0 var(--dd-line);
+  --ifm-footer-background-color: var(--dd-navy);
+
+  --ifm-code-font-size: 93%;
+  --docusaurus-highlighted-code-line-bg: rgba(19, 181, 198, 0.12);
+  --ifm-global-radius: 10px;
+}
+
+[data-theme='dark'] {
+  --dd-ink: #e9f1f6;
+  --dd-muted: #9bb0c2;
+  --dd-line: #1e3148;
+  --dd-bg: #081627;
+  --dd-panel: #0e2237;
+  --dd-stage: #0a1b2d;
+  --dd-tint: #0e2b35;
+
+  --ifm-color-primary: #13b5c6;
+  --ifm-color-primary-dark: #11a3b2;
+  --ifm-color-primary-darker: #109aa8;
+  --ifm-color-primary-darkest: #0d7f8b;
+  --ifm-color-primary-light: #2bbfce;
+  --ifm-color-primary-lighter: #38c4d2;
+  --ifm-color-primary-lightest: #5fd0db;
+
+  --ifm-background-color: #081627;
+  --ifm-background-surface-color: #0e2237;
+  --ifm-heading-color: #e9f1f6;
+  --ifm-font-color-base: #c3d4e1;
+  --ifm-navbar-background-color: rgba(8, 22, 39, 0.86);
+  --ifm-navbar-shadow: inset 0 -1px 0 #16293d;
+  --docusaurus-highlighted-code-line-bg: rgba(19, 181, 198, 0.18);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--dd-sans);
+  letter-spacing: -0.009em;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.028em;
+}
+
+/* ---- navbar ---- */
+.navbar {
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+}
+.navbar__brand { gap: 0.2rem; }
+.navbar__logo { height: 30px; }
+.navbar__title {
+  font-weight: 800;
+  font-size: 1.07rem;
+  letter-spacing: -0.03em;
+  color: var(--dd-ink);
+}
+.navbar__link { font-weight: 500; font-size: 0.935rem; }
+
+/* The only filled control in the bar. Everything else stays quiet so this reads as the next step. */
+.navbar-cta {
+  background: var(--dd-grad);
+  color: #fff !important;
+  padding: 0.46rem 1.05rem;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-left: 0.35rem;
+  box-shadow: 0 2px 10px rgba(13, 102, 123, 0.3);
+  transition: transform 0.14s ease, box-shadow 0.14s ease, filter 0.14s ease;
+}
+.navbar-cta:hover {
+  color: #fff !important;
+  transform: translateY(-1px);
+  filter: saturate(1.1);
+  box-shadow: 0 6px 18px rgba(13, 102, 123, 0.34);
+}
+
+/* ---- footer ---- */
+.footer--dark {
+  --ifm-footer-background-color: var(--dd-navy);
+  --ifm-footer-color: #a9bed0;
+  --ifm-footer-link-color: #cfe0ec;
+  --ifm-footer-title-color: #ffffff;
+  border-top: 3px solid var(--dd-ocean);
+}
+.footer__title {
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+.footer__link-item:hover { color: var(--dd-ocean); }
+.footer__copyright { font-size: 0.84rem; opacity: 0.66; margin-top: 0.4rem; }
+
+/* ---- docs & blog polish ---- */
+.menu__link--active:not(.menu__link--sublist) {
+  background: var(--dd-tint);
+  font-weight: 600;
+}
+.table-of-contents__link--active { font-weight: 600; }
+article a { text-underline-offset: 2px; }
+.pagination-nav__link { border-radius: var(--dd-radius); border-color: var(--dd-line); }
+
+/* A focus ring that is actually visible on both themes. */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--dd-ocean);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Honour a reduced-motion preference, including the landing page animations. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,127 @@
+.wrap {
+  padding: clamp(2.6rem, 6vw, 4.6rem) 0 clamp(3rem, 6vw, 5rem);
+  background: linear-gradient(180deg, var(--dd-tint) 0%, rgba(255, 255, 255, 0) 55%);
+}
+[data-theme='dark'] .wrap {
+  background: linear-gradient(180deg, rgba(19, 181, 198, 0.09) 0%, rgba(8, 22, 39, 0) 55%);
+}
+.inner {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(1.8rem, 4vw, 3.4rem);
+  align-items: start;
+}
+
+.kicker {
+  display: block;
+  font-family: var(--dd-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--dd-ocean);
+  margin-bottom: 0.7rem;
+}
+.h1 {
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  margin: 0 0 0.9rem;
+  color: var(--dd-ink);
+}
+.lede { font-size: 1.04rem; line-height: 1.62; color: var(--dd-muted); margin: 0 0 1.1rem; }
+.small { font-size: 0.9rem; line-height: 1.6; color: var(--dd-muted); margin: 0; }
+
+.card {
+  background: var(--dd-panel);
+  border: 1px solid var(--dd-line);
+  border-radius: var(--dd-radius);
+  box-shadow: var(--dd-shadow);
+  padding: clamp(22px, 3vw, 30px);
+}
+.form { display: grid; gap: 15px; }
+.field { display: grid; gap: 6px; }
+.field > span { font-size: 0.86rem; font-weight: 600; color: var(--dd-ink); }
+.field > span em { font-style: normal; font-weight: 400; color: var(--dd-muted); }
+.field input,
+.field textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 0.97rem;
+  color: var(--dd-ink);
+  background: var(--ifm-background-color);
+  border: 1px solid var(--dd-line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.14s ease, box-shadow 0.14s ease;
+}
+.field textarea { resize: vertical; min-height: 110px; line-height: 1.55; }
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--dd-ocean);
+  box-shadow: 0 0 0 3px rgba(19, 181, 198, 0.16);
+}
+
+/* Honeypot: off-screen rather than display:none, because some bots skip hidden inputs. */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.submit {
+  font: inherit;
+  font-weight: 650;
+  color: #fff;
+  background: var(--dd-grad);
+  border: 0;
+  border-radius: 999px;
+  padding: 0.82rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(13, 102, 123, 0.28);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.submit:hover:not(:disabled) { transform: translateY(-2px); filter: saturate(1.1); }
+.submit:disabled { opacity: 0.65; cursor: default; }
+
+.err {
+  font-size: 0.9rem;
+  color: #a3271a;
+  background: #fdecea;
+  border: 1px solid #f1a9a0;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+[data-theme='dark'] .err { background: rgba(163, 39, 26, 0.18); border-color: rgba(241, 169, 160, 0.4); color: #ffb4a8; }
+.privacy { font-size: 0.82rem; color: var(--dd-muted); margin: 0; text-align: center; }
+
+.done { text-align: center; padding: 20px 0 10px; }
+.doneTick {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #e9f9ee;
+  color: #1a7f4b;
+  border: 1px solid #9ad8ae;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+.done h2 { font-size: 1.25rem; font-weight: 700; margin: 0 0 0.4rem; color: var(--dd-ink); }
+.done p { font-size: 0.96rem; color: var(--dd-muted); margin: 0; }
+
+@media (max-width: 860px) {
+  .inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .inner { padding: 0 18px; }
+}

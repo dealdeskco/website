@@ -85,7 +85,7 @@
   --ifm-navbar-height: 62px;
   --ifm-navbar-background-color: var(--paper);
   --ifm-navbar-shadow: none;
-  --ifm-footer-background-color: var(--desk);
+  --ifm-footer-background-color: var(--paper);
 
   /* ★ 17px base, not 16. The audience is tradespeople and owner-operators, often reading on a
      phone outdoors and often over 45. Nothing in the interface goes below ~15px, and the small
@@ -129,7 +129,7 @@
   --ifm-heading-color: #eef2f6;
   --ifm-font-color-base: #b8c8d6;
   --ifm-navbar-background-color: var(--paper);
-  --ifm-footer-background-color: var(--desk);
+  --ifm-footer-background-color: var(--paper);
 }
 
 html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -196,11 +196,11 @@ h1, h2, h3, h4 { letter-spacing: -0.021em; }
 
 /* ---- footer: the foot of a document. A rule and small type, not a dark slab ---- */
 .footer {
-  /* The sheet of paper ENDS at the footer. Below that line the page is desk, edge to edge, so
-     the footer reads as the surface the document was lying on rather than as its last section.
-     That means no 1320 column here -- the desk has no edges -- while the links inside keep the
-     content measure so they still line up with the page above. */
-  background: var(--desk);
+  /* The footer is PAPER, run edge to edge. The desk margins stop at the top of it, so the band
+     is a single unbroken tone across the full width -- that is what makes it read as the
+     footer, rather than the colour being different. No 1320 column here; the links inside
+     keep the content measure so they still line up with the page above. */
+  background: var(--paper);
   /* width:100% is required, not cosmetic. The footer is a flex item in a column, and `margin: 0
      auto` on a flex item CANCELS cross-axis stretch -- it collapsed to its content width (416px
      of squashed link columns) until this was added. .main-wrapper only escaped the same fate

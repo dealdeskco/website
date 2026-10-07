@@ -118,12 +118,9 @@ export default function Home(): React.ReactElement {
             </dl>
           </div>
           <div className={styles.rule} />
-        </div>
-      </header>
 
-      <section className={styles.intro}>
-        <div className={styles.sheet}>
-          <div className={styles.introGrid}>
+          <div className={styles.intro}>
+            <div className={styles.introGrid}>
             <div>
               <p className={styles.lede}>
                 You worked out the price standing in their garden. Then the proposal sat in a
@@ -140,9 +137,10 @@ export default function Home(): React.ReactElement {
               Built for the person who does the work and quotes it — the landscaper, the trainer,
               the planner, the one-person consultancy. <b>Not</b> for a sales ops department.
             </p>
+            </div>
           </div>
         </div>
-      </section>
+      </header>
 
       {/* ---------------- the sequence ---------------- */}
       <section className={styles.section}>

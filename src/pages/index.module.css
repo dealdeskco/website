@@ -35,7 +35,7 @@
   text-wrap: balance;
 }
 /* Real metadata rows, the way a proposal states its own terms. */
-.meta { display: grid; gap: 0; font-family: var(--mono); font-size: 0.73rem; }
+.meta { display: grid; gap: 0; font-family: var(--mono); font-size: 0.84rem; }
 .metaRow {
   display: flex;
   justify-content: space-between;
@@ -57,14 +57,14 @@
   align-items: start;
 }
 .lede {
-  font-size: clamp(1.08rem, 1.5vw, 1.26rem);
+  font-size: clamp(1.14rem, 1.5vw, 1.3rem);
   line-height: 1.55;
   color: var(--ink-soft);
   max-width: var(--measure);
   margin: 0 0 1.6rem;
 }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-.terms { font-family: var(--mono); font-size: 0.73rem; line-height: 1.75; color: var(--ink-faint); margin: 0; }
+.terms { font-family: var(--mono); font-size: 0.85rem; line-height: 1.7; color: var(--ink-faint); margin: 0; }
 .terms b { color: var(--ink); font-weight: 500; }
 
 /* ---- controls ---- */
@@ -99,8 +99,8 @@
   color: var(--ink);
   margin: 0;
 }
-.note { font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft); max-width: 42ch; margin: 0; }
-.body { font-size: 1rem; line-height: 1.65; color: var(--ink-soft); max-width: var(--measure); margin: 0 0 0.9rem; }
+.note { font-size: 1.03rem; line-height: 1.6; color: var(--ink-soft); max-width: 42ch; margin: 0; }
+.body { font-size: 1.07rem; line-height: 1.65; color: var(--ink-soft); max-width: var(--measure); margin: 0 0 0.9rem; }
 
 /* ============================= line items =============================
    Features as the thing this product actually emits: rows in a ruled table
@@ -114,9 +114,9 @@
   padding: 1.05rem 0;
   border-bottom: 1px solid var(--rule);
 }
-.itemName { font-size: 1rem; font-weight: 650; color: var(--ink); letter-spacing: -0.012em; }
-.itemDesc { font-size: 0.945rem; line-height: 1.58; color: var(--ink-soft); max-width: 58ch; }
-.itemCol { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-faint); white-space: nowrap; text-align: right; }
+.itemName { font-size: 1.09rem; font-weight: 650; color: var(--ink); letter-spacing: -0.012em; }
+.itemDesc { font-size: 1.03rem; line-height: 1.6; color: var(--ink-soft); max-width: 58ch; }
+.itemCol { font-family: var(--mono); font-size: 0.82rem; color: var(--ink-faint); white-space: nowrap; text-align: right; }
 
 /* ============================= process =============================
    A genuine sequence, so it is numbered. A ruled run of steps, not three cards. */
@@ -132,25 +132,25 @@
   counter-increment: step;
   content: counter(step, decimal-leading-zero);
   font-family: var(--mono);
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   color: var(--ink-sig);
-  padding-top: 0.26rem;
+  padding-top: 0.2rem;
 }
-.stepH { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 0.3rem; }
-.stepP { font-size: 0.97rem; line-height: 1.6; color: var(--ink-soft); max-width: var(--measure); margin: 0; }
+.stepH { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 0.3rem; }
+.stepP { font-size: 1.06rem; line-height: 1.6; color: var(--ink-soft); max-width: var(--measure); margin: 0; }
 
 /* ============================= evidence ============================= */
 .evidence { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 24rem); gap: clamp(1.6rem, 5vw, 3.6rem); align-items: start; }
 .receipt { border: 1px solid var(--rule); background: var(--panel); padding: 18px 20px 20px; }
 .receiptHead {
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   color: var(--ink-faint);
   padding-bottom: 10px;
   margin-bottom: 12px;
   border-bottom: 1px solid var(--rule);
 }
-.receiptRows { display: grid; gap: 0; margin: 0 0 14px; font-family: var(--mono); font-size: 0.73rem; }
+.receiptRows { display: grid; gap: 0; margin: 0 0 14px; font-family: var(--mono); font-size: 0.83rem; }
 .receiptRow { display: flex; justify-content: space-between; gap: 1rem; padding: 5px 0; }
 .receiptRow dt { color: var(--ink-faint); }
 .receiptRow dd { margin: 0; color: var(--ink); overflow-wrap: anywhere; text-align: right; }
@@ -158,7 +158,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.85rem;
+  font-size: 0.96rem;
   font-weight: 600;
   color: var(--ok);
   background: var(--ok-wash);
@@ -196,7 +196,7 @@
 .priceTable td:last-child { padding-right: 0; width: 15%; }
 .priceTable thead th {
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 0.86rem;
   font-weight: 400;
   letter-spacing: 0.04em;
   color: var(--ink-faint);
@@ -204,11 +204,11 @@
   padding-bottom: 0.55rem;
   border-bottom: 1px solid var(--rule);
 }
-.planCell { font-weight: 700; color: var(--ink); font-size: 1.02rem; letter-spacing: -0.018em; }
-.planCell small { display: block; font-weight: 400; font-size: 0.88rem; color: var(--ink-soft); margin-top: 3px; letter-spacing: 0; }
-.figure { font-size: 1.32rem; font-weight: 700; color: var(--ink); letter-spacing: -0.025em; white-space: nowrap; }
-.figure span { font-size: 0.76rem; font-weight: 400; color: var(--ink-faint); margin-left: 4px; letter-spacing: 0; }
-.seats { font-size: 0.98rem; color: var(--ink-soft); white-space: nowrap; }
+.planCell { font-weight: 700; color: var(--ink); font-size: 1.1rem; letter-spacing: -0.018em; }
+.planCell small { display: block; font-weight: 400; font-size: 0.98rem; color: var(--ink-soft); margin-top: 3px; letter-spacing: 0; }
+.figure { font-size: 1.44rem; font-weight: 700; color: var(--ink); letter-spacing: -0.025em; white-space: nowrap; }
+.figure span { font-size: 0.84rem; font-weight: 400; color: var(--ink-faint); margin-left: 4px; letter-spacing: 0; }
+.seats { font-size: 1.06rem; color: var(--ink-soft); white-space: nowrap; }
 /* The last rule is the one a total sits under. */
 .priceTable tbody tr:last-child td { border-bottom: 2px solid var(--rule-firm); }
 
@@ -226,7 +226,7 @@
   max-width: 18ch;
   text-wrap: balance;
 }
-.closeP { font-size: 1.04rem; line-height: 1.6; color: var(--ink-soft); max-width: 48ch; margin: 0 0 2.6rem; }
+.closeP { font-size: 1.12rem; line-height: 1.6; color: var(--ink-soft); max-width: 48ch; margin: 0 0 2.6rem; }
 .signRow { display: grid; grid-template-columns: minmax(0, 22rem) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 4rem); align-items: end; }
 .signWell { position: relative; }
 .signInk {
@@ -244,7 +244,7 @@
 .signWell[data-signed='true'] .signInk { animation: ink 1.9s cubic-bezier(0.35, 0, 0.25, 1) forwards; }
 @keyframes ink { to { stroke-dashoffset: 0; } }
 .signLine { border-top: 1.5px solid var(--ink); padding-top: 7px; }
-.signCap { font-family: var(--mono); font-size: 0.71rem; color: var(--ink-faint); }
+.signCap { font-family: var(--mono); font-size: 0.83rem; color: var(--ink-faint); }
 .closeActions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding-bottom: 0.4rem; }
 
 /* ============================= responsive ============================= */
@@ -300,13 +300,15 @@
 }
 .docBody { padding: 20px 22px 18px; }
 .docHead { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
-.docMark { width: 62px; height: 13px; background: var(--ink-sig); margin-bottom: 11px; }
+/* Navy. This block stands in for the CUSTOMER's logo on their own letterhead — it is not an
+   action and not a signing state, so it has no business wearing the signature ink. */
+.docMark { width: 62px; height: 13px; background: var(--ink); margin-bottom: 11px; }
 .docTitle { font-size: 1.05rem; font-weight: 800; letter-spacing: -0.028em; color: var(--ink); }
-.docMeta { font-family: var(--mono); font-size: 0.6rem; line-height: 1.85; text-align: right; color: var(--ink-faint); }
+.docMeta { font-family: var(--mono); font-size: 0.64rem; line-height: 1.85; text-align: right; color: var(--ink-faint); }
 .docMeta b { color: var(--ink); font-weight: 500; margin-left: 9px; }
 .docRule { height: 2px; background: var(--rule-firm); margin: 13px 0 14px; }
-.docLabel { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-bottom: 7px; }
-.docTable { width: 100%; border-collapse: collapse; display: table; font-size: 0.72rem; }
+.docLabel { font-family: var(--mono); font-size: 0.65rem; color: var(--ink-faint); margin-bottom: 7px; }
+.docTable { width: 100%; border-collapse: collapse; display: table; font-size: 0.76rem; }
 .docTable td { padding: 5px 0; border-bottom: 1px solid var(--rule); color: var(--ink); }
 .docTable td:last-child { text-align: right; }
 .docTable .off td { color: var(--ink-sig); }
@@ -352,11 +354,11 @@
 .eyebrow {
   display: block;
   font-family: var(--mono);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
   color: var(--ink-sig);
-  margin-bottom: 0.9rem;
+  margin-bottom: 1rem;
 }
 /* "signed document" in signature ink. The accent exists to mark signing, so the one place a
    headline carries it is the word about signing. */
@@ -369,7 +371,7 @@
   margin: 1.4rem 0 0;
   padding: 0;
   list-style: none;
-  font-size: 0.86rem;
+  font-size: 1rem;
   color: var(--ink-soft);
 }
 .assurances li { display: flex; align-items: center; gap: 0.42rem; }
@@ -385,8 +387,8 @@
   border-top: 1px solid var(--rule);
 }
 .cap svg { width: 20px; height: 20px; color: var(--ink-sig); margin-bottom: 0.6rem; display: block; }
-.capH { font-size: 0.95rem; font-weight: 700; color: var(--ink); margin: 0 0 0.22rem; letter-spacing: -0.015em; }
-.capP { font-size: 0.88rem; line-height: 1.5; color: var(--ink-soft); margin: 0; }
+.capH { font-size: 1.06rem; font-weight: 700; color: var(--ink); margin: 0 0 0.22rem; letter-spacing: -0.015em; }
+.capP { font-size: 0.98rem; line-height: 1.52; color: var(--ink-soft); margin: 0; }
 
 /* ============================= process strip =============================
    A real sequence ending in a signature, so the numbers are earned and they carry the
@@ -402,27 +404,30 @@
 .flowStep { display: flex; gap: 0.75rem; align-items: flex-start; }
 .flowN {
   flex: none;
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background: var(--ink-sig);
   color: #fff;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 1px;
 }
-.flowH { font-size: 0.93rem; font-weight: 700; color: var(--ink); margin: 0 0 0.15rem; }
-.flowP { font-size: 0.84rem; line-height: 1.45; color: var(--ink-soft); margin: 0; }
+.flowH { font-size: 1.03rem; font-weight: 700; color: var(--ink); margin: 0 0 0.15rem; }
+.flowP { font-size: 0.96rem; line-height: 1.5; color: var(--ink-soft); margin: 0; }
 
 /* The proposal's SIGNED mark: the clearest possible use of the accent. */
+/* Green, not signature ink. The accent marks the ACT of signing and the controls that lead to
+   it; a completed state is a different idea and reads green by convention — the same green as
+   the verification chip further down the page. */
 .docStamp {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: var(--ink-sig);
+  background: var(--ok);
   color: #fff;
   font-family: var(--mono);
   font-size: 0.55rem;

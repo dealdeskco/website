@@ -7,6 +7,13 @@ import Layout from '@theme/Layout';
 // also the shape the product's own documents take.
 import styles from './index.module.css';
 
+const Tick = () => (
+  <svg viewBox="0 0 16 16" aria-hidden="true">
+    <path d="M2.5 8.5l4 4 7-9" fill="none" stroke="currentColor" strokeWidth="2.4"
+          strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 const APP = 'https://app.dealdesk.studio';
 const SIGNUP = `${APP}/login?signup=1`;
 
@@ -15,70 +22,36 @@ const SIGNUP = `${APP}/login?signup=1`;
 const PLANS = [
   {
     name: 'Pay per deal',
-    blurb: 'No subscription. Start here and move up when the volume says so.',
-    seats: '1 user',
-    monthly: '$0',
-    included: '—',
-    perDeal: '$9',
+    price: '$0',
+    cadence: '/month',
+    rate: '$9 per deal sent',
+    blurb: 'No subscription. You are charged when a proposal goes out for signature — drafts and regenerations are always free.',
+    lead: null,
+    features: ['1 user', 'Drafting from notes, transcripts or dictation', 'Branded PDF export', 'Signing in person on any device', 'Sealed PDF with Certificate of Completion'],
+    cta: 'Start free',
+    pick: false,
   },
   {
     name: 'Pro',
-    blurb: 'For a business sending a handful of proposals a week.',
-    seats: 'Up to 5',
-    monthly: '$49',
-    included: '10 deals',
-    perDeal: '$5',
+    price: '$49',
+    cadence: '/month',
+    rate: '10 deals included, then $5 each',
+    blurb: 'For a business sending proposals every week.',
+    lead: 'Everything in Pay per deal, plus:',
+    features: ['Up to 5 users', 'Full company branding', 'Editable Terms & Assumptions', 'Remote signing links with one-time codes', 'Email from your own business identity'],
+    cta: 'Start Pro',
+    pick: true,
   },
   {
     name: 'Team',
+    price: '$149',
+    cadence: '/month',
+    rate: '50 deals included, then $3 each',
     blurb: 'For a crew where more than one person quotes work.',
-    seats: 'Unlimited',
-    monthly: '$149',
-    included: '50 deals',
-    perDeal: '$3',
-  },
-];
-
-const INCLUDED = [
-  {
-    name: 'Unlimited drafting',
-    desc: 'Draft, edit, regenerate and preview as often as you like. None of it is billable.',
-    col: 'Every plan',
-  },
-  {
-    name: 'Drafting from notes, transcripts or dictation',
-    desc: 'Paste what you already have, or speak it. There is no template to pick first.',
-    col: 'Every plan',
-  },
-  {
-    name: 'Signing in person or by link',
-    desc: 'Hand over your phone, or send a single-use link that expires in 72 hours.',
-    col: 'Every plan',
-  },
-  {
-    name: 'Sealed PDF with Certificate of Completion',
-    desc: 'An audit trail, how the signer was identified, and a seal anyone can verify.',
-    col: 'Every plan',
-  },
-  {
-    name: 'Full company branding',
-    desc: 'Your logo, colour, signatory and terms language, on the document and the email.',
-    col: 'Pro and Team',
-  },
-  {
-    name: 'Email from your own business identity',
-    desc: 'The proposal arrives from you, not from us.',
-    col: 'Pro and Team',
-  },
-  {
-    name: 'Shared deal history',
-    desc: 'Everyone who quotes work sees the same record of what was sent and agreed.',
-    col: 'Team',
-  },
-  {
-    name: 'DocuSign envelopes',
-    desc: 'For a contested or high-value deal, send a full envelope instead. It is built in.',
-    col: 'Team',
+    lead: 'Everything in Pro, plus:',
+    features: ['Unlimited users', 'Shared deal history across the team', 'DocuSign envelopes for contested deals', 'Priority support'],
+    cta: 'Start Team',
+    pick: false,
   },
 ];
 
@@ -162,52 +135,27 @@ export default function Pricing(): React.ReactElement {
               No contract and no setup fee. Switch in either direction at any time.
             </p>
           </div>
-          <table className={styles.priceTable}>
-            <thead>
-              <tr>
-                <th>Plan</th>
-                <th>Users</th>
-                <th>Monthly</th>
-                <th>Included</th>
-                <th>Then each</th>
-              </tr>
-            </thead>
-            <tbody>
-              {PLANS.map((p) => (
-                <tr key={p.name}>
-                  <td className={styles.planCell}>
-                    {p.name}
-                    <small>{p.blurb}</small>
-                  </td>
-                  <td className={styles.seats}>{p.seats}</td>
-                  <td className={styles.figure}>{p.monthly}<span>/mo</span></td>
-                  <td className={styles.seats}>{p.included}</td>
-                  <td className={styles.figure}>{p.perDeal}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <p className={styles.terms} style={{marginTop: '1.1rem'}}>Prices in USD. Taxes may apply.</p>
-        </div>
-      </section>
-
-      <section className={styles.section}>
-        <div className={styles.sheet}>
-          <div className={styles.sectionHead}>
-            <h2 className={styles.h2}>What you get</h2>
-            <p className={styles.note}>
-              Everything that matters for getting a signature is on every plan.
-            </p>
-          </div>
-          <div className={styles.items}>
-            {INCLUDED.map((i) => (
-              <div key={i.name} className={styles.item}>
-                <div className={styles.itemName}>{i.name}</div>
-                <div className={styles.itemDesc}>{i.desc}</div>
-                <div className={styles.itemCol}>{i.col}</div>
+          <div className={styles.plans}>
+            {PLANS.map((p) => (
+              <div key={p.name} className={`${styles.plan} ${p.pick ? styles.planPick : ''}`}>
+                {p.pick && <span className={styles.planBadge}>Most popular</span>}
+                <h3 className={styles.planName}>{p.name}</h3>
+                <div className={styles.planFig}><b>{p.price}</b><span>{p.cadence}</span></div>
+                <div className={styles.planRate}>{p.rate}</div>
+                <p className={styles.planBlurb}>{p.blurb}</p>
+                <ul className={styles.planList}>
+                  {p.lead && <li className={styles.planLead}>{p.lead}</li>}
+                  {p.features.map((f) => (
+                    <li key={f}><Tick />{f}</li>
+                  ))}
+                </ul>
+                <Link className={`${p.pick ? styles.go : styles.alt} ${styles.planCta}`} to={SIGNUP}>
+                  {p.cta}
+                </Link>
               </div>
             ))}
           </div>
+          <p className={styles.terms} style={{marginTop: '1.1rem'}}>Prices in USD. Taxes may apply.</p>
         </div>
       </section>
 

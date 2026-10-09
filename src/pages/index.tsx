@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
+import Translate, {translate} from '@docusaurus/Translate';
 import styles from './index.module.css';
 
 const APP = 'https://app.dealdesk.studio';
@@ -19,20 +20,20 @@ const Tick = () => (
 function CallTranscript() {
   return (
     <div className={styles.transcript} aria-hidden="true">
-      <div className={styles.trTitle}>Call transcript</div>
+      <div className={styles.trTitle}><Translate id="home.transcript.title">Call transcript</Translate></div>
       <div className={styles.trTabs}>
-        <span className={styles.trTabOn}>Transcript</span>
-        <span>Summary</span>
-        <span>Action items</span>
+        <span className={styles.trTabOn}><Translate id="home.transcript.tab.transcript">Transcript</Translate></span>
+        <span><Translate id="home.transcript.tab.summary">Summary</Translate></span>
+        <span><Translate id="home.transcript.tab.actions">Action items</Translate></span>
       </div>
       <div className={styles.trLines}>
         {[
-          {t: '00:12', who: 'Customer', them: true,
-           q: 'We\u2019re redoing the courtyard before the spring bookings. Can you take the planting and the lighting?'},
-          {t: '01:40', who: 'You', them: false,
-           q: 'Yes \u2014 phase one design and installation, plus irrigation and path lighting.'},
-          {t: '03:05', who: 'Customer', them: true,
-           q: 'Looks good. Please send the proposal.'},
+          {t: '00:12', who: translate({id: 'home.transcript.customer', message: 'Customer'}), them: true,
+           q: translate({id: 'home.transcript.line1', message: 'We\u2019re redoing the courtyard before the spring bookings. Can you take the planting and the lighting?'})},
+          {t: '01:40', who: translate({id: 'home.transcript.you', message: 'You'}), them: false,
+           q: translate({id: 'home.transcript.line2', message: 'Yes \u2014 phase one design and installation, plus irrigation and path lighting.'})},
+          {t: '03:05', who: translate({id: 'home.transcript.customer', message: 'Customer'}), them: true,
+           q: translate({id: 'home.transcript.line3', message: 'Looks good. Please send the proposal.'})},
         ].map((l) => (
           <div key={l.t} className={styles.trLine}>
             <span className={l.them ? styles.trDotThem : styles.trDotYou} />
@@ -76,25 +77,25 @@ function ProposalDoc() {
         <div className={styles.docHead}>
           <div>
             <div className={styles.docMark} />
-            <div className={styles.docTitle}>PROPOSAL</div>
+            <div className={styles.docTitle}><Translate id="home.doc.title">PROPOSAL</Translate></div>
           </div>
           <div className={styles.docMeta}>
-            <div>Date<b>Oct 7, 2026</b></div>
-            <div>Valid until<b>Nov 6, 2026</b></div>
-            <div>Prepared by<b>M. Okafor</b></div>
+            <div><Translate id="home.doc.date">Date</Translate><b><Translate id="home.doc.dateValue">Oct 7, 2026</Translate></b></div>
+            <div><Translate id="home.doc.validUntil">Valid until</Translate><b><Translate id="home.doc.validUntilValue">Nov 6, 2026</Translate></b></div>
+            <div><Translate id="home.doc.preparedBy">Prepared by</Translate><b>M. Okafor</b></div>
           </div>
         </div>
         <div className={styles.docRule} />
-        <div className={styles.docLabel}>Commercial terms</div>
+        <div className={styles.docLabel}><Translate id="home.doc.commercialTerms">Commercial terms</Translate></div>
         <table className={styles.docTable}>
           <tbody>
-            <tr><td>Design &amp; installation — Phase 1</td><td>$18,000</td></tr>
-            <tr><td>Irrigation &amp; lighting</td><td>$6,400</td></tr>
-            <tr className={styles.off}><td>First-year discount (10%)</td><td>−$2,440</td></tr>
-            <tr className={styles.sum}><td>Total</td><td>$21,960</td></tr>
+            <tr><td><Translate id="home.doc.line1">{'Design & installation — Phase 1'}</Translate></td><td>$18,000</td></tr>
+            <tr><td><Translate id="home.doc.line2">{'Irrigation & lighting'}</Translate></td><td>$6,400</td></tr>
+            <tr className={styles.off}><td><Translate id="home.doc.discount">First-year discount (10%)</Translate></td><td>−$2,440</td></tr>
+            <tr className={styles.sum}><td><Translate id="home.doc.total">Total</Translate></td><td>$21,960</td></tr>
           </tbody>
         </table>
-        <div className={styles.docLabel} style={{marginTop: '14px'}}>Acceptance</div>
+        <div className={styles.docLabel} style={{marginTop: '14px'}}><Translate id="home.doc.acceptance">Acceptance</Translate></div>
         <div className={styles.docSign}>
           <div>
             <div className={styles.docSignLine}>
@@ -102,16 +103,16 @@ function ProposalDoc() {
                 <path d="M4 21c4-12 8-18 11-17 3 1 2 11-1 15-3 4-6 3-5-2 2-11 11-18 18-17 5 1 5 6 1 10-4 4-8 5-10 3-2-2 3-6 9-7 13-3 22 5 33 3 8-1 13-5 17-10-5 8-11 13-20 14" />
               </svg>
             </div>
-            <small>Maya Torres · Owner</small>
+            <small>Maya Torres · <Translate id="home.doc.owner">Owner</Translate></small>
           </div>
           <div style={{alignSelf: 'end'}}>
-            <span className={styles.docStamp}>SIGNED</span>
-            <small>Oct 7, 2026</small>
+            <span className={styles.docStamp}><Translate id="home.doc.signed">SIGNED</Translate></span>
+            <small><Translate id="home.doc.dateValue">Oct 7, 2026</Translate></small>
           </div>
         </div>
         <div className={styles.docSealed}>
           <span className={styles.docSealDot} />
-          Sealed · verify 8H0dmfuGIn1Q
+          <Translate id="home.doc.sealed">Sealed · verify</Translate> 8H0dmfuGIn1Q
         </div>
       </div>
     </div>
@@ -158,123 +159,142 @@ function SignatureBlock() {
         <path d="M8 56c14-28 23-40 30-39s4 22-3 33c-6 10-13 7-11-6 3-20 21-39 34-39 10 0 10 10 4 20-5 9-14 14-18 10-5-5 3-14 14-18 18-6 30 2 38 2 6 0 10-3 14-9 3-5 8-5 9 2 1 8-3 16-8 20-4 4-8 2-7-4 2-9 13-19 26-19 11 0 15 7 21 7 5 0 9-3 13-8M196 46c18-6 39-10 58-9" />
       </svg>
       <div className={styles.signLine} />
-      <div className={styles.signCap}>Authorised signature</div>
+      <div className={styles.signCap}><Translate id="home.close.signatureCaption">Authorised signature</Translate></div>
     </div>
   );
 }
 
 const CAPS = [
   {
-    t: 'Professional proposals',
-    d: 'Branded, accurate, ready to send.',
+    t: translate({id: 'home.caps.1.t', message: 'Professional proposals'}),
+    d: translate({id: 'home.caps.1.d', message: 'Branded, accurate, ready to send.'}),
     icon: 'M4 2h9l5 5v13a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1zm9 1.5V7h3.5M6.5 11h9M6.5 14h9M6.5 17h5',
   },
   {
-    t: 'Built-in pricing',
-    d: 'Turn scope into line items in seconds.',
+    t: translate({id: 'home.caps.2.t', message: 'Built-in pricing'}),
+    d: translate({id: 'home.caps.2.d', message: 'Turn scope into line items in seconds.'}),
     icon: 'M11 1v20M15.5 5.5H8.75a3.25 3.25 0 000 6.5h4.5a3.25 3.25 0 010 6.5H6',
   },
   {
-    t: 'Customer signature',
-    d: 'Sign on the spot from any device.',
+    t: translate({id: 'home.caps.3.t', message: 'Customer signature'}),
+    d: translate({id: 'home.caps.3.d', message: 'Sign on the spot from any device.'}),
     icon: 'M2 17c4-10 6-13 8-12s1 8-1 11c-2 3-4 2-3-2 2-7 7-12 11-12 3 0 3 4 1 7M14 19h7',
   },
   {
-    t: 'Sealed PDF',
-    d: 'Tamper-evident, with an audit trail.',
+    t: translate({id: 'home.caps.4.t', message: 'Sealed PDF'}),
+    d: translate({id: 'home.caps.4.d', message: 'Tamper-evident, with an audit trail.'}),
     icon: 'M11 1l8 3v7c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V4l8-3zM7.5 11l2.5 2.5L15 8.5',
   },
 ];
 
 const FLOW = [
-  {t: 'Capture', d: 'Call, transcript or notes.'},
-  {t: 'Generate', d: 'Scope, pricing and proposal.'},
-  {t: 'Send & sign', d: 'Customer signs in minutes.'},
-  {t: 'Seal', d: 'Receive a certified PDF.'},
+  {t: translate({id: 'home.flow.1.t', message: 'Capture'}), d: translate({id: 'home.flow.1.d', message: 'Call, transcript or notes.'})},
+  {t: translate({id: 'home.flow.2.t', message: 'Generate'}), d: translate({id: 'home.flow.2.d', message: 'Scope, pricing and proposal.'})},
+  {t: translate({id: 'home.flow.3.t', message: 'Send & sign'}), d: translate({id: 'home.flow.3.d', message: 'Customer signs in minutes.'})},
+  {t: translate({id: 'home.flow.4.t', message: 'Seal'}), d: translate({id: 'home.flow.4.d', message: 'Receive a certified PDF.'})},
 ];
 
 const ITEMS = [
   {
-    name: 'Draft from a conversation',
-    desc: 'Paste call notes, a transcript or an email thread. Or hold the microphone and describe the job out loud on the drive back. Scope, line items, discounts and terms come back filled in.',
-    col: 'every plan',
+    name: translate({id: 'home.included.1.name', message: 'Draft from a conversation'}),
+    desc: translate({id: 'home.included.1.desc', message: 'Paste call notes, a transcript or an email thread. Or hold the microphone and describe the job out loud on the drive back. Scope, line items, discounts and terms come back filled in.'}),
+    col: translate({id: 'home.included.col.everyPlan', message: 'every plan'}),
   },
   {
-    name: 'Your letterhead',
-    desc: 'Your logo, your colour, your signatory, your terms language — on the document and on the email that delivers it. Your customer sees your business, not ours.',
-    col: 'every plan',
+    name: translate({id: 'home.included.2.name', message: 'Your letterhead'}),
+    desc: translate({id: 'home.included.2.desc', message: 'Your logo, your colour, your signatory, your terms language — on the document and on the email that delivers it. Your customer sees your business, not ours.'}),
+    col: translate({id: 'home.included.col.everyPlan', message: 'every plan'}),
   },
   {
-    name: 'Signature in the room',
-    desc: 'Tap the signature line and the pad fills the screen, the way a card terminal does. Finger, stylus or mouse.',
-    col: 'every plan',
+    name: translate({id: 'home.included.3.name', message: 'Signature in the room'}),
+    desc: translate({id: 'home.included.3.desc', message: 'Tap the signature line and the pad fills the screen, the way a card terminal does. Finger, stylus or mouse.'}),
+    col: translate({id: 'home.included.col.everyPlan', message: 'every plan'}),
   },
   {
-    name: 'Signature from anywhere',
-    desc: 'A single-use link that expires in 72 hours. Your customer signs on their own device, optionally behind a one-time code sent to their email.',
-    col: 'every plan',
+    name: translate({id: 'home.included.4.name', message: 'Signature from anywhere'}),
+    desc: translate({id: 'home.included.4.desc', message: 'A single-use link that expires in 72 hours. Your customer signs on their own device, optionally behind a one-time code sent to their email.'}),
+    col: translate({id: 'home.included.col.everyPlan', message: 'every plan'}),
   },
   {
-    name: 'Certificate of Completion',
-    desc: 'Who signed, when, from where, how they were identified, and the stroke dynamics of the signature — not just a picture of it. Printed on its own page.',
-    col: 'every plan',
+    name: translate({id: 'home.included.5.name', message: 'Certificate of Completion'}),
+    desc: translate({id: 'home.included.5.desc', message: 'Who signed, when, from where, how they were identified, and the stroke dynamics of the signature — not just a picture of it. Printed on its own page.'}),
+    col: translate({id: 'home.included.col.everyPlan', message: 'every plan'}),
   },
   {
-    name: 'Cryptographic seal',
-    desc: 'The finished PDF is signed with an Ed25519 key. Anyone can check a copy is byte-for-byte the original against the published public key.',
-    col: 'every plan',
+    name: translate({id: 'home.included.6.name', message: 'Cryptographic seal'}),
+    desc: translate({id: 'home.included.6.desc', message: 'The finished PDF is signed with an Ed25519 key. Anyone can check a copy is byte-for-byte the original against the published public key.'}),
+    col: translate({id: 'home.included.col.everyPlan', message: 'every plan'}),
   },
   {
-    name: 'DocuSign envelopes',
-    desc: 'For a high-value or likely-contested agreement, send a real envelope instead. The two interlock so a document cannot be executed twice.',
-    col: 'Team',
+    name: translate({id: 'home.included.7.name', message: 'DocuSign envelopes'}),
+    desc: translate({id: 'home.included.7.desc', message: 'For a high-value or likely-contested agreement, send a real envelope instead. The two interlock so a document cannot be executed twice.'}),
+    col: translate({id: 'home.included.col.team', message: 'Team'}),
   },
 ];
 
 const STEPS = [
   {
-    h: 'Talk, paste or dictate',
-    p: 'No template to choose and no form to complete first. Half-sentences, crossed-out numbers and "roughly 18k for phase one" are exactly what it expects.',
+    h: translate({id: 'home.steps.1.h', message: 'Talk, paste or dictate'}),
+    p: translate({id: 'home.steps.1.p', message: 'No template to choose and no form to complete first. Half-sentences, crossed-out numbers and "roughly 18k for phase one" are exactly what it expects.'}),
   },
   {
-    h: 'Read a real draft',
-    p: 'Priced, on your letterhead, with both signature blocks in place. Everything is editable and nothing is locked. Required fields are checked before you can export.',
+    h: translate({id: 'home.steps.2.h', message: 'Read a real draft'}),
+    p: translate({id: 'home.steps.2.p', message: 'Priced, on your letterhead, with both signature blocks in place. Everything is editable and nothing is locked. Required fields are checked before you can export.'}),
   },
   {
-    h: 'Take the signature',
-    p: 'In the room on your phone, or by a single-use link to theirs. Either way you get a sealed PDF with an audit record behind it.',
+    h: translate({id: 'home.steps.3.h', message: 'Take the signature'}),
+    p: translate({id: 'home.steps.3.p', message: 'In the room on your phone, or by a single-use link to theirs. Either way you get a sealed PDF with an audit record behind it.'}),
   },
 ];
 
 export default function Home(): React.ReactElement {
   return (
     <Layout
-      title="From conversation to signed document"
-      description="Deal Desk turns a call, a transcript or a few notes into a priced, branded proposal your customer can sign on the spot.">
+      title={translate({id: 'home.meta.title', message: 'From conversation to signed document'})}
+      description={translate({
+        id: 'home.meta.description',
+        message:
+          'Deal Desk turns a call, a transcript or a few notes into a priced, branded proposal your customer can sign on the spot.',
+      })}>
       {/* ---------------- masthead: the head of a proposal ---------------- */}
       <header className={styles.masthead}>
         <div className={styles.sheet}>
           <div className={styles.coverGrid}>
             <div>
-              <span className={styles.eyebrow}>Call. Scope. Price. Sign.</span>
+              <span className={styles.eyebrow}><Translate id="home.hero.eyebrow">Call. Scope. Price. Sign.</Translate></span>
               {/* Three lines at full size, which the longer phrasing could not manage beside two
                   panels of art. Dropping the articles also makes it read more like the product's
                   own vernacular: a job moving through stages, not a sentence about one. */}
               <h1 className={styles.title}>
-                From conversation, to <span className={styles.sig}>signed document</span>, in
-                one sitting.
+                <Translate
+                  id="home.hero.title"
+                  values={{
+                    signed: (
+                      <span className={styles.sig}>
+                        <Translate id="home.hero.title.signed">signed document</Translate>
+                      </span>
+                    ),
+                  }}>
+                  {'From conversation, to {signed}, in one sitting.'}
+                </Translate>
               </h1>
               <div className={styles.rule} />
               <p className={styles.lede}>
-                Turn a call, a transcript or a few notes into a priced proposal your customer
-                can sign — and get back a sealed PDF with evidence of the agreement.
+                <Translate id="home.hero.lede">
+                  Turn a call, a transcript or a few notes into a priced proposal your customer
+                  can sign — and get back a sealed PDF with evidence of the agreement.
+                </Translate>
               </p>
               <div className={styles.actions}>
-                <Link className={styles.go} to={SIGNUP}>Start free</Link>
-                <Link className={styles.alt} to="/how-it-works">See how it works</Link>
+                <Link className={styles.go} to={SIGNUP}><Translate id="common.cta.startFree">Start free</Translate></Link>
+                <Link className={styles.alt} to="/how-it-works"><Translate id="common.cta.seeHowItWorks">See how it works</Translate></Link>
               </div>
               <ul className={styles.assurances}>
-                {['No credit card', 'Free to draft', 'Ready in minutes'].map((a) => (
+                {[
+                  translate({id: 'home.hero.assurance.noCard', message: 'No credit card'}),
+                  translate({id: 'home.hero.assurance.freeToDraft', message: 'Free to draft'}),
+                  translate({id: 'home.hero.assurance.minutes', message: 'Ready in minutes'}),
+                ].map((a) => (
                   <li key={a}><Tick />{a}</li>
                 ))}
               </ul>
@@ -308,9 +328,11 @@ export default function Home(): React.ReactElement {
       <section className={styles.section}>
         <div className={styles.sheet}>
           <div className={styles.sectionHead}>
-            <h2 className={styles.h2}>A faster way to close</h2>
+            <h2 className={styles.h2}><Translate id="home.flow.heading">A faster way to close</Translate></h2>
             <p className={styles.note}>
-              Everything between a call and a sealed PDF, without the busywork.
+              <Translate id="home.flow.note">
+                Everything between a call and a sealed PDF, without the busywork.
+              </Translate>
             </p>
           </div>
           <div className={styles.flow}>
@@ -330,9 +352,11 @@ export default function Home(): React.ReactElement {
       <section className={styles.section}>
         <div className={styles.sheet}>
           <div className={styles.sectionHead}>
-            <h2 className={styles.h2}>Three steps, one sitting</h2>
+            <h2 className={styles.h2}><Translate id="home.steps.heading">Three steps, one sitting</Translate></h2>
             <p className={styles.note}>
-              The part that takes the time is re-typing what you already decided.
+              <Translate id="home.steps.note">
+                The part that takes the time is re-typing what you already decided.
+              </Translate>
             </p>
           </div>
           <div className={styles.steps}>
@@ -352,9 +376,11 @@ export default function Home(): React.ReactElement {
       <section className={styles.section}>
         <div className={styles.sheet}>
           <div className={styles.sectionHead}>
-            <h2 className={styles.h2}>What is included</h2>
+            <h2 className={styles.h2}><Translate id="home.included.heading">What is included</Translate></h2>
             <p className={styles.note}>
-              A real document, properly executed. Not a link that expires.
+              <Translate id="home.included.note">
+                A real document, properly executed. Not a link that expires.
+              </Translate>
             </p>
           </div>
           <div className={styles.items}>
@@ -373,34 +399,38 @@ export default function Home(): React.ReactElement {
       <section className={styles.section}>
         <div className={styles.sheet}>
           <div className={styles.sectionHead}>
-            <h2 className={styles.h2}>You can prove what was signed</h2>
+            <h2 className={styles.h2}><Translate id="home.evidence.heading">You can prove what was signed</Translate></h2>
           </div>
           <div className={styles.evidence}>
             <div>
               <p className={styles.body}>
-                Every sealed proposal carries a Certificate of Completion and an Ed25519
-                signature. Anyone can check a copy against the published key. Change one
-                character and it fails.
+                <Translate id="home.evidence.p1">
+                  Every sealed proposal carries a Certificate of Completion and an Ed25519
+                  signature. Anyone can check a copy against the published key. Change one
+                  character and it fails.
+                </Translate>
               </p>
               <p className={styles.body}>
-                And we say what it is not: a signature taken on your own phone proves possession
-                of your session, and the certificate says so. For a deal likely to be contested,
-                send a DocuSign envelope.
+                <Translate id="home.evidence.p2">
+                  And we say what it is not: a signature taken on your own phone proves possession
+                  of your session, and the certificate says so. For a deal likely to be contested,
+                  send a DocuSign envelope.
+                </Translate>
               </p>
             </div>
             <div className={styles.receipt}>
               <div className={styles.receiptHead}>dealdesk.studio/verify/8H0dmfuGIn1Q</div>
               <dl className={styles.receiptRows}>
-                <div className={styles.receiptRow}><dt>Document</dt><dd>DD-2026-0042</dd></div>
-                <div className={styles.receiptRow}><dt>Sealed</dt><dd>2026-10-07</dd></div>
-                <div className={styles.receiptRow}><dt>Algorithm</dt><dd>ed25519</dd></div>
+                <div className={styles.receiptRow}><dt><Translate id="home.receipt.document">Document</Translate></dt><dd>DD-2026-0042</dd></div>
+                <div className={styles.receiptRow}><dt><Translate id="home.receipt.sealed">Sealed</Translate></dt><dd>2026-10-07</dd></div>
+                <div className={styles.receiptRow}><dt><Translate id="home.receipt.algorithm">Algorithm</Translate></dt><dd>ed25519</dd></div>
                 <div className={styles.receiptRow}><dt>SHA-256</dt><dd>8494c5e6…1f567c0c</dd></div>
               </dl>
               <p className={styles.verdict}>
                 <svg className={styles.tick} viewBox="0 0 16 16" aria-hidden="true">
                   <path d="M2 8.5l4 4 8-9" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                Byte-for-byte the sealed document
+                <Translate id="home.receipt.verdict">Byte-for-byte the sealed document</Translate>
               </p>
             </div>
           </div>
@@ -411,44 +441,49 @@ export default function Home(): React.ReactElement {
       <section className={styles.section}>
         <div className={styles.sheet}>
           <div className={styles.sectionHead}>
-            <h2 className={styles.h2}>Draft free. Pay only when you send</h2>
+            <h2 className={styles.h2}><Translate id="home.price.heading">Draft free. Pay only when you send</Translate></h2>
             <p className={styles.note}>
-              Charged when a deal goes out, never when it is drafted. Once per deal, however
-              many times you fix it.
+              <Translate id="home.price.note">
+                Charged when a deal goes out, never when it is drafted. Once per deal, however
+                many times you fix it.
+              </Translate>
             </p>
           </div>
           <table className={styles.priceTable}>
             <thead>
               <tr>
-                <th scope="col">Plan</th>
-                <th scope="col">Monthly</th>
-                <th scope="col">Per deal sent</th>
-                <th scope="col">Users</th>
+                <th scope="col"><Translate id="home.price.col.plan">Plan</Translate></th>
+                <th scope="col"><Translate id="home.price.col.monthly">Monthly</Translate></th>
+                <th scope="col"><Translate id="home.price.col.perDeal">Per deal sent</Translate></th>
+                <th scope="col"><Translate id="home.price.col.users">Users</Translate></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className={styles.planCell}>Pay per deal<small>No subscription. Start here.</small></td>
+                <td className={styles.planCell}><Translate id="common.plan.payPerDeal">Pay per deal</Translate><small><Translate id="home.price.payPerDeal.sub">No subscription. Start here.</Translate></small></td>
                 <td className={styles.figure}>$0</td>
                 <td className={styles.figure}>$9</td>
                 <td className={styles.seats}>1</td>
               </tr>
               <tr>
-                <td className={styles.planCell}>Pro<small>10 deals included each month</small></td>
+                <td className={styles.planCell}>Pro<small><Translate id="home.price.pro.sub">10 deals included each month</Translate></small></td>
                 <td className={styles.figure}>$49</td>
-                <td className={styles.figure}>$5<span>after 10</span></td>
+                <td className={styles.figure}>$5<span><Translate id="home.price.after10">after 10</Translate></span></td>
                 <td className={styles.seats}>5</td>
               </tr>
               <tr>
-                <td className={styles.planCell}>Team<small>50 deals included each month</small></td>
+                <td className={styles.planCell}>Team<small><Translate id="home.price.team.sub">50 deals included each month</Translate></small></td>
                 <td className={styles.figure}>$149</td>
-                <td className={styles.figure}>$3<span>after 50</span></td>
-                <td className={styles.seats}>Unlimited</td>
+                <td className={styles.figure}>$3<span><Translate id="home.price.after50">after 50</Translate></span></td>
+                <td className={styles.seats}><Translate id="home.price.unlimited">Unlimited</Translate></td>
               </tr>
             </tbody>
           </table>
           <p className={styles.terms} style={{marginTop: '1rem'}}>
-            Prices in USD, taxes may apply. <Link to="/pricing">Full pricing and what counts as a send</Link>
+            <Translate id="home.price.terms">Prices in USD, taxes may apply.</Translate>{' '}
+            <Link to="/pricing">
+              <Translate id="home.price.fullPricing">Full pricing and what counts as a send</Translate>
+            </Link>
           </p>
         </div>
       </section>
@@ -456,15 +491,17 @@ export default function Home(): React.ReactElement {
       {/* ---------------- close: a signature block ---------------- */}
       <section className={styles.close}>
         <div className={styles.sheet}>
-          <h2 className={styles.closeH}>Send the next one the same day.</h2>
+          <h2 className={styles.closeH}><Translate id="home.close.heading">Send the next one the same day.</Translate></h2>
           <p className={styles.closeP}>
-            Set up your letterhead once. Every proposal after that is a conversation away.
+            <Translate id="home.close.note">
+              Set up your letterhead once. Every proposal after that is a conversation away.
+            </Translate>
           </p>
           <div className={styles.signRow}>
             <SignatureBlock />
             <div className={styles.closeActions}>
-              <Link className={styles.go} to={SIGNUP}>Start free</Link>
-              <Link className={styles.alt} to="/contact">Talk to us</Link>
+              <Link className={styles.go} to={SIGNUP}><Translate id="common.cta.startFree">Start free</Translate></Link>
+              <Link className={styles.alt} to="/contact"><Translate id="common.cta.talkToUs">Talk to us</Translate></Link>
             </div>
           </div>
         </div>

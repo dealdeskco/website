@@ -1,0 +1,34 @@
+{
+  "title": {
+    "message": "Deal Desk",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Deal Desk Studio",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.How it works": {
+    "message": "Cómo funciona",
+    "description": "Navbar item with label How it works"
+  },
+  "item.label.Pricing": {
+    "message": "Precios",
+    "description": "Navbar item with label Pricing"
+  },
+  "item.label.Help": {
+    "message": "Ayuda",
+    "description": "Navbar item with label Help"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Sign in": {
+    "message": "Iniciar sesión",
+    "description": "Navbar item with label Sign in"
+  },
+  "item.label.Start free": {
+    "message": "Comenzar gratis",
+    "description": "Navbar item with label Start free"
+  }
+}

@@ -1,0 +1,992 @@
+{
+  "contact.error.status": {
+    "message": "Algo salió mal ({status})."
+  },
+  "contact.error.generic": {
+    "message": "Algo salió mal."
+  },
+  "contact.meta.title": {
+    "message": "Contacto"
+  },
+  "contact.meta.description": {
+    "message": "Preguntas sobre Deal Desk Studio, los precios o si se adapta a la forma en que usted cotiza su trabajo."
+  },
+  "contact.kicker": {
+    "message": "Contacto"
+  },
+  "contact.title": {
+    "message": "Cuéntenos qué está cotizando."
+  },
+  "contact.lede": {
+    "message": "Preguntas sobre precios, si se adapta a su rubro o qué ocurre con un documento después de firmado: envíelas aquí y le responderá una persona."
+  },
+  "contact.existing": {
+    "message": "¿Ya usa Deal Desk y necesita ayuda con un negocio en curso? Responda cualquier correo electrónico que le haya enviado el producto: así nos llega más rápido."
+  },
+  "contact.sent.heading": {
+    "message": "Gracias, recibimos su mensaje."
+  },
+  "contact.sent.body": {
+    "message": "Respondemos todos los mensajes, por lo general en un día hábil."
+  },
+  "contact.field.name": {
+    "message": "Su nombre"
+  },
+  "contact.field.email": {
+    "message": "Correo electrónico"
+  },
+  "contact.field.company": {
+    "message": "Empresa"
+  },
+  "contact.field.optional": {
+    "message": "(opcional)"
+  },
+  "contact.field.message": {
+    "message": "¿En qué podemos ayudarle?"
+  },
+  "contact.submit.sending": {
+    "message": "Enviando…"
+  },
+  "contact.submit.send": {
+    "message": "Enviar mensaje"
+  },
+  "contact.privacy": {
+    "message": "Usamos su mensaje para responderle y para nada más. Sin listas ni secuencias de correos."
+  },
+  "howItWorks.stage.1.h": {
+    "message": "Empiece con la conversación"
+  },
+  "howItWorks.stage.1.p": {
+    "message": "Pegue las notas de una llamada, la transcripción de una reunión o un hilo de correos. O presione el micrófono y describa el trabajo en voz alta mientras lo tiene fresco, incluso de regreso en el auto. No hay plantilla que elegir ni formulario que completar primero, y el dictado funciona en el celular sin instalar nada."
+  },
+  "howItWorks.stage.1.col": {
+    "message": "cerca de un minuto"
+  },
+  "howItWorks.stage.2.h": {
+    "message": "Lea un borrador real, no una página en blanco"
+  },
+  "howItWorks.stage.2.p": {
+    "message": "Alcance, partidas, cantidades, descuentos, condiciones de pago y ambos bloques de firma, completos y sobre su membrete. Precios plurianuales con descuentos por año, sus propios supuestos y condiciones, y fotos del sitio o maquetas dentro del documento. Todo se puede editar y nada queda bloqueado."
+  },
+  "howItWorks.stage.2.col": {
+    "message": "unos minutos"
+  },
+  "howItWorks.stage.3.h": {
+    "message": "Consiga la firma mientras sigue el interés"
+  },
+  "howItWorks.stage.3.p": {
+    "message": "Entregue su teléfono y tome la firma en el lugar, o envíe por correo electrónico un enlace de un solo uso para que firmen en su propio dispositivo. Los enlaces remotos vencen en 72 horas y pueden protegerse con un código de un solo uso enviado al correo electrónico del propio firmante."
+  },
+  "howItWorks.stage.3.col": {
+    "message": "en la misma visita"
+  },
+  "howItWorks.stage.4.h": {
+    "message": "Conserve algo en lo que pueda confiar"
+  },
+  "howItWorks.stage.4.p": {
+    "message": "El PDF final incluye un Certificado de finalización y un sello criptográfico: quién firmó, cuándo, desde dónde, cómo se identificó y la dinámica del trazo de la firma. Cualquier persona puede verificar que una copia no fue modificada sin tener que confiar en nosotros."
+  },
+  "howItWorks.stage.4.col": {
+    "message": "permanente"
+  },
+  "howItWorks.limit.1.name": {
+    "message": "No es un abogado"
+  },
+  "howItWorks.limit.1.desc": {
+    "message": "Usted define la redacción de los términos, y la redacción predeterminada es un punto de partida para una propuesta, no un texto contractual revisado para un compromiso regulado o de alto valor."
+  },
+  "howItWorks.limit.2.name": {
+    "message": "En persona no es lo mismo que un sobre"
+  },
+  "howItWorks.limit.2.desc": {
+    "message": "Firmar en su dispositivo demuestra la posesión de su sesión, y el certificado dice exactamente eso. Para un negocio que podría impugnarse o de alto valor, envíe un sobre de DocuSign. Está integrado."
+  },
+  "howItWorks.limit.3.name": {
+    "message": "El borrador aún requiere su revisión"
+  },
+  "howItWorks.limit.3.desc": {
+    "message": "Lee bien sus notas, pero no sabe cuánto le cotizó al vecino el mes pasado. Cada número se puede editar, y los campos obligatorios se verifican antes de que pueda exportar."
+  },
+  "howItWorks.meta.title": {
+    "message": "Cómo funciona"
+  },
+  "howItWorks.meta.description": {
+    "message": "De una conversación a una propuesta firmada y sellada en una sola sesión. Cada paso, y sus límites reales."
+  },
+  "howItWorks.title": {
+    "message": "De una conversación a un documento firmado."
+  },
+  "howItWorks.meta.stages": {
+    "message": "Etapas"
+  },
+  "howItWorks.meta.stagesValue": {
+    "message": "Cuatro"
+  },
+  "howItWorks.meta.time": {
+    "message": "Tiempo habitual"
+  },
+  "howItWorks.meta.timeValue": {
+    "message": "Una sola sesión"
+  },
+  "howItWorks.meta.signatures": {
+    "message": "Firmas"
+  },
+  "howItWorks.meta.signaturesValue": {
+    "message": "En persona o a distancia"
+  },
+  "howItWorks.lede": {
+    "message": "Deal Desk no pretende reemplazar su criterio sobre el precio. Elimina los noventa minutos de tipeo entre decidir el precio y que el cliente lo vea."
+  },
+  "howItWorks.limits.heading": {
+    "message": "Lo que esto no es"
+  },
+  "howItWorks.limits.note": {
+    "message": "Vale la pena decirlo con claridad, porque la alternativa es descubrirlo en el peor momento."
+  },
+  "howItWorks.close.heading": {
+    "message": "Pruébelo con el último trabajo que cotizó."
+  },
+  "howItWorks.close.note": {
+    "message": "Pegue las notas que ya tiene y vea lo que obtiene. Redactar es gratis."
+  },
+  "common.cta.startFree": {
+    "message": "Comenzar gratis"
+  },
+  "common.cta.seePricing": {
+    "message": "Ver precios"
+  },
+  "home.transcript.title": {
+    "message": "Transcripción de la llamada"
+  },
+  "home.transcript.tab.transcript": {
+    "message": "Transcripción"
+  },
+  "home.transcript.tab.summary": {
+    "message": "Resumen"
+  },
+  "home.transcript.tab.actions": {
+    "message": "Tareas"
+  },
+  "home.transcript.customer": {
+    "message": "Cliente"
+  },
+  "home.transcript.line1": {
+    "message": "Vamos a renovar el patio antes de las reservas de primavera. ¿Pueden encargarse de las plantas y la iluminación?"
+  },
+  "home.transcript.you": {
+    "message": "Usted"
+  },
+  "home.transcript.line2": {
+    "message": "Sí: diseño e instalación de la fase uno, más riego e iluminación de senderos."
+  },
+  "home.transcript.line3": {
+    "message": "Me parece bien. Por favor, envíenos la propuesta."
+  },
+  "home.doc.title": {
+    "message": "PROPUESTA"
+  },
+  "home.doc.date": {
+    "message": "Fecha"
+  },
+  "home.doc.dateValue": {
+    "message": "7 oct 2026"
+  },
+  "home.doc.validUntil": {
+    "message": "Válida hasta"
+  },
+  "home.doc.validUntilValue": {
+    "message": "6 nov 2026"
+  },
+  "home.doc.preparedBy": {
+    "message": "Preparada por"
+  },
+  "home.doc.commercialTerms": {
+    "message": "Condiciones comerciales"
+  },
+  "home.doc.line1": {
+    "message": "Diseño e instalación — Fase 1"
+  },
+  "home.doc.line2": {
+    "message": "Riego e iluminación"
+  },
+  "home.doc.discount": {
+    "message": "Descuento del primer año (10%)"
+  },
+  "home.doc.total": {
+    "message": "Total"
+  },
+  "home.doc.acceptance": {
+    "message": "Aceptación"
+  },
+  "home.doc.owner": {
+    "message": "Propietaria"
+  },
+  "home.doc.signed": {
+    "message": "FIRMADO"
+  },
+  "home.doc.sealed": {
+    "message": "Sellado · verificar"
+  },
+  "home.close.signatureCaption": {
+    "message": "Firma autorizada"
+  },
+  "home.caps.1.t": {
+    "message": "Propuestas profesionales"
+  },
+  "home.caps.1.d": {
+    "message": "Con su marca, precisas y listas para enviar."
+  },
+  "home.caps.2.t": {
+    "message": "Precios integrados"
+  },
+  "home.caps.2.d": {
+    "message": "Convierta el alcance en partidas en segundos."
+  },
+  "home.caps.3.t": {
+    "message": "Firma del cliente"
+  },
+  "home.caps.3.d": {
+    "message": "Firma en el momento desde cualquier dispositivo."
+  },
+  "home.caps.4.t": {
+    "message": "PDF sellado"
+  },
+  "home.caps.4.d": {
+    "message": "A prueba de alteraciones, con registro de auditoría."
+  },
+  "home.flow.1.t": {
+    "message": "Capturar"
+  },
+  "home.flow.1.d": {
+    "message": "Llamada, transcripción o notas."
+  },
+  "home.flow.2.t": {
+    "message": "Generar"
+  },
+  "home.flow.2.d": {
+    "message": "Alcance, precios y propuesta."
+  },
+  "home.flow.3.t": {
+    "message": "Enviar y firmar"
+  },
+  "home.flow.3.d": {
+    "message": "El cliente firma en minutos."
+  },
+  "home.flow.4.t": {
+    "message": "Sellar"
+  },
+  "home.flow.4.d": {
+    "message": "Reciba un PDF certificado."
+  },
+  "home.included.1.name": {
+    "message": "Redacte a partir de una conversación"
+  },
+  "home.included.1.desc": {
+    "message": "Pegue notas de una llamada, una transcripción o un hilo de correos. O mantenga presionado el micrófono y describa el trabajo en voz alta de regreso en el auto. El alcance, las partidas, los descuentos y los términos vuelven ya completos."
+  },
+  "home.included.col.everyPlan": {
+    "message": "todos los planes"
+  },
+  "home.included.2.name": {
+    "message": "Su membrete"
+  },
+  "home.included.2.desc": {
+    "message": "Su logotipo, su color, su firmante autorizado y la redacción de sus términos, en el documento y en el correo electrónico que lo entrega. Su cliente ve su empresa, no la nuestra."
+  },
+  "home.included.3.name": {
+    "message": "Firma en el lugar"
+  },
+  "home.included.3.desc": {
+    "message": "Toque la línea de firma y el panel ocupa toda la pantalla, como en una terminal de pago. Con el dedo, un lápiz óptico o el mouse."
+  },
+  "home.included.4.name": {
+    "message": "Firma desde cualquier lugar"
+  },
+  "home.included.4.desc": {
+    "message": "Un enlace de un solo uso que vence en 72 horas. Su cliente firma en su propio dispositivo, si lo desea protegido con un código de un solo uso enviado a su correo electrónico."
+  },
+  "home.included.5.name": {
+    "message": "Certificado de finalización"
+  },
+  "home.included.5.desc": {
+    "message": "Quién firmó, cuándo, desde dónde, cómo se identificó y la dinámica del trazo de la firma, no solo una imagen de ella. Impreso en su propia página."
+  },
+  "home.included.6.name": {
+    "message": "Sello criptográfico"
+  },
+  "home.included.6.desc": {
+    "message": "El PDF final se firma con una clave Ed25519. Cualquier persona puede comprobar, con la clave pública publicada, que una copia es idéntica al original byte por byte."
+  },
+  "home.included.7.name": {
+    "message": "Sobres de DocuSign"
+  },
+  "home.included.7.desc": {
+    "message": "Para un contrato de alto valor o que podría impugnarse, envíe en su lugar un sobre real. Ambos se coordinan para que un documento no pueda firmarse dos veces."
+  },
+  "home.included.col.team": {
+    "message": "Team"
+  },
+  "home.steps.1.h": {
+    "message": "Hable, pegue o dicte"
+  },
+  "home.steps.1.p": {
+    "message": "No hay plantilla que elegir ni formulario que completar primero. Frases a medias, números tachados y \"unos 18k por la fase uno\" son exactamente lo que espera."
+  },
+  "home.steps.2.h": {
+    "message": "Lea un borrador real"
+  },
+  "home.steps.2.p": {
+    "message": "Con precios, sobre su membrete y con ambos bloques de firma en su lugar. Todo se puede editar y nada queda bloqueado. Los campos obligatorios se verifican antes de que pueda exportar."
+  },
+  "home.steps.3.h": {
+    "message": "Tome la firma"
+  },
+  "home.steps.3.p": {
+    "message": "En el lugar con su teléfono, o mediante un enlace de un solo uso al teléfono de su cliente. En ambos casos obtiene un PDF sellado respaldado por un registro de auditoría."
+  },
+  "home.meta.title": {
+    "message": "De la conversación al documento firmado"
+  },
+  "home.meta.description": {
+    "message": "Deal Desk convierte una llamada, una transcripción o unas pocas notas en una propuesta con precios y con su marca que su cliente puede firmar en el momento."
+  },
+  "home.hero.eyebrow": {
+    "message": "Llamada. Alcance. Precio. Firma."
+  },
+  "home.hero.title": {
+    "message": "De la conversación al {signed}, en una sola sesión."
+  },
+  "home.hero.title.signed": {
+    "message": "documento firmado"
+  },
+  "home.hero.lede": {
+    "message": "Convierta una llamada, una transcripción o unas pocas notas en una propuesta con precios que su cliente puede firmar, y reciba un PDF sellado con evidencia del acuerdo."
+  },
+  "common.cta.seeHowItWorks": {
+    "message": "Ver cómo funciona"
+  },
+  "home.hero.assurance.noCard": {
+    "message": "Sin tarjeta de crédito"
+  },
+  "home.hero.assurance.freeToDraft": {
+    "message": "Redactar es gratis"
+  },
+  "home.hero.assurance.minutes": {
+    "message": "Listo en minutos"
+  },
+  "home.flow.heading": {
+    "message": "Una forma más rápida de cerrar"
+  },
+  "home.flow.note": {
+    "message": "Todo lo que hay entre una llamada y un PDF sellado, sin el trabajo tedioso."
+  },
+  "home.steps.heading": {
+    "message": "Tres pasos, una sola sesión"
+  },
+  "home.steps.note": {
+    "message": "Lo que lleva tiempo es volver a escribir lo que usted ya decidió."
+  },
+  "home.included.heading": {
+    "message": "Qué incluye"
+  },
+  "home.included.note": {
+    "message": "Un documento real, debidamente firmado. No un enlace que vence."
+  },
+  "home.evidence.heading": {
+    "message": "Puede demostrar qué se firmó"
+  },
+  "home.evidence.p1": {
+    "message": "Cada propuesta sellada incluye un Certificado de finalización y una firma Ed25519. Cualquier persona puede comprobar una copia con la clave publicada. Si cambia un solo carácter, la verificación falla."
+  },
+  "home.evidence.p2": {
+    "message": "Y decimos lo que no es: una firma tomada en su propio teléfono demuestra la posesión de su sesión, y el certificado lo indica. Para un negocio que podría impugnarse, envíe un sobre de DocuSign."
+  },
+  "home.receipt.document": {
+    "message": "Documento"
+  },
+  "home.receipt.sealed": {
+    "message": "Sellado"
+  },
+  "home.receipt.algorithm": {
+    "message": "Algoritmo"
+  },
+  "home.receipt.verdict": {
+    "message": "Idéntico byte por byte al documento sellado"
+  },
+  "home.price.heading": {
+    "message": "Redacte gratis. Pague solo cuando envíe"
+  },
+  "home.price.note": {
+    "message": "Se cobra cuando un negocio se envía, nunca cuando se redacta. Una vez por negocio, sin importar cuántas veces lo corrija."
+  },
+  "home.price.col.plan": {
+    "message": "Plan"
+  },
+  "home.price.col.monthly": {
+    "message": "Mensual"
+  },
+  "home.price.col.perDeal": {
+    "message": "Por negocio enviado"
+  },
+  "home.price.col.users": {
+    "message": "Usuarios"
+  },
+  "common.plan.payPerDeal": {
+    "message": "Pago por negocio"
+  },
+  "home.price.payPerDeal.sub": {
+    "message": "Sin suscripción. Empiece aquí."
+  },
+  "home.price.pro.sub": {
+    "message": "10 negocios incluidos cada mes"
+  },
+  "home.price.after10": {
+    "message": "después de 10"
+  },
+  "home.price.team.sub": {
+    "message": "50 negocios incluidos cada mes"
+  },
+  "home.price.after50": {
+    "message": "después de 50"
+  },
+  "home.price.unlimited": {
+    "message": "Ilimitados"
+  },
+  "home.price.terms": {
+    "message": "Precios en USD. Pueden aplicarse impuestos."
+  },
+  "home.price.fullPricing": {
+    "message": "Todos los precios y qué cuenta como envío"
+  },
+  "home.close.heading": {
+    "message": "Envíe la próxima el mismo día."
+  },
+  "home.close.note": {
+    "message": "Configure su membrete una sola vez. A partir de ahí, cada propuesta está a una conversación de distancia."
+  },
+  "common.cta.talkToUs": {
+    "message": "Hable con nosotros"
+  },
+  "pricing.plan.perMonth": {
+    "message": "/mes"
+  },
+  "pricing.plan.payPerDeal.rate": {
+    "message": "$9 por negocio enviado"
+  },
+  "pricing.plan.payPerDeal.blurb": {
+    "message": "Sin suscripción. Se le cobra cuando una propuesta se envía a firma; los borradores y las regeneraciones siempre son gratuitos."
+  },
+  "pricing.plan.payPerDeal.feature.1": {
+    "message": "1 usuario"
+  },
+  "pricing.plan.payPerDeal.feature.2": {
+    "message": "Redacción a partir de notas, transcripciones o dictado"
+  },
+  "pricing.plan.payPerDeal.feature.3": {
+    "message": "Exportación a PDF con su marca"
+  },
+  "pricing.plan.payPerDeal.feature.4": {
+    "message": "Firma en persona en cualquier dispositivo"
+  },
+  "pricing.plan.payPerDeal.feature.5": {
+    "message": "PDF sellado con Certificado de finalización"
+  },
+  "pricing.plan.payPerDeal.cta": {
+    "message": "Comenzar gratis"
+  },
+  "pricing.plan.pro.rate": {
+    "message": "10 negocios incluidos, luego $5 cada uno"
+  },
+  "pricing.plan.pro.blurb": {
+    "message": "Para una empresa que envía propuestas todas las semanas."
+  },
+  "pricing.plan.pro.lead": {
+    "message": "Todo lo de Pago por negocio, más:"
+  },
+  "pricing.plan.pro.feature.1": {
+    "message": "Hasta 5 usuarios"
+  },
+  "pricing.plan.pro.feature.2": {
+    "message": "Marca de la empresa completa"
+  },
+  "pricing.plan.pro.feature.3": {
+    "message": "Términos y supuestos editables"
+  },
+  "pricing.plan.pro.feature.4": {
+    "message": "Enlaces de firma remota con códigos de un solo uso"
+  },
+  "pricing.plan.pro.feature.5": {
+    "message": "Correos electrónicos enviados con la identidad de su empresa"
+  },
+  "pricing.plan.pro.cta": {
+    "message": "Comenzar con Pro"
+  },
+  "pricing.plan.team.rate": {
+    "message": "50 negocios incluidos, luego $3 cada uno"
+  },
+  "pricing.plan.team.blurb": {
+    "message": "Para un equipo en el que más de una persona cotiza trabajos."
+  },
+  "pricing.plan.team.lead": {
+    "message": "Todo lo de Pro, más:"
+  },
+  "pricing.plan.team.feature.1": {
+    "message": "Usuarios ilimitados"
+  },
+  "pricing.plan.team.feature.2": {
+    "message": "Historial de negocios compartido por todo el equipo"
+  },
+  "pricing.plan.team.feature.3": {
+    "message": "Sobres de DocuSign para negocios que podrían impugnarse"
+  },
+  "pricing.plan.team.feature.4": {
+    "message": "Soporte prioritario"
+  },
+  "pricing.plan.team.cta": {
+    "message": "Comenzar con Team"
+  },
+  "pricing.billing.1.name": {
+    "message": "Se cobra al enviar"
+  },
+  "pricing.billing.1.desc": {
+    "message": "Un negocio cuenta cuando se envía a firma, no cuando se genera. Los borradores, las ediciones y las regeneraciones son gratuitos."
+  },
+  "pricing.billing.1.col": {
+    "message": "Al enviar"
+  },
+  "pricing.billing.2.name": {
+    "message": "La asignación se restablece cada mes"
+  },
+  "pricing.billing.2.desc": {
+    "message": "Los negocios incluidos se restablecen al inicio de cada mes de facturación. Los envíos que superen la asignación se facturan con la tarifa de su plan."
+  },
+  "pricing.billing.2.col": {
+    "message": "Mensual"
+  },
+  "pricing.billing.3.name": {
+    "message": "Se cobra una vez por negocio"
+  },
+  "pricing.billing.3.desc": {
+    "message": "El uso se registra en el propio negocio, así que reenviarlo o corregirlo nunca le genera un segundo cobro."
+  },
+  "pricing.billing.3.col": {
+    "message": "Una vez"
+  },
+  "pricing.billing.4.name": {
+    "message": "Cancele cuando quiera"
+  },
+  "pricing.billing.4.desc": {
+    "message": "Sin contrato ni cargo por cancelación. Su plan sigue vigente hasta el final del mes que ya pagó."
+  },
+  "pricing.billing.4.col": {
+    "message": "En cualquier momento"
+  },
+  "pricing.faq.1.q": {
+    "message": "¿Qué cuenta como un negocio enviado?"
+  },
+  "pricing.faq.1.a": {
+    "message": "Un negocio cuenta cuando usted envía una propuesta, un formulario de pedido o un contrato a firma, o lo marca como enviado o firmado. Redactar a partir de notas, editar, regenerar y previsualizar el PDF nunca cuentan. Puede armar una cotización veinte veces sin pagar nada."
+  },
+  "pricing.faq.2.q": {
+    "message": "¿Qué pasa si supero los negocios incluidos?"
+  },
+  "pricing.faq.2.a": {
+    "message": "Nada deja de funcionar. Cada negocio adicional de ese mes se factura con la tarifa de su plan —$5 en Pro, $3 en Team— y aparece en su próxima factura."
+  },
+  "pricing.faq.3.q": {
+    "message": "¿Se me cobra dos veces si reenvío el mismo negocio?"
+  },
+  "pricing.faq.3.a": {
+    "message": "No. El uso se registra en el negocio, no en la acción, así que un mismo negocio se cobra como máximo una sola vez. Corregir un error de tipeo y reenviarlo no cuesta nada adicional."
+  },
+  "pricing.faq.4.q": {
+    "message": "¿Puedo cambiar de plan más adelante?"
+  },
+  "pricing.faq.4.a": {
+    "message": "Sí, en cualquier dirección, y el cambio se aplica de inmediato. Empiece con pago por negocio y pase a Pro cuando el volumen lo justifique."
+  },
+  "pricing.faq.5.q": {
+    "message": "¿Hay un contrato?"
+  },
+  "pricing.faq.5.a": {
+    "message": "Sin contrato, sin cargo de configuración y sin plazo mínimo. Cancele cuando quiera y su plan seguirá activo hasta el final del mes de facturación que ya pagó."
+  },
+  "pricing.faq.6.q": {
+    "message": "¿Mis propuestas llevan mi marca?"
+  },
+  "pricing.faq.6.a": {
+    "message": "Sí. Su logotipo, su color, su firmante autorizado y la redacción de sus términos, en el documento y en el correo electrónico que lo entrega. Su cliente ve su empresa, no la nuestra."
+  },
+  "pricing.meta.title": {
+    "message": "Precios"
+  },
+  "pricing.meta.description": {
+    "message": "Redacte todo lo que quiera. Pague solo cuando se envía un negocio: $9 por negocio, o $49/mes con 10 incluidos."
+  },
+  "pricing.eyebrow": {
+    "message": "Precios"
+  },
+  "pricing.title": {
+    "message": "Pague cuando sus negocios se envían."
+  },
+  "pricing.lede": {
+    "message": "Redactar es gratis y lo seguirá siendo. Se le cobra cuando una propuesta realmente sale a firma, y nunca por armarla, editarla o previsualizarla."
+  },
+  "pricing.plans.heading": {
+    "message": "Planes"
+  },
+  "pricing.plans.note": {
+    "message": "Sin contrato ni cargo de configuración. Cambie de plan en cualquier dirección cuando quiera."
+  },
+  "pricing.plans.mostPopular": {
+    "message": "Más popular"
+  },
+  "pricing.plans.terms": {
+    "message": "Precios en USD. Pueden aplicarse impuestos."
+  },
+  "pricing.billing.heading": {
+    "message": "Cómo funciona la facturación"
+  },
+  "pricing.billing.note": {
+    "message": "Basada en el uso y predecible. Nunca se le cobra por el trabajo en curso."
+  },
+  "pricing.faq.heading": {
+    "message": "Preguntas"
+  },
+  "pricing.faq.note": {
+    "message": "Las que vale la pena responder antes de que ingrese una tarjeta, no después."
+  },
+  "pricing.close.heading": {
+    "message": "Cotice el próximo trabajo hoy."
+  },
+  "pricing.close.note": {
+    "message": "Redactar no cuesta nada y no necesita tarjeta para empezar."
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "Esta página ha fallado.",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Volver al principio",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.archive.title": {
+    "message": "Archivo",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archivo",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Navegación de la lista de publicaciones del blog",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Entradas más recientes",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Entradas más antiguas",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Barra de paginación de publicaciones del blog",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Publicación más reciente",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Publicación más antigua",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "modo del sistema",
+    "description": "The name for the system color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "modo claro",
+    "description": "The name for the light color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "modo oscuro",
+    "description": "The name for the dark color mode"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Cambiar entre modo oscuro y claro (actualmente {mode})",
+    "description": "The ARIA label for the color mode toggle"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Rastro de navegación",
+    "description": "The ARIA label for the breadcrumbs"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Ver todas las etiquetas",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "Página del documento",
+    "description": "The ARIA label for the docs pagination"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Anterior",
+    "description": "The label used to navigate to the previous doc"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Siguiente",
+    "description": "The label used to navigate to the next doc"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "Un documento|{count} documentos",
+    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} con la etiqueta \"{tagName}\"",
+    "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Versión: {versionLabel}"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "Esta es la documentación sin publicar para {siteTitle}, versión {versionLabel}.",
+    "description": "The label used to tell the user that he's browsing an unreleased doc version"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "Esta es la documentación para {siteTitle} {versionLabel}, que ya no se mantiene activamente.",
+    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "Para la documentación actualizada, vea {latestVersionLink} ({versionLabel}).",
+    "description": "The label used to tell the user to check the latest version"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "última versión",
+    "description": "The label used for the latest version suggestion link label"
+  },
+  "theme.common.editThisPage": {
+    "message": "Editar esta página",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Enlace directo a {heading}",
+    "description": "Title for link to heading"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " en {date}",
+    "description": "The words used to describe on which date a page has been last updated"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " por {user}",
+    "description": "The words used to describe by who the page has been last updated"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "Última actualización{atDate}{byUser}",
+    "description": "The sentence used to display when a page has been last updated, and by who"
+  },
+  "theme.NotFound.title": {
+    "message": "Página no encontrada",
+    "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versiones",
+    "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "Etiquetas:",
+    "description": "The label alongside a tag list"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Cerrar",
+    "description": "The ARIA label for close button of announcement bar"
+  },
+  "theme.admonition.caution": {
+    "message": "precaución",
+    "description": "The default label used for the Caution admonition (:::caution)"
+  },
+  "theme.admonition.danger": {
+    "message": "peligro",
+    "description": "The default label used for the Danger admonition (:::danger)"
+  },
+  "theme.admonition.info": {
+    "message": "información",
+    "description": "The default label used for the Info admonition (:::info)"
+  },
+  "theme.admonition.note": {
+    "message": "nota",
+    "description": "The default label used for the Note admonition (:::note)"
+  },
+  "theme.admonition.tip": {
+    "message": "consejo",
+    "description": "The default label used for the Tip admonition (:::tip)"
+  },
+  "theme.admonition.warning": {
+    "message": "aviso",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Navegación de publicaciones recientes",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Ampliar la categoría '{label}' de la barra lateral",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Colapsar categoría '{label}' de la barra lateral",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Principal",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(se abre en una nueva pestaña)",
+    "description": "The ARIA label for the external link icon"
+  },
+  "theme.NotFound.p1": {
+    "message": "No pudimos encontrar lo que buscaba.",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "Comuníquese con el propietario del sitio que le proporcionó la URL original y avísele que el enlace no funciona.",
+    "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Idiomas",
+    "description": "The label for the mobile language switcher dropdown"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Lectura de un minuto|{readingTime} min de lectura",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "En esta página",
+    "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Copiar",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Copiado",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Copiar código",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Leer más",
+    "description": "The label used in blog post item excerpts to link to full blog posts"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "Leer más acerca de {title}",
+    "description": "The ARIA label for the link to full blog posts from excerpts"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Alternar ajuste de palabras",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Página de inicio",
+    "description": "The ARIA label for the home page in the breadcrumbs"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Colapsar barra lateral",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Colapsar barra lateral",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Barra lateral de ayuda",
+    "description": "The ARIA label for the sidebar navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Cerrar barra lateral",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Alternar barra lateral",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Volver al menú principal",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Expandir el menú desplegable",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Contraer el menú desplegable",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Expandir barra lateral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Expandir barra lateral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.blog.post.plurals": {
+    "message": "Una publicación|{count} publicaciones",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} con la etiqueta \"{tagName}\"",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Autores",
+    "description": "The title of the authors page"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "Ver todos los autores",
+    "description": "The label of the link targeting the blog authors page"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "Este autor aún no ha escrito ninguna publicación.",
+    "description": "The text for authors with 0 blog post"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "Página no listada",
+    "description": "The unlisted content banner title"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "Esta página no está listada. Los motores de búsqueda no la indexarán, y solo podrán acceder a ella quienes tengan el enlace directo.",
+    "description": "The unlisted content banner message"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Página en borrador",
+    "description": "The draft content banner title"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "Esta página es un borrador. Solo será visible en desarrollo y será excluida de la compilación de producción.",
+    "description": "The draft content banner message"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 artículo|{count} artículos",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Intente de nuevo",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Saltar al contenido principal",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Etiquetas",
+    "description": "The title of the tag list page"
+  }
+}

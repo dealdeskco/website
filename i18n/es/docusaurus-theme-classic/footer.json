@@ -1,0 +1,46 @@
+{
+  "link.title.Product": {
+    "message": "Producto",
+    "description": "The title of the footer links column with title=Product in the footer"
+  },
+  "link.title.Learn": {
+    "message": "Recursos",
+    "description": "The title of the footer links column with title=Learn in the footer"
+  },
+  "link.title.Company": {
+    "message": "Empresa",
+    "description": "The title of the footer links column with title=Company in the footer"
+  },
+  "link.item.label.How it works": {
+    "message": "Cómo funciona",
+    "description": "The label of footer link with label=How it works linking to /how-it-works"
+  },
+  "link.item.label.Pricing": {
+    "message": "Precios",
+    "description": "The label of footer link with label=Pricing linking to /pricing"
+  },
+  "link.item.label.Sign in": {
+    "message": "Iniciar sesión",
+    "description": "The label of footer link with label=Sign in linking to https://app.dealdesk.studio/login"
+  },
+  "link.item.label.Help": {
+    "message": "Ayuda",
+    "description": "The label of footer link with label=Help linking to /help/intro"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to /blog"
+  },
+  "link.item.label.Contact": {
+    "message": "Contacto",
+    "description": "The label of footer link with label=Contact linking to /contact"
+  },
+  "link.item.label.Privacy": {
+    "message": "Privacidad",
+    "description": "The label of footer link with label=Privacy linking to /legal/privacy"
+  },
+  "link.item.label.Terms": {
+    "message": "Términos",
+    "description": "The label of footer link with label=Terms linking to /legal/terms"
+  }
+}

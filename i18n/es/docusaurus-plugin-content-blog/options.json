@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Blog de Deal Desk Studio",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "Notas sobre cotizaciones, precios y cómo cobrar más rápido.",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Publicaciones recientes",
+    "description": "The label for the left sidebar"
+  }
+}

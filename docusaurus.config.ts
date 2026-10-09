@@ -7,9 +7,19 @@ import type * as Preset from '@docusaurus/preset-classic';
 // visitor-facing string should say "IO".
 const SITE = 'https://dealdesk.studio';
 const APP = 'https://app.dealdesk.studio';
-const TAGLINE = 'Conversations in. Deals out.';
-const DESCRIPTION =
-  'Turn a call, a transcript, or a few notes into a priced, branded proposal your customer can sign on the spot. Built for the people who actually quote the work.';
+// The config is loaded once per locale and Docusaurus sets this before each load. It is how the
+// few strings that live here (rather than in i18n/) get translated: the copyright has to keep its
+// live year, which a translation file would freeze, and the JSON-LD is not translatable otherwise.
+const LOCALE = process.env.DOCUSAURUS_CURRENT_LOCALE ?? 'en';
+const ES = LOCALE === 'es';
+const TAGLINE = ES ? 'Conversaciones que se convierten en negocios.' : 'Conversations in. Deals out.';
+const DESCRIPTION = ES
+  ? 'Convierta una llamada, una transcripción o unas pocas notas en una propuesta con precios y con su marca que su cliente puede firmar en el momento. Hecho para quienes cotizan el trabajo.'
+  : 'Turn a call, a transcript, or a few notes into a priced, branded proposal your customer can sign on the spot. Built for the people who actually quote the work.';
+const OFFER = ES
+  ? 'Redactar es gratis. Pague solo cuando envíe un negocio.'
+  : 'Free to draft. Pay only when you send a deal.';
+const POWERED = ES ? 'Con tecnología de Lucenia' : 'Powered by Lucenia';
 
 const config: Config = {
   title: 'Deal Desk Studio',
@@ -28,12 +38,20 @@ const config: Config = {
   onBrokenLinks: 'throw',
   markdown: {hooks: {onBrokenMarkdownLinks: 'throw'}},
 
-  i18n: {defaultLocale: 'en', locales: ['en']},
+  // Spanish is Latin American neutral (es-419), served under /es. The theme derives og:locale
+  // (en_US / es_419) and og:locale:alternate from htmlLang, so headTags no longer hard-codes it.
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'es'],
+    localeConfigs: {
+      en: {label: 'English', htmlLang: 'en-US'},
+      es: {label: 'Español', htmlLang: 'es-419'},
+    },
+  },
 
   headTags: [
     {tagName: 'meta', attributes: {property: 'og:type', content: 'website'}},
     {tagName: 'meta', attributes: {property: 'og:site_name', content: 'Deal Desk Studio'}},
-    {tagName: 'meta', attributes: {property: 'og:locale', content: 'en_US'}},
     {tagName: 'meta', attributes: {name: 'twitter:card', content: 'summary_large_image'}},
     {tagName: 'meta', attributes: {name: 'theme-color', content: '#0B1F3A'}},
     {tagName: 'link', attributes: {rel: 'apple-touch-icon', href: '/img/favicon.png'}},
@@ -47,12 +65,13 @@ const config: Config = {
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         description: DESCRIPTION,
-        url: SITE,
+        url: ES ? `${SITE}/es` : SITE,
+        inLanguage: ES ? 'es-419' : 'en-US',
         offers: {
           '@type': 'Offer',
           price: '0',
           priceCurrency: 'USD',
-          description: 'Free to draft. Pay only when you send a deal.',
+          description: OFFER,
         },
       }),
     },
@@ -104,6 +123,7 @@ const config: Config = {
         {to: '/pricing', label: 'Pricing', position: 'left'},
         {to: '/help/intro', label: 'Help', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
+        {type: 'localeDropdown', position: 'right'},
         {href: `${APP}/login`, label: 'Sign in', position: 'right'},
         {
           href: `${APP}/login?signup=1`,
@@ -140,7 +160,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Deal Desk Studio · Powered by Lucenia`,
+      copyright: `© ${new Date().getFullYear()} Deal Desk Studio · ${POWERED}`,
     },
     prism: {theme: prismThemes.github, darkTheme: prismThemes.dracula},
   } satisfies Preset.ThemeConfig,

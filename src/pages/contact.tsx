@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Layout from '@theme/Layout';
+import Translate, {translate} from '@docusaurus/Translate';
 import styles from './contact.module.css';
 
 // The site is static, so there is no backend here. The form posts to the APPLICATION's API, which
@@ -26,31 +27,50 @@ export default function Contact(): React.ReactElement {
         body: JSON.stringify(data),
       });
       const d = await r.json().catch(() => ({}));
-      if (!r.ok) throw new Error(d.error || `Something went wrong (${r.status}).`);
+      if (!r.ok) {
+        throw new Error(
+          d.error ||
+            translate(
+              {id: 'contact.error.status', message: 'Something went wrong ({status}).'},
+              {status: r.status},
+            ),
+        );
+      }
       setState('sent');
       form.reset();
     } catch (err) {
       setState('error');
-      setError(err instanceof Error ? err.message : 'Something went wrong.');
+      setError(
+        err instanceof Error
+          ? err.message
+          : translate({id: 'contact.error.generic', message: 'Something went wrong.'}),
+      );
     }
   }
 
   return (
     <Layout
-      title="Contact"
-      description="Questions about Deal Desk Studio, pricing, or whether it fits how you quote work.">
+      title={translate({id: 'contact.meta.title', message: 'Contact'})}
+      description={translate({
+        id: 'contact.meta.description',
+        message: 'Questions about Deal Desk Studio, pricing, or whether it fits how you quote work.',
+      })}>
       <div className={styles.wrap}>
         <div className={styles.inner}>
           <div className={styles.copy}>
-            <span className={styles.kicker}>Contact</span>
-            <h1 className={styles.h1}>Tell us what you are quoting.</h1>
+            <span className={styles.kicker}><Translate id="contact.kicker">Contact</Translate></span>
+            <h1 className={styles.h1}><Translate id="contact.title">Tell us what you are quoting.</Translate></h1>
             <p className={styles.lede}>
-              Questions about pricing, whether it fits your trade, or what happens to a document
-              after it is signed — send them here and a human will answer.
+              <Translate id="contact.lede">
+                Questions about pricing, whether it fits your trade, or what happens to a document
+                after it is signed — send them here and a human will answer.
+              </Translate>
             </p>
             <p className={styles.small}>
-              Already using Deal Desk and need help with a live deal? Reply to any email the
-              product sent you — those reach us faster.
+              <Translate id="contact.existing">
+                Already using Deal Desk and need help with a live deal? Reply to any email the
+                product sent you — those reach us faster.
+              </Translate>
             </p>
           </div>
 
@@ -58,25 +78,27 @@ export default function Contact(): React.ReactElement {
             {state === 'sent' ? (
               <div className={styles.done} role="status">
                 <div className={styles.doneTick}>✓</div>
-                <h2>Thanks — that reached us.</h2>
-                <p>We reply to everything, usually within a working day.</p>
+                <h2><Translate id="contact.sent.heading">Thanks — that reached us.</Translate></h2>
+                <p><Translate id="contact.sent.body">We reply to everything, usually within a working day.</Translate></p>
               </div>
             ) : (
               <form onSubmit={submit} className={styles.form} noValidate={false}>
                 <label className={styles.field}>
-                  <span>Your name</span>
+                  <span><Translate id="contact.field.name">Your name</Translate></span>
                   <input name="name" required maxLength={120} autoComplete="name" />
                 </label>
                 <label className={styles.field}>
-                  <span>Email</span>
+                  <span><Translate id="contact.field.email">Email</Translate></span>
                   <input name="email" type="email" required maxLength={254} autoComplete="email" />
                 </label>
                 <label className={styles.field}>
-                  <span>Company <em>(optional)</em></span>
+                  <span>
+                    <Translate id="contact.field.company">Company</Translate> <em><Translate id="contact.field.optional">(optional)</Translate></em>
+                  </span>
                   <input name="company" maxLength={120} autoComplete="organization" />
                 </label>
                 <label className={styles.field}>
-                  <span>What can we help with?</span>
+                  <span><Translate id="contact.field.message">What can we help with?</Translate></span>
                   <textarea name="message" required rows={5} maxLength={4000} />
                 </label>
 
@@ -95,10 +117,14 @@ export default function Contact(): React.ReactElement {
                 {state === 'error' && <div className={styles.err}>{error}</div>}
 
                 <button className={styles.submit} type="submit" disabled={state === 'sending'}>
-                  {state === 'sending' ? 'Sending…' : 'Send message'}
+                  {state === 'sending'
+                    ? translate({id: 'contact.submit.sending', message: 'Sending…'})
+                    : translate({id: 'contact.submit.send', message: 'Send message'})}
                 </button>
                 <p className={styles.privacy}>
-                  We use your message to reply and nothing else. No list, no sequence.
+                  <Translate id="contact.privacy">
+                    We use your message to reply and nothing else. No list, no sequence.
+                  </Translate>
                 </p>
               </form>
             )}

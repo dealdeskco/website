@@ -5,7 +5,7 @@ description: What Deal Desk Studio collects, why, and what we never do with it.
 
 # Privacy
 
-_Last updated 7 October 2026._
+_Last updated 9 October 2026._
 
 Deal Desk Studio is a tool businesses use to write and send proposals. This page describes what
 we hold and why, in plain terms.
@@ -14,6 +14,9 @@ we hold and why, in plain terms.
 
 **Your account.** Name, email address, company profile (name, logo, website, signatory, your terms
 language). You give us these; you can change or remove them at any time from Company Profile.
+
+**Your language preference.** The language you choose for the application is stored on your
+account and in a cookie named `dd_lang`, so pages appear in that language.
 
 **Your deals.** The proposals you draft, their line items and prices, and their status. These are
 yours. We do not read them to build features, train models, or compile market data.
@@ -30,8 +33,9 @@ the application.
 
 - **Your Lucenia tenant.** Your deals live in a database namespace that is yours. Other customers'
   credentials cannot reach it.
-- **Amazon Bedrock**, when you use AI drafting. Your notes are sent to generate the draft and are
-  not retained by the model provider for training.
+- **Amazon Bedrock**, when you use AI drafting. The notes you provide are sent to generate the
+  draft, along with a postal or ZIP code when you ask for a tax estimate. They are not retained by
+  the model provider for training.
 - **Amazon SES and Resend**, to deliver email. They see the recipient address and the message.
 - **Stripe**, for billing. We never see or store your card number.
 - **DocuSign**, only if you send an envelope.

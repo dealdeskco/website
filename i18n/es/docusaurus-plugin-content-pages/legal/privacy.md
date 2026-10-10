@@ -42,7 +42,6 @@ terceros en la aplicación.
 - **Amazon SES y Resend**, para entregar el correo electrónico. Ven la dirección del destinatario y
   el mensaje.
 - **Stripe**, para la facturación. Nunca vemos ni guardamos el número de su tarjeta.
-- **DocuSign**, solo si usted envía un sobre.
 
 No vendemos datos ni los compartimos con nadie que no figure en esta lista.
 

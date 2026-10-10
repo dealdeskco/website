@@ -225,11 +225,6 @@ const ITEMS = [
     desc: translate({id: 'home.included.6.desc', message: 'The finished PDF is signed with an Ed25519 key. Anyone can check a copy is byte-for-byte the original against the published public key.'}),
     col: translate({id: 'home.included.col.everyPlan', message: 'every plan'}),
   },
-  {
-    name: translate({id: 'home.included.7.name', message: 'DocuSign envelopes'}),
-    desc: translate({id: 'home.included.7.desc', message: 'For a high-value or likely-contested agreement, send a real envelope instead. The two interlock so a document cannot be executed twice.'}),
-    col: translate({id: 'home.included.col.everyPlan', message: 'every plan'}),
-  },
 ];
 
 const STEPS = [
@@ -414,7 +409,7 @@ export default function Home(): React.ReactElement {
                 <Translate id="home.evidence.p2">
                   And we say what it is not: a signature taken on your own phone proves possession
                   of your session, and the certificate says so. For a deal likely to be contested,
-                  send a DocuSign envelope.
+                  consider a neutral third-party e-signature service.
                 </Translate>
               </p>
             </div>

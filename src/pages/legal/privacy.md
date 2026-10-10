@@ -38,7 +38,6 @@ the application.
   the model provider for training.
 - **Amazon SES and Resend**, to deliver email. They see the recipient address and the message.
 - **Stripe**, for billing. We never see or store your card number.
-- **DocuSign**, only if you send an envelope.
 
 We do not sell data, and we do not share it with anyone not listed above.
 

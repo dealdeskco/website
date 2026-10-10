@@ -36,8 +36,8 @@ const LIMITS = [
     desc: translate({id: 'howItWorks.limit.1.desc', message: 'The terms language is yours to set, and the default wording is a starting point for a proposal — not reviewed contract language for a regulated or high-value engagement.'}),
   },
   {
-    name: translate({id: 'howItWorks.limit.2.name', message: 'In person is not an envelope'}),
-    desc: translate({id: 'howItWorks.limit.2.desc', message: 'Signing on your device proves possession of your session, and the certificate says exactly that. For a contested or high-value deal, send a DocuSign envelope instead. It is built in.'}),
+    name: translate({id: 'howItWorks.limit.2.name', message: 'In person is not a neutral third party'}),
+    desc: translate({id: 'howItWorks.limit.2.desc', message: 'Signing on your device proves possession of your session, and the certificate says exactly that. For a high-value or likely-contested agreement, consider a neutral third-party e-signature service.'}),
   },
   {
     name: translate({id: 'howItWorks.limit.3.name', message: 'The draft still needs you'}),

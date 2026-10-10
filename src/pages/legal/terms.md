@@ -60,7 +60,7 @@ the Service is legally binding in your jurisdiction, for your type of agreement,
 particular counterparty.** An in-person signature taken on your own device evidences possession of
 your session, and the Certificate of Completion says so rather than claiming more. For agreements
 that are high-value, regulated, or likely to be contested, take your own legal advice and consider
-a third-party e-signature service — DocuSign is built in for exactly that reason.
+using a neutral third-party e-signature service.
 
 ## Acceptable use
 

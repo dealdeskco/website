@@ -96,10 +96,10 @@
     "message": "Usted define la redacción de los términos, y la redacción predeterminada es un punto de partida para una propuesta, no un texto contractual revisado para un compromiso regulado o de alto valor."
   },
   "howItWorks.limit.2.name": {
-    "message": "En persona no es lo mismo que un sobre"
+    "message": "En persona no es un tercero neutral"
   },
   "howItWorks.limit.2.desc": {
-    "message": "Firmar en su dispositivo demuestra la posesión de su sesión, y el certificado dice exactamente eso. Para un negocio que podría impugnarse o de alto valor, envíe un sobre de DocuSign. Está integrado."
+    "message": "Firmar en su dispositivo demuestra la posesión de su sesión, y el certificado dice exactamente eso. Para un contrato de alto valor o que probablemente se impugne, considere un servicio de firma electrónica de un tercero neutral."
   },
   "howItWorks.limit.3.name": {
     "message": "El borrador aún requiere su revisión"
@@ -317,12 +317,6 @@
   "home.included.6.desc": {
     "message": "El PDF final se firma con una clave Ed25519. Cualquier persona puede comprobar, con la clave pública publicada, que una copia es idéntica al original byte por byte."
   },
-  "home.included.7.name": {
-    "message": "Sobres de DocuSign"
-  },
-  "home.included.7.desc": {
-    "message": "Para un contrato de alto valor o que podría impugnarse, envíe en su lugar un sobre real. Ambos se coordinan para que un documento no pueda firmarse dos veces."
-  },
   "home.steps.1.h": {
     "message": "Hable, pegue o dicte"
   },
@@ -396,7 +390,7 @@
     "message": "Cada propuesta sellada incluye un Certificado de finalización y una firma Ed25519. Cualquier persona puede comprobar una copia con la clave publicada. Si cambia un solo carácter, la verificación falla."
   },
   "home.evidence.p2": {
-    "message": "Y decimos lo que no es: una firma tomada en su propio teléfono demuestra la posesión de su sesión, y el certificado lo indica. Para un negocio que podría impugnarse, envíe un sobre de DocuSign."
+    "message": "Y decimos lo que no es: una firma tomada en su propio teléfono demuestra la posesión de su sesión, y el certificado lo indica. Para un negocio que podría impugnarse, considere un servicio de firma electrónica de un tercero neutral."
   },
   "home.receipt.document": {
     "message": "Documento"

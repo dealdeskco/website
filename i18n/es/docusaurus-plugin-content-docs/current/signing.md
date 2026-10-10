@@ -52,10 +52,10 @@ Si cambia un solo byte del PDF, la verificación falla.
 
 ## Lo que esto no es
 
-El peso de DocuSign en una disputa proviene en gran medida de ser un **tercero neutral** que
-presentará registros y declarará. Un registro de auditoría escrito por el proveedor cuyo cliente
+El peso de un servicio de firma electrónica de terceros en una disputa proviene en gran medida de
+ser un **tercero neutral** que presentará registros y declarará. Un registro de auditoría escrito por el proveedor cuyo cliente
 cobra cuando se cierra el negocio es una evidencia más débil, por buena que sea la criptografía.
 
 Por eso: la firma en persona es lo adecuado cuando *"el cliente está frente a mí, hay que cerrarlo
-ahora"*. Para un contrato de alto valor o que probablemente se impugne, envíe un sobre de DocuSign:
-está integrado, y ambos se coordinan para que un documento no pueda firmarse dos veces por error.
+ahora"*. Para un contrato de alto valor o que probablemente se impugne, considere en su lugar un
+servicio de firma electrónica de un tercero neutral. Deal Desk no incluye uno.

@@ -65,8 +65,7 @@ legalmente vinculante en su jurisdicción, para su tipo de acuerdo o frente a un
 determinada.** Una firma en persona tomada en su propio dispositivo evidencia la posesión de su
 sesión, y el Certificado de finalización lo indica así en lugar de afirmar algo más. Para acuerdos
 de alto valor, regulados o que probablemente se impugnen, busque su propio asesoramiento legal y
-considere un servicio de firma electrónica de terceros; DocuSign está integrado precisamente por
-esa razón.
+considere usar un servicio de firma electrónica de un tercero neutral.
 
 ## Uso aceptable
 

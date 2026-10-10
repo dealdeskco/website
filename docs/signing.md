@@ -52,10 +52,10 @@ Change one byte of the PDF and verification fails.
 
 ## What this is not
 
-DocuSign's weight in a dispute comes substantially from being a **neutral third party** who will
-produce records and testify. An audit trail written by the vendor whose customer gets paid when the
+A third-party e-signature service's weight in a dispute comes substantially from being a **neutral
+third party** that will produce records and testify. An audit trail written by the vendor whose customer gets paid when the
 deal closes is weaker evidence, however good the cryptography.
 
 So: in-person signing is right for *"the customer is in front of me, close it now"*. For a
-high-value or likely-contested agreement, send a DocuSign envelope — it is built in, and the two
-interlock so a document cannot accidentally be executed twice.
+high-value or likely-contested agreement, consider a neutral third-party e-signature service
+instead. Deal Desk does not include one.

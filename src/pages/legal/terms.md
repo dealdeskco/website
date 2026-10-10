@@ -23,11 +23,14 @@ relationship with the people you send documents to.
 
 ## Billing
 
-Drafting is free. You are charged when a deal is **sent** — for signature, or marked sent or
-signed. A given deal is charged at most once. Paid plans include a monthly allowance; sends beyond
-it bill at the plan's per-deal rate. Plans renew monthly until cancelled, and cancelling leaves
-your plan active until the end of the period you have paid for. Fees already incurred are not
-refundable.
+Drafting is free. What we meter is a deal being **sent** — for signature, or marked sent or
+signed. A given deal is counted at most once. Every plan includes a monthly allowance of sent
+deals. The Free plan has no charge; once its allowance is used, you choose a paid plan to keep
+sending. A paid plan is charged its monthly fee, and sends beyond its allowance bill at the plan's
+per-deal rate. Add-ons on a paid plan are billed the same way: a monthly fee, and a per-unit rate
+beyond their allowance. Paid plans renew monthly until cancelled, and cancelling leaves your plan
+active until the end of the period you have paid for, after which your account is on the Free
+plan. Fees already incurred are not refundable.
 
 Upgrading takes effect immediately, and the prorated difference for the rest of the period is
 charged at once. Downgrading takes effect at the end of the period you have already paid for; your

@@ -228,7 +228,7 @@ const ITEMS = [
   {
     name: translate({id: 'home.included.7.name', message: 'DocuSign envelopes'}),
     desc: translate({id: 'home.included.7.desc', message: 'For a high-value or likely-contested agreement, send a real envelope instead. The two interlock so a document cannot be executed twice.'}),
-    col: translate({id: 'home.included.col.team', message: 'Team'}),
+    col: translate({id: 'home.included.col.everyPlan', message: 'every plan'}),
   },
 ];
 
@@ -444,8 +444,8 @@ export default function Home(): React.ReactElement {
             <h2 className={styles.h2}><Translate id="home.price.heading">Draft free. Pay only when you send</Translate></h2>
             <p className={styles.note}>
               <Translate id="home.price.note">
-                Charged when a deal goes out, never when it is drafted. Once per deal, however
-                many times you fix it.
+                Counted when a deal goes out, never when it is drafted. Once per deal, however
+                many times you fix it. Free covers three a month.
               </Translate>
             </p>
           </div>
@@ -454,27 +454,36 @@ export default function Home(): React.ReactElement {
               <tr>
                 <th scope="col"><Translate id="home.price.col.plan">Plan</Translate></th>
                 <th scope="col"><Translate id="home.price.col.monthly">Monthly</Translate></th>
-                <th scope="col"><Translate id="home.price.col.perDeal">Per deal sent</Translate></th>
+                <th scope="col"><Translate id="home.price.col.extra">Each extra sent deal</Translate></th>
                 <th scope="col"><Translate id="home.price.col.users">Users</Translate></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className={styles.planCell}><Translate id="common.plan.payPerDeal">Pay per deal</Translate><small><Translate id="home.price.payPerDeal.sub">No subscription. Start here.</Translate></small></td>
+                <td className={styles.planCell}>
+                  <Translate id="home.price.free.name">Free</Translate>
+                  <small><Translate id="home.price.free.sub">3 sent deals a month, no card</Translate></small>
+                </td>
                 <td className={styles.figure}>$0</td>
-                <td className={styles.figure}>$9</td>
+                <td className={styles.figure}>—</td>
                 <td className={styles.seats}>1</td>
               </tr>
               <tr>
-                <td className={styles.planCell}>Pro<small><Translate id="home.price.pro.sub">10 deals included each month</Translate></small></td>
-                <td className={styles.figure}>$49</td>
-                <td className={styles.figure}>$5<span><Translate id="home.price.after10">after 10</Translate></span></td>
+                <td className={styles.planCell}>Starter<small><Translate id="home.price.starter.sub">50 sent deals included each month</Translate></small></td>
+                <td className={styles.figure}>$9</td>
+                <td className={styles.figure}>$0.50<span><Translate id="home.price.after50">after 50</Translate></span></td>
+                <td className={styles.seats}>1</td>
+              </tr>
+              <tr>
+                <td className={styles.planCell}>Pro<small><Translate id="home.price.pro.sub">200 sent deals included each month</Translate></small></td>
+                <td className={styles.figure}>$19</td>
+                <td className={styles.figure}>$0.25<span><Translate id="home.price.after200">after 200</Translate></span></td>
                 <td className={styles.seats}>5</td>
               </tr>
               <tr>
-                <td className={styles.planCell}>Team<small><Translate id="home.price.team.sub">50 deals included each month</Translate></small></td>
-                <td className={styles.figure}>$149</td>
-                <td className={styles.figure}>$3<span><Translate id="home.price.after50">after 50</Translate></span></td>
+                <td className={styles.planCell}>Team<small><Translate id="home.price.team.sub">1,000 sent deals included each month</Translate></small></td>
+                <td className={styles.figure}>$49</td>
+                <td className={styles.figure}>$0.10<span><Translate id="home.price.after1000">after 1,000</Translate></span></td>
                 <td className={styles.seats}><Translate id="home.price.unlimited">Unlimited</Translate></td>
               </tr>
             </tbody>

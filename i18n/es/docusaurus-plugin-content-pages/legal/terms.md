@@ -26,11 +26,15 @@ tener una relación comercial legítima con las personas a quienes envía docume
 
 ## Facturación
 
-Redactar es gratis. Se le cobra cuando un negocio se **envía**: a firma, o cuando se marca como
-enviado o firmado. Un mismo negocio se cobra como máximo una vez. Los planes pagos incluyen una
-asignación mensual; los envíos que la superen se facturan con la tarifa por negocio del plan. Los
-planes se renuevan cada mes hasta que se cancelan, y al cancelar su plan sigue activo hasta el final
-del período que ya pagó. Los cargos ya generados no son reembolsables.
+Redactar es gratis. Lo que medimos es el **envío** de un negocio: a firma, o cuando se marca como
+enviado o firmado. Un mismo negocio se cuenta como máximo una vez. Todos los planes incluyen una
+cantidad mensual de negocios enviados. El plan Gratis no tiene costo; cuando se agota lo incluido,
+usted elige un plan de pago para seguir enviando. Un plan de pago se cobra con su cuota mensual, y
+los envíos que superen lo incluido se facturan con la tarifa por negocio del plan. Los complementos
+de un plan de pago se facturan de la misma forma: una cuota mensual y una tarifa por unidad cuando
+se supera lo incluido. Los planes de pago se renuevan cada mes hasta que se cancelan, y al cancelar
+su plan sigue activo hasta el final del período que ya pagó; después, su cuenta pasa al plan
+Gratis. Los cargos ya generados no son reembolsables.
 
 Mejorar su plan surte efecto de inmediato, y la diferencia prorrateada por el resto del período se
 cobra en ese momento. Bajar de plan surte efecto al final del período que ya pagó; su plan actual se

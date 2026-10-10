@@ -20,106 +20,119 @@ const SIGNUP = `${APP}/login?signup=1`;
 
 // Mirrors plans.mjs in the application, which is the billing source of truth. If a price changes
 // there it must change here -- they are two systems and nothing enforces agreement between them.
+// Only the RFP add-on is gated in the app; everything in EVERY_PLAN is on every plan, Free included,
+// so it is listed once rather than presented as something a higher tier buys.
 const PLANS = [
   {
-    name: translate({id: 'common.plan.payPerDeal', message: 'Pay per deal'}),
+    name: translate({id: 'pricing.plan.free.name', message: 'Free'}),
     price: '$0',
-    cadence: translate({id: 'pricing.plan.perMonth', message: '/month'}),
-    rate: translate({id: 'pricing.plan.payPerDeal.rate', message: '$9 per deal sent'}),
-    blurb: translate({id: 'pricing.plan.payPerDeal.blurb', message: 'No subscription. You are charged when a proposal goes out for signature — drafts and regenerations are always free.'}),
-    lead: null,
+    rate: translate({id: 'pricing.plan.free.rate', message: 'No card needed'}),
+    blurb: translate({id: 'pricing.plan.free.blurb', message: 'For trying it out, or the quiet months of a seasonal business.'}),
     features: [
-      translate({id: 'pricing.plan.payPerDeal.feature.1', message: '1 user'}),
-      translate({id: 'pricing.plan.payPerDeal.feature.2', message: 'Drafting from notes, transcripts or dictation'}),
-      translate({id: 'pricing.plan.payPerDeal.feature.3', message: 'Branded PDF export'}),
-      translate({id: 'pricing.plan.payPerDeal.feature.4', message: 'Signing in person on any device'}),
-      translate({id: 'pricing.plan.payPerDeal.feature.5', message: 'Sealed PDF with Certificate of Completion'}),
+      translate({id: 'pricing.plan.users.one', message: '1 user'}),
+      translate({id: 'pricing.plan.free.sends', message: '3 sent deals a month'}),
     ],
-    cta: translate({id: 'pricing.plan.payPerDeal.cta', message: 'Start free'}),
+    cta: translate({id: 'common.cta.startFree', message: 'Start free'}),
     pick: false,
   },
   {
-    name: 'Pro',
-    price: '$49',
-    cadence: translate({id: 'pricing.plan.perMonth', message: '/month'}),
-    rate: translate({id: 'pricing.plan.pro.rate', message: '10 deals included, then $5 each'}),
-    blurb: translate({id: 'pricing.plan.pro.blurb', message: 'For a business sending proposals every week.'}),
-    lead: translate({id: 'pricing.plan.pro.lead', message: 'Everything in Pay per deal, plus:'}),
+    name: 'Starter',
+    price: '$9',
+    rate: translate({id: 'pricing.plan.starter.rate', message: '50 sent deals/month included, then $0.50/deal'}),
+    blurb: translate({id: 'pricing.plan.starter.blurb', message: 'For a small business sending quotes and contracts to its customers.'}),
     features: [
-      translate({id: 'pricing.plan.pro.feature.1', message: 'Up to 5 users'}),
-      translate({id: 'pricing.plan.pro.feature.2', message: 'Full company branding'}),
-      translate({id: 'pricing.plan.pro.feature.3', message: 'Editable Terms & Assumptions'}),
-      translate({id: 'pricing.plan.pro.feature.4', message: 'Remote signing links with one-time codes'}),
-      translate({id: 'pricing.plan.pro.feature.5', message: 'Email from your own business identity'}),
+      translate({id: 'pricing.plan.users.one', message: '1 user'}),
+      translate({id: 'pricing.plan.starter.sends', message: '50 sent deals a month'}),
     ],
-    cta: translate({id: 'pricing.plan.pro.cta', message: 'Start Pro'}),
+    cta: translate({id: 'pricing.plan.starter.cta', message: 'Start Starter'}),
     pick: true,
   },
   {
-    name: 'Team',
-    price: '$149',
-    cadence: translate({id: 'pricing.plan.perMonth', message: '/month'}),
-    rate: translate({id: 'pricing.plan.team.rate', message: '50 deals included, then $3 each'}),
-    blurb: translate({id: 'pricing.plan.team.blurb', message: 'For a crew where more than one person quotes work.'}),
-    lead: translate({id: 'pricing.plan.team.lead', message: 'Everything in Pro, plus:'}),
+    name: 'Pro',
+    price: '$19',
+    rate: translate({id: 'pricing.plan.pro.rate', message: '200 sent deals/month included, then $0.25/deal'}),
+    blurb: translate({id: 'pricing.plan.pro.blurb', message: 'For small teams sending proposals every week.'}),
     features: [
-      translate({id: 'pricing.plan.team.feature.1', message: 'Unlimited users'}),
-      translate({id: 'pricing.plan.team.feature.2', message: 'Shared deal history across the team'}),
-      translate({id: 'pricing.plan.team.feature.3', message: 'DocuSign envelopes for contested deals'}),
-      translate({id: 'pricing.plan.team.feature.4', message: 'Priority support'}),
+      translate({id: 'pricing.plan.users.five', message: 'Up to 5 users'}),
+      translate({id: 'pricing.plan.pro.sends', message: '200 sent deals a month'}),
+    ],
+    cta: translate({id: 'pricing.plan.pro.cta', message: 'Start Pro'}),
+    pick: false,
+  },
+  {
+    name: 'Team',
+    price: '$49',
+    rate: translate({id: 'pricing.plan.team.rate', message: '1,000 sent deals/month included, then $0.10/deal'}),
+    blurb: translate({id: 'pricing.plan.team.blurb', message: 'For growing businesses that run on proposals.'}),
+    features: [
+      translate({id: 'pricing.plan.users.unlimited', message: 'Unlimited users'}),
+      translate({id: 'pricing.plan.team.sends', message: '1,000 sent deals a month'}),
     ],
     cta: translate({id: 'pricing.plan.team.cta', message: 'Start Team'}),
     pick: false,
   },
 ];
 
+const EVERY_PLAN = [
+  translate({id: 'pricing.everyPlan.documents', message: 'Quotes, proposals and contracts'}),
+  translate({id: 'pricing.everyPlan.ai', message: 'AI drafting from your notes'}),
+  translate({id: 'pricing.everyPlan.sign', message: 'eSignature and PDF export'}),
+  translate({id: 'pricing.everyPlan.branding', message: 'Your own branding and terms'}),
+  translate({id: 'pricing.everyPlan.spanish', message: 'Documents in English or Spanish'}),
+];
+
 const BILLING = [
   {
-    name: translate({id: 'pricing.billing.1.name', message: 'Charged on send'}),
-    desc: translate({id: 'pricing.billing.1.desc', message: 'A deal counts when it goes out for signature, not when it is generated. Drafts, edits and regenerations are free.'}),
-    col: translate({id: 'pricing.billing.1.col', message: 'On send'}),
+    name: translate({id: 'pricing.billing.send.name', message: 'Counted on send'}),
+    desc: translate({id: 'pricing.billing.send.desc', message: 'A deal counts when it goes out for signature, not when it is generated. Drafts, edits and regenerations are free.'}),
+    col: translate({id: 'pricing.billing.send.col', message: 'On send'}),
   },
   {
-    name: translate({id: 'pricing.billing.2.name', message: 'Allowance resets monthly'}),
-    desc: translate({id: 'pricing.billing.2.desc', message: 'Included deals reset at the start of each billing month. Sends beyond the allowance bill at your plan rate.'}),
-    col: translate({id: 'pricing.billing.2.col', message: 'Monthly'}),
+    name: translate({id: 'pricing.billing.resets.name', message: 'Allowance resets monthly'}),
+    desc: translate({id: 'pricing.billing.resets.desc', message: 'Included deals reset at the start of each billing month. On a paid plan, sends beyond the allowance bill at your plan rate; on Free, you choose a plan to keep sending.'}),
+    col: translate({id: 'pricing.billing.resets.col', message: 'Monthly'}),
   },
   {
-    name: translate({id: 'pricing.billing.3.name', message: 'Charged once per deal'}),
-    desc: translate({id: 'pricing.billing.3.desc', message: 'Usage is recorded against the deal itself, so resending or correcting one never bills you a second time.'}),
-    col: translate({id: 'pricing.billing.3.col', message: 'Once'}),
+    name: translate({id: 'pricing.billing.once.name', message: 'Counted once per deal'}),
+    desc: translate({id: 'pricing.billing.once.desc', message: 'Usage is recorded against the deal itself, so resending or correcting one never counts a second time.'}),
+    col: translate({id: 'pricing.billing.once.col', message: 'Once'}),
   },
   {
-    name: translate({id: 'pricing.billing.4.name', message: 'Cancel any time'}),
-    desc: translate({id: 'pricing.billing.4.desc', message: 'No contract and no cancellation fee. Your plan runs to the end of the month you have already paid for.'}),
-    col: translate({id: 'pricing.billing.4.col', message: 'Any time'}),
+    name: translate({id: 'pricing.billing.change.name', message: 'Change plans any time'}),
+    desc: translate({id: 'pricing.billing.change.desc', message: 'Upgrades take effect immediately. Downgrades take effect at the end of the month you have already paid for.'}),
+    col: translate({id: 'pricing.billing.change.col', message: 'Any time'}),
+  },
+  {
+    name: translate({id: 'pricing.billing.cancel.name', message: 'Cancel any time'}),
+    desc: translate({id: 'pricing.billing.cancel.desc', message: 'No contract and no cancellation fee. Your plan stays active to the end of the billing month you have already paid for, then your account is on Free.'}),
+    col: translate({id: 'pricing.billing.cancel.col', message: 'Any time'}),
   },
 ];
 
 const FAQ = [
   {
-    q: translate({id: 'pricing.faq.1.q', message: 'What counts as a sent deal?'}),
-    a: translate({id: 'pricing.faq.1.a', message: 'A deal counts once you send a proposal, order form or agreement out for signature — or mark it sent or signed. Drafting from notes, editing, regenerating and previewing the PDF never count. You can build a quote twenty times and pay nothing.'}),
+    q: translate({id: 'pricing.faq.counts.q', message: 'What counts as a sent deal?'}),
+    a: translate({id: 'pricing.faq.counts.a', message: 'A deal counts once you send a proposal, order form or agreement out for signature — or mark it sent or signed. Drafting from notes, editing, regenerating and previewing the PDF never count. You can build a quote twenty times and it counts once.'}),
   },
   {
-    q: translate({id: 'pricing.faq.2.q', message: 'What happens if I go over my included deals?'}),
-    a: translate({id: 'pricing.faq.2.a', message: 'Nothing stops working. Each extra deal that month is billed at your plan rate — $5 on Pro, $3 on Team — and appears on your next invoice.'}),
+    q: translate({id: 'pricing.faq.over.q', message: 'What happens if I go over my included deals?'}),
+    a: translate({id: 'pricing.faq.over.a', message: 'On a paid plan, nothing stops working: each additional sent deal is billed at your plan rate — $0.50 on Starter, $0.25 on Pro, $0.10 on Team — on your next invoice. On Free, you choose a plan to keep sending; drafting stays free.'}),
   },
   {
-    q: translate({id: 'pricing.faq.3.q', message: 'Do I get charged twice if I resend the same deal?'}),
-    a: translate({id: 'pricing.faq.3.a', message: 'No. Usage is recorded against the deal, not the action, so a given deal is charged at most once ever. Correcting a typo and resending costs nothing extra.'}),
+    q: translate({id: 'pricing.faq.twice.q', message: 'Do I get charged twice if I resend the same deal?'}),
+    a: translate({id: 'pricing.faq.twice.a', message: 'No. Usage is recorded against the deal, not the action, so a given deal is counted at most once ever. Correcting a typo and resending costs nothing extra.'}),
   },
   {
-    q: translate({id: 'pricing.faq.4.q', message: 'Can I switch plans later?'}),
-    a: translate({id: 'pricing.faq.4.a', message: 'Yes, in either direction, and the change takes effect immediately. Start per-deal and move to Pro when the volume justifies it.'}),
+    q: translate({id: 'pricing.faq.switch.q', message: 'Can I switch plans later?'}),
+    a: translate({id: 'pricing.faq.switch.a', message: 'Yes, in either direction. Upgrades take effect immediately, and the prorated difference for the rest of the month is charged then. Downgrades take effect at the end of the month you have already paid for.'}),
   },
   {
-    q: translate({id: 'pricing.faq.5.q', message: 'Is there a contract?'}),
-    a: translate({id: 'pricing.faq.5.a', message: 'No contract, no setup fee, no minimum term. Cancel whenever you like and your plan stays active through the end of the billing month you have already paid for.'}),
+    q: translate({id: 'pricing.faq.contract.q', message: 'Is there a contract?'}),
+    a: translate({id: 'pricing.faq.contract.a', message: 'No contract, no setup fee, no minimum term. Cancel whenever you like: your plan stays active through the end of the billing month you have already paid for, then your account is on Free.'}),
   },
   {
-    q: translate({id: 'pricing.faq.6.q', message: 'Do proposals carry my branding?'}),
-    a: translate({id: 'pricing.faq.6.a', message: 'Yes. Your logo, your colour, your signatory and your terms language, on the document and on the email that delivers it. Your customer sees your business, not ours.'}),
+    q: translate({id: 'pricing.faq.branding.q', message: 'Do proposals carry my branding?'}),
+    a: translate({id: 'pricing.faq.branding.a', message: 'Yes, on every plan, Free included. Your logo, your colour, your signatory and your terms language, on the document and on the email that delivers it. Your customer sees your business, not ours.'}),
   },
 ];
 
@@ -130,7 +143,7 @@ export default function Pricing(): React.ReactElement {
       description={translate({
         id: 'pricing.meta.description',
         message:
-          'Draft as much as you like. Pay only when a deal is sent — $9 per deal, or $49/month for 10 included.',
+          'Draft as much as you like. Free covers 3 sent deals a month with no card; paid plans start at $9 a month.',
       })}>
       <header className={`${styles.masthead} ${styles.mastShort}`}>
         <div className={styles.sheet}>
@@ -139,8 +152,9 @@ export default function Pricing(): React.ReactElement {
           <div className={styles.rule} />
           <p className={styles.lede}>
             <Translate id="pricing.lede">
-              Drafting is free and stays free. You are charged once a proposal actually leaves for
-              signature, and never for building, editing or previewing one.
+              Drafting is free and stays free. What counts is a proposal actually leaving for
+              signature, never building, editing or previewing one. Free covers three a month with
+              no card; when you send more, plans start at $9 a month.
             </Translate>
           </p>
           <div className={styles.actions}>
@@ -166,11 +180,13 @@ export default function Pricing(): React.ReactElement {
               <div key={p.name} className={`${styles.plan} ${p.pick ? styles.planPick : ''}`}>
                 {p.pick && <span className={styles.planBadge}><Translate id="pricing.plans.mostPopular">Most popular</Translate></span>}
                 <h3 className={styles.planName}>{p.name}</h3>
-                <div className={styles.planFig}><b>{p.price}</b><span>{p.cadence}</span></div>
+                <div className={styles.planFig}>
+                  <b>{p.price}</b>
+                  <span><Translate id="pricing.plan.perMonth">/month</Translate></span>
+                </div>
                 <div className={styles.planRate}>{p.rate}</div>
                 <p className={styles.planBlurb}>{p.blurb}</p>
                 <ul className={styles.planList}>
-                  {p.lead && <li className={styles.planLead}>{p.lead}</li>}
                   {p.features.map((f) => (
                     <li key={f}><Tick />{f}</li>
                   ))}
@@ -184,6 +200,57 @@ export default function Pricing(): React.ReactElement {
           <p className={styles.terms} style={{marginTop: '1.1rem'}}>
             <Translate id="pricing.plans.terms">Prices in USD. Taxes may apply.</Translate>
           </p>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sheet}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}><Translate id="pricing.everyPlan.heading">On every plan</Translate></h2>
+            <p className={styles.note}>
+              <Translate id="pricing.everyPlan.note">
+                Plans differ in users and sent deals. Everything else is on all of them, Free included.
+              </Translate>
+            </p>
+          </div>
+          <ul className={styles.planList}>
+            {EVERY_PLAN.map((f) => (
+              <li key={f}><Tick />{f}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sheet}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}><Translate id="pricing.addon.heading">Add-on</Translate></h2>
+            <p className={styles.note}>
+              <Translate id="pricing.addon.note">
+                For businesses that answer requests for proposals. Available on any paid plan.
+              </Translate>
+            </p>
+          </div>
+          <div className={styles.items}>
+            <div className={styles.item}>
+              <div className={styles.itemName}>
+                <Translate id="pricing.addon.name">RFP responder</Translate>
+              </div>
+              <div className={styles.itemDesc}>
+                <Translate id="pricing.addon.desc">
+                  Upload an RFP, an RFI or a customer's own form. Deal Desk breaks it into every
+                  requirement, drafts answers from what your company already knows, and checks them
+                  the way an evaluator would.
+                </Translate>{' '}
+                <Translate id="pricing.addon.usage">
+                  5 documents a month included, then $10 each. Design partners have it included.
+                </Translate>
+              </div>
+              <div className={styles.itemCol}>
+                <Translate id="pricing.addon.price">+$49/month</Translate>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -323,9 +323,6 @@
   "home.included.7.desc": {
     "message": "Para un contrato de alto valor o que podría impugnarse, envíe en su lugar un sobre real. Ambos se coordinan para que un documento no pueda firmarse dos veces."
   },
-  "home.included.col.team": {
-    "message": "Team"
-  },
   "home.steps.1.h": {
     "message": "Hable, pegue o dicte"
   },
@@ -417,7 +414,7 @@
     "message": "Redacte gratis. Pague solo cuando envíe"
   },
   "home.price.note": {
-    "message": "Se cobra cuando un negocio se envía, nunca cuando se redacta. Una vez por negocio, sin importar cuántas veces lo corrija."
+    "message": "Se cuenta cuando un negocio se envía, nunca cuando se redacta. Una vez por negocio, sin importar cuántas veces lo corrija. Gratis cubre tres al mes."
   },
   "home.price.col.plan": {
     "message": "Plan"
@@ -425,29 +422,35 @@
   "home.price.col.monthly": {
     "message": "Mensual"
   },
-  "home.price.col.perDeal": {
-    "message": "Por negocio enviado"
+  "home.price.col.extra": {
+    "message": "Cada negocio enviado adicional"
   },
   "home.price.col.users": {
     "message": "Usuarios"
   },
-  "common.plan.payPerDeal": {
-    "message": "Pago por negocio"
+  "home.price.free.name": {
+    "message": "Gratis"
   },
-  "home.price.payPerDeal.sub": {
-    "message": "Sin suscripción. Empiece aquí."
+  "home.price.free.sub": {
+    "message": "3 negocios enviados al mes, sin tarjeta"
   },
-  "home.price.pro.sub": {
-    "message": "10 negocios incluidos cada mes"
-  },
-  "home.price.after10": {
-    "message": "después de 10"
-  },
-  "home.price.team.sub": {
-    "message": "50 negocios incluidos cada mes"
+  "home.price.starter.sub": {
+    "message": "50 negocios enviados incluidos cada mes"
   },
   "home.price.after50": {
     "message": "después de 50"
+  },
+  "home.price.pro.sub": {
+    "message": "200 negocios enviados incluidos cada mes"
+  },
+  "home.price.after200": {
+    "message": "después de 200"
+  },
+  "home.price.team.sub": {
+    "message": "1,000 negocios enviados incluidos cada mes"
+  },
+  "home.price.after1000": {
+    "message": "después de 1,000"
   },
   "home.price.unlimited": {
     "message": "Ilimitados"
@@ -467,161 +470,164 @@
   "common.cta.talkToUs": {
     "message": "Hable con nosotros"
   },
-  "pricing.plan.perMonth": {
-    "message": "/mes"
+  "pricing.plan.free.name": {
+    "message": "Gratis"
   },
-  "pricing.plan.payPerDeal.rate": {
-    "message": "$9 por negocio enviado"
+  "pricing.plan.free.rate": {
+    "message": "No necesita tarjeta"
   },
-  "pricing.plan.payPerDeal.blurb": {
-    "message": "Sin suscripción. Se le cobra cuando una propuesta se envía a firma; los borradores y las regeneraciones siempre son gratuitos."
+  "pricing.plan.free.blurb": {
+    "message": "Para probarlo, o para los meses tranquilos de un negocio de temporada."
   },
-  "pricing.plan.payPerDeal.feature.1": {
+  "pricing.plan.users.one": {
     "message": "1 usuario"
   },
-  "pricing.plan.payPerDeal.feature.2": {
-    "message": "Redacción a partir de notas, transcripciones o dictado"
+  "pricing.plan.free.sends": {
+    "message": "3 negocios enviados al mes"
   },
-  "pricing.plan.payPerDeal.feature.3": {
-    "message": "Exportación a PDF con su marca"
+  "pricing.plan.starter.rate": {
+    "message": "50 negocios enviados/mes incluidos, luego $0.50/negocio"
   },
-  "pricing.plan.payPerDeal.feature.4": {
-    "message": "Firma en persona en cualquier dispositivo"
+  "pricing.plan.starter.blurb": {
+    "message": "Para un negocio pequeño que envía cotizaciones y contratos a sus clientes."
   },
-  "pricing.plan.payPerDeal.feature.5": {
-    "message": "PDF sellado con Certificado de finalización"
+  "pricing.plan.starter.sends": {
+    "message": "50 negocios enviados al mes"
   },
-  "pricing.plan.payPerDeal.cta": {
-    "message": "Comenzar gratis"
+  "pricing.plan.starter.cta": {
+    "message": "Comenzar con Starter"
   },
   "pricing.plan.pro.rate": {
-    "message": "10 negocios incluidos, luego $5 cada uno"
+    "message": "200 negocios enviados/mes incluidos, luego $0.25/negocio"
   },
   "pricing.plan.pro.blurb": {
-    "message": "Para una empresa que envía propuestas todas las semanas."
+    "message": "Para equipos pequeños que envían propuestas cada semana."
   },
-  "pricing.plan.pro.lead": {
-    "message": "Todo lo de Pago por negocio, más:"
-  },
-  "pricing.plan.pro.feature.1": {
+  "pricing.plan.users.five": {
     "message": "Hasta 5 usuarios"
   },
-  "pricing.plan.pro.feature.2": {
-    "message": "Marca de la empresa completa"
-  },
-  "pricing.plan.pro.feature.3": {
-    "message": "Términos y supuestos editables"
-  },
-  "pricing.plan.pro.feature.4": {
-    "message": "Enlaces de firma remota con códigos de un solo uso"
-  },
-  "pricing.plan.pro.feature.5": {
-    "message": "Correos electrónicos enviados con la identidad de su empresa"
+  "pricing.plan.pro.sends": {
+    "message": "200 negocios enviados al mes"
   },
   "pricing.plan.pro.cta": {
     "message": "Comenzar con Pro"
   },
   "pricing.plan.team.rate": {
-    "message": "50 negocios incluidos, luego $3 cada uno"
+    "message": "1,000 negocios enviados/mes incluidos, luego $0.10/negocio"
   },
   "pricing.plan.team.blurb": {
-    "message": "Para un equipo en el que más de una persona cotiza trabajos."
+    "message": "Para empresas en crecimiento que dependen de las propuestas."
   },
-  "pricing.plan.team.lead": {
-    "message": "Todo lo de Pro, más:"
-  },
-  "pricing.plan.team.feature.1": {
+  "pricing.plan.users.unlimited": {
     "message": "Usuarios ilimitados"
   },
-  "pricing.plan.team.feature.2": {
-    "message": "Historial de negocios compartido por todo el equipo"
-  },
-  "pricing.plan.team.feature.3": {
-    "message": "Sobres de DocuSign para negocios que podrían impugnarse"
-  },
-  "pricing.plan.team.feature.4": {
-    "message": "Soporte prioritario"
+  "pricing.plan.team.sends": {
+    "message": "1,000 negocios enviados al mes"
   },
   "pricing.plan.team.cta": {
     "message": "Comenzar con Team"
   },
-  "pricing.billing.1.name": {
-    "message": "Se cobra al enviar"
+  "pricing.everyPlan.documents": {
+    "message": "Cotizaciones, propuestas y contratos"
   },
-  "pricing.billing.1.desc": {
+  "pricing.everyPlan.ai": {
+    "message": "Redacción con IA a partir de sus notas"
+  },
+  "pricing.everyPlan.sign": {
+    "message": "Firma electrónica y exportación a PDF"
+  },
+  "pricing.everyPlan.branding": {
+    "message": "Su propia marca y sus propios términos"
+  },
+  "pricing.everyPlan.spanish": {
+    "message": "Documentos en inglés o en español"
+  },
+  "pricing.billing.send.name": {
+    "message": "Se cuenta al enviar"
+  },
+  "pricing.billing.send.desc": {
     "message": "Un negocio cuenta cuando se envía a firma, no cuando se genera. Los borradores, las ediciones y las regeneraciones son gratuitos."
   },
-  "pricing.billing.1.col": {
+  "pricing.billing.send.col": {
     "message": "Al enviar"
   },
-  "pricing.billing.2.name": {
-    "message": "La asignación se restablece cada mes"
+  "pricing.billing.resets.name": {
+    "message": "Lo incluido se restablece cada mes"
   },
-  "pricing.billing.2.desc": {
-    "message": "Los negocios incluidos se restablecen al inicio de cada mes de facturación. Los envíos que superen la asignación se facturan con la tarifa de su plan."
+  "pricing.billing.resets.desc": {
+    "message": "Los negocios incluidos se restablecen al inicio de cada mes de facturación. En un plan de pago, los envíos que superen lo incluido se facturan con la tarifa de su plan; en Gratis, usted elige un plan para seguir enviando."
   },
-  "pricing.billing.2.col": {
+  "pricing.billing.resets.col": {
     "message": "Mensual"
   },
-  "pricing.billing.3.name": {
-    "message": "Se cobra una vez por negocio"
+  "pricing.billing.once.name": {
+    "message": "Se cuenta una vez por negocio"
   },
-  "pricing.billing.3.desc": {
-    "message": "El uso se registra en el propio negocio, así que reenviarlo o corregirlo nunca le genera un segundo cobro."
+  "pricing.billing.once.desc": {
+    "message": "El uso se registra en el propio negocio, así que reenviarlo o corregirlo nunca cuenta una segunda vez."
   },
-  "pricing.billing.3.col": {
+  "pricing.billing.once.col": {
     "message": "Una vez"
   },
-  "pricing.billing.4.name": {
-    "message": "Cancele cuando quiera"
+  "pricing.billing.change.name": {
+    "message": "Cambie de plan cuando quiera"
   },
-  "pricing.billing.4.desc": {
-    "message": "Sin contrato ni cargo por cancelación. Su plan sigue vigente hasta el final del mes que ya pagó."
+  "pricing.billing.change.desc": {
+    "message": "Las mejoras de plan se aplican de inmediato. Los cambios a un plan menor se aplican al final del mes que ya pagó."
   },
-  "pricing.billing.4.col": {
+  "pricing.billing.change.col": {
     "message": "En cualquier momento"
   },
-  "pricing.faq.1.q": {
+  "pricing.billing.cancel.name": {
+    "message": "Cancele cuando quiera"
+  },
+  "pricing.billing.cancel.desc": {
+    "message": "Sin contrato ni cargo por cancelación. Su plan sigue activo hasta el final del mes de facturación que ya pagó y luego su cuenta pasa al plan Gratis."
+  },
+  "pricing.billing.cancel.col": {
+    "message": "En cualquier momento"
+  },
+  "pricing.faq.counts.q": {
     "message": "¿Qué cuenta como un negocio enviado?"
   },
-  "pricing.faq.1.a": {
-    "message": "Un negocio cuenta cuando usted envía una propuesta, un formulario de pedido o un contrato a firma, o lo marca como enviado o firmado. Redactar a partir de notas, editar, regenerar y previsualizar el PDF nunca cuentan. Puede armar una cotización veinte veces sin pagar nada."
+  "pricing.faq.counts.a": {
+    "message": "Un negocio cuenta cuando usted envía una propuesta, un formulario de pedido o un contrato a firma, o lo marca como enviado o firmado. Redactar a partir de notas, editar, regenerar y previsualizar el PDF nunca cuentan. Puede armar una cotización veinte veces y cuenta una sola vez."
   },
-  "pricing.faq.2.q": {
+  "pricing.faq.over.q": {
     "message": "¿Qué pasa si supero los negocios incluidos?"
   },
-  "pricing.faq.2.a": {
-    "message": "Nada deja de funcionar. Cada negocio adicional de ese mes se factura con la tarifa de su plan —$5 en Pro, $3 en Team— y aparece en su próxima factura."
+  "pricing.faq.over.a": {
+    "message": "En un plan de pago, nada deja de funcionar: cada negocio enviado adicional se factura con la tarifa de su plan —$0.50 en Starter, $0.25 en Pro, $0.10 en Team— en su próxima factura. En Gratis, usted elige un plan para seguir enviando; redactar sigue siendo gratis."
   },
-  "pricing.faq.3.q": {
+  "pricing.faq.twice.q": {
     "message": "¿Se me cobra dos veces si reenvío el mismo negocio?"
   },
-  "pricing.faq.3.a": {
-    "message": "No. El uso se registra en el negocio, no en la acción, así que un mismo negocio se cobra como máximo una sola vez. Corregir un error de tipeo y reenviarlo no cuesta nada adicional."
+  "pricing.faq.twice.a": {
+    "message": "No. El uso se registra en el negocio, no en la acción, así que un mismo negocio se cuenta como máximo una sola vez. Corregir un error de tipeo y reenviarlo no cuesta nada adicional."
   },
-  "pricing.faq.4.q": {
+  "pricing.faq.switch.q": {
     "message": "¿Puedo cambiar de plan más adelante?"
   },
-  "pricing.faq.4.a": {
-    "message": "Sí, en cualquier dirección, y el cambio se aplica de inmediato. Empiece con pago por negocio y pase a Pro cuando el volumen lo justifique."
+  "pricing.faq.switch.a": {
+    "message": "Sí, en cualquier dirección. Las mejoras de plan se aplican de inmediato, y la diferencia prorrateada por el resto del mes se cobra en ese momento. Los cambios a un plan menor se aplican al final del mes que ya pagó."
   },
-  "pricing.faq.5.q": {
+  "pricing.faq.contract.q": {
     "message": "¿Hay un contrato?"
   },
-  "pricing.faq.5.a": {
-    "message": "Sin contrato, sin cargo de configuración y sin plazo mínimo. Cancele cuando quiera y su plan seguirá activo hasta el final del mes de facturación que ya pagó."
+  "pricing.faq.contract.a": {
+    "message": "Sin contrato, sin cargo de configuración y sin plazo mínimo. Cancele cuando quiera: su plan sigue activo hasta el final del mes de facturación que ya pagó y luego su cuenta pasa al plan Gratis."
   },
-  "pricing.faq.6.q": {
+  "pricing.faq.branding.q": {
     "message": "¿Mis propuestas llevan mi marca?"
   },
-  "pricing.faq.6.a": {
-    "message": "Sí. Su logotipo, su color, su firmante autorizado y la redacción de sus términos, en el documento y en el correo electrónico que lo entrega. Su cliente ve su empresa, no la nuestra."
+  "pricing.faq.branding.a": {
+    "message": "Sí, en todos los planes, incluido Gratis. Su logotipo, su color, su firmante autorizado y la redacción de sus términos, en el documento y en el correo electrónico que lo entrega. Su cliente ve su empresa, no la nuestra."
   },
   "pricing.meta.title": {
     "message": "Precios"
   },
   "pricing.meta.description": {
-    "message": "Redacte todo lo que quiera. Pague solo cuando se envía un negocio: $9 por negocio, o $49/mes con 10 incluidos."
+    "message": "Redacte todo lo que quiera. Gratis cubre 3 negocios enviados al mes sin tarjeta; los planes de pago empiezan en $9 al mes."
   },
   "pricing.eyebrow": {
     "message": "Precios"
@@ -630,7 +636,7 @@
     "message": "Pague cuando sus negocios se envían."
   },
   "pricing.lede": {
-    "message": "Redactar es gratis y lo seguirá siendo. Se le cobra cuando una propuesta realmente sale a firma, y nunca por armarla, editarla o previsualizarla."
+    "message": "Redactar es gratis y lo seguirá siendo. Lo que cuenta es que una propuesta realmente salga a firma, nunca armarla, editarla o previsualizarla. Gratis cubre tres al mes sin tarjeta; cuando envíe más, los planes empiezan en $9 al mes."
   },
   "pricing.plans.heading": {
     "message": "Planes"
@@ -641,8 +647,35 @@
   "pricing.plans.mostPopular": {
     "message": "Más popular"
   },
+  "pricing.plan.perMonth": {
+    "message": "/mes"
+  },
   "pricing.plans.terms": {
     "message": "Precios en USD. Pueden aplicarse impuestos."
+  },
+  "pricing.everyPlan.heading": {
+    "message": "En todos los planes"
+  },
+  "pricing.everyPlan.note": {
+    "message": "Los planes difieren en usuarios y negocios enviados. Todo lo demás está en todos, incluido Gratis."
+  },
+  "pricing.addon.heading": {
+    "message": "Complemento"
+  },
+  "pricing.addon.note": {
+    "message": "Para empresas que responden solicitudes de propuestas. Disponible en cualquier plan de pago."
+  },
+  "pricing.addon.name": {
+    "message": "Respuesta a licitaciones"
+  },
+  "pricing.addon.desc": {
+    "message": "Cargue una solicitud de propuestas (RFP), una solicitud de información (RFI) o un formulario de su cliente. Deal Desk lo divide en cada requisito, redacta respuestas a partir de lo que su empresa ya sabe y las revisa como lo haría un evaluador."
+  },
+  "pricing.addon.usage": {
+    "message": "5 documentos al mes incluidos, luego $10 cada uno. Los socios de diseño lo tienen incluido."
+  },
+  "pricing.addon.price": {
+    "message": "+$49/mes"
   },
   "pricing.billing.heading": {
     "message": "Cómo funciona la facturación"
@@ -702,6 +735,10 @@
     "message": "Publicación más antigua",
     "description": "The blog post button label to navigate to the older/next post"
   },
+  "theme.tags.tagsPageLink": {
+    "message": "Ver todas las etiquetas",
+    "description": "The label of the link targeting the tag list page"
+  },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "modo del sistema",
     "description": "The name for the system color mode"
@@ -721,10 +758,6 @@
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Rastro de navegación",
     "description": "The ARIA label for the breadcrumbs"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "Ver todas las etiquetas",
-    "description": "The label of the link targeting the tag list page"
   },
   "theme.docs.paginator.navAriaLabel": {
     "message": "Página del documento",
@@ -837,13 +870,13 @@
     "message": "Colapsar categoría '{label}' de la barra lateral",
     "description": "The ARIA label to collapse the sidebar category"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "Principal",
-    "description": "The ARIA label for the main navigation"
-  },
   "theme.IconExternalLink.ariaLabel": {
     "message": "(se abre en una nueva pestaña)",
     "description": "The ARIA label for the external link icon"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Principal",
+    "description": "The ARIA label for the main navigation"
   },
   "theme.NotFound.p1": {
     "message": "No pudimos encontrar lo que buscaba.",
@@ -857,13 +890,21 @@
     "message": "Idiomas",
     "description": "The label for the mobile language switcher dropdown"
   },
-  "theme.blog.post.readingTime.plurals": {
-    "message": "Lectura de un minuto|{readingTime} min de lectura",
-    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
-  },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "En esta página",
     "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Leer más",
+    "description": "The label used in blog post item excerpts to link to full blog posts"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "Leer más acerca de {title}",
+    "description": "The ARIA label for the link to full blog posts from excerpts"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Lectura de un minuto|{readingTime} min de lectura",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.CodeBlock.copy": {
     "message": "Copiar",
@@ -876,14 +917,6 @@
   "theme.CodeBlock.copyButtonAriaLabel": {
     "message": "Copiar código",
     "description": "The ARIA label for copy code blocks button"
-  },
-  "theme.blog.post.readMore": {
-    "message": "Leer más",
-    "description": "The label used in blog post item excerpts to link to full blog posts"
-  },
-  "theme.blog.post.readMoreLabel": {
-    "message": "Leer más acerca de {title}",
-    "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.CodeBlock.wordWrapToggle": {
     "message": "Alternar ajuste de palabras",
@@ -909,13 +942,13 @@
     "message": "Cerrar barra lateral",
     "description": "The ARIA label for close button of mobile sidebar"
   },
-  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
-    "message": "Alternar barra lateral",
-    "description": "The ARIA label for hamburger menu button of mobile navigation"
-  },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
     "message": "← Volver al menú principal",
     "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Alternar barra lateral",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "Expandir el menú desplegable",

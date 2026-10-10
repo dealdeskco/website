@@ -222,7 +222,8 @@
    signature ink rather than by floating above its neighbours. */
 .plans {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  /* 14rem lets the four plans sit in one row at full width. */
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: 1.1rem;
   align-items: stretch;
   margin-top: 1.6rem;

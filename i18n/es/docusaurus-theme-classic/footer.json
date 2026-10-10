@@ -42,5 +42,9 @@
   "link.item.label.Terms": {
     "message": "Términos",
     "description": "The label of footer link with label=Terms linking to /legal/terms"
+  },
+  "link.item.label.Answering RFPs": {
+    "message": "Respuesta a licitaciones",
+    "description": "The label of footer link with label=Answering RFPs linking to /rfp"
   }
 }

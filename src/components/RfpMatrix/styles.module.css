@@ -1,0 +1,265 @@
+/* The RFP responder at work, as one sheet on the desk.
+   Same devices as the rest of the site: ruled rows, mono only for the document's own metadata
+   (file name, references, figures), rose reserved for review marks and "Required" -- the way the
+   app's own workspace sets them -- and green for a finished state. */
+
+.figure { margin: 0; }
+
+.sheet {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  box-shadow: 0 1px 2px rgba(16, 24, 32, 0.05), 0 18px 44px rgba(16, 24, 32, 0.07);
+  padding: clamp(14px, 3vw, 22px) clamp(14px, 3vw, 24px) clamp(14px, 2.6vw, 20px);
+  font-variant-numeric: tabular-nums;
+}
+
+/* States that replace one another share a cell, so the cell is always as tall as the tallest. */
+.stack { display: grid; }
+.stack > * { grid-area: 1 / 1; }
+
+/* Everything fades; nothing slides far, and nothing reflows. */
+/* Scoped under .figure: a bare attribute selector in a CSS module is NOT local, and would reach
+   every [data-on] on the site. */
+.figure [data-on] { transition: opacity 0.32s ease, transform 0.32s ease, visibility 0s linear 0s; }
+.figure [data-on='false'] { opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s; }
+.figure [data-on='true'] { opacity: 1; visibility: visible; }
+
+/* ---- head ---- */
+.drop {
+  border: 1.5px dashed var(--rule);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  text-align: center;
+}
+.dropText { font-size: 0.86rem; color: var(--ink-faint); }
+.file {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 5px 9px;
+}
+.file[data-on='false'] { transform: translateY(-14px); }
+.file[data-on='true'] { transform: none; }
+.fileIcon { width: 14px; height: 14px; flex: none; color: var(--ink-faint); }
+
+.head { padding-bottom: 12px; }
+.headTop { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.fileName {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  min-width: 0;
+}
+.draftAll {
+  flex: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  padding: 4px 10px;
+  border-radius: 3px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.draftAll[data-pressed='true'] { border-color: var(--ink); background: var(--field); }
+.docTitle {
+  margin-top: 10px;
+  font-size: clamp(1.02rem, 2.4vw, 1.18rem);
+  font-weight: 800;
+  letter-spacing: -0.024em;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.docSub { font-family: var(--mono); font-size: 0.74rem; color: var(--ink-faint); margin-top: 2px; }
+.headLine {
+  margin-top: 9px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.headLine b { color: var(--ink); font-weight: 650; }
+
+/* ---- the matrix ---- */
+.cols,
+.row {
+  display: grid;
+  grid-template-columns: 3.1rem minmax(0, 1fr) 5.9rem;
+  gap: 0 12px;
+}
+.cols {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--ink-faint);
+  padding: 7px 0 6px;
+  border-top: 2px solid var(--rule-firm);
+  border-bottom: 1px solid var(--rule);
+}
+.right { text-align: right; }
+.rows { list-style: none; margin: 0; padding: 0; }
+.row { padding: 9px 0; border-bottom: 1px solid var(--rule); align-items: start; }
+.row[data-on='false'] { transform: translateY(4px); }
+.row[data-on='true'] { transform: none; }
+.ref { font-family: var(--mono); font-size: 0.8rem; color: var(--ink); line-height: 1.4; }
+.req { display: block; font-size: 0.66rem; font-weight: 600; color: var(--ink-sig); margin-top: 3px; }
+.body { min-width: 0; }
+.reqText { font-size: 0.86rem; line-height: 1.4; color: var(--ink); }
+.scored { font-size: 0.74rem; line-height: 1.4; color: var(--ink-soft); margin-top: 3px; }
+.draft {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  margin-top: 5px;
+  padding-left: 9px;
+  border-left: 2px solid var(--rule);
+}
+.cite { font-family: var(--mono); font-size: 0.7rem; color: var(--ink-faint); white-space: nowrap; }
+/* Marginalia in review ink, as the app sets them. */
+.margin {
+  margin-top: 6px;
+  font-size: 0.76rem;
+  line-height: 1.4;
+  color: var(--ink-sig);
+  padding-left: 9px;
+  border-left: 2px solid var(--ink-sig);
+}
+.margin b { font-weight: 650; }
+.status {
+  text-align: right;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+.status[data-st='none'] { opacity: 0; }
+.status[data-st='open'] { color: var(--ink-faint); font-weight: 500; }
+.status[data-st='drafted'] { color: var(--ink); }
+.status[data-st='answered'] { color: var(--ok); }
+
+/* ---- bottom ---- */
+.bottom { margin-top: 12px; align-items: start; }
+.prompt {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 8px 0;
+  border-bottom: 1.5px solid var(--ink-sig);
+  justify-self: start;
+}
+.question { background: var(--field); border: 1px solid var(--rule); padding: 11px 12px 12px; }
+.qLabel { font-size: 0.74rem; font-weight: 650; color: var(--ink-faint); }
+.qText { font-size: 0.84rem; line-height: 1.45; color: var(--ink); margin-top: 3px; }
+.qRow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 9px; align-items: flex-start; }
+.input {
+  flex: 1 1 14rem;
+  min-width: 0;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  padding: 6px 9px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--ink);
+  /* Two lines reserved: the answer wraps on a phone, and the box must not grow as it is typed. */
+  min-height: calc(2 * 1.4em + 12px);
+}
+.placeholder { color: var(--ink-faint); }
+.caret {
+  display: inline-block;
+  width: 1.5px;
+  height: 1em;
+  margin-left: 1px;
+  vertical-align: -0.15em;
+  background: var(--ink);
+}
+.caret[data-on='true'] { animation: blink 0.9s steps(1) infinite; }
+/* Out of flow when off, or a hidden caret wraps a full line onto a second one. */
+.figure .caret[data-on='false'] { display: none; }
+@keyframes blink { 50% { opacity: 0; } }
+.save {
+  flex: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--on-sig);
+  background: var(--ink-sig);
+  padding: 6px 11px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  min-height: calc(1.4em + 12px);
+  transition: background 0.15s ease;
+}
+.save[data-pressed='true'] { background: var(--ink-sig-deep); }
+.question[data-done='true'] .save { background: transparent; color: var(--ink-faint); box-shadow: inset 0 0 0 1px var(--rule); }
+.tally {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  padding-top: 2px;
+}
+.count { font-size: 0.86rem; font-weight: 650; color: var(--ok); }
+.exports { display: flex; flex-wrap: wrap; gap: 8px; }
+.export {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  padding: 4px 9px;
+  border-radius: 3px;
+}
+
+/* ---- caption ---- */
+.caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 10px;
+  font-size: 0.86rem;
+  color: var(--ink-faint);
+}
+.replay {
+  flex: none;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 4px 11px;
+  cursor: pointer;
+}
+.replay:hover { border-color: var(--ink); }
+.replay:focus-visible { outline: 2px solid var(--ink-sig); outline-offset: 2px; }
+
+/* On a phone the three columns leave the requirement a sliver, so each row becomes two lines:
+   the reference and its status across the top, the requirement at full width beneath. */
+@media (max-width: 480px) {
+  .cols { grid-template-columns: auto minmax(0, 1fr); }
+  .cols > span:nth-child(2) { display: none; }
+  .row { grid-template-columns: auto minmax(0, 1fr); row-gap: 4px; }
+  .row .ref { grid-column: 1; grid-row: 1; }
+  .row .status { grid-column: 2; grid-row: 1; display: flex; justify-content: flex-end; align-items: baseline; gap: 8px; }
+  .row .status .req { display: inline; margin-top: 0; order: -1; }
+  .row .body { grid-column: 1 / -1; grid-row: 2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .figure [data-on], .status, .row, .file { transition: none !important; transform: none !important; }
+  .caret[data-on='true'] { animation: none; }
+}

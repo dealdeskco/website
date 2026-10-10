@@ -1015,5 +1015,272 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etiquetas",
     "description": "The title of the tag list page"
+  },
+  "home.rfp.heading": {
+    "message": "Responda la RFP con lo que ya sabe"
+  },
+  "home.rfp.note": {
+    "message": "Para firmas de consultoría y para cualquiera que responda RFP, RFI y formularios de clientes."
+  },
+  "home.rfp.p1": {
+    "message": "Cargue el documento. Deal Desk lo divide en cada requisito, conserva la numeración propia del documento y encuentra cómo se calificará cada uno. El resultado es la matriz de cumplimiento: todos los requisitos en una sola lista, sin nada que buscar."
+  },
+  "home.rfp.p2": {
+    "message": "Luego redacta cada respuesta a partir de sus propuestas anteriores, declaraciones de capacidades y currículums, y cita los pasajes que usó. Cuando a un borrador le falta un dato, lo indica en lugar de inventarlo, y unas pocas preguntas breves completan lo que falta. Sus respuestas se guardan, así que la próxima RFP ya las conoce."
+  },
+  "home.rfp.link": {
+    "message": "Cómo funciona la respuesta a licitaciones"
+  },
+  "home.rfp.terms": {
+    "message": "Un complemento para cualquier plan de pago: $49 al mes."
+  },
+  "pricing.addon.link": {
+    "message": "Cómo funciona"
+  },
+  "rfp.stage.upload.h": {
+    "message": "Cargue el documento"
+  },
+  "rfp.stage.upload.p": {
+    "message": "Una RFP, una RFI o un formulario propio del cliente: un PDF con texto seleccionable, un archivo de Word .docx o texto pegado, de hasta unas 100 páginas. Leer un documento extenso toma unos minutos."
+  },
+  "rfp.stage.matrix.h": {
+    "message": "Obtenga la matriz de cumplimiento"
+  },
+  "rfp.stage.matrix.p": {
+    "message": "Cada requisito por separado en una lista numerada, con las referencias propias del documento, como L.4, la sección en la que se encuentra, de qué tipo es (una pregunta, un requisito, un campo de formulario o una instrucción) y si es obligatorio."
+  },
+  "rfp.stage.eval.h": {
+    "message": "Vea cómo se calificará"
+  },
+  "rfp.stage.eval.p": {
+    "message": "Lectura del evaluador encuentra los criterios de evaluación en el documento y muestra, en cada requisito, cómo se califica, citando las palabras del propio documento."
+  },
+  "rfp.stage.draft.h": {
+    "message": "Redacte cada respuesta con lo que ya sabe"
+  },
+  "rfp.stage.draft.p": {
+    "message": "Agregue propuestas anteriores, declaraciones de capacidades y currículums a Lo que sabemos, la biblioteca de su empresa. Redactar todo escribe cada respuesta en segundo plano a partir de ella, y cada borrador cita los pasajes que usó como [1], [2]."
+  },
+  "rfp.stage.check.h": {
+    "message": "Lea las revisiones en el margen"
+  },
+  "rfp.stage.check.p": {
+    "message": "Cada respuesta se revisa con reglas fijas, no con la IA calificando su propio trabajo: el requisito repetido tal cual, afirmaciones imprecisas, superlativos sin nada que los respalde, relleno, plazos de antigüedad como “en los últimos tres años” y siglas sin desarrollar en su primer uso. Cuando falta un dato real, el borrador indica “Necesita un dato de usted” en lugar de inventarlo."
+  },
+  "rfp.stage.ask.h": {
+    "message": "Resuelva los pocos elementos abiertos"
+  },
+  "rfp.stage.ask.p": {
+    "message": "Unas pocas preguntas piden solo los datos que faltan. Escriba o dicte cada uno y luego elija Guardar y volver a redactar. Sus respuestas se guardan en Lo que sabemos, así que la próxima RFP ya las tiene."
+  },
+  "rfp.stage.export.h": {
+    "message": "Expórtelo"
+  },
+  "rfp.stage.export.p": {
+    "message": "Descargue la matriz de cumplimiento como CSV. Si el documento llegó como archivo de Word, descargue el original del cliente con sus respuestas ya escritas."
+  },
+  "rfp.note.review.name": {
+    "message": "Usted revisa cada respuesta"
+  },
+  "rfp.note.review.desc": {
+    "message": "Los borradores los escribe la IA y pueden contener errores. Las revisiones señalan los puntos débiles, pero usted lee y aprueba cada respuesta antes de enviarla."
+  },
+  "rfp.note.text.name": {
+    "message": "Texto, no escaneos"
+  },
+  "rfp.note.text.desc": {
+    "message": "Un PDF necesita texto seleccionable. Si el suyo es un escaneo, pegue el texto."
+  },
+  "rfp.note.library.name": {
+    "message": "Una biblioteca, no un repositorio de documentos"
+  },
+  "rfp.note.library.desc": {
+    "message": "Lo que sabemos es un lugar donde soltar documentos y una lista de lo que contiene. Todas las personas de su cuenta la comparten, y las respuestas que usted aprueba se agregan a ella."
+  },
+  "rfp.note.deal.name": {
+    "message": "Vinculado al negocio"
+  },
+  "rfp.note.deal.desc": {
+    "message": "Vincule una respuesta a uno de sus negocios para encontrarla desde ese negocio."
+  },
+  "rfp.meta.title": {
+    "message": "Respuesta a licitaciones"
+  },
+  "rfp.meta.description": {
+    "message": "Cargue una RFP, una RFI o un formulario propio del cliente. Deal Desk lo divide en cada requisito, redacta respuestas a partir de lo que su empresa ya sabe y las revisa como lo haría un evaluador."
+  },
+  "rfp.title": {
+    "message": "Responda la RFP con lo que su empresa ya sabe."
+  },
+  "rfp.lede": {
+    "message": "Cargue una RFP, una RFI o un formulario propio del cliente. Deal Desk lo divide en cada requisito, redacta cada respuesta a partir de sus propuestas anteriores y currículums, la revisa como lo haría un evaluador y solo le pide los datos que faltan."
+  },
+  "rfp.hero.terms": {
+    "message": "La respuesta a licitaciones es un complemento para cualquier plan de pago: $49 al mes."
+  },
+  "rfp.stages.heading": {
+    "message": "En el orden en que usted trabaja"
+  },
+  "rfp.stages.note": {
+    "message": "Desde que el documento llega a su bandeja de entrada hasta la matriz que entrega con él."
+  },
+  "rfp.notes.heading": {
+    "message": "Conviene saber antes"
+  },
+  "rfp.price.heading": {
+    "message": "Precio"
+  },
+  "rfp.price.note": {
+    "message": "Un complemento para Starter, Pro o Team."
+  },
+  "rfp.price.desc": {
+    "message": "5 documentos al mes incluidos, luego $10 cada uno. Un documento solo cuenta cuando se lee correctamente. Los socios de diseño lo tienen incluido."
+  },
+  "rfp.price.plans": {
+    "message": "Ver los planes"
+  },
+  "rfp.close.heading": {
+    "message": "Traiga la próxima RFP."
+  },
+  "rfp.close.note": {
+    "message": "Cree su cuenta, elija un plan de pago y agregue la respuesta a licitaciones cuando llegue el próximo documento."
+  },
+  "rfp.close.guide": {
+    "message": "Leer la guía paso a paso"
+  },
+  "rfp.demo.l1.req": {
+    "message": "Describa su enfoque para evaluar los resultados del programa."
+  },
+  "rfp.demo.l1.draft": {
+    "message": "Un diseño de métodos mixtos: indicadores de resultados acordados con el personal del programa en el primer mes, tableros trimestrales y un informe final de impacto."
+  },
+  "rfp.demo.l1.scored": {
+    "message": "Enfoque técnico, 40% de la calificación (M.2)"
+  },
+  "rfp.demo.l2.req": {
+    "message": "Identifique al gerente del proyecto y resuma su experiencia relevante."
+  },
+  "rfp.demo.l2.draft": {
+    "message": "Dana Whitfield, PMP, ha dirigido once evaluaciones de programas de condados desde 2016."
+  },
+  "rfp.demo.l3.req": {
+    "message": "Proporcione dos referencias de contratos similares completados en los últimos tres años, incluido el valor del contrato."
+  },
+  "rfp.demo.l3.draft": {
+    "message": "Estudio de usuarios de Lakeshore Transit Authority, $310,000, completado en agosto de 2024."
+  },
+  "rfp.demo.l3.scored": {
+    "message": "Experiencia previa, 30% de la calificación (M.2)"
+  },
+  "rfp.demo.l4.req": {
+    "message": "Describa su proceso de aseguramiento de la calidad de los entregables."
+  },
+  "rfp.demo.l4.draft": {
+    "message": "Cada entregable pasa por una revisión entre analistas y luego por la aprobación del gerente del proyecto según los criterios de aceptación."
+  },
+  "rfp.demo.l5.req": {
+    "message": "Indique si su firma cuenta con un seguro de responsabilidad profesional de al menos $1,000,000."
+  },
+  "rfp.demo.l5.draft": {
+    "message": "Sí. Cobertura de responsabilidad profesional de $2,000,000 por reclamo; se adjunta el certificado."
+  },
+  "rfp.demo.l6.req": {
+    "message": "Presente los currículums del personal clave."
+  },
+  "rfp.demo.l6.draft": {
+    "message": "Los currículums de Dana Whitfield y dos analistas sénior están en el Anexo B."
+  },
+  "rfp.demo.answer": {
+    "message": "Evaluación de Ridgeview Housing, $240,000, mar–nov 2025"
+  },
+  "rfp.demo.l3.redraft": {
+    "message": "Estudio de usuarios de Lakeshore Transit Authority, $310,000, completado en agosto de 2024; evaluación de Ridgeview Housing, $240,000, de marzo a noviembre de 2025."
+  },
+  "rfp.demo.status.open": {
+    "message": "Abierto"
+  },
+  "rfp.demo.status.drafted": {
+    "message": "Redactado"
+  },
+  "rfp.demo.status.answered": {
+    "message": "Respondido"
+  },
+  "rfp.demo.required": {
+    "message": "Obligatorio"
+  },
+  "rfp.demo.aria": {
+    "message": "Una RFP de ejemplo se lee y se divide en seis requisitos, se redacta a partir de la biblioteca de la firma con citas, se señala y se responde un dato faltante, y la matriz de cumplimiento y el documento completado quedan listos para descargar."
+  },
+  "rfp.demo.drop": {
+    "message": "Cargue el documento que necesita responder"
+  },
+  "rfp.demo.draftAll": {
+    "message": "Redactar todo"
+  },
+  "rfp.demo.title": {
+    "message": "Servicios de evaluación de programas"
+  },
+  "rfp.demo.sub": {
+    "message": "RFP 2026-014, Condado de Ejemplo"
+  },
+  "rfp.demo.reading": {
+    "message": "Leyendo…"
+  },
+  "rfp.demo.found": {
+    "message": "6 requisitos"
+  },
+  "rfp.demo.evalRead": {
+    "message": "Lectura del evaluador"
+  },
+  "rfp.demo.evalCriteria": {
+    "message": "Enfoque técnico 40%, experiencia previa 30%, precio 30% (M.2)"
+  },
+  "rfp.demo.col.ref": {
+    "message": "Ref."
+  },
+  "rfp.demo.col.req": {
+    "message": "Requisito"
+  },
+  "rfp.demo.col.status": {
+    "message": "Estado"
+  },
+  "rfp.demo.howScored": {
+    "message": "Cómo se califica:"
+  },
+  "rfp.demo.needsFact": {
+    "message": "Necesita un dato de usted"
+  },
+  "rfp.demo.needsFactWhat": {
+    "message": "una segunda referencia de los últimos tres años"
+  },
+  "rfp.demo.prompt": {
+    "message": "Resuelva 1 elemento abierto con unas pocas preguntas"
+  },
+  "rfp.demo.qLabel": {
+    "message": "Algunas preguntas"
+  },
+  "rfp.demo.qText": {
+    "message": "L.3 pide dos referencias de los últimos tres años. ¿Cuál es un segundo contrato, con su valor y sus fechas?"
+  },
+  "rfp.demo.typeHere": {
+    "message": "Escríbalo aquí"
+  },
+  "rfp.demo.save": {
+    "message": "Guardar y volver a redactar"
+  },
+  "rfp.demo.tally": {
+    "message": "{n} de 6 respondidos"
+  },
+  "rfp.demo.exportMatrix": {
+    "message": "⤓ Matriz de cumplimiento"
+  },
+  "rfp.demo.exportFilled": {
+    "message": "⤓ Documento completado"
+  },
+  "rfp.demo.caption": {
+    "message": "Un documento de ejemplo. El condado, la firma y todas las cifras son ficticios."
+  },
+  "rfp.demo.replay": {
+    "message": "Repetir"
   }
 }

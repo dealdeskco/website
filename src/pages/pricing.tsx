@@ -244,7 +244,10 @@ export default function Pricing(): React.ReactElement {
                 </Translate>{' '}
                 <Translate id="pricing.addon.usage">
                   5 documents a month included, then $10 each. Design partners have it included.
-                </Translate>
+                </Translate>{' '}
+                <Link to="/rfp">
+                  <Translate id="pricing.addon.link">How it works</Translate>
+                </Link>
               </div>
               <div className={styles.itemCol}>
                 <Translate id="pricing.addon.price">+$49/month</Translate>

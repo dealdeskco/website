@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Translate, {translate} from '@docusaurus/Translate';
+import RfpMatrix from '@site/src/components/RfpMatrix';
 import styles from './index.module.css';
 
 const APP = 'https://app.dealdesk.studio';
@@ -386,6 +387,53 @@ export default function Home(): React.ReactElement {
                 <div className={styles.itemCol}>{it.col}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------- the RFP responder ----------------
+          The add-on gets its own section rather than a line item: it is a different job (answering
+          someone else's document, not writing your own) for a different buyer, and the demo shows
+          that faster than a description can. */}
+      <section className={styles.section} id="rfp">
+        <div className={styles.sheet}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}>
+              <Translate id="home.rfp.heading">Answer the RFP from what you already know</Translate>
+            </h2>
+            <p className={styles.note}>
+              <Translate id="home.rfp.note">
+                For consulting firms, and anyone who answers RFPs, RFIs and customer forms.
+              </Translate>
+            </p>
+          </div>
+          <div className={styles.rfpGrid}>
+            <div>
+              <p className={styles.body}>
+                <Translate id="home.rfp.p1">
+                  Upload the document. Deal Desk breaks it into every requirement, keeps the
+                  document’s own numbering, and finds how each one will be scored. The result is
+                  the compliance matrix: every requirement in one list, with nothing left to find.
+                </Translate>
+              </p>
+              <p className={styles.body}>
+                <Translate id="home.rfp.p2">
+                  Then it drafts every answer from your past proposals, capability statements and
+                  résumés, and cites the passages it used. Where a draft is missing a fact, it says
+                  so instead of making one up, and a few short questions fill the gaps. Your answers
+                  are kept, so the next RFP already knows them.
+                </Translate>
+              </p>
+              <p className={styles.body}>
+                <Link to="/rfp">
+                  <Translate id="home.rfp.link">How the RFP responder works</Translate>
+                </Link>
+              </p>
+              <p className={styles.terms}>
+                <Translate id="home.rfp.terms">An add-on to any paid plan: $49 a month.</Translate>
+              </p>
+            </div>
+            <RfpMatrix />
           </div>
         </div>
       </section>

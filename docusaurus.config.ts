@@ -141,6 +141,7 @@ const config: Config = {
           items: [
             {label: 'How it works', to: '/how-it-works'},
             {label: 'Pricing', to: '/pricing'},
+            {label: 'Answering RFPs', to: '/rfp'},
             {label: 'Sign in', href: `${APP}/login`},
           ],
         },

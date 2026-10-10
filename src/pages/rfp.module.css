@@ -1,0 +1,16 @@
+/* The RFP page's hero: the claim on the left, the matrix working on the right. The matrix needs
+   more width than the proposal in the landing cover does, because it is the subject here rather
+   than a picture of an output. */
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 34rem);
+  gap: clamp(1.6rem, 4.5vw, 3.6rem);
+  align-items: start;
+  padding-bottom: clamp(2rem, 5vw, 3.2rem);
+}
+.demo { min-width: 0; }
+
+@media (max-width: 1000px) {
+  .heroGrid { grid-template-columns: minmax(0, 1fr); }
+  .demo { max-width: 36rem; }
+}

@@ -142,6 +142,11 @@
 .stepH { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 0.3rem; }
 .stepP { font-size: 1.06rem; line-height: 1.6; color: var(--ink-soft); max-width: var(--measure); margin: 0; }
 
+/* ============================= RFP responder =============================
+   Copy left, the matrix working right. The matrix is wider than the evidence receipt because
+   its rows have to stay readable, so it gets its own grid rather than borrowing that one. */
+.rfpGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 34rem); gap: clamp(1.6rem, 5vw, 3.6rem); align-items: start; }
+
 /* ============================= evidence ============================= */
 .evidence { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 24rem); gap: clamp(1.6rem, 5vw, 3.6rem); align-items: start; }
 .receipt { border: 1px solid var(--rule); background: var(--panel); padding: 18px 20px 20px; }
@@ -317,7 +322,7 @@
   .masthead { min-height: 0; }
 }
 @media (max-width: 900px) {
-  .mastGrid, .introGrid, .evidence, .signRow { grid-template-columns: minmax(0, 1fr); }
+  .mastGrid, .introGrid, .evidence, .signRow, .rfpGrid { grid-template-columns: minmax(0, 1fr); }
   .meta { max-width: 320px; }
   .item { grid-template-columns: minmax(0, 1fr); gap: 0.3rem; }
   .itemCol { text-align: left; }

@@ -143,18 +143,17 @@ export default function Pricing(): React.ReactElement {
       description={translate({
         id: 'pricing.meta.description',
         message:
-          'Draft as much as you like. Free covers 3 sent deals a month with no card; paid plans start at $9 a month.',
+          'Drafting is free and stays free. Send three deals a month at no cost. Need more? Plans start at $9.',
       })}>
       <header className={`${styles.masthead} ${styles.mastShort}`}>
         <div className={styles.sheet}>
           <span className={styles.eyebrow}><Translate id="pricing.eyebrow">Pricing</Translate></span>
-          <h1 className={styles.title}><Translate id="pricing.title">Pay when deals go out.</Translate></h1>
+          <h1 className={styles.title}><Translate id="pricing.title">Free to start.</Translate></h1>
           <div className={styles.rule} />
           <p className={styles.lede}>
             <Translate id="pricing.lede">
-              Drafting is free and stays free. What counts is a proposal actually leaving for
-              signature, never building, editing or previewing one. Free covers three a month with
-              no card; when you send more, plans start at $9 a month.
+              Drafting is free and stays free. Send three deals a month at no cost. Need more? Plans
+              start at $9.
             </Translate>
           </p>
           <div className={styles.actions}>

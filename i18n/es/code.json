@@ -405,10 +405,10 @@
     "message": "Idéntico byte por byte al documento sellado"
   },
   "home.price.heading": {
-    "message": "Redacte gratis. Pague solo cuando envíe"
+    "message": "Redactar es gratis"
   },
   "home.price.note": {
-    "message": "Se cuenta cuando un negocio se envía, nunca cuando se redacta. Una vez por negocio, sin importar cuántas veces lo corrija. Gratis cubre tres al mes."
+    "message": "Envíe tres negocios al mes sin costo. ¿Necesita más? Los planes empiezan en $9."
   },
   "home.price.col.plan": {
     "message": "Plan"
@@ -621,16 +621,16 @@
     "message": "Precios"
   },
   "pricing.meta.description": {
-    "message": "Redacte todo lo que quiera. Gratis cubre 3 negocios enviados al mes sin tarjeta; los planes de pago empiezan en $9 al mes."
+    "message": "Redactar es gratis y lo seguirá siendo. Envíe tres negocios al mes sin costo. ¿Necesita más? Los planes empiezan en $9."
   },
   "pricing.eyebrow": {
     "message": "Precios"
   },
   "pricing.title": {
-    "message": "Pague cuando sus negocios se envían."
+    "message": "Gratis para empezar."
   },
   "pricing.lede": {
-    "message": "Redactar es gratis y lo seguirá siendo. Lo que cuenta es que una propuesta realmente salga a firma, nunca armarla, editarla o previsualizarla. Gratis cubre tres al mes sin tarjeta; cuando envíe más, los planes empiezan en $9 al mes."
+    "message": "Redactar es gratis y lo seguirá siendo. Envíe tres negocios al mes sin costo. ¿Necesita más? Los planes empiezan en $9."
   },
   "pricing.plans.heading": {
     "message": "Planes"

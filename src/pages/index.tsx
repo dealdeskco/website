@@ -484,11 +484,10 @@ export default function Home(): React.ReactElement {
       <section className={styles.section}>
         <div className={styles.sheet}>
           <div className={styles.sectionHead}>
-            <h2 className={styles.h2}><Translate id="home.price.heading">Draft free. Pay only when you send</Translate></h2>
+            <h2 className={styles.h2}><Translate id="home.price.heading">Drafting is free</Translate></h2>
             <p className={styles.note}>
               <Translate id="home.price.note">
-                Counted when a deal goes out, never when it is drafted. Once per deal, however
-                many times you fix it. Free covers three a month.
+                Send three deals a month at no cost. Need more? Plans start at $9.
               </Translate>
             </p>
           </div>

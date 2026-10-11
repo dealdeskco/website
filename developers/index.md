@@ -55,8 +55,9 @@ visible but keys cannot be created, and existing keys answer `402`.
   answers, searching the library.
 - **Sending is metered** exactly as in the app: a proposal sent for signature counts as one sent
   deal on your plan, once, however many times it is re-sent.
-- The library, facts and RFP responses need the **RFP responder** add-on, as in the app. Without it
-  those calls answer `402` with `"required_addon": "rfp"`.
+- The company library and facts are included on every paid plan, from Starter. RFP responses need
+  the **RFP responder** add-on, as in the app; without it those calls answer `402` with
+  `"required_addon": "rfp"`.
 
 See [Pricing](/pricing) for the plans, and [Deal Desk for your AI agent](/agents) for what this
 looks like from the agent's side.

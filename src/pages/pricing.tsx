@@ -20,10 +20,11 @@ const SIGNUP = `${APP}/login?signup=1`;
 
 // Mirrors plans.mjs in the application, which is the billing source of truth. If a price changes
 // there it must change here -- they are two systems and nothing enforces agreement between them.
-// Two things are gated in the app: developer access (the API, MCP and CLI), from Starter up, and the
-// RFP add-on. Everything in EVERY_PLAN is on every plan, Free included, so it is listed once rather
-// than presented as something a higher tier buys.
+// Gated in the app: the company library and developer access (the API, MCP and CLI), from Starter
+// up, and RFP responses, the RFP add-on. Everything in EVERY_PLAN is on every plan, Free included, so
+// it is listed once rather than presented as something a higher tier buys.
 const DEV = translate({id: 'pricing.plan.developer', message: 'Developer: API, MCP, CLI'});
+const LIBRARY = translate({id: 'pricing.plan.library', message: 'Company library, with citations'});
 
 const PLANS = [
   {
@@ -46,6 +47,7 @@ const PLANS = [
     features: [
       translate({id: 'pricing.plan.users.one', message: '1 user'}),
       translate({id: 'pricing.plan.starter.sends', message: '50 sent deals a month'}),
+      LIBRARY,
       DEV,
     ],
     cta: translate({id: 'pricing.plan.starter.cta', message: 'Start Starter'}),
@@ -59,6 +61,7 @@ const PLANS = [
     features: [
       translate({id: 'pricing.plan.users.five', message: 'Up to 5 users'}),
       translate({id: 'pricing.plan.pro.sends', message: '200 sent deals a month'}),
+      LIBRARY,
       DEV,
     ],
     cta: translate({id: 'pricing.plan.pro.cta', message: 'Start Pro'}),
@@ -72,6 +75,7 @@ const PLANS = [
     features: [
       translate({id: 'pricing.plan.users.unlimited', message: 'Unlimited users'}),
       translate({id: 'pricing.plan.team.sends', message: '1,000 sent deals a month'}),
+      LIBRARY,
       DEV,
     ],
     cta: translate({id: 'pricing.plan.team.cta', message: 'Start Team'}),
@@ -127,6 +131,10 @@ const FAQ = [
   {
     q: translate({id: 'pricing.faq.twice.q', message: 'Do I get charged twice if I resend the same deal?'}),
     a: translate({id: 'pricing.faq.twice.a', message: 'No. Usage is recorded against the deal, not the action, so a given deal is counted at most once ever. Correcting a typo and resending costs nothing extra.'}),
+  },
+  {
+    q: translate({id: 'pricing.faq.library.q', message: 'Which plans include the company library?'}),
+    a: translate({id: 'pricing.faq.library.a', message: 'Every paid plan, from Starter: What we know, the facts you teach Deal Desk, and search with citations, in the app and from your AI agent. The RFP responder add-on adds RFP responses on top; it is not needed for the library.'}),
   },
   {
     q: translate({id: 'pricing.faq.switch.q', message: 'Can I switch plans later?'}),
@@ -214,8 +222,8 @@ export default function Pricing(): React.ReactElement {
             <h2 className={styles.h2}><Translate id="pricing.everyPlan.heading">On every plan</Translate></h2>
             <p className={styles.note}>
               <Translate id="pricing.everyPlan.note">
-                Plans differ in users, sent deals and developer access. Everything else is on all of
-                them, Free included.
+                Plans differ in users, sent deals, the company library and developer access.
+                Everything else is on all of them, Free included.
               </Translate>
             </p>
           </div>
@@ -227,27 +235,41 @@ export default function Pricing(): React.ReactElement {
         </div>
       </section>
 
-      {/* A line item on the rate card rather than a plan feature buried in a list: it is the one
-          capability besides the add-on that a plan buys. */}
+      {/* Line items on the rate card rather than plan features buried in a list: they are what a
+          paid plan buys besides more sends and users. */}
       <section className={styles.section} id="developer">
         <div className={styles.sheet}>
           <div className={styles.sectionHead}>
             <h2 className={styles.h2}><Translate id="pricing.developer.heading">From Starter up</Translate></h2>
             <p className={styles.note}>
               <Translate id="pricing.developer.note">
-                For anyone who writes proposals in Claude, Cursor, Copilot or their own agent.
+                Every paid plan, in the app and from your AI agent.
               </Translate>
             </p>
           </div>
           <div className={styles.items}>
+            <div className={styles.item}>
+              <div className={styles.itemName}>{LIBRARY}</div>
+              <div className={styles.itemDesc}>
+                <Translate id="pricing.library.desc">
+                  What we know: your past proposals, capability statements and the facts you teach
+                  Deal Desk, searched with citations. Drafts in the app and from your agent are
+                  written from it, so they carry your real facts instead of invented ones.
+                </Translate>
+              </div>
+              <div className={styles.itemCol}>
+                <Translate id="pricing.developer.col">Starter, Pro, Team</Translate>
+              </div>
+            </div>
             <div className={styles.item}>
               <div className={styles.itemName}>{DEV}</div>
               <div className={styles.itemDesc}>
                 <Translate id="pricing.developer.desc">
                   Connect your AI agent to Deal Desk with an API key: a remote MCP server, a REST
                   API and the dealdesk command line tool. Drafting through an agent is free; a
-                  proposal it sends for signature counts as a sent deal, as in the app. The library
-                  and RFP tools need the RFP responder add-on.
+                  proposal it sends for signature counts as a sent deal, as in the app. From $9,
+                  your agent drafts from your company’s real library, with citations; only the RFP
+                  tools need the RFP responder add-on.
                 </Translate>{' '}
                 <Link to="/agents">
                   <Translate id="pricing.developer.link">How it works</Translate>

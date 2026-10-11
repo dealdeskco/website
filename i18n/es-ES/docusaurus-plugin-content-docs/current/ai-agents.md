@@ -13,9 +13,10 @@ documento y de la firma.
 
 ![Claude Code conectado a Deal Desk redacta una propuesta para Lakeside Dental, y la propuesta sale con un total de $6,300 para el año 1](/img/agents/agent-session-es-ES.gif)
 
-El acceso para desarrolladores está incluido en **Starter, Pro y Team**. La biblioteca, los datos
-que usted le enseñe y las herramientas de RFP también requieren el complemento **Respuesta a
-licitaciones**, igual que en la aplicación.
+El acceso para desarrolladores y la biblioteca de la empresa están incluidos en **Starter, Pro y
+Team**: desde $9 al mes, su agente redacta a partir de la biblioteca real de su empresa, con citas.
+Solo las herramientas de RFP requieren el complemento **Respuesta a licitaciones**, igual que las
+respuestas a RFP en la aplicación.
 
 ## 1. Cree una clave en Desarrolladores
 

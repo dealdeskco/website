@@ -651,7 +651,7 @@
     "message": "En todos los planes"
   },
   "pricing.everyPlan.note": {
-    "message": "Los planes difieren en usuarios y negocios enviados. Todo lo demás está en todos, incluido Gratis."
+    "message": "Los planes difieren en usuarios, negocios enviados, la biblioteca de la empresa y el acceso para desarrolladores. Todo lo demás está en todos, incluido Gratis."
   },
   "pricing.addon.heading": {
     "message": "Complemento"
@@ -1455,7 +1455,7 @@
     "message": "Desarrolladores: API, MCP, CLI"
   },
   "agents.plan.dev.desc": {
-    "message": "Incluido en Starter, Pro y Team. Redacte, lea y actualice propuestas desde cualquier agente. Enviar a firma cuenta como un negocio enviado, exactamente igual que en la aplicación."
+    "message": "Incluido en Starter, Pro y Team, con la biblioteca de su empresa: desde $9 al mes, su agente redacta a partir de los datos reales de su empresa, con citas, y redacta, lee y actualiza propuestas. Enviar a firma cuenta como un negocio enviado, exactamente igual que en la aplicación."
   },
   "agents.plan.link": {
     "message": "Vea los planes"
@@ -1464,10 +1464,10 @@
     "message": "desde $9/mes"
   },
   "agents.plan.library.name": {
-    "message": "Biblioteca, datos y herramientas de RFP"
+    "message": "Herramientas de RFP"
   },
   "agents.plan.library.desc": {
-    "message": "search_library, teach_fact y las herramientas de RFP vienen con el complemento Respuesta a licitaciones, igual que la biblioteca en la aplicación."
+    "message": "start_rfp_response, get_rfp_requirements, draft_rfp_answer y las demás herramientas de RFP vienen con el complemento Respuesta a licitaciones, igual que las respuestas a RFP en la aplicación."
   },
   "agents.plan.rfp": {
     "message": "Sobre la respuesta a licitaciones"
@@ -1515,10 +1515,10 @@
     "message": "Desde Starter"
   },
   "pricing.developer.note": {
-    "message": "Para quienes redactan propuestas en Claude, Cursor, Copilot o su propio agente."
+    "message": "Todos los planes de pago, en la aplicación y desde su agente de IA."
   },
   "pricing.developer.desc": {
-    "message": "Conecte su agente de IA a Deal Desk con una clave de API: un servidor MCP remoto, una API REST y la herramienta de línea de comandos dealdesk. Redactar a través de un agente es gratis; una propuesta que envíe a firma cuenta como un negocio enviado, igual que en la aplicación. La biblioteca y las herramientas de RFP requieren el complemento Respuesta a licitaciones."
+    "message": "Conecte su agente de IA a Deal Desk con una clave de API: un servidor MCP remoto, una API REST y la herramienta de línea de comandos dealdesk. Redactar a través de un agente es gratis; una propuesta que envíe a firma cuenta como un negocio enviado, igual que en la aplicación. Desde $9, su agente redacta a partir de la biblioteca real de su empresa, con citas; solo las herramientas de RFP requieren el complemento Respuesta a licitaciones."
   },
   "pricing.developer.link": {
     "message": "Cómo funciona"
@@ -1722,7 +1722,7 @@
     "message": "Incluido desde Starter"
   },
   "developers.price.desc": {
-    "message": "Starter, Pro y Team. Redactar por la API es gratis; un envío cuenta como un negocio enviado, igual que en la aplicación. La biblioteca, los datos y las herramientas de RFP requieren el complemento Respuesta a licitaciones."
+    "message": "Starter, Pro y Team, con la biblioteca de la empresa y los datos: desde $9, su agente redacta a partir de la biblioteca real de su empresa, con citas. Redactar por la API es gratis; un envío cuenta como un negocio enviado, igual que en la aplicación. Solo las herramientas de RFP requieren el complemento Respuesta a licitaciones."
   },
   "developers.docs.heading": {
     "message": "Documentación"
@@ -1807,5 +1807,20 @@
   },
   "clients.col.status": {
     "message": "Hoy"
+  },
+  "agents.hero.terms": {
+    "message": "Desde $9 al mes, su agente redacta a partir de la biblioteca real de su empresa, con citas."
+  },
+  "pricing.plan.library": {
+    "message": "Biblioteca de la empresa, con citas"
+  },
+  "pricing.faq.library.q": {
+    "message": "¿Qué planes incluyen la biblioteca de la empresa?"
+  },
+  "pricing.faq.library.a": {
+    "message": "Todos los planes de pago, desde Starter: Lo que sabemos, los datos que le enseña a Deal Desk y la búsqueda con citas, en la aplicación y desde su agente de IA. El complemento Respuesta a licitaciones agrega las respuestas a RFP; no hace falta para la biblioteca."
+  },
+  "pricing.library.desc": {
+    "message": "Lo que sabemos: sus propuestas anteriores, declaraciones de capacidades y los datos que le enseña a Deal Desk, con búsqueda y citas. Los borradores, en la aplicación y desde su agente, se redactan a partir de ella, así que llevan sus datos reales en lugar de datos inventados."
   }
 }

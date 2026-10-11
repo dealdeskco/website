@@ -161,6 +161,7 @@ omitir.
 | `update_rfp_answer` | Edita una respuesta o la marca como Respondido (las respuestas aprobadas se incorporan a la biblioteca) o como No aplica. | `requirement_id`, `rfp_id`, `response` *opcional*, `status` *opcional* | `write` |
 | `answer_rfp_gap` | Aporta el dato que faltaba: se guarda y la respuesta se vuelve a redactar. | `answer`, `requirement_id`, `rfp_id` | `write` |
 
-Las herramientas de biblioteca, datos y RFP requieren el complemento Respuesta a licitaciones; sin
-él devuelven un error que el agente puede leer y explicar. Antes de darle a un agente una clave que
+Las herramientas de biblioteca y datos funcionan en todos los planes de pago, desde Starter. Las
+herramientas de RFP requieren el complemento Respuesta a licitaciones; sin él devuelven un error que
+el agente puede leer y explicar. Antes de darle a un agente una clave que
 pueda escribir, lea [Mantenga privado lo privado](./private.md).

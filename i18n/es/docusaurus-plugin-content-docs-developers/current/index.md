@@ -56,9 +56,9 @@ sección Desarrolladores se ve, pero no se pueden crear claves, y las que ya exi
   propuesta, redactar respuestas y buscar en la biblioteca.
 - **Los envíos se cobran** exactamente igual que en la aplicación: una propuesta enviada a firma
   cuenta como un negocio enviado de su plan, una sola vez, aunque se reenvíe varias veces.
-- La biblioteca, los datos y las respuestas a RFP requieren el complemento **Respuesta a
-  licitaciones**, igual que en la aplicación. Sin él, esas llamadas responden `402` con
-  `"required_addon": "rfp"`.
+- La biblioteca de la empresa y los datos están incluidos en todos los planes de pago, desde
+  Starter. Las respuestas a RFP requieren el complemento **Respuesta a licitaciones**, igual que en
+  la aplicación; sin él, esas llamadas responden `402` con `"required_addon": "rfp"`.
 
 Consulte [Precios](/pricing) para ver los planes, y [Deal Desk para su agente de IA](/agents) para
 ver cómo se ve esto desde el lado del agente.

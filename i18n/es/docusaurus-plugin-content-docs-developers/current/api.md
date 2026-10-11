@@ -58,7 +58,7 @@ máquinas está en [`/api/v1/openapi.json`](https://app.dealdesk.studio/api/v1/o
 Todos los errores tienen la misma forma:
 
 ```json
-{ "error": { "code": "payment_required", "message": "The knowledge library is part of the RFP responder add-on.", "billing_required": true, "required_addon": "rfp" } }
+{ "error": { "code": "payment_required", "message": "Responding to a document is part of the RFP responder add-on. …", "billing_required": true, "required_addon": "rfp" } }
 ```
 
 El objeto `error` lleva `code` y `message`, y cuando corresponde `billing_required`,
@@ -68,7 +68,7 @@ El objeto `error` lleva `code` y `message`, y cuando corresponde `billing_requir
 | --- | --- | --- |
 | 400 | `invalid_request` | Falta algo en la solicitud o algo es incorrecto; el mensaje indica qué. |
 | 401 | `unauthenticated` | No hay clave, la clave no es válida o fue revocada, o quien la creó ya no administra la cuenta. |
-| 402 | `payment_required` | El plan no lo incluye: el acceso para desarrolladores empieza en Starter; la biblioteca y las RFP requieren Respuesta a licitaciones; o se superó el límite de envíos del plan Gratis. |
+| 402 | `payment_required` | El plan no lo incluye: el acceso para desarrolladores empieza en Starter; las respuestas a RFP requieren Respuesta a licitaciones; o se superó el límite de envíos del plan Gratis. |
 | 403 | `insufficient_scope` | A la clave le falta el ámbito necesario (`required_scope` indica cuál). Otros rechazos responden `forbidden`. |
 | 404 | `not_found` | No existe en esta cuenta. Los ids de otra cuenta no se distinguen de los que no existen. |
 | 405 | `method_not_allowed` | Ese método no está disponible en esa ruta. |
@@ -94,8 +94,9 @@ El objeto `error` lleva `code` y `message`, y cuando corresponde `billing_requir
 ### `GET /account`
 
 Ámbito `read`. La cuenta para la que actúa esta clave, con su plan y sus funciones, y la propia
-clave (nunca su secreto). `features` incluye `documents` cuando la biblioteca y las respuestas a
-RFP están disponibles.
+clave (nunca su secreto). `features` incluye `library` cuando la biblioteca de la empresa y los datos están disponibles
+(todos los planes de pago) y `documents` cuando lo están las respuestas a RFP (el complemento
+Respuesta a licitaciones).
 
 ```bash
 curl https://app.dealdesk.studio/api/v1/account -H "Authorization: Bearer $DEALDESK_API_KEY"
@@ -114,8 +115,8 @@ Cualquier ámbito. Revoca la clave que hace la solicitud. Es lo que usa `dealdes
 
 ## Biblioteca
 
-La biblioteca, **Lo que sabemos** en la aplicación, requiere el complemento Respuesta a
-licitaciones.
+La biblioteca, **Lo que sabemos** en la aplicación, está incluida en todos los planes de pago, desde
+Starter.
 
 ### `POST /library/search`
 
@@ -166,8 +167,8 @@ hasta que el estado sea `ready`.
 
 ## Datos
 
-Los datos son lo que las personas le dijeron a Deal Desk sobre la empresa. Requieren el complemento
-Respuesta a licitaciones.
+Los datos son lo que las personas le dijeron a Deal Desk sobre la empresa. Forman parte de la
+biblioteca, en todos los planes de pago desde Starter.
 
 ### `POST /facts`
 

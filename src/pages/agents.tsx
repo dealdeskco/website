@@ -144,6 +144,11 @@ export default function Agents(): React.ReactElement {
                   <Translate id="agents.cta.docs">Read the developer docs</Translate>
                 </Link>
               </div>
+              <p className={styles.terms} style={{marginTop: '1.1rem'}}>
+                <Translate id="agents.hero.terms">
+                  From $9 a month, your agent drafts from your company’s real library, with citations.
+                </Translate>
+              </p>
             </div>
           </div>
           <div className={styles.rule} />
@@ -377,8 +382,10 @@ export default function Agents(): React.ReactElement {
               </div>
               <div className={styles.itemDesc}>
                 <Translate id="agents.plan.dev.desc">
-                  Included on Starter, Pro and Team. Draft, read and update proposals from any
-                  agent. Sending for signature counts as a sent deal, exactly as it does in the app.
+                  Included on Starter, Pro and Team, with your company library: from $9 a month your
+                  agent drafts from your company’s real facts, with citations, and drafts, reads and
+                  updates proposals. Sending for signature counts as a sent deal, exactly as it does
+                  in the app.
                 </Translate>{' '}
                 <Link to="/pricing">
                   <Translate id="agents.plan.link">See the plans</Translate>
@@ -390,12 +397,12 @@ export default function Agents(): React.ReactElement {
             </div>
             <div className={styles.item}>
               <div className={styles.itemName}>
-                <Translate id="agents.plan.library.name">Library, facts and RFP tools</Translate>
+                <Translate id="agents.plan.library.name">RFP tools</Translate>
               </div>
               <div className={styles.itemDesc}>
                 <Translate id="agents.plan.library.desc">
-                  search_library, teach_fact and the RFP tools come with the RFP responder add-on,
-                  as the library does in the app.
+                  start_rfp_response, get_rfp_requirements, draft_rfp_answer and the other RFP tools
+                  come with the RFP responder add-on, as RFP responses do in the app.
                 </Translate>{' '}
                 <Link to="/rfp">
                   <Translate id="agents.plan.rfp">About the RFP responder</Translate>

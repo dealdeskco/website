@@ -1822,5 +1822,38 @@
   },
   "pricing.library.desc": {
     "message": "Lo que sabemos: sus propuestas anteriores, declaraciones de capacidades y los datos que le enseña a Deal Desk, con búsqueda y citas. Los borradores, en la aplicación y desde su agente, se redactan a partir de ella, así que llevan sus datos reales en lugar de datos inventados."
+  },
+  "flow.notes": {
+    "message": "Recorrí el patio con Maya Torres (propietaria, Harbor & Vine Weddings). Rediseño del césped de ceremonias, fase uno: diseño + instalación $18k, riego e iluminación de caminos $6400. 10% de descuento si firma este mes. Quiere la propuesta para el viernes."
+  },
+  "flow.aria": {
+    "message": "Las notas de una visita con Maya Torres, de Harbor & Vine Weddings, se convierten en una propuesta: diseño e instalación, fase 1, $18,000; riego e iluminación, $6,400; descuento del primer año del 10%, $2,440; total $21,960. Maya Torres la firma y el PDF queda sellado con el identificador de verificación 8H0dmfuGIn1Q."
+  },
+  "flow.notesTitle": {
+    "message": "Redactar a partir de notas"
+  },
+  "flow.notesPlaceholder": {
+    "message": "Pegue o dicte sus notas"
+  },
+  "flow.draftWithAI": {
+    "message": "✨ Redactar con IA"
+  },
+  "flow.doc.customer": {
+    "message": "Cliente"
+  },
+  "flow.doc.scope": {
+    "message": "Alcance"
+  },
+  "flow.doc.scopeValue": {
+    "message": "Rediseño del patio y del césped de ceremonias, fase uno: diseño, instalación, riego e iluminación de caminos."
+  },
+  "flow.caption": {
+    "message": "Un trabajo de ejemplo. La empresa, el cliente y todas las cifras son ficticios."
+  },
+  "flow.replay": {
+    "message": "Repetir"
+  },
+  "flow.gif.alt": {
+    "message": "Las notas de una visita se convierten en una propuesta con precios para Harbor & Vine Weddings, con un total de $21,960, firmada por Maya Torres y sellada."
   }
 }

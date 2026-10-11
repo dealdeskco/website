@@ -1,7 +1,11 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Translate, {translate} from '@docusaurus/Translate';
+import ProposalFlow from '@site/src/components/ProposalFlow';
 // Shares the landing page's primitives so the two cannot drift apart.
 import styles from './index.module.css';
 
@@ -46,6 +50,10 @@ const LIMITS = [
 ];
 
 export default function HowItWorks(): React.ReactElement {
+  const {i18n} = useDocusaurusContext();
+  const sfx = i18n.currentLocale === 'en' ? '' : `-${i18n.currentLocale}`;
+  const og = `https://dealdesk.studio/img/how-it-works/how-it-works-social${sfx}.png`;
+  const gif = useBaseUrl(`/img/how-it-works/proposal-flow${sfx}.gif`);
   return (
     <Layout
       title={translate({id: 'howItWorks.meta.title', message: 'How it works'})}
@@ -54,6 +62,10 @@ export default function HowItWorks(): React.ReactElement {
         message:
           'From a conversation to a signed, sealed proposal in one sitting. Each step, and the honest limits.',
       })}>
+      <Head>
+        <meta property="og:image" content={og} />
+        <meta name="twitter:image" content={og} />
+      </Head>
       <header className={styles.masthead}>
         <div className={styles.sheet}>
           <div className={styles.mastGrid}>
@@ -92,6 +104,22 @@ export default function HowItWorks(): React.ReactElement {
                 </div>
               </div>
             ))}
+          </div>
+          {/* The four stages above, shown working on one job: the one moment of motion here. */}
+          <div className={styles.flowDemo}>
+            <ProposalFlow />
+            <noscript>
+              <img
+                src={gif}
+                width={888}
+                height={627}
+                style={{display: 'block', width: '100%', height: 'auto', border: '1px solid var(--rule)'}}
+                alt={translate({
+                  id: 'flow.gif.alt',
+                  message: 'Notes from a site visit become a priced proposal for Harbor & Vine Weddings, total $21,960, signed by Maya Torres and sealed.',
+                })}
+              />
+            </noscript>
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Translate, {translate} from '@docusaurus/Translate';
 import RfpMatrix from '@site/src/components/RfpMatrix';
+import {OAUTH} from '@site/src/data/agentClients';
 import styles from './index.module.css';
 
 const APP = 'https://app.dealdesk.studio';
@@ -186,6 +187,18 @@ const CAPS = [
     d: translate({id: 'home.caps.4.d', message: 'Tamper-evident, with an audit trail.'}),
     icon: 'M11 1l8 3v7c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V4l8-3zM7.5 11l2.5 2.5L15 8.5',
   },
+  {
+    // Which clients the line names follows the one status in src/data/agentClients.tsx: ChatGPT
+    // is named only once it can actually connect.
+    t: translate({id: 'home.caps.5.t', message: 'Works with your AI'}),
+    d:
+      OAUTH === 'available'
+        ? translate({id: 'home.caps.5.d.oauth', message: 'Use it from ChatGPT, Claude, Copilot and more.'})
+        : translate({id: 'home.caps.5.d', message: 'Use it from Claude, Copilot, Cursor and more.'}),
+    // A speech bubble with a plug's two prongs in it: a conversation that is connected to something.
+    icon: 'M4 3h14a2 2 0 012 2v9a2 2 0 01-2 2h-7l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2zM9 6.5v2.5M13 6.5v2.5M7.5 9h7v1.5a3.5 3.5 0 01-7 0V9z',
+    to: '/agents',
+  },
 ];
 
 const FLOW = [
@@ -312,7 +325,7 @@ export default function Home(): React.ReactElement {
                 <svg viewBox="0 0 22 22" aria-hidden="true">
                   <path d={c.icon} fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <h2 className={styles.capH}>{c.t}</h2>
+                <h2 className={styles.capH}>{c.to ? <Link to={c.to} className={styles.capLink}>{c.t}</Link> : c.t}</h2>
                 <p className={styles.capP}>{c.d}</p>
               </div>
             ))}
@@ -341,6 +354,33 @@ export default function Home(): React.ReactElement {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------- the AI you already use ----------------
+          Deliberately small: a few lines in the page's own voice. The demonstration lives on
+          /agents and /developers. Which assistants are named follows the one status in
+          src/data/agentClients.tsx. */}
+      <section className={styles.section} id="ai">
+        <div className={styles.sheet}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}><Translate id="home.ai.heading">Use Deal Desk from the AI you already use</Translate></h2>
+            <p className={styles.note}>
+              {OAUTH === 'available'
+                ? translate({id: 'home.ai.names.oauth', message: 'ChatGPT, Claude, Copilot, Cursor and any MCP-compatible agent.'})
+                : translate({id: 'home.ai.names', message: 'Claude, Copilot, Cursor and any MCP-compatible agent.'})}
+            </p>
+          </div>
+          <p className={styles.body}>
+            <Translate id="home.ai.p">
+              Ask your assistant for a proposal, and it comes back with your real prices and your
+              company’s facts, with sources, ready to sign.
+            </Translate>
+          </p>
+          <div className={styles.actions}>
+            <Link className={styles.alt} to="/agents"><Translate id="common.cta.seeHowItWorks">See how it works</Translate></Link>
+            <Link className={styles.alt} to="/developers"><Translate id="home.ai.developers">For developers</Translate></Link>
           </div>
         </div>
       </section>

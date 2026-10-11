@@ -525,7 +525,8 @@
 /* ============================= capability row ============================= */
 .caps {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  /* Five across: one list, no orphan. Below 900px it is 3 + 2, and one column on a phone. */
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: clamp(1rem, 3vw, 2.2rem);
   padding-top: clamp(1.6rem, 4vw, 2.4rem);
   margin-top: clamp(1.6rem, 4vw, 2.4rem);
@@ -534,6 +535,10 @@
 .cap svg { width: 20px; height: 20px; color: var(--ink-sig); margin-bottom: 0.6rem; display: block; }
 .capH { font-size: 1.06rem; font-weight: 700; color: var(--ink); margin: 0 0 0.22rem; letter-spacing: -0.015em; }
 .capP { font-size: 0.98rem; line-height: 1.52; color: var(--ink-soft); margin: 0; }
+/* The one item that leads somewhere: underlined, in the heading's own ink, so it reads as a link
+   without an arrow appended or a colour change. */
+.capLink { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--rule-firm); }
+.capLink:hover { color: var(--ink-sig); text-decoration-color: currentColor; }
 
 /* ============================= process strip =============================
    A real sequence ending in a signature, so the numbers are earned and they carry the
@@ -582,8 +587,11 @@
 }
 
 @media (max-width: 900px) {
-  .caps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.6rem; }
+  .caps { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 1.6rem; }
   .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.3rem; }
+}
+@media (max-width: 640px) {
+  .caps { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
   .caps, .flow { grid-template-columns: minmax(0, 1fr); }

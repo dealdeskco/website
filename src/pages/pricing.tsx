@@ -20,8 +20,11 @@ const SIGNUP = `${APP}/login?signup=1`;
 
 // Mirrors plans.mjs in the application, which is the billing source of truth. If a price changes
 // there it must change here -- they are two systems and nothing enforces agreement between them.
-// Only the RFP add-on is gated in the app; everything in EVERY_PLAN is on every plan, Free included,
-// so it is listed once rather than presented as something a higher tier buys.
+// Two things are gated in the app: developer access (the API, MCP and CLI), from Starter up, and the
+// RFP add-on. Everything in EVERY_PLAN is on every plan, Free included, so it is listed once rather
+// than presented as something a higher tier buys.
+const DEV = translate({id: 'pricing.plan.developer', message: 'Developer: API, MCP, CLI'});
+
 const PLANS = [
   {
     name: translate({id: 'pricing.plan.free.name', message: 'Free'}),
@@ -43,6 +46,7 @@ const PLANS = [
     features: [
       translate({id: 'pricing.plan.users.one', message: '1 user'}),
       translate({id: 'pricing.plan.starter.sends', message: '50 sent deals a month'}),
+      DEV,
     ],
     cta: translate({id: 'pricing.plan.starter.cta', message: 'Start Starter'}),
     pick: true,
@@ -55,6 +59,7 @@ const PLANS = [
     features: [
       translate({id: 'pricing.plan.users.five', message: 'Up to 5 users'}),
       translate({id: 'pricing.plan.pro.sends', message: '200 sent deals a month'}),
+      DEV,
     ],
     cta: translate({id: 'pricing.plan.pro.cta', message: 'Start Pro'}),
     pick: false,
@@ -67,6 +72,7 @@ const PLANS = [
     features: [
       translate({id: 'pricing.plan.users.unlimited', message: 'Unlimited users'}),
       translate({id: 'pricing.plan.team.sends', message: '1,000 sent deals a month'}),
+      DEV,
     ],
     cta: translate({id: 'pricing.plan.team.cta', message: 'Start Team'}),
     pick: false,
@@ -208,7 +214,8 @@ export default function Pricing(): React.ReactElement {
             <h2 className={styles.h2}><Translate id="pricing.everyPlan.heading">On every plan</Translate></h2>
             <p className={styles.note}>
               <Translate id="pricing.everyPlan.note">
-                Plans differ in users and sent deals. Everything else is on all of them, Free included.
+                Plans differ in users, sent deals and developer access. Everything else is on all of
+                them, Free included.
               </Translate>
             </p>
           </div>
@@ -217,6 +224,43 @@ export default function Pricing(): React.ReactElement {
               <li key={f}><Tick />{f}</li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* A line item on the rate card rather than a plan feature buried in a list: it is the one
+          capability besides the add-on that a plan buys. */}
+      <section className={styles.section} id="developer">
+        <div className={styles.sheet}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}><Translate id="pricing.developer.heading">From Starter up</Translate></h2>
+            <p className={styles.note}>
+              <Translate id="pricing.developer.note">
+                For anyone who writes proposals in Claude, Cursor, Copilot or their own agent.
+              </Translate>
+            </p>
+          </div>
+          <div className={styles.items}>
+            <div className={styles.item}>
+              <div className={styles.itemName}>{DEV}</div>
+              <div className={styles.itemDesc}>
+                <Translate id="pricing.developer.desc">
+                  Connect your AI agent to Deal Desk with an API key: a remote MCP server, a REST
+                  API and the dealdesk command line tool. Drafting through an agent is free; a
+                  proposal it sends for signature counts as a sent deal, as in the app. The library
+                  and RFP tools need the RFP responder add-on.
+                </Translate>{' '}
+                <Link to="/agents">
+                  <Translate id="pricing.developer.link">How it works</Translate>
+                </Link>{' '}
+                <Link to="/docs/developers">
+                  <Translate id="pricing.developer.docs">Developer docs</Translate>
+                </Link>
+              </div>
+              <div className={styles.itemCol}>
+                <Translate id="pricing.developer.col">Starter, Pro, Team</Translate>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

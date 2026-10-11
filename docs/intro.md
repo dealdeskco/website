@@ -58,3 +58,4 @@ file's SHA-256 in their browser and compares it with the sealed value. Any chang
 
 - [Pricing and what counts as a send](/pricing)
 - [How it works, step by step](/how-it-works)
+- [Use Deal Desk with your AI agent](./ai-agents.md)

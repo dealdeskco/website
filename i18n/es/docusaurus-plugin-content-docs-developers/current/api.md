@@ -238,8 +238,9 @@ curl https://app.dealdesk.studio/api/v1/proposals -H "Authorization: Bearer $DEA
 ### `GET /proposals/{number}`
 
 Ámbito `read`. Una propuesta por su número, por ejemplo `DD-2026-0042`: todos los campos, las
-partidas, los descuentos, los totales por año y el estado de la firma, con la misma forma que el
-borrador de arriba.
+partidas, los descuentos y los totales por año, con la misma forma que el borrador de arriba, más
+`signing`: una entrada por parte (`cust` para el cliente, `luc` para su firmante) con `method`,
+`signer_name`, `email`, `completed_at` y `authenticated`.
 
 ### `PATCH /proposals/{number}`
 
@@ -266,11 +267,22 @@ curl -o DD-2026-0042.pdf https://app.dealdesk.studio/api/v1/proposals/DD-2026-00
 
 ### `POST /proposals/{number}/send`
 
-Ámbito `send`. Envía la propuesta para firma electrónica: primero firma el cliente y luego su
-firmante. **Se factura como un negocio enviado**, por el mismo camino que Enviar en la aplicación.
-`customer_email` es obligatorio; `customer_name`, `signer_name` y `signer_email` son opcionales;
-con `force: true` se envía aunque el documento ya se haya firmado en persona. Envíe solo cuando la
-persona lo haya indicado.
+Ámbito `send`. Envía al cliente un enlace para revisar y firmar la propuesta con la firma
+electrónica propia de Deal Desk, junto con un código de un solo uso cuando el correo está
+disponible. **Se factura como un negocio enviado**, por el mismo camino que Enviar en la
+aplicación: si el plan ya agotó sus envíos, la llamada se rechaza (`402`) antes de enviar ningún
+correo. Cuerpo: `customer_email` (obligatorio), `customer_name` y `customer_title` (opcionales).
+Una propuesta ya firmada devuelve `409`. Envíe solo cuando la persona lo haya indicado.
+
+La respuesta incluye el `link` de firma y `mail_status`, para que usted pueda compartir el enlace si
+el correo no se pudo entregar. `mail_status` es `sent`, `failed` o `not_configured`:
+
+```js
+// 200
+{ "status": "sent",
+  "signing": { "emailed": true, "mail_status": "sent", "one_time_code": true, "expires_in_hours": 72,
+               "link": "https://app.dealdesk.studio/sign/..." } }
+```
 
 ## Respuestas a RFP
 

@@ -6,16 +6,14 @@ description: Sign in through the browser, then search the library, teach facts, 
 
 # The dealdesk command line tool
 
-One file, no dependencies, Node.js 18 or later. It is not on npm yet; until it is, run it from a
-checkout of the Deal Desk repository:
+One file, no dependencies, Node.js 18 or later. Install it straight from Deal Desk:
 
 ```bash
-git clone https://github.com/dealdeskco/dealdesk.git
-npm install -g ./dealdesk/cli        # puts `dealdesk` on your PATH
+npm install -g https://app.dealdesk.studio/cli/dealdesk-cli.tgz   # puts `dealdesk` on your PATH
 dealdesk --help
 ```
 
-Once published it will be `npx @dealdesk/cli` or `npm install -g @dealdesk/cli`.
+It will also be published on npm as `@dealdesk/cli`; the command above keeps working.
 
 ## Signing in
 

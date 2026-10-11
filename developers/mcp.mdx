@@ -144,7 +144,7 @@ Inputs marked *optional* can be left out.
 | `list_proposals` | Proposals, orders and agreements, newest first. | none | `read` |
 | `get_proposal` | One proposal's fields, line items and totals per year. | `number` | `read` |
 | `update_proposal` | Change fields, line items or discounts. Never changes the status. | `number`, `discounts` *optional*, `fields` *optional*, `lineItems` *optional*, `version` *optional* | `write` |
-| `send_proposal_for_signature` | Send for e-signature. Billed as a sent deal. | `customer_email`, `number`, `customer_name` *optional*, `signer_email` *optional*, `signer_name` *optional* | `send` |
+| `send_proposal_for_signature` | Email the customer a link to sign, with Deal Desk e-signature. Billed as a sent deal. | `customer_email`, `number`, `customer_name` *optional*, `customer_title` *optional* | `send` |
 | `start_rfp_response` | Upload an RFP, RFI, questionnaire, a customer's own form or a capability matrix; it is broken into every requirement. | `name`, `content_type` *optional*, `data` *optional*, `deal_number` *optional*, `text` *optional* | `write` |
 | `list_rfp_responses` | Documents being answered. | none | `read` |
 | `get_rfp_status` | Reading or ready, counts by status, and drafting progress. | `rfp_id` | `read` |

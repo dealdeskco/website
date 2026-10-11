@@ -151,7 +151,7 @@ omitir.
 | `list_proposals` | Propuestas, pedidos y contratos, del más reciente al más antiguo. | ninguna | `read` |
 | `get_proposal` | Los campos, las partidas y los totales por año de una propuesta. | `number` | `read` |
 | `update_proposal` | Cambia campos, partidas o descuentos. Nunca cambia el estado. | `number`, `discounts` *opcional*, `fields` *opcional*, `lineItems` *opcional*, `version` *opcional* | `write` |
-| `send_proposal_for_signature` | Envía la propuesta para firma electrónica. Se factura como un negocio enviado. | `customer_email`, `number`, `customer_name` *opcional*, `signer_email` *opcional*, `signer_name` *opcional* | `send` |
+| `send_proposal_for_signature` | Envía al cliente un enlace para firmar la propuesta con la firma electrónica de Deal Desk. Se factura como un negocio enviado. | `customer_email`, `number`, `customer_name` *opcional*, `customer_title` *opcional* | `send` |
 | `start_rfp_response` | Carga una RFP, una RFI, un cuestionario, un formulario propio del cliente o una matriz de capacidades, y la desglosa en cada uno de sus requisitos. | `name`, `content_type` *opcional*, `data` *opcional*, `deal_number` *opcional*, `text` *opcional* | `write` |
 | `list_rfp_responses` | Los documentos que se están respondiendo. | ninguna | `read` |
 | `get_rfp_status` | Si el documento se está leyendo o ya está listo, los recuentos por estado y el avance de la redacción. | `rfp_id` | `read` |

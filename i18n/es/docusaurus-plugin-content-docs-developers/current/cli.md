@@ -6,16 +6,14 @@ description: Inicie sesión desde el navegador y luego busque en la biblioteca, 
 
 # La herramienta de línea de comandos dealdesk
 
-Un solo archivo, sin dependencias, para Node.js 18 o posterior. Todavía no está publicada en npm;
-mientras tanto, ejecútela desde una copia clonada del repositorio de Deal Desk:
+Un solo archivo, sin dependencias, para Node.js 18 o posterior. Instálela directamente desde Deal Desk:
 
 ```bash
-git clone https://github.com/dealdeskco/dealdesk.git
-npm install -g ./dealdesk/cli        # agrega `dealdesk` a su PATH
+npm install -g https://app.dealdesk.studio/cli/dealdesk-cli.tgz   # agrega `dealdesk` a su PATH
 dealdesk --help
 ```
 
-Cuando se publique, podrá usar `npx @dealdesk/cli` o `npm install -g @dealdesk/cli`.
+También se publicará en npm como `@dealdesk/cli`; el comando anterior seguirá funcionando.
 
 ## Inicio de sesión
 

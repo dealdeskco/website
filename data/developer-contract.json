@@ -371,9 +371,8 @@
     "inputs": [
      "customer_email",
      "customer_name",
-     "number",
-     "signer_email",
-     "signer_name"
+     "customer_title",
+     "number"
     ],
     "read_only": false
    },

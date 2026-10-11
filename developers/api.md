@@ -231,7 +231,9 @@ curl https://app.dealdesk.studio/api/v1/proposals -H "Authorization: Bearer $DEA
 ### `GET /proposals/{number}`
 
 Scope `read`. One proposal by its number, for example `DD-2026-0042`: every field, the line items,
-discounts, totals per year and its signature status, in the same shape as the draft above.
+discounts and totals per year, in the same shape as the draft above, plus `signing`: one entry per
+party (`cust` for the customer, `luc` for your signer) with `method`, `signer_name`, `email`,
+`completed_at` and `authenticated`.
 
 ### `PATCH /proposals/{number}`
 
@@ -258,10 +260,22 @@ curl -o DD-2026-0042.pdf https://app.dealdesk.studio/api/v1/proposals/DD-2026-00
 
 ### `POST /proposals/{number}/send`
 
-Scope `send`. Send for e-signature: the customer signs, then your signer. **Billed as a sent
-deal**, through the same path as Send in the app. `customer_email` is required; `customer_name`,
-`signer_name`, `signer_email` are optional; `force: true` sends even if the document was already
-signed in person. Only send when the person has said to.
+Scope `send`. Emails the customer a link to review and sign the proposal with Deal Desk's own
+e-signature, plus a one-time code when email is available. **Billed as a sent deal**, through the
+same path as Send in the app: if the plan's sending allowance is used up, the call is refused
+(`402`) before any email goes out. Body: `customer_email` (required), `customer_name` and
+`customer_title` (optional). A proposal that is already signed returns `409`. Only send when the
+person has said to.
+
+The response includes the signing `link` and `mail_status`, so you can pass the link on yourself
+if the email could not be delivered. `mail_status` is `sent`, `failed` or `not_configured`:
+
+```js
+// 200
+{ "status": "sent",
+  "signing": { "emailed": true, "mail_status": "sent", "one_time_code": true, "expires_in_hours": 72,
+               "link": "https://app.dealdesk.studio/sign/..." } }
+```
 
 ## RFP responses
 

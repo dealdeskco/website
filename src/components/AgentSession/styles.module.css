@@ -1,0 +1,225 @@
+/* Deal Desk inside an AI agent: a terminal on the left, the proposal it produced coming out
+   beside it. The sibling of RfpMatrix and set with the same devices: mono only for what is
+   literally terminal text or document metadata, figures tabular and right-aligned, rules that are
+   table rows. The terminal is the site's inverted slab (dark in both themes); the sheet is a
+   white panel, the way the product's own document is. */
+
+.figure { margin: 0; }
+.stage { font-variant-numeric: tabular-nums; }
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr);
+  gap: clamp(14px, 2.4vw, 26px);
+  align-items: start;
+}
+
+/* States share a cell so the cell is as tall as its tallest state. */
+.stack { display: inline-grid; vertical-align: top; }
+.stack > * { grid-area: 1 / 1; }
+.ghost { visibility: hidden; }
+
+/* Everything fades; nothing slides far, and nothing reflows. Scoped under .figure: a bare
+   attribute selector in a CSS module is not local, and would reach every [data-on] on the site. */
+.figure [data-on] { transition: opacity 0.32s ease, transform 0.42s cubic-bezier(0.2, 0.7, 0.2, 1), visibility 0s linear 0s; }
+.figure [data-on='false'] { opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s; }
+.figure [data-on='true'] { opacity: 1; visibility: visible; }
+
+/* ---- the terminal ---- */
+.term {
+  background: var(--slab);
+  color: var(--on-slab);
+  border: 1px solid var(--slab);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  min-width: 0;
+}
+[data-theme='dark'] .term { border-color: var(--rule); background: #081422; }
+.termBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 8px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: rgba(238, 242, 246, 0.82);
+}
+.termPath { font-family: var(--mono); font-weight: 400; color: rgba(238, 242, 246, 0.5); }
+.termBody {
+  padding: 12px 14px 14px;
+  display: grid;
+  gap: 9px;
+  overflow-wrap: anywhere;
+}
+.line { display: grid; grid-template-columns: 1.1em minmax(0, 1fr); }
+.line.dim { display: block; padding-left: 1.1em; }
+.dim { color: rgba(238, 242, 246, 0.56); }
+.ps { color: rgba(238, 242, 246, 0.5); }
+.ask {
+  display: grid;
+  grid-template-columns: 1.1em minmax(0, 1fr);
+  border: 1px solid rgba(238, 242, 246, 0.28);
+  border-radius: 3px;
+  padding: 7px 9px;
+  font-family: var(--sans);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+.ask .ps { font-family: var(--mono); }
+.call, .reply { display: grid; grid-template-columns: 1.1em minmax(0, 1fr); }
+.call b { font-weight: 500; color: #fff; }
+.reply { font-family: var(--sans); font-size: 0.86rem; line-height: 1.5; }
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-top: 0.5em;
+  background: rgba(238, 242, 246, 0.45);
+  transition: background 0.25s ease;
+}
+/* A finished tool call is green, as the agent itself marks it; the reply is plain ink. */
+.dot[data-done='true'] { background: #69c998; }
+.dot[data-reply='true'] { background: rgba(238, 242, 246, 0.9); }
+.reply .dot { margin-top: 0.55em; }
+.result {
+  display: grid;
+  grid-template-columns: 1.1em 1.3em minmax(0, 1fr);
+  color: rgba(238, 242, 246, 0.72);
+  margin-top: -5px;
+}
+.result .elbow { grid-column: 2; color: rgba(238, 242, 246, 0.42); }
+.result > span:last-child { grid-column: 3; }
+.caret {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 1px;
+  vertical-align: -0.18em;
+  background: rgba(238, 242, 246, 0.85);
+}
+.caret[data-on='true'] { animation: blink 0.9s steps(1) infinite; }
+/* Out of flow when off, or a hidden caret could wrap a line onto a second one. */
+.figure .caret[data-on='false'] { display: none; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ---- the sheet ---- */
+.sheet {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  box-shadow: 0 1px 2px rgba(16, 24, 32, 0.05), 0 18px 44px rgba(16, 24, 32, 0.07);
+  min-width: 0;
+  /* It comes out from under the terminal, the way a page leaves a printer. */
+  margin-top: clamp(18px, 4vw, 44px);
+}
+.sheet[data-on='false'] { transform: translateX(-28px); }
+.sheet[data-on='true'] { transform: none; }
+.sheetTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 8px 14px;
+  background: var(--field);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--ink-faint);
+}
+.sheetBody { padding: 16px 18px 16px; }
+.sheetHead { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+.docTitle { font-size: 1.02rem; font-weight: 800; letter-spacing: -0.028em; color: var(--ink); }
+.forWhom { font-size: 0.84rem; color: var(--ink-soft); margin-top: 2px; }
+.forWhom b { color: var(--ink); font-weight: 650; }
+.status {
+  flex: none;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 2px 8px;
+}
+.terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+  margin: 12px 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--rule-firm);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+.terms div { display: flex; gap: 8px; }
+.terms dt { color: var(--ink-faint); font-weight: 400; }
+.terms dd { margin: 0; color: var(--ink); }
+
+/* Docusaurus dresses every table (display:block, a border per cell, zebra rows); undo all three. */
+.items { width: 100%; display: table; border-collapse: collapse; border: 0; margin: 0; font-size: 0.86rem; }
+.items tr,
+.items tr:nth-child(2n) { background: none; border: 0; }
+.items td {
+  padding: 7px 0;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  background: none;
+  color: var(--ink);
+  vertical-align: baseline;
+}
+.items td:last-child { text-align: right; white-space: nowrap; padding-left: 12px; font-weight: 600; }
+.items small { display: block; font-size: 0.76rem; color: var(--ink-faint); margin-top: 1px; }
+.items .sum td { font-weight: 800; font-size: 0.98rem; border-bottom: 0; padding-top: 9px; letter-spacing: -0.01em; }
+.items tr[data-on='false'] { transform: translateY(4px); }
+.items tr[data-on='true'] { transform: none; }
+.sources {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--ink-faint);
+}
+
+/* ---- caption ---- */
+.caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 10px;
+  font-size: 0.86rem;
+  color: var(--ink-faint);
+}
+.replay {
+  flex: none;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 4px 11px;
+  cursor: pointer;
+}
+.replay:hover { border-color: var(--ink); }
+.replay:focus-visible { outline: 2px solid var(--ink-sig); outline-offset: 2px; }
+
+/* Below this the two panes would leave the terminal a sliver: the sheet goes underneath. */
+@media screen and (max-width: 820px) {
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .sheet { margin-top: 0; }
+  .sheet[data-on='false'] { transform: translateY(-14px); }
+}
+@media screen and (max-width: 480px) {
+  .term { font-size: 0.72rem; }
+  .termBody { padding: 10px 11px 12px; }
+  .ask, .reply { font-size: 0.82rem; }
+  .sheetBody { padding: 14px 14px 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .figure [data-on], .sheet, .items tr, .dot { transition: none !important; transform: none !important; }
+  .caret[data-on='true'] { animation: none; }
+}

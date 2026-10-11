@@ -1,0 +1,51 @@
+/* A ruled table, the way a proposal sets line items. Docusaurus's base stylesheet dresses every
+   table (`display:block; overflow:auto`, a border on every cell, zebra rows on even rows); all
+   three are undone here, or it reads as a pasted markdown table. */
+.table thead { background: transparent; border: 0; }
+.table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  font-variant-numeric: tabular-nums;
+}
+.table thead tr,
+.table tr,
+.table tbody tr:nth-child(2n) { background: transparent; border: 0; }
+.table th,
+.table td {
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  background: transparent;
+  padding: 0.8rem 1.2rem 0.8rem 0;
+  text-align: left;
+  vertical-align: baseline;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.table th:last-child,
+.table td:last-child { padding-right: 0; }
+.table thead th { font-size: 0.88rem; font-weight: 600; color: var(--ink-faint); padding-top: 0.6rem; padding-bottom: 0.5rem; }
+.table tbody th { font-weight: 650; color: var(--ink); letter-spacing: -0.012em; }
+.table:not([data-compact='true']) tbody th { width: 30%; }
+.table tbody tr:last-child th,
+.table tbody tr:last-child td { border-bottom: 2px solid var(--rule-firm); }
+.right { text-align: right !important; white-space: nowrap; }
+.status { font-weight: 600; }
+.status[data-st='available'] { color: var(--ok); }
+.status[data-st='soon'] { color: var(--ink-faint); }
+
+/* On a phone, the "how" column goes under the name, so nothing is a sliver. */
+@media screen and (max-width: 680px) {
+  .table:not([data-compact='true']) thead { display: none; }
+  .table:not([data-compact='true']) tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.15rem 1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--rule); }
+  .table:not([data-compact='true']) tbody tr:last-child { border-bottom: 2px solid var(--rule-firm); }
+  .table:not([data-compact='true']) th,
+  .table:not([data-compact='true']) td,
+  .table:not([data-compact='true']) tbody tr:last-child th,
+  .table:not([data-compact='true']) tbody tr:last-child td { border: 0; padding: 0; width: auto; }
+  .table:not([data-compact='true']) td:not(.status) { grid-column: 1 / -1; grid-row: 2; font-size: 0.95rem; }
+}

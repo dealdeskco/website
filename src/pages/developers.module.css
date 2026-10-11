@@ -1,0 +1,26 @@
+/* The developer landing page: the three ways in as ruled rows, each with its own sample. The
+   sample sits beside the description on a wide screen and under it on a narrow one, and scrolls
+   inside its own box rather than widening the page. */
+.ways { border-top: 1px solid var(--rule); }
+.way {
+  display: grid;
+  grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+  gap: clamp(0.8rem, 3vw, 2.4rem);
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
+}
+.ways .way:last-child { border-bottom: 2px solid var(--rule-firm); }
+.wayHead { min-width: 0; }
+.wayName { font-size: 1.12rem; font-weight: 700; letter-spacing: -0.015em; color: var(--ink); margin: 0 0 0.3rem; }
+.wayDesc { font-size: 1rem; line-height: 1.6; color: var(--ink-soft); margin: 0; }
+.wayCode { margin: 0 !important; white-space: pre !important; overflow-wrap: normal !important; overflow-x: auto !important; }
+
+.split { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(1.6rem, 5vw, 4rem); align-items: start; }
+.docList { list-style: none; margin: 1.2rem 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.docList li { padding: 0.7rem 0; border-bottom: 1px solid var(--rule); font-size: 1.04rem; }
+.docList li:last-child { border-bottom: 2px solid var(--rule-firm); }
+
+@media screen and (max-width: 900px) {
+  .way, .split { grid-template-columns: minmax(0, 1fr); }
+}

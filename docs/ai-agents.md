@@ -13,8 +13,9 @@ and the signature.
 
 ![Claude Code connected to Deal Desk drafts a proposal for Lakeside Dental, and the proposal comes out with a year-1 total of $6,300](/img/agents/agent-session.gif)
 
-Developer access is included on **Starter, Pro and Team**. The library, taught facts and RFP
-tools also need the **RFP responder** add-on, as they do in the app.
+Developer access and the company library are included on **Starter, Pro and Team**: from $9 a
+month, your agent drafts from your company's real library, with citations. Only the RFP tools need
+the **RFP responder** add-on, as RFP responses do in the app.
 
 ## 1. Create a key in Developer
 

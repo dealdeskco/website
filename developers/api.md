@@ -56,7 +56,7 @@ except file downloads. The machine-readable description is at
 Every error has one shape:
 
 ```json
-{ "error": { "code": "payment_required", "message": "The knowledge library is part of the RFP responder add-on.", "billing_required": true, "required_addon": "rfp" } }
+{ "error": { "code": "payment_required", "message": "Responding to a document is part of the RFP responder add-on. …", "billing_required": true, "required_addon": "rfp" } }
 ```
 
 The `error` object carries `code` and `message`, and where they apply `billing_required`,
@@ -66,7 +66,7 @@ The `error` object carries `code` and `message`, and where they apply `billing_r
 | --- | --- | --- |
 | 400 | `invalid_request` | Something in the request is missing or wrong; the message says what. |
 | 401 | `unauthenticated` | No key, an invalid or revoked key, or its creator is no longer an admin. |
-| 402 | `payment_required` | The plan does not include this: Developer starts on Starter; the library and RFPs need the RFP responder; sending past the Free plan's allowance. |
+| 402 | `payment_required` | The plan does not include this: Developer starts on Starter; RFP responses need the RFP responder; sending past the Free plan's allowance. |
 | 403 | `insufficient_scope` | The key lacks the scope (`required_scope` says which). Other refusals answer `forbidden`. |
 | 404 | `not_found` | No such thing in this account. Another account's ids are indistinguishable from ids that do not exist. |
 | 405 | `method_not_allowed` | That method is not offered on that path. |
@@ -92,7 +92,8 @@ The `error` object carries `code` and `message`, and where they apply `billing_r
 ### `GET /account`
 
 Scope `read`. The account, plan and features this key acts for, and the key itself (never its
-secret). `features` includes `documents` when the library and RFP responses are available.
+secret). `features` includes `library` when the company library and facts are available (every
+paid plan) and `documents` when RFP responses are (the RFP responder add-on).
 
 ```bash
 curl https://app.dealdesk.studio/api/v1/account -H "Authorization: Bearer $DEALDESK_API_KEY"
@@ -111,7 +112,7 @@ Any scope. Revoke the key making the request. `dealdesk logout` uses it.
 
 ## Library
 
-The library, **What we know** in the app, needs the RFP responder add-on.
+The library, **What we know** in the app, is included on every paid plan, from Starter.
 
 ### `POST /library/search`
 
@@ -162,7 +163,8 @@ Scope `write`. Remove a document from the library.
 
 ## Facts
 
-Facts are what people told Deal Desk about the company. They need the RFP responder add-on.
+Facts are what people told Deal Desk about the company. They are part of the library, on every paid
+plan from Starter.
 
 ### `POST /facts`
 

@@ -258,9 +258,10 @@ export default function Developers(): React.ReactElement {
                   </div>
                   <div className={styles.itemDesc}>
                     <Translate id="developers.price.desc">
-                      Starter, Pro and Team. Drafting through the API is free; a send counts as a sent
-                      deal, as in the app. The library, facts and RFP tools need the RFP responder
-                      add-on.
+                      Starter, Pro and Team, with the company library and facts: from $9 your agent
+                      drafts from your company’s real library, with citations. Drafting through the
+                      API is free; a send counts as a sent deal, as in the app. Only the RFP tools
+                      need the RFP responder add-on.
                     </Translate>{' '}
                     <Link to="/pricing">
                       <Translate id="agents.plan.link">See the plans</Translate>

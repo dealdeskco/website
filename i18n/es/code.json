@@ -1282,5 +1282,530 @@
   },
   "rfp.demo.replay": {
     "message": "Repetir"
+  },
+  "agents.compare.facts": {
+    "message": "Datos sobre su empresa"
+  },
+  "agents.compare.facts.alone": {
+    "message": "Lo que suene bien. Una referencia o una certificación que falta se inventa."
+  },
+  "agents.compare.facts.with": {
+    "message": "De su biblioteca y de los datos que usted le enseñó, cada uno con su cita. Si la biblioteca no lo sabe, el agente tiene la indicación de preguntarle a usted."
+  },
+  "agents.compare.math": {
+    "message": "Precios y totales"
+  },
+  "agents.compare.math.alone": {
+    "message": "Cuentas escritas en prosa, y a veces equivocadas."
+  },
+  "agents.compare.math.with": {
+    "message": "Partidas, descuentos y totales por año, calculados por Deal Desk."
+  },
+  "agents.compare.doc": {
+    "message": "El documento"
+  },
+  "agents.compare.doc.alone": {
+    "message": "Texto en una ventana de chat, para pegar en otro lado."
+  },
+  "agents.compare.doc.with": {
+    "message": "Una propuesta con su membrete, guardada en Deal Desk como borrador, con su PDF."
+  },
+  "agents.compare.sign": {
+    "message": "La firma"
+  },
+  "agents.compare.sign.alone": {
+    "message": "No es su trabajo."
+  },
+  "agents.compare.sign.with": {
+    "message": "Firma electrónica y un PDF sellado, enviados cuando usted lo indique."
+  },
+  "agents.compare.col.alone": {
+    "message": "El agente por sí solo"
+  },
+  "agents.compare.col.with": {
+    "message": "Con Deal Desk conectado"
+  },
+  "agents.tools.search": {
+    "message": "Encuentra los pasajes de su biblioteca que responden a una pregunta, numerados para que el agente pueda citarlos."
+  },
+  "agents.tools.teach": {
+    "message": "Guarda un dato que usted indica, como la cantidad de personal o una certificación, para que cada borrador posterior pueda citarlo."
+  },
+  "agents.tools.draft": {
+    "message": "Convierte notas en una propuesta con precios, guardada en Deal Desk como borrador. Los campos que las notas no respaldan quedan vacíos."
+  },
+  "agents.tools.get": {
+    "message": "Lee una propuesta: cada campo, las partidas y los totales de cada año."
+  },
+  "agents.tools.rfp": {
+    "message": "Carga una RFP, una RFI o un cuestionario y lo separa en cada uno de sus requisitos."
+  },
+  "agents.tools.reqs": {
+    "message": "Enumera los requisitos con sus respuestas redactadas, las citas que las respaldan y cualquier dato que todavía falte."
+  },
+  "agents.tools.answer": {
+    "message": "Redacta una respuesta a partir de su biblioteca, o indica qué dato necesita en lugar de inventarlo."
+  },
+  "agents.security.keys.name": {
+    "message": "Las claves se guardan como hash y se pueden revocar"
+  },
+  "agents.security.keys.desc": {
+    "message": "Una clave se muestra una sola vez, cuando usted la crea. Deal Desk guarda solo un hash, y revocarla la detiene de inmediato. Cree una clave por agente o por computadora, para que revocar una no detenga las demás."
+  },
+  "agents.security.scopes.name": {
+    "message": "Cada clave hace solo lo que usted permite"
+  },
+  "agents.security.scopes.desc": {
+    "message": "Solo lectura, o lectura y escritura. Enviar a firma es un permiso aparte que usted marca al crear la clave, y cada envío se factura igual que un envío desde la aplicación."
+  },
+  "agents.security.library.name": {
+    "message": "Su biblioteca se queda en Deal Desk"
+  },
+  "agents.security.library.desc": {
+    "message": "El agente recibe solo los pasajes que una pregunta necesita, como respuestas con citas. Cada llamada se limita a su propia cuenta, con los mismos controles que la aplicación."
+  },
+  "agents.security.memory.name": {
+    "message": "Funciona junto a una memoria privada"
+  },
+  "agents.security.memory.desc": {
+    "message": "Úselo junto con una herramienta de memoria privada como Gnarl. El agente usa ambas, y cada almacén se mantiene por separado: nada de uno se copia en el otro."
+  },
+  "agents.meta.title": {
+    "message": "Deal Desk para su agente de IA"
+  },
+  "agents.meta.description": {
+    "message": "Conecte Claude Code, Cursor, VS Code o su propio agente a Deal Desk. El agente redacta; Deal Desk aporta los datos reales de su empresa con citas, los precios, el documento y la firma."
+  },
+  "agents.title": {
+    "message": "Deal Desk para su agente de IA."
+  },
+  "agents.lede": {
+    "message": "Siga redactando propuestas en Claude, Cursor o Copilot. Conecte Deal Desk una vez, y el agente redacta a partir de lo que su empresa realmente sabe, con citas, mientras Deal Desk se encarga de los precios, del documento y de la firma."
+  },
+  "agents.cta.docs": {
+    "message": "Lea la documentación para desarrolladores"
+  },
+  "agents.gif.alt": {
+    "message": "Claude Code conectado a Deal Desk redacta una propuesta para Lakeside Dental con un total de $6,300 para el año 1."
+  },
+  "agents.problem.heading": {
+    "message": "Bien escrito no es lo mismo que correcto"
+  },
+  "agents.problem.note": {
+    "message": "Un agente escribe una propuesta convincente en segundos. No conoce sus referencias, sus tarifas ni sus términos, y hace las cuentas en prosa."
+  },
+  "agents.setup.heading": {
+    "message": "Configúrelo en tres pasos"
+  },
+  "agents.setup.note": {
+    "message": "Unos minutos, una sola vez. Necesita permisos de administración de la cuenta."
+  },
+  "agents.setup.1.h": {
+    "message": "Cree una clave en Desarrolladores"
+  },
+  "agents.setup.1.p": {
+    "message": "En Deal Desk, abra el menú de la cuenta y elija Desarrolladores. Nombre la clave según dónde se usará, elija qué puede hacer y presione Crear clave. Cópiela en ese momento: se muestra una sola vez."
+  },
+  "agents.setup.2.h": {
+    "message": "Ejecute el comando"
+  },
+  "agents.setup.2.p": {
+    "message": "Para Claude Code es una sola línea. Desarrolladores la muestra con su clave ya incluida, junto a la configuración de Cursor, VS Code y Claude Desktop."
+  },
+  "agents.setup.2.cli": {
+    "message": "¿Prefiere su propia terminal? La herramienta de línea de comandos dealdesk inicia sesión a través de su navegador con dealdesk login, sin pegar una clave. La documentación para desarrolladores explica cómo configurarla."
+  },
+  "agents.setup.3.h": {
+    "message": "Pídaselo a su agente"
+  },
+  "agents.setup.3.p": {
+    "message": "“Redacte una propuesta con estas notas de la llamada.” “¿Qué sabemos sobre nuestro historial de seguridad?” “Cargue esta RFP en Deal Desk y redacte todas las respuestas.” El borrador llega a Deal Desk, donde usted lo revisa, le pone su marca y lo envía."
+  },
+  "agents.shot.alt": {
+    "message": "El panel Desarrolladores de Deal Desk: una clave llamada Claude Code en mi portátil con acceso de lectura y escritura, y el comando de configuración de Claude Code."
+  },
+  "agents.shot.caption": {
+    "message": "Desarrolladores, en el menú de la cuenta. Aquí la clave aparece abreviada; Deal Desk muestra la clave completa una sola vez, cuando usted la crea."
+  },
+  "agents.clients.heading": {
+    "message": "Funciona en las herramientas que ya usa"
+  },
+  "agents.clients.note": {
+    "message": "Deal Desk es un servidor MCP remoto en app.dealdesk.studio/mcp, con una API REST al lado."
+  },
+  "agents.tools.heading": {
+    "message": "Lo que el agente puede pedirle a Deal Desk"
+  },
+  "agents.tools.note": {
+    "message": "Algunas de las herramientas que ve un agente conectado, y el permiso que necesita cada una."
+  },
+  "agents.tools.more": {
+    "message": "La lista completa, los endpoints REST y el documento OpenAPI están en la documentación para desarrolladores, en inglés."
+  },
+  "agents.security.heading": {
+    "message": "La seguridad, en palabras simples"
+  },
+  "agents.plan.heading": {
+    "message": "Precio"
+  },
+  "agents.plan.note": {
+    "message": "Redactar a través de un agente es gratis, igual que en la aplicación."
+  },
+  "agents.plan.dev.name": {
+    "message": "Desarrolladores: API, MCP, CLI"
+  },
+  "agents.plan.dev.desc": {
+    "message": "Incluido en Starter, Pro y Team. Redacte, lea y actualice propuestas desde cualquier agente. Enviar a firma cuenta como un negocio enviado, exactamente igual que en la aplicación."
+  },
+  "agents.plan.link": {
+    "message": "Vea los planes"
+  },
+  "agents.plan.dev.col": {
+    "message": "desde $9/mes"
+  },
+  "agents.plan.library.name": {
+    "message": "Biblioteca, datos y herramientas de RFP"
+  },
+  "agents.plan.library.desc": {
+    "message": "search_library, teach_fact y las herramientas de RFP vienen con el complemento Respuesta a licitaciones, igual que la biblioteca en la aplicación."
+  },
+  "agents.plan.rfp": {
+    "message": "Sobre la respuesta a licitaciones"
+  },
+  "agents.plan.partners.name": {
+    "message": "Socios de diseño"
+  },
+  "agents.plan.partners.desc": {
+    "message": "Todo lo anterior está incluido mientras dure la asociación."
+  },
+  "agents.plan.partners.col": {
+    "message": "incluido"
+  },
+  "agents.close.heading": {
+    "message": "Que el agente redacte. Que Deal Desk lo haga bien."
+  },
+  "agents.close.note": {
+    "message": "Cree su cuenta, elija Starter o un plan superior y cree su primera clave en Desarrolladores."
+  },
+  "agents.close.guide": {
+    "message": "Lea la guía paso a paso"
+  },
+  "howItWorks.agents.heading": {
+    "message": "O empiece desde su agente de IA"
+  },
+  "howItWorks.agents.note": {
+    "message": "Claude Code, Cursor, VS Code con GitHub Copilot, Claude Desktop, o el suyo propio."
+  },
+  "howItWorks.agents.name": {
+    "message": "Pídale la propuesta al agente"
+  },
+  "howItWorks.agents.desc": {
+    "message": "Conecte Deal Desk al agente una vez. Luego pídale la propuesta con palabras sencillas: busca los datos en su biblioteca, los cita, y Deal Desk redacta la propuesta con precios, lista para la misma revisión, firma y sellado."
+  },
+  "howItWorks.agents.link": {
+    "message": "Deal Desk para su agente de IA"
+  },
+  "howItWorks.agents.col": {
+    "message": "Desde Starter"
+  },
+  "pricing.plan.developer": {
+    "message": "Desarrolladores: API, MCP, CLI"
+  },
+  "pricing.developer.heading": {
+    "message": "Desde Starter"
+  },
+  "pricing.developer.note": {
+    "message": "Para quienes redactan propuestas en Claude, Cursor, Copilot o su propio agente."
+  },
+  "pricing.developer.desc": {
+    "message": "Conecte su agente de IA a Deal Desk con una clave de API: un servidor MCP remoto, una API REST y la herramienta de línea de comandos dealdesk. Redactar a través de un agente es gratis; una propuesta que envíe a firma cuenta como un negocio enviado, igual que en la aplicación. La biblioteca y las herramientas de RFP requieren el complemento Respuesta a licitaciones."
+  },
+  "pricing.developer.link": {
+    "message": "Cómo funciona"
+  },
+  "pricing.developer.col": {
+    "message": "Starter, Pro, Team"
+  },
+  "rfp.note.agent.name": {
+    "message": "También desde su agente de IA"
+  },
+  "rfp.note.agent.desc": {
+    "message": "Claude, Cursor o Copilot pueden trabajar la misma respuesta a través de Deal Desk: start_rfp_response carga el documento, get_rfp_requirements lee la matriz y draft_rfp_answer redacta a partir de su biblioteca, con citas."
+  },
+  "rfp.note.agent.link": {
+    "message": "Deal Desk para su agente de IA"
+  },
+  "agents.demo.ask": {
+    "message": "Redacte una propuesta para Lakeside Dental: 12 meses de mantenimiento del sitio web a $400 al mes más un rediseño de $1,500, a partir del 1 de noviembre"
+  },
+  "agents.demo.aria": {
+    "message": "Claude Code se conecta a Deal Desk con un comando y recibe el pedido de redactar una propuesta para Lakeside Dental. Busca en la biblioteca de la empresa, Deal Desk redacta la propuesta y sale la hoja: mantenimiento del sitio web, 12 meses a $400, $4,800; rediseño del sitio web, $1,500; total del año 1, $6,300; propuesta DD-2026-0002."
+  },
+  "agents.demo.cite1": {
+    "message": "Catálogo de servicios: plan de mantenimiento web, actualizaciones, copias de seguridad y monitoreo, $400 al mes"
+  },
+  "agents.demo.cite2": {
+    "message": "Catálogo de servicios: rediseño del sitio web, tarifa fija de $1,500, cuatro semanas"
+  },
+  "agents.demo.drafted": {
+    "message": "{n} guardada como borrador. Total del año 1: {total}"
+  },
+  "agents.demo.reply": {
+    "message": "Redacté DD-2026-0002 para Lakeside Dental: mantenimiento web a $400 al mes durante 12 meses, $4,800, más el rediseño de $1,500, $6,300 en el año 1, según su catálogo de servicios [1][2]. Revísela y envíela a firma desde Deal Desk."
+  },
+  "agents.demo.doc.title": {
+    "message": "PROPUESTA"
+  },
+  "agents.demo.doc.for": {
+    "message": "Preparada para"
+  },
+  "agents.demo.doc.draft": {
+    "message": "Borrador"
+  },
+  "agents.demo.doc.start": {
+    "message": "Inicio"
+  },
+  "agents.demo.doc.startValue": {
+    "message": "1 nov 2026"
+  },
+  "agents.demo.doc.term": {
+    "message": "Plazo"
+  },
+  "agents.demo.doc.termValue": {
+    "message": "12 meses"
+  },
+  "agents.demo.doc.line1": {
+    "message": "Plan de mantenimiento web"
+  },
+  "agents.demo.doc.line1.sub": {
+    "message": "12 meses a $400"
+  },
+  "agents.demo.doc.line2": {
+    "message": "Rediseño del sitio web"
+  },
+  "agents.demo.doc.line2.sub": {
+    "message": "Pago único"
+  },
+  "agents.demo.doc.total": {
+    "message": "Total, año 1"
+  },
+  "agents.demo.doc.sources": {
+    "message": "Fuentes"
+  },
+  "agents.demo.doc.sourcesName": {
+    "message": "Catálogo de servicios"
+  },
+  "agents.demo.caption": {
+    "message": "Las empresas son ficticias. El pedido, las cifras y el número de propuesta provienen de una prueba real."
+  },
+  "agents.demo.replay": {
+    "message": "Repetir"
+  },
+  "agents.tools.link": {
+    "message": "Todas las herramientas, con sus entradas"
+  },
+  "developers.ways.mcp.name": {
+    "message": "Servidor MCP"
+  },
+  "developers.ways.mcp.desc": {
+    "message": "Para Claude Code, Cursor, VS Code / GitHub Copilot, Claude Desktop y cualquier cliente MCP. Un comando, y el agente ve las herramientas de Deal Desk."
+  },
+  "developers.ways.mcp.link": {
+    "message": "Servidor MCP y herramientas"
+  },
+  "developers.ways.api.name": {
+    "message": "API REST"
+  },
+  "developers.ways.api.desc": {
+    "message": "Para su propio código. JSON por HTTPS en /api/v1, descrito en un documento OpenAPI."
+  },
+  "developers.ways.api.link": {
+    "message": "Referencia de la API REST"
+  },
+  "developers.ways.cli.name": {
+    "message": "Herramienta de línea de comandos dealdesk"
+  },
+  "developers.ways.cli.desc": {
+    "message": "Para su terminal y sus scripts. Inicia sesión desde el navegador, así que no hay ninguna clave que pegar."
+  },
+  "developers.ways.cli.link": {
+    "message": "Línea de comandos"
+  },
+  "developers.scopes.read": {
+    "message": "Buscar en la biblioteca, listar datos y leer propuestas y respuestas a RFP. Todas las claves lo tienen."
+  },
+  "developers.scopes.write": {
+    "message": "Agregar documentos, enseñar datos, redactar propuestas y respuestas, y editar y aprobar respuestas."
+  },
+  "developers.scopes.send": {
+    "message": "Enviar una propuesta para firma electrónica, que se factura igual que un envío desde la aplicación. Solo si marca Permitir enviar a firma."
+  },
+  "developers.security.hash.name": {
+    "message": "Con hash, se muestra una vez"
+  },
+  "developers.security.hash.desc": {
+    "message": "Deal Desk guarda solo un hash SHA-256 de cada clave, lo compara en tiempo constante y registra las solicitudes por el id de la clave, nunca por la clave. Revocar una la detiene al instante."
+  },
+  "developers.security.account.name": {
+    "message": "Limitado a su cuenta"
+  },
+  "developers.security.account.desc": {
+    "message": "Cada llamada pasa por los mismos controles que la aplicación, solo para la cuenta de la propia clave. Su biblioteca se queda en Deal Desk; los agentes reciben solo los pasajes que una pregunta necesita."
+  },
+  "developers.security.private.name": {
+    "message": "Lo privado sigue siendo privado"
+  },
+  "developers.security.private.desc": {
+    "message": "Junto a un servidor de memoria privada como Gnarl, los dos almacenes nunca se mezclan. Una clave de solo lectura impide que un agente copie notas privadas en la biblioteca de la empresa."
+  },
+  "developers.docs.quickstart": {
+    "message": "Introducción e inicio rápido"
+  },
+  "developers.docs.auth": {
+    "message": "Claves de API y ámbitos"
+  },
+  "developers.docs.mcp": {
+    "message": "Servidor MCP, configuración de clientes y herramientas"
+  },
+  "developers.docs.clients": {
+    "message": "Qué clientes pueden conectarse"
+  },
+  "developers.docs.api": {
+    "message": "Referencia de la API REST"
+  },
+  "developers.docs.cli": {
+    "message": "Línea de comandos"
+  },
+  "developers.docs.openapi": {
+    "message": "Documento OpenAPI (JSON)"
+  },
+  "developers.meta.title": {
+    "message": "Desarrolladores"
+  },
+  "developers.meta.description": {
+    "message": "Deal Desk es el motor de propuestas y la biblioteca de la empresa detrás de su agente: un servidor MCP remoto, una API REST y una herramienta de línea de comandos, todo con una sola clave de API."
+  },
+  "developers.title": {
+    "message": "El motor de propuestas detrás de su agente."
+  },
+  "developers.lede": {
+    "message": "Su agente redacta. Deal Desk responde por la empresa: datos con citas de su biblioteca, propuestas con precios y los totales calculados, documentos y firma electrónica. Una clave de API, tres formas de entrar."
+  },
+  "developers.cta.quickstart": {
+    "message": "Lea el inicio rápido"
+  },
+  "developers.cta.api": {
+    "message": "Referencia de la API"
+  },
+  "developers.ways.heading": {
+    "message": "Tres formas de entrar, una sola clave"
+  },
+  "developers.ways.note": {
+    "message": "Cree la clave en Deal Desk, en Desarrolladores, dentro del menú de la cuenta. Se muestra una sola vez."
+  },
+  "developers.scopes.heading": {
+    "message": "Claves y ámbitos"
+  },
+  "developers.scopes.note": {
+    "message": "Una clave por agente o por computadora, para que revocar una no detenga las demás."
+  },
+  "developers.clients.heading": {
+    "message": "Clientes"
+  },
+  "developers.clients.note": {
+    "message": "El servidor MCP remoto está en app.dealdesk.studio/mcp."
+  },
+  "developers.security.heading": {
+    "message": "Seguridad"
+  },
+  "developers.price.heading": {
+    "message": "Incluido desde Starter"
+  },
+  "developers.price.desc": {
+    "message": "Starter, Pro y Team. Redactar por la API es gratis; un envío cuenta como un negocio enviado, igual que en la aplicación. La biblioteca, los datos y las herramientas de RFP requieren el complemento Respuesta a licitaciones."
+  },
+  "developers.docs.heading": {
+    "message": "Documentación"
+  },
+  "developers.close.heading": {
+    "message": "Haga la primera llamada hoy."
+  },
+  "developers.close.note": {
+    "message": "Cree su cuenta, elija Starter o un plan superior y cree una clave en Desarrolladores."
+  },
+  "developers.close.agents": {
+    "message": "Lo que verá su equipo"
+  },
+  "home.caps.5.t": {
+    "message": "Funciona con su IA"
+  },
+  "home.caps.5.d.oauth": {
+    "message": "Úselo desde ChatGPT, Claude, Copilot y más."
+  },
+  "home.caps.5.d": {
+    "message": "Úselo desde Claude, Copilot, Cursor y más."
+  },
+  "home.ai.heading": {
+    "message": "Use Deal Desk desde la IA que ya usa"
+  },
+  "home.ai.names.oauth": {
+    "message": "ChatGPT, Claude, Copilot, Cursor y cualquier agente compatible con MCP."
+  },
+  "home.ai.names": {
+    "message": "Claude, Copilot, Cursor y cualquier agente compatible con MCP."
+  },
+  "home.ai.p": {
+    "message": "Pídale una propuesta a su asistente y la recibirá con sus precios reales y los datos de su empresa, con sus fuentes, lista para firmar."
+  },
+  "home.ai.developers": {
+    "message": "Para desarrolladores"
+  },
+  "pricing.developer.docs": {
+    "message": "Documentación para desarrolladores"
+  },
+  "clients.chatgpt.name": {
+    "message": "ChatGPT"
+  },
+  "clients.chatgpt.how": {
+    "message": "Agregue Deal Desk como conector, inicie sesión con Deal Desk y apruebe."
+  },
+  "clients.claudeCode.how": {
+    "message": "Un comando en la terminal, con una clave de API."
+  },
+  "clients.claudeDesktop.how": {
+    "message": "Una entrada en su archivo de configuración, con una clave de API."
+  },
+  "clients.connectors.name": {
+    "message": "Conectores de claude.ai y Claude Desktop"
+  },
+  "clients.connectors.how": {
+    "message": "Agregue un conector personalizado con la dirección de Deal Desk e inicie sesión con Deal Desk."
+  },
+  "clients.cursor.how": {
+    "message": "Unas líneas en su configuración MCP, con una clave de API."
+  },
+  "clients.vscode.how": {
+    "message": "Unas líneas en .vscode/mcp.json, y luego Copilot Chat en modo agente."
+  },
+  "clients.any.name": {
+    "message": "Cualquier agente compatible con MCP"
+  },
+  "clients.any.how": {
+    "message": "El servidor MCP remoto, o la API REST para su propio código, con una clave de API."
+  },
+  "clients.status.available": {
+    "message": "Disponible"
+  },
+  "clients.status.soon": {
+    "message": "Próximamente"
+  },
+  "clients.col.client": {
+    "message": "Cliente"
+  },
+  "clients.col.how": {
+    "message": "Cómo se conecta"
+  },
+  "clients.col.status": {
+    "message": "Hoy"
   }
 }

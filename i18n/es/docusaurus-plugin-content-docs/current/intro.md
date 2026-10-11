@@ -62,3 +62,4 @@ Cualquier cambio rompe la coincidencia.
 
 - [Precios y qué cuenta como envío](/pricing)
 - [Cómo funciona, paso a paso](/how-it-works)
+- [Use Deal Desk con su agente de IA](./ai-agents.md)

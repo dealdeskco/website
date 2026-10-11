@@ -1,0 +1,52 @@
+---
+title: Qué clientes pueden conectarse
+sidebar_label: Qué clientes pueden conectarse
+description: Qué se conecta hoy a Deal Desk, y cómo.
+---
+
+import ClientTable from '@site/src/components/ClientTable';
+import {WhenOAuth, UntilOAuth} from '@site/src/data/agentClients';
+
+# Qué clientes pueden conectarse
+
+<div style={{marginBottom: '1.6rem'}}><ClientTable /></div>
+
+Hay dos formas de conectarse:
+
+- **Con una clave de API**, para Claude Code, Cursor, VS Code / GitHub Copilot, el archivo de
+  configuración de Claude Desktop, la [herramienta de línea de comandos](./cli.md) y su propio
+  código. La configuración de cada uno está en [Servidor MCP](./mcp.mdx#connect-a-client).
+- **Iniciando sesión con Deal Desk**, para la aplicación de ChatGPT y los conectores de un solo clic
+  de claude.ai y Claude Desktop. No hay nada que pegar: usted aprueba la conexión en Deal Desk.
+
+<UntilOAuth>
+
+:::note[Próximamente]
+Iniciar sesión con Deal Desk usa OAuth, que está en camino. Hasta que esté disponible, la aplicación
+de ChatGPT y las pantallas de conectores no pueden conectarse. Claude Desktop ya puede conectarse
+mediante su archivo de configuración, y la Responses API de OpenAI puede llamar a Deal Desk con una
+clave de API; ambos casos están en [Servidor MCP](./mcp.mdx#connect-a-client).
+:::
+
+</UntilOAuth>
+
+<WhenOAuth>
+
+<h2 id="sign-in-with-deal-desk">Inicie sesión con Deal Desk</h2>
+
+En ChatGPT, claude.ai o Claude Desktop:
+
+1. Agregue un conector (en Claude, un conector personalizado) con esta dirección:
+
+   ```text
+   https://app.dealdesk.studio/mcp
+   ```
+
+2. Elija **Conectar**. Deal Desk se abre en su navegador: inicie sesión con el rol de propietario o
+   administrador de la cuenta.
+3. Revise lo que pide hacer la conexión y apruébela. Las herramientas de Deal Desk aparecen entonces
+   en el chat.
+
+Para desconectarse, quite el conector en el cliente.
+
+</WhenOAuth>

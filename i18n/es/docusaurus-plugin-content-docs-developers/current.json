@@ -1,0 +1,10 @@
+{
+  "version.label": {
+    "message": "Siguiente",
+    "description": "The label for version current"
+  },
+  "sidebar.developers.category.MCP": {
+    "message": "MCP",
+    "description": "The label for category 'MCP' in sidebar 'developers'"
+  }
+}

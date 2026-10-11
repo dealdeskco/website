@@ -1,0 +1,166 @@
+---
+title: Servidor MCP remoto
+sidebar_label: Servidor MCP
+description: El servidor MCP de Deal Desk, cómo conectar cada cliente y todas las herramientas con sus entradas.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Servidor MCP remoto
+
+Deal Desk implementa el [Model Context Protocol](https://modelcontextprotocol.io) en:
+
+```text
+https://app.dealdesk.studio/mcp
+```
+
+- Transporte: Streamable HTTP (un mensaje JSON-RPC por cada `POST`, con respuesta en
+  `application/json`). Versiones del protocolo: `2025-06-18`, `2025-03-26` y `2024-11-05`.
+- Autenticación: la misma clave de API, como `Authorization: Bearer ...`. Una clave de solo lectura
+  solo ve las herramientas de solo lectura.
+- Sin estado: no hay identificador de sesión ni flujo de eventos del servidor (`GET /mcp` responde
+  `405`), así que cualquier solicitud puede ir a cualquier servidor.
+
+## Conectar un cliente {/* #connect-a-client */}
+
+Cada configuración usa una clave de API de **Desarrolladores** en Deal Desk (consulte
+[Claves de API y ámbitos](./authentication.md)). Desarrolladores también las muestra con su clave ya
+incluida. Qué clientes pueden conectarse hoy está en
+[Qué clientes pueden conectarse](./clients.mdx).
+
+<Tabs groupId="client">
+<TabItem value="claude-code" label="Claude Code" default>
+
+```bash
+claude mcp add --transport http dealdesk https://app.dealdesk.studio/mcp --header "Authorization: Bearer ddk_live_..."
+```
+
+Añada `--scope project` para compartir la configuración mediante `.mcp.json` (y mantenga la
+clave fuera del control de versiones: en ese caso, use
+`--header "Authorization: Bearer ${DEALDESK_API_KEY}"`). O deje que la herramienta de línea de
+comandos lo haga por usted: `dealdesk mcp install claude-code`.
+
+</TabItem>
+<TabItem value="claude-desktop" label="Claude Desktop">
+
+La pantalla de conectores (**Connectors**) de Claude Desktop inicia sesión en los servidores
+remotos con OAuth, que Deal Desk todavía no ofrece. Mientras tanto, añada Deal Desk a
+`claude_desktop_config.json` (Settings, Developer, Edit Config) mediante el puente `mcp-remote`,
+que requiere Node.js:
+
+```json
+{
+  "mcpServers": {
+    "dealdesk": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://app.dealdesk.studio/mcp", "--header", "Authorization:${DEALDESK_AUTH}"],
+      "env": { "DEALDESK_AUTH": "Bearer ddk_live_..." }
+    }
+  }
+}
+```
+
+Después, reinicie Claude Desktop.
+
+</TabItem>
+<TabItem value="cursor" label="Cursor">
+
+En `~/.cursor/mcp.json` (o en `.cursor/mcp.json`, dentro de un proyecto):
+
+```json
+{
+  "mcpServers": {
+    "dealdesk": {
+      "url": "https://app.dealdesk.studio/mcp",
+      "headers": { "Authorization": "Bearer ddk_live_..." }
+    }
+  }
+}
+```
+
+</TabItem>
+<TabItem value="vscode" label="VS Code / GitHub Copilot">
+
+En `.vscode/mcp.json`. VS Code pide la clave la primera vez y la guarda en su almacenamiento de
+secretos, así que este archivo se puede incluir en el repositorio:
+
+```json
+{
+  "inputs": [
+    { "type": "promptString", "id": "dealdesk-key", "description": "Deal Desk API key", "password": true }
+  ],
+  "servers": {
+    "dealdesk": {
+      "type": "http",
+      "url": "https://app.dealdesk.studio/mcp",
+      "headers": { "Authorization": "Bearer ${input:dealdesk-key}" }
+    }
+  }
+}
+```
+
+Luego use Copilot Chat en modo agente: las herramientas de Deal Desk aparecen en su lista de
+herramientas.
+
+</TabItem>
+<TabItem value="openai" label="ChatGPT y la API de OpenAI">
+
+**ChatGPT (la aplicación) todavía no puede conectarse.** Los conectores de ChatGPT inician sesión
+en los servidores MCP remotos con OAuth, y Deal Desk aún no ofrece OAuth. Estará disponible
+próximamente.
+
+Si desarrolla sobre la API de OpenAI, la Responses API puede llamar a Deal Desk directamente con
+su clave:
+
+```json
+{
+  "model": "gpt-5",
+  "tools": [{
+    "type": "mcp",
+    "server_label": "dealdesk",
+    "server_url": "https://app.dealdesk.studio/mcp",
+    "headers": { "Authorization": "Bearer ddk_live_..." },
+    "require_approval": "never"
+  }],
+  "input": "What certifications does our company hold? Cite the Deal Desk library."
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Herramientas {/* #tools */}
+
+Cada herramienta corresponde a una operación de la API y se ejecuta con la clave de la conexión.
+Los resultados llegan como contenido estructurado (y el mismo JSON como texto), con citas numeradas
+siempre que Deal Desk haya usado la biblioteca. Las entradas marcadas como *opcional* se pueden
+omitir.
+
+| Herramienta | Qué hace | Entradas | Ámbito |
+| --- | --- | --- | --- |
+| `get_account` | La cuenta, el plan, las funciones y los ámbitos de esta clave. | ninguna | `read` |
+| `search_library` | Los pasajes de su biblioteca que responden una pregunta, numerados y con su documento de origen y su título de sección, listos para citar. | `query` | `read` |
+| `list_library_sources` | Los documentos de la biblioteca y su estado de indexación. | ninguna | `read` |
+| `add_library_document` | Añade a la biblioteca un documento .docx, .pdf o de texto. | `name`, `content_type` *opcional*, `data` *opcional*, `text` *opcional* | `write` |
+| `teach_fact` | Le enseña a Deal Desk datos sobre la empresa («Tenemos 18 empleados»); solo se guarda lo que se afirma. También responde preguntas sobre lo que sabe. | `fact` | `write` |
+| `list_facts` | Los datos que la empresa le ha enseñado. | ninguna | `read` |
+| `remove_fact` | Elimina un dato erróneo o obsoleto. | `fact_id` | `write` |
+| `list_knowledge_gaps` | Los datos que todavía les faltan a las respuestas a RFP abiertas: buenas preguntas para hacer. | ninguna | `read` |
+| `draft_proposal` | Recibe notas, una transcripción o un hilo de correos y devuelve una propuesta estructurada (cliente, alcance, partidas, descuentos, términos) guardada como borrador. Nunca inventa precios ni nombres. | `notes`, `language` *opcional* | `write` |
+| `list_proposals` | Propuestas, pedidos y contratos, del más reciente al más antiguo. | ninguna | `read` |
+| `get_proposal` | Los campos, las partidas y los totales por año de una propuesta. | `number` | `read` |
+| `update_proposal` | Cambia campos, partidas o descuentos. Nunca cambia el estado. | `number`, `discounts` *opcional*, `fields` *opcional*, `lineItems` *opcional*, `version` *opcional* | `write` |
+| `send_proposal_for_signature` | Envía al cliente un enlace para firmar la propuesta con la firma electrónica de Deal Desk. Se factura como un negocio enviado. | `customer_email`, `number`, `customer_name` *opcional*, `customer_title` *opcional* | `send` |
+| `start_rfp_response` | Sube una RFP, una RFI, un cuestionario, un formulario propio del cliente o una matriz de capacidades, y la desglosa en cada uno de sus requisitos. | `name`, `content_type` *opcional*, `data` *opcional*, `deal_number` *opcional*, `text` *opcional* | `write` |
+| `list_rfp_responses` | Los documentos que se están respondiendo. | ninguna | `read` |
+| `get_rfp_status` | Si el documento se está leyendo o ya está listo, los recuentos por estado y el avance de la redacción. | `rfp_id` | `read` |
+| `get_rfp_requirements` | Los requisitos con sus respuestas redactadas, las citas, las afirmaciones sin verificar y el dato que todavía le falta a cada uno. | `rfp_id`, `limit` *opcional*, `needs_input` *opcional*, `offset` *opcional*, `status` *opcional* | `read` |
+| `draft_rfp_answer` | Redacta o vuelve a redactar una respuesta a partir de la biblioteca. | `requirement_id`, `rfp_id` | `write` |
+| `draft_all_rfp_answers` | Redacta en segundo plano todas las respuestas abiertas. | `rfp_id`, `cancel` *opcional* | `write` |
+| `update_rfp_answer` | Edita una respuesta o la marca como Respondido (las respuestas aprobadas se incorporan a la biblioteca) o como No aplica. | `requirement_id`, `rfp_id`, `response` *opcional*, `status` *opcional* | `write` |
+| `answer_rfp_gap` | Aporta el dato que faltaba: se guarda y la respuesta se vuelve a redactar. | `answer`, `requirement_id`, `rfp_id` | `write` |
+
+Las herramientas de biblioteca, datos y RFP requieren el complemento Respuesta a licitaciones; sin
+él devuelven un error que el agente puede leer y explicar. Antes de darle a un agente una clave que
+pueda escribir, lea [Mantenga privado lo privado](./private.md).

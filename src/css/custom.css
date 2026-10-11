@@ -294,3 +294,76 @@ article a { text-underline-offset: 2px; }
     scroll-behavior: auto !important;
   }
 }
+
+/* ---- tables in Help and the developer docs ----
+   Docusaurus dresses every markdown table: `display:block; overflow:auto`, a border on every cell,
+   a shaded head and zebra rows. On a page shaped like a document, a table is a ruled sheet:
+   horizontal rules only, a firm rule under the last row, and the head set quietly. Long code in a
+   cell (an endpoint path) breaks rather than widening the page. */
+.markdown table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  font-size: 0.95rem;
+}
+.markdown table thead { background: transparent; border: 0; }
+.markdown table tr,
+.markdown table tr:nth-child(2n) { background: transparent; border: 0; }
+.markdown table th,
+.markdown table td {
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  background: transparent;
+  padding: 0.6rem 1rem 0.6rem 0;
+  text-align: left;
+  vertical-align: baseline;
+}
+.markdown table th:last-child,
+.markdown table td:last-child { padding-right: 0; }
+.markdown table thead th { font-size: 0.86rem; font-weight: 600; color: var(--ink-faint); }
+.markdown table tbody tr:last-child td { border-bottom: 2px solid var(--rule-firm); }
+.markdown table code { overflow-wrap: anywhere; word-break: normal; }
+
+/* Inline code is document metadata here, so it is set quietly: Plex Mono on the field tone, no box. */
+.markdown :not(pre) > code {
+  background: var(--field);
+  border: 0;
+  padding: 0.08em 0.32em;
+  font-size: 0.86em;
+  color: var(--ink);
+}
+/* Code blocks scroll inside their own box on a phone, never the page. */
+.markdown pre { max-width: 100%; overflow-x: auto; }
+/* On a phone, a wide reference table (method, path, scope) would break its paths mid-word, so it
+   scrolls sideways inside its own box instead, with code kept whole. */
+@media screen and (max-width: 680px) {
+  .markdown table { display: block; overflow-x: auto; }
+  .markdown table code { white-space: nowrap; overflow-wrap: normal; }
+}
+
+/* ---- a full navbar in every language ----
+   Spanish labels are longer ("Cómo funciona", "Desarrolladores", "Español (Latinoamérica)") and
+   the bar has to hold them all down to 997px, where Docusaurus switches to the menu. Labels never
+   wrap, and between there and 1600px the language menu shows just its icon -- the full names are
+   still in the list it opens. */
+.navbar__item, .navbar__title { white-space: nowrap; }
+@media (min-width: 997px) and (max-width: 1600px) {
+  .navbar__items--right .dropdown > .navbar__link { font-size: 0; padding-left: 0.4rem; padding-right: 0.4rem; }
+  .navbar__items--right .dropdown > .navbar__link svg { margin-right: 0; }
+  .navbar__items--right .dropdown > .navbar__link::after { margin-left: 0.25rem; font-size: 0.97rem; }
+  .navbar__link { padding-left: 0.55rem; padding-right: 0.55rem; }
+}
+@media (min-width: 997px) and (max-width: 1160px) {
+  .navbar__link { font-size: 0.92rem; padding-left: 0.42rem; padding-right: 0.42rem; }
+  .navbar-cta { margin-left: 0.25rem; padding-left: 0.75rem; padding-right: 0.75rem; }
+}
+/* The narrowest full bar in Spanish cannot hold the wordmark as well: the logo carries the brand
+   there until the menu takes over at 996px. */
+@media (min-width: 997px) and (max-width: 1080px) {
+  html[lang^='es'] .navbar__title { display: none; }
+}
+
+/* Admonition titles in the sentence case of everything else, not tracked-out capitals. */
+.theme-admonition [class*='admonitionHeading'] { text-transform: none; font-size: 0.95rem; letter-spacing: 0; }

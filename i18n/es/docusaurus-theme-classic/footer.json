@@ -46,5 +46,13 @@
   "link.item.label.Answering RFPs": {
     "message": "Respuesta a licitaciones",
     "description": "The label of footer link with label=Answering RFPs linking to /rfp"
+  },
+  "link.item.label.Use with your AI agent": {
+    "message": "Úselo con su agente de IA",
+    "description": "The label of footer link with label=Use with your AI agent linking to /agents"
+  },
+  "link.item.label.Developers": {
+    "message": "Desarrolladores",
+    "description": "The label of footer link with label=Developers linking to /developers"
   }
 }

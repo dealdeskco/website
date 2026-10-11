@@ -1,0 +1,109 @@
+/* The agents page. The claim across the top, then the session working at the full width of the
+   sheet: a terminal and a proposal side by side need more room than the RFP matrix does. */
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.4rem, 4.5vw, 3.6rem);
+  align-items: end;
+}
+.demo { min-width: 0; padding-bottom: clamp(2rem, 5vw, 3.2rem); }
+.gif { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+
+/* ============ ruled tables ============
+   Docusaurus's base stylesheet dresses every table: `display:block; overflow:auto`, a border on
+   every cell, and zebra striping on even rows. All three are undone here, or this reads as a
+   pasted markdown table rather than a ruled sheet. */
+.table thead { background: transparent; border: 0; }
+.table {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0;
+  border-top: 1px solid var(--rule);
+}
+.table tr,
+.table tbody tr:nth-child(2n) { background: transparent; border: 0; }
+.table th,
+.table td {
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  background: transparent;
+  padding: 0.95rem 1.2rem 0.95rem 0;
+  text-align: left;
+  vertical-align: baseline;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.table th:last-child,
+.table td:last-child { padding-right: 0; }
+.table thead th {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+  padding-top: 0.7rem;
+  padding-bottom: 0.55rem;
+}
+.table tbody th { font-weight: 650; color: var(--ink); width: 26%; letter-spacing: -0.012em; }
+.table tbody tr:last-child th,
+.table tbody tr:last-child td { border-bottom: 2px solid var(--rule-firm); }
+.alone { color: var(--ink-faint) !important; }
+.right { text-align: right !important; width: 9rem; }
+.ok { color: var(--ok) !important; font-weight: 600; white-space: nowrap; }
+.soon { color: var(--ink-faint) !important; font-weight: 600; white-space: nowrap; }
+
+/* ============ setup ============ */
+.setup {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 30rem);
+  gap: clamp(1.6rem, 4.5vw, 3.6rem);
+  align-items: start;
+}
+.code {
+  margin: 0.8rem 0 0.6rem;
+  padding: 0.8rem 0.95rem;
+  background: var(--slab);
+  color: var(--on-slab);
+  border: 0;
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow: visible;
+}
+[data-theme='dark'] .code { background: #081422; border: 1px solid var(--rule); }
+.code code { background: none; border: 0; padding: 0; font-size: inherit; color: inherit; white-space: inherit; }
+.small { font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft); max-width: var(--measure); margin: 0; }
+.shot { margin: 0; position: sticky; top: calc(var(--ifm-navbar-height) + 1.2rem); }
+.shot img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); box-shadow: 0 1px 2px rgba(16, 24, 32, 0.05), 0 18px 44px rgba(16, 24, 32, 0.07); }
+.shot figcaption { margin-top: 10px; font-size: 0.88rem; line-height: 1.5; color: var(--ink-faint); }
+
+/* Tool names are what the agent calls, so they are set as code. */
+.tool { font-family: var(--mono); font-size: 0.95rem; font-weight: 500; letter-spacing: 0; overflow-wrap: anywhere; }
+
+@media screen and (max-width: 1000px) {
+  .setup { grid-template-columns: minmax(0, 1fr); }
+  .shot { position: static; max-width: 36rem; }
+}
+@media screen and (max-width: 900px) {
+  .heroGrid { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
+}
+/* On a phone a three-column table leaves each cell a sliver, so each row becomes a block: the
+   label across the top, the cells beneath it at full width. */
+@media screen and (max-width: 680px) {
+  .table thead { display: none; }
+  .table, .table tbody, .table tr, .table th, .table td { display: block; width: auto; }
+  .table tr { padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
+  .table tbody tr:last-child { border-bottom: 2px solid var(--rule-firm); }
+  .table th, .table td,
+  .table tbody tr:last-child th,
+  .table tbody tr:last-child td { border: 0; padding: 0; }
+  .table tbody th { width: auto; margin-bottom: 0.3rem; }
+  .table td + td { margin-top: 0.35rem; }
+  .right { text-align: left !important; width: auto; }
+  .table td[data-label]::before { content: attr(data-label); display: block; font-size: 0.84rem; font-weight: 600; color: var(--ink-faint); margin-bottom: 0.1rem; }
+}

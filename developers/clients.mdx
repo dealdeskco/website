@@ -1,0 +1,50 @@
+---
+title: Which clients can connect
+sidebar_label: Which clients can connect
+description: What connects to Deal Desk today, and how.
+---
+
+import ClientTable from '@site/src/components/ClientTable';
+import {WhenOAuth, UntilOAuth} from '@site/src/data/agentClients';
+
+# Which clients can connect
+
+<div style={{marginBottom: '1.6rem'}}><ClientTable /></div>
+
+Two ways to connect:
+
+- **With an API key**, for Claude Code, Cursor, VS Code / GitHub Copilot, Claude Desktop's
+  configuration file, the [command line tool](./cli.md) and your own code. The setup for each is in
+  [MCP server](./mcp.mdx#connect-a-client).
+- **By signing in with Deal Desk**, for the ChatGPT app and the click-to-connect Connectors in
+  claude.ai and Claude Desktop. Nothing to paste: you approve the connection in Deal Desk.
+
+<UntilOAuth>
+
+:::note[Coming soon]
+Signing in with Deal Desk uses OAuth, which is on its way. Until it is live, the ChatGPT app and
+the Connectors screens cannot connect. Claude Desktop can connect today through its configuration
+file, and the OpenAI Responses API can call Deal Desk with an API key; both are in
+[MCP server](./mcp.mdx#connect-a-client).
+:::
+
+</UntilOAuth>
+
+<WhenOAuth>
+
+<h2 id="sign-in-with-deal-desk">Sign in with Deal Desk</h2>
+
+In ChatGPT, claude.ai or Claude Desktop:
+
+1. Add a connector (in Claude, a custom connector) with this address:
+
+   ```text
+   https://app.dealdesk.studio/mcp
+   ```
+
+2. Choose **Connect**. Deal Desk opens in your browser: sign in as an account owner or admin.
+3. Check what the connection asks to do, and approve. Deal Desk tools then appear in the chat.
+
+To disconnect, remove the connector in the client.
+
+</WhenOAuth>

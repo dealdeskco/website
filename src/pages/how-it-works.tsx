@@ -96,6 +96,41 @@ export default function HowItWorks(): React.ReactElement {
         </div>
       </section>
 
+      {/* The same four stages, started from somewhere else: an AI agent the person already writes
+          in. One row, because it is a way in, not a fifth stage. */}
+      <section className={styles.section}>
+        <div className={styles.sheet}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}><Translate id="howItWorks.agents.heading">Or start from your AI agent</Translate></h2>
+            <p className={styles.note}>
+              <Translate id="howItWorks.agents.note">
+                Claude Code, Cursor, VS Code with GitHub Copilot, Claude Desktop, or your own.
+              </Translate>
+            </p>
+          </div>
+          <div className={styles.items}>
+            <div className={styles.item}>
+              <div className={styles.itemName}>
+                <Translate id="howItWorks.agents.name">Ask the agent for the proposal</Translate>
+              </div>
+              <div className={styles.itemDesc}>
+                <Translate id="howItWorks.agents.desc">
+                  Connect Deal Desk to the agent once. Then ask it for the proposal in plain words:
+                  it searches your library for the facts, cites them, and Deal Desk drafts the
+                  priced proposal, ready for the same review, signature and seal.
+                </Translate>{' '}
+                <Link to="/agents">
+                  <Translate id="howItWorks.agents.link">Deal Desk for your AI agent</Translate>
+                </Link>
+              </div>
+              <div className={styles.itemCol}>
+                <Translate id="howItWorks.agents.col">Starter and up</Translate>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.section}>
         <div className={styles.sheet}>
           <div className={styles.sectionHead}>

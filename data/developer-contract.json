@@ -1,0 +1,547 @@
+{
+ "_about": "The public developer contract. Generated, never edited by hand: after a DELIBERATE change run UPDATE_CONTRACT=1 node --test tests/developer-regression.test.mjs and commit this file. A change here can break agents already integrated.",
+ "scopes": [
+  "read",
+  "write",
+  "send"
+ ],
+ "api": [
+  {
+   "name": "account.get",
+   "method": "GET",
+   "path": "/api/v1/account",
+   "scope": "read"
+  },
+  {
+   "name": "facts.list",
+   "method": "GET",
+   "path": "/api/v1/facts",
+   "scope": "read"
+  },
+  {
+   "name": "facts.teach",
+   "method": "POST",
+   "path": "/api/v1/facts",
+   "scope": "write"
+  },
+  {
+   "name": "facts.delete",
+   "method": "DELETE",
+   "path": "/api/v1/facts/:id",
+   "scope": "write"
+  },
+  {
+   "name": "facts.gaps",
+   "method": "GET",
+   "path": "/api/v1/facts/gaps",
+   "scope": "read"
+  },
+  {
+   "name": "library.search",
+   "method": "POST",
+   "path": "/api/v1/library/search",
+   "scope": "read"
+  },
+  {
+   "name": "library.sources.list",
+   "method": "GET",
+   "path": "/api/v1/library/sources",
+   "scope": "read"
+  },
+  {
+   "name": "library.sources.add",
+   "method": "POST",
+   "path": "/api/v1/library/sources",
+   "scope": "write"
+  },
+  {
+   "name": "library.sources.delete",
+   "method": "DELETE",
+   "path": "/api/v1/library/sources/:id",
+   "scope": "write"
+  },
+  {
+   "name": "library.sources.get",
+   "method": "GET",
+   "path": "/api/v1/library/sources/:id",
+   "scope": "read"
+  },
+  {
+   "name": "proposals.list",
+   "method": "GET",
+   "path": "/api/v1/proposals",
+   "scope": "read"
+  },
+  {
+   "name": "proposals.draft",
+   "method": "POST",
+   "path": "/api/v1/proposals",
+   "scope": "write"
+  },
+  {
+   "name": "proposals.get",
+   "method": "GET",
+   "path": "/api/v1/proposals/:number",
+   "scope": "read"
+  },
+  {
+   "name": "proposals.update",
+   "method": "PATCH",
+   "path": "/api/v1/proposals/:number",
+   "scope": "write"
+  },
+  {
+   "name": "proposals.pdf",
+   "method": "GET",
+   "path": "/api/v1/proposals/:number/pdf",
+   "scope": "read"
+  },
+  {
+   "name": "proposals.send",
+   "method": "POST",
+   "path": "/api/v1/proposals/:number/send",
+   "scope": "send"
+  },
+  {
+   "name": "rfps.list",
+   "method": "GET",
+   "path": "/api/v1/rfps",
+   "scope": "read"
+  },
+  {
+   "name": "rfps.create",
+   "method": "POST",
+   "path": "/api/v1/rfps",
+   "scope": "write"
+  },
+  {
+   "name": "rfps.delete",
+   "method": "DELETE",
+   "path": "/api/v1/rfps/:id",
+   "scope": "write"
+  },
+  {
+   "name": "rfps.get",
+   "method": "GET",
+   "path": "/api/v1/rfps/:id",
+   "scope": "read"
+  },
+  {
+   "name": "rfps.draft_all",
+   "method": "POST",
+   "path": "/api/v1/rfps/:id/draft-all",
+   "scope": "write"
+  },
+  {
+   "name": "rfps.export",
+   "method": "GET",
+   "path": "/api/v1/rfps/:id/export",
+   "scope": "read"
+  },
+  {
+   "name": "rfps.requirements",
+   "method": "GET",
+   "path": "/api/v1/rfps/:id/requirements",
+   "scope": "read"
+  },
+  {
+   "name": "rfps.update_answer",
+   "method": "PATCH",
+   "path": "/api/v1/rfps/:id/requirements/:rid",
+   "scope": "write"
+  },
+  {
+   "name": "rfps.draft_answer",
+   "method": "POST",
+   "path": "/api/v1/rfps/:id/requirements/:rid/draft",
+   "scope": "write"
+  },
+  {
+   "name": "rfps.answer_gap",
+   "method": "POST",
+   "path": "/api/v1/rfps/:id/requirements/:rid/fact",
+   "scope": "write"
+  }
+ ],
+ "unrouted": [
+  "GET /api/v1/openapi.json",
+  "POST /api/v1/device/code",
+  "POST /api/v1/device/token",
+  "POST /api/v1/auth/revoke",
+  "POST /mcp"
+ ],
+ "mcp": {
+  "protocol_versions": [
+   "2025-06-18",
+   "2025-03-26",
+   "2024-11-05"
+  ],
+  "tools": [
+   {
+    "name": "add_library_document",
+    "op": "library.sources.add",
+    "scope": "write",
+    "required": [
+     "name"
+    ],
+    "inputs": [
+     "content_type",
+     "data",
+     "name",
+     "text"
+    ],
+    "read_only": false
+   },
+   {
+    "name": "answer_rfp_gap",
+    "op": "rfps.answer_gap",
+    "scope": "write",
+    "required": [
+     "answer",
+     "requirement_id",
+     "rfp_id"
+    ],
+    "inputs": [
+     "answer",
+     "requirement_id",
+     "rfp_id"
+    ],
+    "read_only": false
+   },
+   {
+    "name": "draft_all_rfp_answers",
+    "op": "rfps.draft_all",
+    "scope": "write",
+    "required": [
+     "rfp_id"
+    ],
+    "inputs": [
+     "cancel",
+     "rfp_id"
+    ],
+    "read_only": false
+   },
+   {
+    "name": "draft_proposal",
+    "op": "proposals.draft",
+    "scope": "write",
+    "required": [
+     "notes"
+    ],
+    "inputs": [
+     "language",
+     "notes"
+    ],
+    "read_only": false
+   },
+   {
+    "name": "draft_rfp_answer",
+    "op": "rfps.draft_answer",
+    "scope": "write",
+    "required": [
+     "requirement_id",
+     "rfp_id"
+    ],
+    "inputs": [
+     "requirement_id",
+     "rfp_id"
+    ],
+    "read_only": false
+   },
+   {
+    "name": "get_account",
+    "op": "account.get",
+    "scope": "read",
+    "required": [],
+    "inputs": [],
+    "read_only": true
+   },
+   {
+    "name": "get_proposal",
+    "op": "proposals.get",
+    "scope": "read",
+    "required": [
+     "number"
+    ],
+    "inputs": [
+     "number"
+    ],
+    "read_only": true
+   },
+   {
+    "name": "get_rfp_requirements",
+    "op": "rfps.requirements",
+    "scope": "read",
+    "required": [
+     "rfp_id"
+    ],
+    "inputs": [
+     "limit",
+     "needs_input",
+     "offset",
+     "rfp_id",
+     "status"
+    ],
+    "read_only": true
+   },
+   {
+    "name": "get_rfp_status",
+    "op": "rfps.get",
+    "scope": "read",
+    "required": [
+     "rfp_id"
+    ],
+    "inputs": [
+     "rfp_id"
+    ],
+    "read_only": true
+   },
+   {
+    "name": "list_facts",
+    "op": "facts.list",
+    "scope": "read",
+    "required": [],
+    "inputs": [],
+    "read_only": true
+   },
+   {
+    "name": "list_knowledge_gaps",
+    "op": "facts.gaps",
+    "scope": "read",
+    "required": [],
+    "inputs": [],
+    "read_only": true
+   },
+   {
+    "name": "list_library_sources",
+    "op": "library.sources.list",
+    "scope": "read",
+    "required": [],
+    "inputs": [],
+    "read_only": true
+   },
+   {
+    "name": "list_proposals",
+    "op": "proposals.list",
+    "scope": "read",
+    "required": [],
+    "inputs": [],
+    "read_only": true
+   },
+   {
+    "name": "list_rfp_responses",
+    "op": "rfps.list",
+    "scope": "read",
+    "required": [],
+    "inputs": [],
+    "read_only": true
+   },
+   {
+    "name": "remove_fact",
+    "op": "facts.delete",
+    "scope": "write",
+    "required": [
+     "fact_id"
+    ],
+    "inputs": [
+     "fact_id"
+    ],
+    "read_only": false
+   },
+   {
+    "name": "search_library",
+    "op": "library.search",
+    "scope": "read",
+    "required": [
+     "query"
+    ],
+    "inputs": [
+     "query"
+    ],
+    "read_only": true
+   },
+   {
+    "name": "send_proposal_for_signature",
+    "op": "proposals.send",
+    "scope": "send",
+    "required": [
+     "customer_email",
+     "number"
+    ],
+    "inputs": [
+     "customer_email",
+     "customer_name",
+     "customer_title",
+     "number"
+    ],
+    "read_only": false
+   },
+   {
+    "name": "start_rfp_response",
+    "op": "rfps.create",
+    "scope": "write",
+    "required": [
+     "name"
+    ],
+    "inputs": [
+     "content_type",
+     "data",
+     "deal_number",
+     "name",
+     "text"
+    ],
+    "read_only": false
+   },
+   {
+    "name": "teach_fact",
+    "op": "facts.teach",
+    "scope": "write",
+    "required": [
+     "fact"
+    ],
+    "inputs": [
+     "fact"
+    ],
+    "read_only": false
+   },
+   {
+    "name": "update_proposal",
+    "op": "proposals.update",
+    "scope": "write",
+    "required": [
+     "number"
+    ],
+    "inputs": [
+     "discounts",
+     "fields",
+     "lineItems",
+     "number",
+     "version"
+    ],
+    "read_only": false
+   },
+   {
+    "name": "update_rfp_answer",
+    "op": "rfps.update_answer",
+    "scope": "write",
+    "required": [
+     "requirement_id",
+     "rfp_id"
+    ],
+    "inputs": [
+     "requirement_id",
+     "response",
+     "rfp_id",
+     "status"
+    ],
+    "read_only": false
+   }
+  ]
+ },
+ "errors": {
+  "envelope": {
+   "error": [
+    "billing_required",
+    "code",
+    "feature",
+    "message",
+    "needs_force",
+    "required_addon",
+    "required_scope",
+    "retry_after"
+   ]
+  },
+  "codes": {
+   "400": "invalid_request",
+   "401": "unauthenticated",
+   "402": "payment_required",
+   "403": "forbidden",
+   "404": "not_found",
+   "405": "method_not_allowed",
+   "409": "conflict",
+   "410": "gone",
+   "413": "payload_too_large",
+   "415": "unsupported_media_type",
+   "422": "unprocessable",
+   "429": "rate_limited",
+   "500": "internal_error",
+   "502": "upstream_error",
+   "503": "unavailable"
+  },
+  "device": [
+   "authorization_pending",
+   "slow_down",
+   "access_denied",
+   "expired_token",
+   "invalid_grant",
+   "too_many_keys"
+  ],
+  "scope": "insufficient_scope"
+ },
+ "openapi_paths": {
+  "/account": [
+   "get"
+  ],
+  "/facts": [
+   "get",
+   "post"
+  ],
+  "/facts/{id}": [
+   "delete"
+  ],
+  "/facts/gaps": [
+   "get"
+  ],
+  "/library/search": [
+   "post"
+  ],
+  "/library/sources": [
+   "get",
+   "post"
+  ],
+  "/library/sources/{id}": [
+   "delete",
+   "get"
+  ],
+  "/proposals": [
+   "get",
+   "post"
+  ],
+  "/proposals/{number}": [
+   "get",
+   "patch"
+  ],
+  "/proposals/{number}/pdf": [
+   "get"
+  ],
+  "/proposals/{number}/send": [
+   "post"
+  ],
+  "/rfps": [
+   "get",
+   "post"
+  ],
+  "/rfps/{id}": [
+   "delete",
+   "get"
+  ],
+  "/rfps/{id}/draft-all": [
+   "post"
+  ],
+  "/rfps/{id}/export": [
+   "get"
+  ],
+  "/rfps/{id}/requirements": [
+   "get"
+  ],
+  "/rfps/{id}/requirements/{rid}": [
+   "patch"
+  ],
+  "/rfps/{id}/requirements/{rid}/draft": [
+   "post"
+  ],
+  "/rfps/{id}/requirements/{rid}/fact": [
+   "post"
+  ]
+ }
+}

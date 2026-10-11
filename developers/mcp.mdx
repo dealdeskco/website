@@ -1,0 +1,159 @@
+---
+title: Remote MCP server
+sidebar_label: MCP server
+description: The Deal Desk MCP server, how to connect each client, and every tool with its inputs.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Remote MCP server
+
+Deal Desk speaks the [Model Context Protocol](https://modelcontextprotocol.io) at:
+
+```text
+https://app.dealdesk.studio/mcp
+```
+
+- Transport: Streamable HTTP (one JSON-RPC message per `POST`, answered as `application/json`).
+  Protocol versions `2025-06-18`, `2025-03-26` and `2024-11-05`.
+- Authentication: the same API key, as `Authorization: Bearer ...`. A read-only key only sees the
+  read-only tools.
+- Stateless: no session id and no server-sent stream (`GET /mcp` answers `405`), so any request
+  can go to any server.
+
+## Connect a client {/* #connect-a-client */}
+
+Each setup below takes an API key from **Developer** in Deal Desk (see
+[API keys and scopes](./authentication.md)). Developer also shows them with your key filled in.
+Which clients can connect today is on [Which clients can connect](./clients.mdx).
+
+<Tabs groupId="client">
+<TabItem value="claude-code" label="Claude Code" default>
+
+```bash
+claude mcp add --transport http dealdesk https://app.dealdesk.studio/mcp --header "Authorization: Bearer ddk_live_..."
+```
+
+Add `--scope project` to share it through `.mcp.json` (keep the key out of version control: use
+`--header "Authorization: Bearer ${DEALDESK_API_KEY}"` there). Or let the command line tool do it:
+`dealdesk mcp install claude-code`.
+
+</TabItem>
+<TabItem value="claude-desktop" label="Claude Desktop">
+
+Claude Desktop's **Connectors** screen signs in to remote servers with OAuth, which Deal Desk does
+not offer yet. Until it does, add Deal Desk to `claude_desktop_config.json` (Settings, Developer,
+Edit Config) through the `mcp-remote` bridge, which needs Node.js:
+
+```json
+{
+  "mcpServers": {
+    "dealdesk": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://app.dealdesk.studio/mcp", "--header", "Authorization:${DEALDESK_AUTH}"],
+      "env": { "DEALDESK_AUTH": "Bearer ddk_live_..." }
+    }
+  }
+}
+```
+
+Restart Claude Desktop afterwards.
+
+</TabItem>
+<TabItem value="cursor" label="Cursor">
+
+In `~/.cursor/mcp.json` (or `.cursor/mcp.json` in a project):
+
+```json
+{
+  "mcpServers": {
+    "dealdesk": {
+      "url": "https://app.dealdesk.studio/mcp",
+      "headers": { "Authorization": "Bearer ddk_live_..." }
+    }
+  }
+}
+```
+
+</TabItem>
+<TabItem value="vscode" label="VS Code / GitHub Copilot">
+
+In `.vscode/mcp.json`. VS Code asks for the key the first time and keeps it in its secret storage,
+so this file can be committed:
+
+```json
+{
+  "inputs": [
+    { "type": "promptString", "id": "dealdesk-key", "description": "Deal Desk API key", "password": true }
+  ],
+  "servers": {
+    "dealdesk": {
+      "type": "http",
+      "url": "https://app.dealdesk.studio/mcp",
+      "headers": { "Authorization": "Bearer ${input:dealdesk-key}" }
+    }
+  }
+}
+```
+
+Then use Copilot Chat in agent mode; the Deal Desk tools appear in its tool list.
+
+</TabItem>
+<TabItem value="openai" label="ChatGPT and the OpenAI API">
+
+**ChatGPT (the app) cannot connect yet.** ChatGPT connectors sign in to remote MCP servers with
+OAuth, and Deal Desk does not offer OAuth yet. It is coming soon.
+
+If you build on the OpenAI API, the Responses API can call Deal Desk directly with your key:
+
+```json
+{
+  "model": "gpt-5",
+  "tools": [{
+    "type": "mcp",
+    "server_label": "dealdesk",
+    "server_url": "https://app.dealdesk.studio/mcp",
+    "headers": { "Authorization": "Bearer ddk_live_..." },
+    "require_approval": "never"
+  }],
+  "input": "What certifications does our company hold? Cite the Deal Desk library."
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Tools {/* #tools */}
+
+Each tool is one API operation, run with the connection's key. Results come back as structured
+content (and the same JSON as text), with numbered citations wherever Deal Desk used the library.
+Inputs marked *optional* can be left out.
+
+| Tool | What it does | Inputs | Scope |
+| --- | --- | --- | --- |
+| `get_account` | The account, plan, features and this key's scopes. | none | `read` |
+| `search_library` | Passages from your library that answer a question, numbered, with their source document and heading, to cite. | `query` | `read` |
+| `list_library_sources` | Documents in the library and their indexing status. | none | `read` |
+| `add_library_document` | Add a .docx, .pdf or text document to the library. | `name`, `content_type` *optional*, `data` *optional*, `text` *optional* | `write` |
+| `teach_fact` | Tell Deal Desk facts about the company ("We have 18 employees"); only what is stated is kept. Also answers questions about what it knows. | `fact` | `write` |
+| `list_facts` | The facts the company has taught it. | none | `read` |
+| `remove_fact` | Remove a wrong or outdated fact. | `fact_id` | `write` |
+| `list_knowledge_gaps` | Facts open RFP responses are still missing: good questions to ask. | none | `read` |
+| `draft_proposal` | Notes, a transcript or an email thread in; a structured proposal (customer, scope, line items, discounts, terms) saved as a draft out. Never invents prices or names. | `notes`, `language` *optional* | `write` |
+| `list_proposals` | Proposals, orders and agreements, newest first. | none | `read` |
+| `get_proposal` | One proposal's fields, line items and totals per year. | `number` | `read` |
+| `update_proposal` | Change fields, line items or discounts. Never changes the status. | `number`, `discounts` *optional*, `fields` *optional*, `lineItems` *optional*, `version` *optional* | `write` |
+| `send_proposal_for_signature` | Email the customer a link to sign, with Deal Desk e-signature. Billed as a sent deal. | `customer_email`, `number`, `customer_name` *optional*, `customer_title` *optional* | `send` |
+| `start_rfp_response` | Upload an RFP, RFI, questionnaire, a customer's own form or a capability matrix; it is broken into every requirement. | `name`, `content_type` *optional*, `data` *optional*, `deal_number` *optional*, `text` *optional* | `write` |
+| `list_rfp_responses` | Documents being answered. | none | `read` |
+| `get_rfp_status` | Reading or ready, counts by status, and drafting progress. | `rfp_id` | `read` |
+| `get_rfp_requirements` | Requirements with drafted answers, citations, unverified claims and the fact each still needs. | `rfp_id`, `limit` *optional*, `needs_input` *optional*, `offset` *optional*, `status` *optional* | `read` |
+| `draft_rfp_answer` | Draft or redraft one answer from the library. | `requirement_id`, `rfp_id` | `write` |
+| `draft_all_rfp_answers` | Draft every open answer in the background. | `rfp_id`, `cancel` *optional* | `write` |
+| `update_rfp_answer` | Edit an answer or mark it answered (approved answers teach the library) or not applicable. | `requirement_id`, `rfp_id`, `response` *optional*, `status` *optional* | `write` |
+| `answer_rfp_gap` | Give the missing fact; it is kept and the answer redrafted. | `answer`, `requirement_id`, `rfp_id` | `write` |
+
+The library, facts and RFP tools need the RFP responder add-on; without it they return an error
+the agent can read and explain. Before you give an agent a key that can write, read
+[Keep private things private](./private.md).

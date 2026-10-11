@@ -11,9 +11,14 @@ const APP = 'https://app.dealdesk.studio';
 // few strings that live here (rather than in i18n/) get translated: the copyright has to keep its
 // live year, which a translation file would freeze, and the JSON-LD is not translatable otherwise.
 const LOCALE = process.env.DOCUSAURUS_CURRENT_LOCALE ?? 'en';
-const ES = LOCALE === 'es';
+// Two Spanish editions: `es` is Latin American (es-419) and keeps the /es URLs it has always had;
+// `es-ES` is Spain's, at /es-ES. They share most wording; where Spain differs it is said here.
+const ES_ES = LOCALE === 'es-ES';
+const ES = LOCALE === 'es' || ES_ES;
 const TAGLINE = ES ? 'Conversaciones que se convierten en negocios.' : 'Conversations in. Deals out.';
-const DESCRIPTION = ES
+const DESCRIPTION = ES_ES
+  ? 'Convierta una llamada, una transcripción o unas pocas notas en una propuesta con precios y con su marca que su cliente puede firmar en el momento. Hecho para quienes presupuestan el trabajo.'
+  : ES
   ? 'Convierta una llamada, una transcripción o unas pocas notas en una propuesta con precios y con su marca que su cliente puede firmar en el momento. Hecho para quienes cotizan el trabajo.'
   : 'Turn a call, a transcript, or a few notes into a priced, branded proposal your customer can sign on the spot. Built for the people who actually quote the work.';
 const OFFER = ES
@@ -38,14 +43,16 @@ const config: Config = {
   onBrokenLinks: 'throw',
   markdown: {hooks: {onBrokenMarkdownLinks: 'throw'}},
 
-  // Spanish is Latin American neutral (es-419), served under /es. The theme derives og:locale
+  // Spanish comes in two editions: Latin American neutral (es-419) under /es, and Spain's (es-ES)
+  // under /es-ES. Docusaurus writes the hreflang alternates for all three. The theme derives og:locale
   // (en_US / es_419) and og:locale:alternate from htmlLang, so headTags no longer hard-codes it.
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'es'],
+    locales: ['en', 'es', 'es-ES'],
     localeConfigs: {
       en: {label: 'English', htmlLang: 'en-US'},
-      es: {label: 'Español', htmlLang: 'es-419'},
+      es: {label: 'Español (Latinoamérica)', htmlLang: 'es-419'},
+      'es-ES': {label: 'Español (España)', htmlLang: 'es-ES', path: 'es-ES'},
     },
   },
 
@@ -65,8 +72,8 @@ const config: Config = {
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         description: DESCRIPTION,
-        url: ES ? `${SITE}/es` : SITE,
-        inLanguage: ES ? 'es-419' : 'en-US',
+        url: ES_ES ? `${SITE}/es-ES` : ES ? `${SITE}/es` : SITE,
+        inLanguage: ES_ES ? 'es-ES' : ES ? 'es-419' : 'en-US',
         offers: {
           '@type': 'Offer',
           price: '0',
@@ -104,6 +111,23 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    // The developer documentation: a second docs instance with its own sidebar, at /docs/developers
+    // so it reads as part of the site rather than as Help (which is written for people who quote
+    // work, not people who write code). The content is restructured from the app's
+    // developers.html; scripts/check-developer-contract.mjs keeps it in step with the API.
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'developers',
+        path: 'developers',
+        routeBasePath: 'docs/developers',
+        sidebarPath: './sidebarsDevelopers.ts',
+        editUrl: 'https://github.com/dealdeskco/website/tree/main/',
+      },
+    ],
+  ],
+
   themeConfig: {
     image: 'img/social-card.png',
     metadata: [
@@ -111,7 +135,7 @@ const config: Config = {
       {
         name: 'keywords',
         content:
-          'proposal software, quoting software, e-signature, small business proposals, estimate software',
+          'proposal software, quoting software, e-signature, small business proposals, estimate software, MCP server, AI agent proposals',
       },
     ],
     colorMode: {defaultMode: 'light', respectPrefersColorScheme: true},
@@ -121,6 +145,7 @@ const config: Config = {
       items: [
         {to: '/how-it-works', label: 'How it works', position: 'left'},
         {to: '/pricing', label: 'Pricing', position: 'left'},
+        {to: '/developers', label: 'Developers', position: 'left'},
         {to: '/help/intro', label: 'Help', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {type: 'localeDropdown', position: 'right'},
@@ -142,6 +167,8 @@ const config: Config = {
             {label: 'How it works', to: '/how-it-works'},
             {label: 'Pricing', to: '/pricing'},
             {label: 'Answering RFPs', to: '/rfp'},
+            {label: 'Use with your AI agent', to: '/agents'},
+            {label: 'Developers', to: '/developers'},
             {label: 'Sign in', href: `${APP}/login`},
           ],
         },

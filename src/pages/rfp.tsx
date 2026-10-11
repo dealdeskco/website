@@ -96,6 +96,15 @@ const NOTES = [
     }),
   },
   {
+    name: translate({id: 'rfp.note.agent.name', message: 'From your AI agent too'}),
+    desc: translate({
+      id: 'rfp.note.agent.desc',
+      message:
+        'Claude, Cursor or Copilot can work the same response through Deal Desk: start_rfp_response uploads the document, get_rfp_requirements reads the matrix, and draft_rfp_answer drafts from your library with citations.',
+    }),
+    link: true,
+  },
+  {
     name: translate({id: 'rfp.note.deal.name', message: 'Tied to the deal'}),
     desc: translate({
       id: 'rfp.note.deal.desc',
@@ -185,7 +194,17 @@ export default function Rfp(): React.ReactElement {
             {NOTES.map((n) => (
               <div key={n.name} className={styles.item}>
                 <div className={styles.itemName}>{n.name}</div>
-                <div className={styles.itemDesc}>{n.desc}</div>
+                <div className={styles.itemDesc}>
+                  {n.desc}
+                  {n.link && (
+                    <>
+                      {' '}
+                      <Link to="/agents">
+                        <Translate id="rfp.note.agent.link">Deal Desk for your AI agent</Translate>
+                      </Link>
+                    </>
+                  )}
+                </div>
                 <div className={styles.itemCol} />
               </div>
             ))}

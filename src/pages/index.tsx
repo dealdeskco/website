@@ -188,6 +188,11 @@ const CAPS = [
     icon: 'M11 1l8 3v7c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V4l8-3zM7.5 11l2.5 2.5L15 8.5',
   },
   {
+    t: translate({id: 'home.caps.6.t', message: 'Encrypted at rest'}),
+    d: translate({id: 'home.caps.6.d', message: 'Your proposals and documents are encrypted on disk.'}),
+    icon: 'M5 10h12a1 1 0 011 1v9a1 1 0 01-1 1H5a1 1 0 01-1-1v-9a1 1 0 011-1zM7.5 10V6.5a3.5 3.5 0 017 0V10M11 14v3',
+  },
+  {
     // Which clients the line names follows the one status in src/data/agentClients.tsx: ChatGPT
     // is named only once it can actually connect.
     t: translate({id: 'home.caps.5.t', message: 'Works with your AI'}),

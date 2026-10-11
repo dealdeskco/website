@@ -1,0 +1,1811 @@
+{
+  "contact.error.status": {
+    "message": "Algo salió mal ({status})."
+  },
+  "contact.error.generic": {
+    "message": "Algo salió mal."
+  },
+  "contact.meta.title": {
+    "message": "Contacto"
+  },
+  "contact.meta.description": {
+    "message": "Preguntas sobre Deal Desk Studio, los precios o si se adapta a la forma en que usted presupuesta su trabajo."
+  },
+  "contact.kicker": {
+    "message": "Contacto"
+  },
+  "contact.title": {
+    "message": "Cuéntenos qué está presupuestando."
+  },
+  "contact.lede": {
+    "message": "Preguntas sobre precios, si se adapta a su sector o qué ocurre con un documento después de firmarse: envíelas aquí y le responderá una persona."
+  },
+  "contact.existing": {
+    "message": "¿Ya usa Deal Desk y necesita ayuda con un negocio en curso? Responda cualquier correo electrónico que le haya enviado el producto: así nos llega más rápido."
+  },
+  "contact.sent.heading": {
+    "message": "Gracias, hemos recibido su mensaje."
+  },
+  "contact.sent.body": {
+    "message": "Respondemos todos los mensajes, por lo general en un día hábil."
+  },
+  "contact.field.name": {
+    "message": "Su nombre"
+  },
+  "contact.field.email": {
+    "message": "Correo electrónico"
+  },
+  "contact.field.company": {
+    "message": "Empresa"
+  },
+  "contact.field.optional": {
+    "message": "(opcional)"
+  },
+  "contact.field.message": {
+    "message": "¿En qué podemos ayudarle?"
+  },
+  "contact.submit.sending": {
+    "message": "Enviando…"
+  },
+  "contact.submit.send": {
+    "message": "Enviar mensaje"
+  },
+  "contact.privacy": {
+    "message": "Usamos su mensaje para responderle y para nada más. Sin listas ni secuencias de correos."
+  },
+  "howItWorks.stage.1.h": {
+    "message": "Empiece con la conversación"
+  },
+  "howItWorks.stage.1.p": {
+    "message": "Pegue las notas de una llamada, la transcripción de una reunión o un hilo de correos. O pulse el micrófono y describa el trabajo en voz alta mientras lo tiene fresco, incluso de vuelta en el coche. No hay plantilla que elegir ni formulario que rellenar primero, y el dictado funciona en el móvil sin instalar nada."
+  },
+  "howItWorks.stage.1.col": {
+    "message": "cerca de un minuto"
+  },
+  "howItWorks.stage.2.h": {
+    "message": "Lea un borrador real, no una página en blanco"
+  },
+  "howItWorks.stage.2.p": {
+    "message": "Alcance, partidas, cantidades, descuentos, condiciones de pago y ambos bloques de firma, completos y sobre su membrete. Precios plurianuales con descuentos por año, sus propios supuestos y condiciones, y fotos del lugar o maquetas dentro del documento. Todo se puede editar y nada queda bloqueado."
+  },
+  "howItWorks.stage.2.col": {
+    "message": "unos minutos"
+  },
+  "howItWorks.stage.3.h": {
+    "message": "Consiga la firma mientras sigue el interés"
+  },
+  "howItWorks.stage.3.p": {
+    "message": "Entregue su móvil y recoja la firma allí mismo, o envíe por correo electrónico un enlace de un solo uso para que firmen en su propio dispositivo. Los enlaces remotos caducan a las 72 horas y pueden protegerse con un código de un solo uso enviado al correo electrónico del propio firmante."
+  },
+  "howItWorks.stage.3.col": {
+    "message": "en la misma visita"
+  },
+  "howItWorks.stage.4.h": {
+    "message": "Conserve algo en lo que pueda confiar"
+  },
+  "howItWorks.stage.4.p": {
+    "message": "El PDF final incluye un Certificado de finalización y un sello criptográfico: quién firmó, cuándo, desde dónde, cómo se identificó y la dinámica del trazo de la firma. Cualquier persona puede verificar que una copia no fue modificada sin tener que confiar en nosotros."
+  },
+  "howItWorks.stage.4.col": {
+    "message": "permanente"
+  },
+  "howItWorks.limit.1.name": {
+    "message": "No es un abogado"
+  },
+  "howItWorks.limit.1.desc": {
+    "message": "Usted define la redacción de los términos, y la redacción predeterminada es un punto de partida para una propuesta, no un texto contractual revisado para un compromiso regulado o de alto valor."
+  },
+  "howItWorks.limit.2.name": {
+    "message": "En persona no es un tercero neutral"
+  },
+  "howItWorks.limit.2.desc": {
+    "message": "Firmar en su dispositivo demuestra la posesión de su sesión, y el certificado dice exactamente eso. Para un contrato de alto valor o que probablemente se impugne, considere un servicio de firma electrónica de un tercero neutral."
+  },
+  "howItWorks.limit.3.name": {
+    "message": "El borrador aún requiere su revisión"
+  },
+  "howItWorks.limit.3.desc": {
+    "message": "Lee bien sus notas, pero no sabe cuánto le presupuestó al vecino el mes pasado. Cada número se puede editar, y los campos obligatorios se verifican antes de que pueda exportar."
+  },
+  "howItWorks.meta.title": {
+    "message": "Cómo funciona"
+  },
+  "howItWorks.meta.description": {
+    "message": "De una conversación a una propuesta firmada y sellada en una sola sesión. Cada paso, y sus límites reales."
+  },
+  "howItWorks.title": {
+    "message": "De una conversación a un documento firmado."
+  },
+  "howItWorks.meta.stages": {
+    "message": "Etapas"
+  },
+  "howItWorks.meta.stagesValue": {
+    "message": "Cuatro"
+  },
+  "howItWorks.meta.time": {
+    "message": "Tiempo habitual"
+  },
+  "howItWorks.meta.timeValue": {
+    "message": "Una sola sesión"
+  },
+  "howItWorks.meta.signatures": {
+    "message": "Firmas"
+  },
+  "howItWorks.meta.signaturesValue": {
+    "message": "En persona o a distancia"
+  },
+  "howItWorks.lede": {
+    "message": "Deal Desk no pretende reemplazar su criterio sobre el precio. Elimina los noventa minutos de tecleo entre decidir el precio y que el cliente lo vea."
+  },
+  "howItWorks.limits.heading": {
+    "message": "Lo que esto no es"
+  },
+  "howItWorks.limits.note": {
+    "message": "Vale la pena decirlo con claridad, porque la alternativa es descubrirlo en el peor momento."
+  },
+  "howItWorks.close.heading": {
+    "message": "Pruébelo con el último trabajo que presupuestó."
+  },
+  "howItWorks.close.note": {
+    "message": "Pegue las notas que ya tiene y vea lo que obtiene. Redactar es gratis."
+  },
+  "common.cta.startFree": {
+    "message": "Comenzar gratis"
+  },
+  "common.cta.seePricing": {
+    "message": "Ver precios"
+  },
+  "home.transcript.title": {
+    "message": "Transcripción de la llamada"
+  },
+  "home.transcript.tab.transcript": {
+    "message": "Transcripción"
+  },
+  "home.transcript.tab.summary": {
+    "message": "Resumen"
+  },
+  "home.transcript.tab.actions": {
+    "message": "Tareas"
+  },
+  "home.transcript.customer": {
+    "message": "Cliente"
+  },
+  "home.transcript.line1": {
+    "message": "Vamos a renovar el patio antes de las reservas de primavera. ¿Pueden encargarse de las plantas y la iluminación?"
+  },
+  "home.transcript.you": {
+    "message": "Usted"
+  },
+  "home.transcript.line2": {
+    "message": "Sí: diseño e instalación de la fase uno, más riego e iluminación de senderos."
+  },
+  "home.transcript.line3": {
+    "message": "Me parece bien. Por favor, envíenos la propuesta."
+  },
+  "home.doc.title": {
+    "message": "PROPUESTA"
+  },
+  "home.doc.date": {
+    "message": "Fecha"
+  },
+  "home.doc.dateValue": {
+    "message": "7 oct 2026"
+  },
+  "home.doc.validUntil": {
+    "message": "Válida hasta"
+  },
+  "home.doc.validUntilValue": {
+    "message": "6 nov 2026"
+  },
+  "home.doc.preparedBy": {
+    "message": "Preparada por"
+  },
+  "home.doc.commercialTerms": {
+    "message": "Condiciones comerciales"
+  },
+  "home.doc.line1": {
+    "message": "Diseño e instalación — Fase 1"
+  },
+  "home.doc.line2": {
+    "message": "Riego e iluminación"
+  },
+  "home.doc.discount": {
+    "message": "Descuento del primer año (10%)"
+  },
+  "home.doc.total": {
+    "message": "Total"
+  },
+  "home.doc.acceptance": {
+    "message": "Aceptación"
+  },
+  "home.doc.owner": {
+    "message": "Propietaria"
+  },
+  "home.doc.signed": {
+    "message": "FIRMADO"
+  },
+  "home.doc.sealed": {
+    "message": "Sellado · verificar"
+  },
+  "home.close.signatureCaption": {
+    "message": "Firma autorizada"
+  },
+  "home.caps.1.t": {
+    "message": "Propuestas profesionales"
+  },
+  "home.caps.1.d": {
+    "message": "Con su marca, precisas y listas para enviar."
+  },
+  "home.caps.2.t": {
+    "message": "Precios integrados"
+  },
+  "home.caps.2.d": {
+    "message": "Convierta el alcance en partidas en segundos."
+  },
+  "home.caps.3.t": {
+    "message": "Firma del cliente"
+  },
+  "home.caps.3.d": {
+    "message": "Firma en el momento desde cualquier dispositivo."
+  },
+  "home.caps.4.t": {
+    "message": "PDF sellado"
+  },
+  "home.caps.4.d": {
+    "message": "A prueba de alteraciones, con registro de auditoría."
+  },
+  "home.flow.1.t": {
+    "message": "Capturar"
+  },
+  "home.flow.1.d": {
+    "message": "Llamada, transcripción o notas."
+  },
+  "home.flow.2.t": {
+    "message": "Generar"
+  },
+  "home.flow.2.d": {
+    "message": "Alcance, precios y propuesta."
+  },
+  "home.flow.3.t": {
+    "message": "Enviar y firmar"
+  },
+  "home.flow.3.d": {
+    "message": "El cliente firma en minutos."
+  },
+  "home.flow.4.t": {
+    "message": "Sellar"
+  },
+  "home.flow.4.d": {
+    "message": "Reciba un PDF certificado."
+  },
+  "home.included.1.name": {
+    "message": "Redacte a partir de una conversación"
+  },
+  "home.included.1.desc": {
+    "message": "Pegue notas de una llamada, una transcripción o un hilo de correos. O mantenga pulsado el micrófono y describa el trabajo en voz alta de vuelta en el coche. El alcance, las partidas, los descuentos y los términos vuelven ya completos."
+  },
+  "home.included.col.everyPlan": {
+    "message": "todos los planes"
+  },
+  "home.included.2.name": {
+    "message": "Su membrete"
+  },
+  "home.included.2.desc": {
+    "message": "Su logotipo, su color, su firmante autorizado y la redacción de sus términos, en el documento y en el correo electrónico que lo entrega. Su cliente ve su empresa, no la nuestra."
+  },
+  "home.included.3.name": {
+    "message": "Firma en el lugar"
+  },
+  "home.included.3.desc": {
+    "message": "Toque la línea de firma y el panel ocupa toda la pantalla, como en un terminal de pago. Con el dedo, un lápiz óptico o el ratón."
+  },
+  "home.included.4.name": {
+    "message": "Firma desde cualquier lugar"
+  },
+  "home.included.4.desc": {
+    "message": "Un enlace de un solo uso que caduca a las 72 horas. Su cliente firma en su propio dispositivo, si lo desea protegido con un código de un solo uso enviado a su correo electrónico."
+  },
+  "home.included.5.name": {
+    "message": "Certificado de finalización"
+  },
+  "home.included.5.desc": {
+    "message": "Quién firmó, cuándo, desde dónde, cómo se identificó y la dinámica del trazo de la firma, no solo una imagen de ella. Impreso en su propia página."
+  },
+  "home.included.6.name": {
+    "message": "Sello criptográfico"
+  },
+  "home.included.6.desc": {
+    "message": "El PDF final se firma con una clave Ed25519. Cualquier persona puede comprobar, con la clave pública publicada, que una copia es idéntica al original byte por byte."
+  },
+  "home.steps.1.h": {
+    "message": "Hable, pegue o dicte"
+  },
+  "home.steps.1.p": {
+    "message": "No hay plantilla que elegir ni formulario que rellenar primero. Frases a medias, números tachados y «unos 18k por la fase uno» son exactamente lo que espera."
+  },
+  "home.steps.2.h": {
+    "message": "Lea un borrador real"
+  },
+  "home.steps.2.p": {
+    "message": "Con precios, sobre su membrete y con ambos bloques de firma en su lugar. Todo se puede editar y nada queda bloqueado. Los campos obligatorios se verifican antes de que pueda exportar."
+  },
+  "home.steps.3.h": {
+    "message": "Recoja la firma"
+  },
+  "home.steps.3.p": {
+    "message": "Allí mismo con su móvil, o mediante un enlace de un solo uso al móvil de su cliente. En ambos casos obtiene un PDF sellado respaldado por un registro de auditoría."
+  },
+  "home.meta.title": {
+    "message": "De la conversación al documento firmado"
+  },
+  "home.meta.description": {
+    "message": "Deal Desk convierte una llamada, una transcripción o unas pocas notas en una propuesta con precios y con su marca que su cliente puede firmar en el momento."
+  },
+  "home.hero.eyebrow": {
+    "message": "Llamada. Alcance. Precio. Firma."
+  },
+  "home.hero.title": {
+    "message": "De la conversación al {signed}, en una sola sesión."
+  },
+  "home.hero.title.signed": {
+    "message": "documento firmado"
+  },
+  "home.hero.lede": {
+    "message": "Convierta una llamada, una transcripción o unas pocas notas en una propuesta con precios que su cliente puede firmar, y reciba un PDF sellado con evidencia del acuerdo."
+  },
+  "common.cta.seeHowItWorks": {
+    "message": "Ver cómo funciona"
+  },
+  "home.hero.assurance.noCard": {
+    "message": "Sin tarjeta de crédito"
+  },
+  "home.hero.assurance.freeToDraft": {
+    "message": "Redactar es gratis"
+  },
+  "home.hero.assurance.minutes": {
+    "message": "Listo en minutos"
+  },
+  "home.flow.heading": {
+    "message": "Una forma más rápida de cerrar"
+  },
+  "home.flow.note": {
+    "message": "Todo lo que hay entre una llamada y un PDF sellado, sin el trabajo tedioso."
+  },
+  "home.steps.heading": {
+    "message": "Tres pasos, una sola sesión"
+  },
+  "home.steps.note": {
+    "message": "Lo que lleva tiempo es volver a escribir lo que usted ya decidió."
+  },
+  "home.included.heading": {
+    "message": "Qué incluye"
+  },
+  "home.included.note": {
+    "message": "Un documento real, debidamente firmado. No un enlace que caduca."
+  },
+  "home.evidence.heading": {
+    "message": "Puede demostrar qué se firmó"
+  },
+  "home.evidence.p1": {
+    "message": "Cada propuesta sellada incluye un Certificado de finalización y una firma Ed25519. Cualquier persona puede comprobar una copia con la clave publicada. Si cambia un solo carácter, la verificación falla."
+  },
+  "home.evidence.p2": {
+    "message": "Y decimos lo que no es: una firma recogida en su propio móvil demuestra la posesión de su sesión, y el certificado lo indica. Para un negocio que podría impugnarse, considere un servicio de firma electrónica de un tercero neutral."
+  },
+  "home.receipt.document": {
+    "message": "Documento"
+  },
+  "home.receipt.sealed": {
+    "message": "Sellado"
+  },
+  "home.receipt.algorithm": {
+    "message": "Algoritmo"
+  },
+  "home.receipt.verdict": {
+    "message": "Idéntico byte por byte al documento sellado"
+  },
+  "home.price.heading": {
+    "message": "Redactar es gratis"
+  },
+  "home.price.note": {
+    "message": "Envíe tres negocios al mes sin coste. ¿Necesita más? Los planes empiezan en $9."
+  },
+  "home.price.col.plan": {
+    "message": "Plan"
+  },
+  "home.price.col.monthly": {
+    "message": "Mensual"
+  },
+  "home.price.col.extra": {
+    "message": "Cada negocio enviado adicional"
+  },
+  "home.price.col.users": {
+    "message": "Usuarios"
+  },
+  "home.price.free.name": {
+    "message": "Gratis"
+  },
+  "home.price.free.sub": {
+    "message": "3 negocios enviados al mes, sin tarjeta"
+  },
+  "home.price.starter.sub": {
+    "message": "50 negocios enviados incluidos cada mes"
+  },
+  "home.price.after50": {
+    "message": "después de 50"
+  },
+  "home.price.pro.sub": {
+    "message": "200 negocios enviados incluidos cada mes"
+  },
+  "home.price.after200": {
+    "message": "después de 200"
+  },
+  "home.price.team.sub": {
+    "message": "1000 negocios enviados incluidos cada mes"
+  },
+  "home.price.after1000": {
+    "message": "después de 1000"
+  },
+  "home.price.unlimited": {
+    "message": "Ilimitados"
+  },
+  "home.price.terms": {
+    "message": "Precios en USD. Pueden aplicarse impuestos."
+  },
+  "home.price.fullPricing": {
+    "message": "Todos los precios y qué cuenta como envío"
+  },
+  "home.close.heading": {
+    "message": "Envíe la próxima el mismo día."
+  },
+  "home.close.note": {
+    "message": "Configure su membrete una sola vez. A partir de ahí, cada propuesta está a una conversación de distancia."
+  },
+  "common.cta.talkToUs": {
+    "message": "Hable con nosotros"
+  },
+  "pricing.plan.free.name": {
+    "message": "Gratis"
+  },
+  "pricing.plan.free.rate": {
+    "message": "No necesita tarjeta"
+  },
+  "pricing.plan.free.blurb": {
+    "message": "Para probarlo, o para los meses tranquilos de un negocio de temporada."
+  },
+  "pricing.plan.users.one": {
+    "message": "1 usuario"
+  },
+  "pricing.plan.free.sends": {
+    "message": "3 negocios enviados al mes"
+  },
+  "pricing.plan.starter.rate": {
+    "message": "50 negocios enviados/mes incluidos, luego $0.50/negocio"
+  },
+  "pricing.plan.starter.blurb": {
+    "message": "Para un negocio pequeño que envía presupuestos y contratos a sus clientes."
+  },
+  "pricing.plan.starter.sends": {
+    "message": "50 negocios enviados al mes"
+  },
+  "pricing.plan.starter.cta": {
+    "message": "Comenzar con Starter"
+  },
+  "pricing.plan.pro.rate": {
+    "message": "200 negocios enviados/mes incluidos, luego $0.25/negocio"
+  },
+  "pricing.plan.pro.blurb": {
+    "message": "Para equipos pequeños que envían propuestas cada semana."
+  },
+  "pricing.plan.users.five": {
+    "message": "Hasta 5 usuarios"
+  },
+  "pricing.plan.pro.sends": {
+    "message": "200 negocios enviados al mes"
+  },
+  "pricing.plan.pro.cta": {
+    "message": "Comenzar con Pro"
+  },
+  "pricing.plan.team.rate": {
+    "message": "1000 negocios enviados/mes incluidos, luego $0.10/negocio"
+  },
+  "pricing.plan.team.blurb": {
+    "message": "Para empresas en crecimiento que dependen de las propuestas."
+  },
+  "pricing.plan.users.unlimited": {
+    "message": "Usuarios ilimitados"
+  },
+  "pricing.plan.team.sends": {
+    "message": "1000 negocios enviados al mes"
+  },
+  "pricing.plan.team.cta": {
+    "message": "Comenzar con Team"
+  },
+  "pricing.everyPlan.documents": {
+    "message": "Presupuestos, propuestas y contratos"
+  },
+  "pricing.everyPlan.ai": {
+    "message": "Redacción con IA a partir de sus notas"
+  },
+  "pricing.everyPlan.sign": {
+    "message": "Firma electrónica y exportación a PDF"
+  },
+  "pricing.everyPlan.branding": {
+    "message": "Su propia marca y sus propios términos"
+  },
+  "pricing.everyPlan.spanish": {
+    "message": "Documentos en inglés o en español"
+  },
+  "pricing.billing.send.name": {
+    "message": "Se cuenta al enviar"
+  },
+  "pricing.billing.send.desc": {
+    "message": "Un negocio cuenta cuando se envía a firma, no cuando se genera. Los borradores, las ediciones y las regeneraciones son gratuitos."
+  },
+  "pricing.billing.send.col": {
+    "message": "Al enviar"
+  },
+  "pricing.billing.resets.name": {
+    "message": "Lo incluido se restablece cada mes"
+  },
+  "pricing.billing.resets.desc": {
+    "message": "Los negocios incluidos se restablecen al inicio de cada mes de facturación. En un plan de pago, los envíos que superen lo incluido se facturan con la tarifa de su plan; en Gratis, usted elige un plan para seguir enviando."
+  },
+  "pricing.billing.resets.col": {
+    "message": "Mensual"
+  },
+  "pricing.billing.once.name": {
+    "message": "Se cuenta una vez por negocio"
+  },
+  "pricing.billing.once.desc": {
+    "message": "El uso se registra en el propio negocio, así que reenviarlo o corregirlo nunca cuenta una segunda vez."
+  },
+  "pricing.billing.once.col": {
+    "message": "Una vez"
+  },
+  "pricing.billing.change.name": {
+    "message": "Cambie de plan cuando quiera"
+  },
+  "pricing.billing.change.desc": {
+    "message": "Las mejoras de plan se aplican de inmediato. Los cambios a un plan menor se aplican al final del mes que ya pagó."
+  },
+  "pricing.billing.change.col": {
+    "message": "En cualquier momento"
+  },
+  "pricing.billing.cancel.name": {
+    "message": "Cancele cuando quiera"
+  },
+  "pricing.billing.cancel.desc": {
+    "message": "Sin contrato ni cargo por cancelación. Su plan sigue activo hasta el final del mes de facturación que ya pagó y luego su cuenta pasa al plan Gratis."
+  },
+  "pricing.billing.cancel.col": {
+    "message": "En cualquier momento"
+  },
+  "pricing.faq.counts.q": {
+    "message": "¿Qué cuenta como un negocio enviado?"
+  },
+  "pricing.faq.counts.a": {
+    "message": "Un negocio cuenta cuando usted envía una propuesta, un formulario de pedido o un contrato a firma, o lo marca como enviado o firmado. Redactar a partir de notas, editar, regenerar y previsualizar el PDF nunca cuentan. Puede preparar un presupuesto veinte veces y cuenta una sola vez."
+  },
+  "pricing.faq.over.q": {
+    "message": "¿Qué pasa si supero los negocios incluidos?"
+  },
+  "pricing.faq.over.a": {
+    "message": "En un plan de pago, nada deja de funcionar: cada negocio enviado adicional se factura con la tarifa de su plan —$0.50 en Starter, $0.25 en Pro, $0.10 en Team— en su próxima factura. En Gratis, usted elige un plan para seguir enviando; redactar sigue siendo gratis."
+  },
+  "pricing.faq.twice.q": {
+    "message": "¿Se me cobra dos veces si reenvío el mismo negocio?"
+  },
+  "pricing.faq.twice.a": {
+    "message": "No. El uso se registra en el negocio, no en la acción, así que un mismo negocio se cuenta como máximo una sola vez. Corregir una errata y reenviarlo no cuesta nada adicional."
+  },
+  "pricing.faq.switch.q": {
+    "message": "¿Puedo cambiar de plan más adelante?"
+  },
+  "pricing.faq.switch.a": {
+    "message": "Sí, en cualquier dirección. Las mejoras de plan se aplican de inmediato, y la diferencia prorrateada por el resto del mes se cobra en ese momento. Los cambios a un plan menor se aplican al final del mes que ya pagó."
+  },
+  "pricing.faq.contract.q": {
+    "message": "¿Hay un contrato?"
+  },
+  "pricing.faq.contract.a": {
+    "message": "Sin contrato, sin cargo de configuración y sin plazo mínimo. Cancele cuando quiera: su plan sigue activo hasta el final del mes de facturación que ya pagó y luego su cuenta pasa al plan Gratis."
+  },
+  "pricing.faq.branding.q": {
+    "message": "¿Mis propuestas llevan mi marca?"
+  },
+  "pricing.faq.branding.a": {
+    "message": "Sí, en todos los planes, incluido Gratis. Su logotipo, su color, su firmante autorizado y la redacción de sus términos, en el documento y en el correo electrónico que lo entrega. Su cliente ve su empresa, no la nuestra."
+  },
+  "pricing.meta.title": {
+    "message": "Precios"
+  },
+  "pricing.meta.description": {
+    "message": "Redactar es gratis y lo seguirá siendo. Envíe tres negocios al mes sin coste. ¿Necesita más? Los planes empiezan en $9."
+  },
+  "pricing.eyebrow": {
+    "message": "Precios"
+  },
+  "pricing.title": {
+    "message": "Gratis para empezar."
+  },
+  "pricing.lede": {
+    "message": "Redactar es gratis y lo seguirá siendo. Envíe tres negocios al mes sin coste. ¿Necesita más? Los planes empiezan en $9."
+  },
+  "pricing.plans.heading": {
+    "message": "Planes"
+  },
+  "pricing.plans.note": {
+    "message": "Sin contrato ni cargo de configuración. Cambie de plan en cualquier dirección cuando quiera."
+  },
+  "pricing.plans.mostPopular": {
+    "message": "Más popular"
+  },
+  "pricing.plan.perMonth": {
+    "message": "/mes"
+  },
+  "pricing.plans.terms": {
+    "message": "Precios en USD. Pueden aplicarse impuestos."
+  },
+  "pricing.everyPlan.heading": {
+    "message": "En todos los planes"
+  },
+  "pricing.everyPlan.note": {
+    "message": "Los planes difieren en usuarios y negocios enviados. Todo lo demás está en todos, incluido Gratis."
+  },
+  "pricing.addon.heading": {
+    "message": "Complemento"
+  },
+  "pricing.addon.note": {
+    "message": "Para empresas que responden solicitudes de propuestas. Disponible en cualquier plan de pago."
+  },
+  "pricing.addon.name": {
+    "message": "Respuesta a licitaciones"
+  },
+  "pricing.addon.desc": {
+    "message": "Suba una solicitud de propuestas (RFP), una solicitud de información (RFI) o un formulario de su cliente. Deal Desk lo divide en cada requisito, redacta respuestas a partir de lo que su empresa ya sabe y las revisa como lo haría un evaluador."
+  },
+  "pricing.addon.usage": {
+    "message": "5 documentos al mes incluidos, luego $10 cada uno. Los socios de diseño lo tienen incluido."
+  },
+  "pricing.addon.price": {
+    "message": "+$49/mes"
+  },
+  "pricing.billing.heading": {
+    "message": "Cómo funciona la facturación"
+  },
+  "pricing.billing.note": {
+    "message": "Basada en el uso y predecible. Nunca se le cobra por el trabajo en curso."
+  },
+  "pricing.faq.heading": {
+    "message": "Preguntas"
+  },
+  "pricing.faq.note": {
+    "message": "Las que vale la pena responder antes de que introduzca una tarjeta, no después."
+  },
+  "pricing.close.heading": {
+    "message": "Presupueste el próximo trabajo hoy."
+  },
+  "pricing.close.note": {
+    "message": "Redactar no cuesta nada y no necesita tarjeta para empezar."
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "Esta página ha fallado.",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Volver al principio",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.archive.title": {
+    "message": "Archivo",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archivo",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Navegación de la lista de publicaciones del blog",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Entradas más recientes",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Entradas más antiguas",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Barra de paginación de publicaciones del blog",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Publicación más reciente",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Publicación más antigua",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Ver todas las etiquetas",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "modo del sistema",
+    "description": "The name for the system color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "modo claro",
+    "description": "The name for the light color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "modo oscuro",
+    "description": "The name for the dark color mode"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Cambiar entre modo oscuro y claro (actualmente {mode})",
+    "description": "The ARIA label for the color mode toggle"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Rastro de navegación",
+    "description": "The ARIA label for the breadcrumbs"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "Página del documento",
+    "description": "The ARIA label for the docs pagination"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Anterior",
+    "description": "The label used to navigate to the previous doc"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Siguiente",
+    "description": "The label used to navigate to the next doc"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "Un documento|{count} documentos",
+    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} con la etiqueta \"{tagName}\"",
+    "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Versión: {versionLabel}"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "Esta es la documentación sin publicar para {siteTitle}, versión {versionLabel}.",
+    "description": "The label used to tell the user that he's browsing an unreleased doc version"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "Esta es la documentación para {siteTitle} {versionLabel}, que ya no se mantiene activamente.",
+    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "Para la documentación actualizada, vea {latestVersionLink} ({versionLabel}).",
+    "description": "The label used to tell the user to check the latest version"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "última versión",
+    "description": "The label used for the latest version suggestion link label"
+  },
+  "theme.common.editThisPage": {
+    "message": "Editar esta página",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Enlace directo a {heading}",
+    "description": "Title for link to heading"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " en {date}",
+    "description": "The words used to describe on which date a page has been last updated"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " por {user}",
+    "description": "The words used to describe by who the page has been last updated"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "Última actualización{atDate}{byUser}",
+    "description": "The sentence used to display when a page has been last updated, and by who"
+  },
+  "theme.NotFound.title": {
+    "message": "Página no encontrada",
+    "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versiones",
+    "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "Etiquetas:",
+    "description": "The label alongside a tag list"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Cerrar",
+    "description": "The ARIA label for close button of announcement bar"
+  },
+  "theme.admonition.caution": {
+    "message": "precaución",
+    "description": "The default label used for the Caution admonition (:::caution)"
+  },
+  "theme.admonition.danger": {
+    "message": "peligro",
+    "description": "The default label used for the Danger admonition (:::danger)"
+  },
+  "theme.admonition.info": {
+    "message": "información",
+    "description": "The default label used for the Info admonition (:::info)"
+  },
+  "theme.admonition.note": {
+    "message": "nota",
+    "description": "The default label used for the Note admonition (:::note)"
+  },
+  "theme.admonition.tip": {
+    "message": "consejo",
+    "description": "The default label used for the Tip admonition (:::tip)"
+  },
+  "theme.admonition.warning": {
+    "message": "aviso",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Navegación de publicaciones recientes",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Ampliar la categoría '{label}' de la barra lateral",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Colapsar categoría '{label}' de la barra lateral",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(se abre en una nueva pestaña)",
+    "description": "The ARIA label for the external link icon"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Principal",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.NotFound.p1": {
+    "message": "No pudimos encontrar lo que buscaba.",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "Póngase en contacto con el propietario del sitio que le proporcionó la URL original y avísele que el enlace no funciona.",
+    "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Idiomas",
+    "description": "The label for the mobile language switcher dropdown"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "En esta página",
+    "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Leer más",
+    "description": "The label used in blog post item excerpts to link to full blog posts"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "Leer más acerca de {title}",
+    "description": "The ARIA label for the link to full blog posts from excerpts"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Lectura de un minuto|{readingTime} min de lectura",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Copiar",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Copiado",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Copiar código",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Alternar ajuste de palabras",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Página de inicio",
+    "description": "The ARIA label for the home page in the breadcrumbs"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Colapsar barra lateral",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Colapsar barra lateral",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Barra lateral de ayuda",
+    "description": "The ARIA label for the sidebar navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Cerrar barra lateral",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Volver al menú principal",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Alternar barra lateral",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Expandir el menú desplegable",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Contraer el menú desplegable",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Expandir barra lateral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Expandir barra lateral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.blog.post.plurals": {
+    "message": "Una publicación|{count} publicaciones",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} con la etiqueta \"{tagName}\"",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Autores",
+    "description": "The title of the authors page"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "Ver todos los autores",
+    "description": "The label of the link targeting the blog authors page"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "Este autor aún no ha escrito ninguna publicación.",
+    "description": "The text for authors with 0 blog post"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "Página no listada",
+    "description": "The unlisted content banner title"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "Esta página no está listada. Los motores de búsqueda no la indexarán, y solo podrán acceder a ella quienes tengan el enlace directo.",
+    "description": "The unlisted content banner message"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Página en borrador",
+    "description": "The draft content banner title"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "Esta página es un borrador. Solo será visible en desarrollo y será excluida de la compilación de producción.",
+    "description": "The draft content banner message"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 artículo|{count} artículos",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Intente de nuevo",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Saltar al contenido principal",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Etiquetas",
+    "description": "The title of the tag list page"
+  },
+  "home.rfp.heading": {
+    "message": "Responda la RFP con lo que ya sabe"
+  },
+  "home.rfp.note": {
+    "message": "Para firmas de consultoría y para cualquiera que responda RFP, RFI y formularios de clientes."
+  },
+  "home.rfp.p1": {
+    "message": "Suba el documento. Deal Desk lo divide en cada requisito, conserva la numeración propia del documento y encuentra cómo se calificará cada uno. El resultado es la matriz de cumplimiento: todos los requisitos en una sola lista, sin nada que buscar."
+  },
+  "home.rfp.p2": {
+    "message": "Luego redacta cada respuesta a partir de sus propuestas anteriores, declaraciones de capacidades y currículums, y cita los pasajes que usó. Cuando a un borrador le falta un dato, lo indica en lugar de inventarlo, y unas pocas preguntas breves completan lo que falta. Sus respuestas se guardan, así que la próxima RFP ya las conoce."
+  },
+  "home.rfp.link": {
+    "message": "Cómo funciona la respuesta a licitaciones"
+  },
+  "home.rfp.terms": {
+    "message": "Un complemento para cualquier plan de pago: $49 al mes."
+  },
+  "pricing.addon.link": {
+    "message": "Cómo funciona"
+  },
+  "rfp.stage.upload.h": {
+    "message": "Suba el documento"
+  },
+  "rfp.stage.upload.p": {
+    "message": "Una RFP, una RFI o un formulario propio del cliente: un PDF con texto seleccionable, un archivo de Word .docx o texto pegado, de hasta unas 100 páginas. Leer un documento extenso lleva unos minutos."
+  },
+  "rfp.stage.matrix.h": {
+    "message": "Obtenga la matriz de cumplimiento"
+  },
+  "rfp.stage.matrix.p": {
+    "message": "Cada requisito por separado en una lista numerada, con las referencias propias del documento, como L.4, la sección en la que se encuentra, de qué tipo es (una pregunta, un requisito, un campo de formulario o una instrucción) y si es obligatorio."
+  },
+  "rfp.stage.eval.h": {
+    "message": "Vea cómo se calificará"
+  },
+  "rfp.stage.eval.p": {
+    "message": "Lectura del evaluador encuentra los criterios de evaluación en el documento y muestra, en cada requisito, cómo se califica, citando las palabras del propio documento."
+  },
+  "rfp.stage.draft.h": {
+    "message": "Redacte cada respuesta con lo que ya sabe"
+  },
+  "rfp.stage.draft.p": {
+    "message": "Añada propuestas anteriores, declaraciones de capacidades y currículums a Lo que sabemos, la biblioteca de su empresa. Redactar todo escribe cada respuesta en segundo plano a partir de ella, y cada borrador cita los pasajes que usó como [1], [2]."
+  },
+  "rfp.stage.check.h": {
+    "message": "Lea las revisiones en el margen"
+  },
+  "rfp.stage.check.p": {
+    "message": "Cada respuesta se revisa con reglas fijas, no con la IA calificando su propio trabajo: el requisito repetido tal cual, afirmaciones imprecisas, superlativos sin nada que los respalde, relleno, plazos de antigüedad como «en los últimos tres años» y siglas sin desarrollar en su primer uso. Cuando falta un dato real, el borrador indica «Necesita un dato de usted» en lugar de inventarlo."
+  },
+  "rfp.stage.ask.h": {
+    "message": "Resuelva los pocos elementos abiertos"
+  },
+  "rfp.stage.ask.p": {
+    "message": "Unas pocas preguntas piden solo los datos que faltan. Escriba o dicte cada uno y luego elija Guardar y volver a redactar. Sus respuestas se guardan en Lo que sabemos, así que la próxima RFP ya las tiene."
+  },
+  "rfp.stage.export.h": {
+    "message": "Expórtelo"
+  },
+  "rfp.stage.export.p": {
+    "message": "Descargue la matriz de cumplimiento como CSV. Si el documento llegó como archivo de Word, descargue el original del cliente con sus respuestas ya escritas."
+  },
+  "rfp.note.review.name": {
+    "message": "Usted revisa cada respuesta"
+  },
+  "rfp.note.review.desc": {
+    "message": "Los borradores los escribe la IA y pueden contener errores. Las revisiones señalan los puntos débiles, pero usted lee y aprueba cada respuesta antes de enviarla."
+  },
+  "rfp.note.text.name": {
+    "message": "Texto, no escaneos"
+  },
+  "rfp.note.text.desc": {
+    "message": "Un PDF necesita texto seleccionable. Si el suyo es un escaneo, pegue el texto."
+  },
+  "rfp.note.library.name": {
+    "message": "Una biblioteca, no un repositorio de documentos"
+  },
+  "rfp.note.library.desc": {
+    "message": "Lo que sabemos es un lugar donde soltar documentos y una lista de lo que contiene. Todas las personas de su cuenta la comparten, y las respuestas que usted aprueba se añaden a ella."
+  },
+  "rfp.note.deal.name": {
+    "message": "Vinculado al negocio"
+  },
+  "rfp.note.deal.desc": {
+    "message": "Vincule una respuesta a uno de sus negocios para encontrarla desde ese negocio."
+  },
+  "rfp.meta.title": {
+    "message": "Respuesta a licitaciones"
+  },
+  "rfp.meta.description": {
+    "message": "Suba una RFP, una RFI o un formulario propio del cliente. Deal Desk lo divide en cada requisito, redacta respuestas a partir de lo que su empresa ya sabe y las revisa como lo haría un evaluador."
+  },
+  "rfp.title": {
+    "message": "Responda la RFP con lo que su empresa ya sabe."
+  },
+  "rfp.lede": {
+    "message": "Suba una RFP, una RFI o un formulario propio del cliente. Deal Desk lo divide en cada requisito, redacta cada respuesta a partir de sus propuestas anteriores y currículums, la revisa como lo haría un evaluador y solo le pide los datos que faltan."
+  },
+  "rfp.hero.terms": {
+    "message": "La respuesta a licitaciones es un complemento para cualquier plan de pago: $49 al mes."
+  },
+  "rfp.stages.heading": {
+    "message": "En el orden en que usted trabaja"
+  },
+  "rfp.stages.note": {
+    "message": "Desde que el documento llega a su bandeja de entrada hasta la matriz que entrega con él."
+  },
+  "rfp.notes.heading": {
+    "message": "Conviene saber antes"
+  },
+  "rfp.price.heading": {
+    "message": "Precio"
+  },
+  "rfp.price.note": {
+    "message": "Un complemento para Starter, Pro o Team."
+  },
+  "rfp.price.desc": {
+    "message": "5 documentos al mes incluidos, luego $10 cada uno. Un documento solo cuenta cuando se lee correctamente. Los socios de diseño lo tienen incluido."
+  },
+  "rfp.price.plans": {
+    "message": "Ver los planes"
+  },
+  "rfp.close.heading": {
+    "message": "Traiga la próxima RFP."
+  },
+  "rfp.close.note": {
+    "message": "Cree su cuenta, elija un plan de pago y añada la respuesta a licitaciones cuando llegue el próximo documento."
+  },
+  "rfp.close.guide": {
+    "message": "Leer la guía paso a paso"
+  },
+  "rfp.demo.l1.req": {
+    "message": "Describa su enfoque para evaluar los resultados del programa."
+  },
+  "rfp.demo.l1.draft": {
+    "message": "Un diseño de métodos mixtos: indicadores de resultados acordados con el personal del programa en el primer mes, cuadros de mando trimestrales y un informe final de impacto."
+  },
+  "rfp.demo.l1.scored": {
+    "message": "Enfoque técnico, 40% de la calificación (M.2)"
+  },
+  "rfp.demo.l2.req": {
+    "message": "Identifique al gerente del proyecto y resuma su experiencia relevante."
+  },
+  "rfp.demo.l2.draft": {
+    "message": "Dana Whitfield, PMP, ha dirigido once evaluaciones de programas de condados desde 2016."
+  },
+  "rfp.demo.l3.req": {
+    "message": "Proporcione dos referencias de contratos similares completados en los últimos tres años, incluido el valor del contrato."
+  },
+  "rfp.demo.l3.draft": {
+    "message": "Estudio de usuarios de Lakeshore Transit Authority, $310,000, completado en agosto de 2024."
+  },
+  "rfp.demo.l3.scored": {
+    "message": "Experiencia previa, 30% de la calificación (M.2)"
+  },
+  "rfp.demo.l4.req": {
+    "message": "Describa su proceso de aseguramiento de la calidad de los entregables."
+  },
+  "rfp.demo.l4.draft": {
+    "message": "Cada entregable pasa por una revisión entre analistas y luego por la aprobación del gerente del proyecto según los criterios de aceptación."
+  },
+  "rfp.demo.l5.req": {
+    "message": "Indique si su firma cuenta con un seguro de responsabilidad profesional de al menos $1,000,000."
+  },
+  "rfp.demo.l5.draft": {
+    "message": "Sí. Cobertura de responsabilidad profesional de $2,000,000 por reclamación; se adjunta el certificado."
+  },
+  "rfp.demo.l6.req": {
+    "message": "Presente los currículums del personal clave."
+  },
+  "rfp.demo.l6.draft": {
+    "message": "Los currículums de Dana Whitfield y dos analistas sénior están en el Anexo B."
+  },
+  "rfp.demo.answer": {
+    "message": "Evaluación de Ridgeview Housing, $240,000, mar–nov 2025"
+  },
+  "rfp.demo.l3.redraft": {
+    "message": "Estudio de usuarios de Lakeshore Transit Authority, $310,000, completado en agosto de 2024; evaluación de Ridgeview Housing, $240,000, de marzo a noviembre de 2025."
+  },
+  "rfp.demo.status.open": {
+    "message": "Abierto"
+  },
+  "rfp.demo.status.drafted": {
+    "message": "Redactado"
+  },
+  "rfp.demo.status.answered": {
+    "message": "Respondido"
+  },
+  "rfp.demo.required": {
+    "message": "Obligatorio"
+  },
+  "rfp.demo.aria": {
+    "message": "Una RFP de ejemplo se lee y se divide en seis requisitos, se redacta a partir de la biblioteca de la firma con citas, se señala y se responde un dato faltante, y la matriz de cumplimiento y el documento completado quedan listos para descargar."
+  },
+  "rfp.demo.drop": {
+    "message": "Suba el documento que necesita responder"
+  },
+  "rfp.demo.draftAll": {
+    "message": "Redactar todo"
+  },
+  "rfp.demo.title": {
+    "message": "Servicios de evaluación de programas"
+  },
+  "rfp.demo.sub": {
+    "message": "RFP 2026-014, Condado de Ejemplo"
+  },
+  "rfp.demo.reading": {
+    "message": "Leyendo…"
+  },
+  "rfp.demo.found": {
+    "message": "6 requisitos"
+  },
+  "rfp.demo.evalRead": {
+    "message": "Lectura del evaluador"
+  },
+  "rfp.demo.evalCriteria": {
+    "message": "Enfoque técnico 40%, experiencia previa 30%, precio 30% (M.2)"
+  },
+  "rfp.demo.col.ref": {
+    "message": "Ref."
+  },
+  "rfp.demo.col.req": {
+    "message": "Requisito"
+  },
+  "rfp.demo.col.status": {
+    "message": "Estado"
+  },
+  "rfp.demo.howScored": {
+    "message": "Cómo se califica:"
+  },
+  "rfp.demo.needsFact": {
+    "message": "Necesita un dato de usted"
+  },
+  "rfp.demo.needsFactWhat": {
+    "message": "una segunda referencia de los últimos tres años"
+  },
+  "rfp.demo.prompt": {
+    "message": "Resuelva 1 elemento abierto con unas pocas preguntas"
+  },
+  "rfp.demo.qLabel": {
+    "message": "Algunas preguntas"
+  },
+  "rfp.demo.qText": {
+    "message": "L.3 pide dos referencias de los últimos tres años. ¿Cuál es un segundo contrato, con su valor y sus fechas?"
+  },
+  "rfp.demo.typeHere": {
+    "message": "Escríbalo aquí"
+  },
+  "rfp.demo.save": {
+    "message": "Guardar y volver a redactar"
+  },
+  "rfp.demo.tally": {
+    "message": "{n} de 6 respondidos"
+  },
+  "rfp.demo.exportMatrix": {
+    "message": "⤓ Matriz de cumplimiento"
+  },
+  "rfp.demo.exportFilled": {
+    "message": "⤓ Documento completado"
+  },
+  "rfp.demo.caption": {
+    "message": "Un documento de ejemplo. El condado, la firma y todas las cifras son ficticios."
+  },
+  "rfp.demo.replay": {
+    "message": "Repetir"
+  },
+  "agents.compare.facts": {
+    "message": "Datos sobre su empresa"
+  },
+  "agents.compare.facts.alone": {
+    "message": "Lo que suene bien. Una referencia o una certificación que falta se inventa."
+  },
+  "agents.compare.facts.with": {
+    "message": "De su biblioteca y de los datos que usted le enseñó, cada uno con su cita. Si la biblioteca no lo sabe, el agente tiene la indicación de preguntarle a usted."
+  },
+  "agents.compare.math": {
+    "message": "Precios y totales"
+  },
+  "agents.compare.math.alone": {
+    "message": "Cuentas escritas en prosa, y a veces equivocadas."
+  },
+  "agents.compare.math.with": {
+    "message": "Partidas, descuentos y totales por año, calculados por Deal Desk."
+  },
+  "agents.compare.doc": {
+    "message": "El documento"
+  },
+  "agents.compare.doc.alone": {
+    "message": "Texto en una ventana de chat, para pegar en otro sitio."
+  },
+  "agents.compare.doc.with": {
+    "message": "Una propuesta con su membrete, guardada en Deal Desk como borrador, con su PDF."
+  },
+  "agents.compare.sign": {
+    "message": "La firma"
+  },
+  "agents.compare.sign.alone": {
+    "message": "No es su trabajo."
+  },
+  "agents.compare.sign.with": {
+    "message": "Firma electrónica y un PDF sellado, enviados cuando usted lo indique."
+  },
+  "agents.compare.col.alone": {
+    "message": "El agente por sí solo"
+  },
+  "agents.compare.col.with": {
+    "message": "Con Deal Desk conectado"
+  },
+  "agents.tools.search": {
+    "message": "Encuentra los pasajes de su biblioteca que responden a una pregunta, numerados para que el agente pueda citarlos."
+  },
+  "agents.tools.teach": {
+    "message": "Guarda un dato que usted indica, como la cantidad de personal o una certificación, para que cada borrador posterior pueda citarlo."
+  },
+  "agents.tools.draft": {
+    "message": "Convierte notas en una propuesta con precios, guardada en Deal Desk como borrador. Los campos que las notas no respaldan quedan vacíos."
+  },
+  "agents.tools.get": {
+    "message": "Lee una propuesta: cada campo, las partidas y los totales de cada año."
+  },
+  "agents.tools.rfp": {
+    "message": "Sube una RFP, una RFI o un cuestionario y lo separa en cada uno de sus requisitos."
+  },
+  "agents.tools.reqs": {
+    "message": "Enumera los requisitos con sus respuestas redactadas, las citas que las respaldan y cualquier dato que todavía falte."
+  },
+  "agents.tools.answer": {
+    "message": "Redacta una respuesta a partir de su biblioteca, o indica qué dato necesita en lugar de inventarlo."
+  },
+  "agents.security.keys.name": {
+    "message": "Las claves se guardan como hash y se pueden revocar"
+  },
+  "agents.security.keys.desc": {
+    "message": "Una clave se muestra una sola vez, cuando usted la crea. Deal Desk guarda solo un hash, y revocarla la detiene de inmediato. Cree una clave por agente o por ordenador, para que revocar una no detenga las demás."
+  },
+  "agents.security.scopes.name": {
+    "message": "Cada clave hace solo lo que usted permite"
+  },
+  "agents.security.scopes.desc": {
+    "message": "Solo lectura, o lectura y escritura. Enviar a firma es un permiso aparte que usted marca al crear la clave, y cada envío se factura igual que un envío desde la aplicación."
+  },
+  "agents.security.library.name": {
+    "message": "Su biblioteca se queda en Deal Desk"
+  },
+  "agents.security.library.desc": {
+    "message": "El agente recibe solo los pasajes que una pregunta necesita, como respuestas con citas. Cada llamada se limita a su propia cuenta, con los mismos controles que la aplicación."
+  },
+  "agents.security.memory.name": {
+    "message": "Funciona junto a una memoria privada"
+  },
+  "agents.security.memory.desc": {
+    "message": "Úselo junto con una herramienta de memoria privada como Gnarl. El agente usa ambas, y cada almacén se mantiene por separado: nada de uno se copia en el otro."
+  },
+  "agents.meta.title": {
+    "message": "Deal Desk para su agente de IA"
+  },
+  "agents.meta.description": {
+    "message": "Conecte Claude Code, Cursor, VS Code o su propio agente a Deal Desk. El agente redacta; Deal Desk aporta los datos reales de su empresa con citas, los precios, el documento y la firma."
+  },
+  "agents.title": {
+    "message": "Deal Desk para su agente de IA."
+  },
+  "agents.lede": {
+    "message": "Siga redactando propuestas en Claude, Cursor o Copilot. Conecte Deal Desk una vez, y el agente redacta a partir de lo que su empresa realmente sabe, con citas, mientras Deal Desk se encarga de los precios, del documento y de la firma."
+  },
+  "agents.cta.docs": {
+    "message": "Lea la documentación para desarrolladores"
+  },
+  "agents.gif.alt": {
+    "message": "Claude Code conectado a Deal Desk redacta una propuesta para Lakeside Dental con un total de $6,300 para el año 1."
+  },
+  "agents.problem.heading": {
+    "message": "Bien escrito no es lo mismo que correcto"
+  },
+  "agents.problem.note": {
+    "message": "Un agente escribe una propuesta convincente en segundos. No conoce sus referencias, sus tarifas ni sus términos, y hace las cuentas en prosa."
+  },
+  "agents.setup.heading": {
+    "message": "Configúrelo en tres pasos"
+  },
+  "agents.setup.note": {
+    "message": "Unos minutos, una sola vez. Necesita permisos de administración de la cuenta."
+  },
+  "agents.setup.1.h": {
+    "message": "Cree una clave en Desarrolladores"
+  },
+  "agents.setup.1.p": {
+    "message": "En Deal Desk, abra el menú de la cuenta y elija Desarrolladores. Nombre la clave según dónde se usará, elija qué puede hacer y pulse Crear clave. Cópiela en ese momento: se muestra una sola vez."
+  },
+  "agents.setup.2.h": {
+    "message": "Ejecute el comando"
+  },
+  "agents.setup.2.p": {
+    "message": "Para Claude Code es una sola línea. Desarrolladores la muestra con su clave ya incluida, junto a la configuración de Cursor, VS Code y Claude Desktop."
+  },
+  "agents.setup.2.cli": {
+    "message": "¿Prefiere su propio terminal? La herramienta de línea de comandos dealdesk inicia sesión a través de su navegador con dealdesk login, sin pegar una clave. La documentación para desarrolladores explica cómo configurarla."
+  },
+  "agents.setup.3.h": {
+    "message": "Pídaselo a su agente"
+  },
+  "agents.setup.3.p": {
+    "message": "«Redacte una propuesta con estas notas de la llamada.» «¿Qué sabemos sobre nuestro historial de seguridad?» «Suba esta RFP a Deal Desk y redacte todas las respuestas.» El borrador llega a Deal Desk, donde usted lo revisa, le pone su marca y lo envía."
+  },
+  "agents.shot.alt": {
+    "message": "El panel Desarrolladores de Deal Desk: una clave llamada Claude Code en mi portátil con acceso de lectura y escritura, y el comando de configuración de Claude Code."
+  },
+  "agents.shot.caption": {
+    "message": "Desarrolladores, en el menú de la cuenta. Aquí la clave aparece abreviada; Deal Desk muestra la clave completa una sola vez, cuando usted la crea."
+  },
+  "agents.clients.heading": {
+    "message": "Funciona en las herramientas que ya usa"
+  },
+  "agents.clients.note": {
+    "message": "Deal Desk es un servidor MCP remoto en app.dealdesk.studio/mcp, con una API REST al lado."
+  },
+  "agents.tools.heading": {
+    "message": "Lo que el agente puede pedirle a Deal Desk"
+  },
+  "agents.tools.note": {
+    "message": "Algunas de las herramientas que ve un agente conectado, y el permiso que necesita cada una."
+  },
+  "agents.tools.more": {
+    "message": "La lista completa, los endpoints REST y el documento OpenAPI están en la documentación para desarrolladores, en inglés."
+  },
+  "agents.security.heading": {
+    "message": "La seguridad, en palabras simples"
+  },
+  "agents.plan.heading": {
+    "message": "Precio"
+  },
+  "agents.plan.note": {
+    "message": "Redactar a través de un agente es gratis, igual que en la aplicación."
+  },
+  "agents.plan.dev.name": {
+    "message": "Desarrolladores: API, MCP, CLI"
+  },
+  "agents.plan.dev.desc": {
+    "message": "Incluido en Starter, Pro y Team. Redacte, lea y actualice propuestas desde cualquier agente. Enviar a firma cuenta como un negocio enviado, exactamente igual que en la aplicación."
+  },
+  "agents.plan.link": {
+    "message": "Vea los planes"
+  },
+  "agents.plan.dev.col": {
+    "message": "desde $9/mes"
+  },
+  "agents.plan.library.name": {
+    "message": "Biblioteca, datos y herramientas de RFP"
+  },
+  "agents.plan.library.desc": {
+    "message": "search_library, teach_fact y las herramientas de RFP vienen con el complemento Respuesta a licitaciones, igual que la biblioteca en la aplicación."
+  },
+  "agents.plan.rfp": {
+    "message": "Sobre la respuesta a licitaciones"
+  },
+  "agents.plan.partners.name": {
+    "message": "Socios de diseño"
+  },
+  "agents.plan.partners.desc": {
+    "message": "Todo lo anterior está incluido mientras dure la asociación."
+  },
+  "agents.plan.partners.col": {
+    "message": "incluido"
+  },
+  "agents.close.heading": {
+    "message": "Que el agente redacte. Que Deal Desk lo haga bien."
+  },
+  "agents.close.note": {
+    "message": "Cree su cuenta, elija Starter o un plan superior y cree su primera clave en Desarrolladores."
+  },
+  "agents.close.guide": {
+    "message": "Lea la guía paso a paso"
+  },
+  "howItWorks.agents.heading": {
+    "message": "O empiece desde su agente de IA"
+  },
+  "howItWorks.agents.note": {
+    "message": "Claude Code, Cursor, VS Code con GitHub Copilot, Claude Desktop, o el suyo propio."
+  },
+  "howItWorks.agents.name": {
+    "message": "Pídale la propuesta al agente"
+  },
+  "howItWorks.agents.desc": {
+    "message": "Conecte Deal Desk al agente una vez. Luego pídale la propuesta con palabras sencillas: busca los datos en su biblioteca, los cita, y Deal Desk redacta la propuesta con precios, lista para la misma revisión, firma y sellado."
+  },
+  "howItWorks.agents.link": {
+    "message": "Deal Desk para su agente de IA"
+  },
+  "howItWorks.agents.col": {
+    "message": "Desde Starter"
+  },
+  "pricing.plan.developer": {
+    "message": "Desarrolladores: API, MCP, CLI"
+  },
+  "pricing.developer.heading": {
+    "message": "Desde Starter"
+  },
+  "pricing.developer.note": {
+    "message": "Para quienes redactan propuestas en Claude, Cursor, Copilot o su propio agente."
+  },
+  "pricing.developer.desc": {
+    "message": "Conecte su agente de IA a Deal Desk con una clave de API: un servidor MCP remoto, una API REST y la herramienta de línea de comandos dealdesk. Redactar a través de un agente es gratis; una propuesta que envíe a firma cuenta como un negocio enviado, igual que en la aplicación. La biblioteca y las herramientas de RFP requieren el complemento Respuesta a licitaciones."
+  },
+  "pricing.developer.link": {
+    "message": "Cómo funciona"
+  },
+  "pricing.developer.col": {
+    "message": "Starter, Pro, Team"
+  },
+  "rfp.note.agent.name": {
+    "message": "También desde su agente de IA"
+  },
+  "rfp.note.agent.desc": {
+    "message": "Claude, Cursor o Copilot pueden trabajar la misma respuesta a través de Deal Desk: start_rfp_response sube el documento, get_rfp_requirements lee la matriz y draft_rfp_answer redacta a partir de su biblioteca, con citas."
+  },
+  "rfp.note.agent.link": {
+    "message": "Deal Desk para su agente de IA"
+  },
+  "agents.demo.ask": {
+    "message": "Redacte una propuesta para Lakeside Dental: 12 meses de mantenimiento del sitio web a $400 al mes más un rediseño de $1,500, a partir del 1 de noviembre"
+  },
+  "agents.demo.aria": {
+    "message": "Claude Code se conecta a Deal Desk con un comando y recibe la petición de redactar una propuesta para Lakeside Dental. Busca en la biblioteca de la empresa, Deal Desk redacta la propuesta y sale la hoja: mantenimiento del sitio web, 12 meses a $400, $4,800; rediseño del sitio web, $1,500; total del año 1, $6,300; propuesta DD-2026-0002."
+  },
+  "agents.demo.cite1": {
+    "message": "Catálogo de servicios: plan de mantenimiento web, actualizaciones, copias de seguridad y monitorización, $400 al mes"
+  },
+  "agents.demo.cite2": {
+    "message": "Catálogo de servicios: rediseño del sitio web, tarifa fija de $1,500, cuatro semanas"
+  },
+  "agents.demo.drafted": {
+    "message": "{n} guardada como borrador. Total del año 1: {total}"
+  },
+  "agents.demo.reply": {
+    "message": "Redacté DD-2026-0002 para Lakeside Dental: mantenimiento web a $400 al mes durante 12 meses, $4,800, más el rediseño de $1,500, $6,300 en el año 1, según su catálogo de servicios [1][2]. Revísela y envíela a firma desde Deal Desk."
+  },
+  "agents.demo.doc.title": {
+    "message": "PROPUESTA"
+  },
+  "agents.demo.doc.for": {
+    "message": "Preparada para"
+  },
+  "agents.demo.doc.draft": {
+    "message": "Borrador"
+  },
+  "agents.demo.doc.start": {
+    "message": "Inicio"
+  },
+  "agents.demo.doc.startValue": {
+    "message": "1 nov 2026"
+  },
+  "agents.demo.doc.term": {
+    "message": "Plazo"
+  },
+  "agents.demo.doc.termValue": {
+    "message": "12 meses"
+  },
+  "agents.demo.doc.line1": {
+    "message": "Plan de mantenimiento web"
+  },
+  "agents.demo.doc.line1.sub": {
+    "message": "12 meses a $400"
+  },
+  "agents.demo.doc.line2": {
+    "message": "Rediseño del sitio web"
+  },
+  "agents.demo.doc.line2.sub": {
+    "message": "Pago único"
+  },
+  "agents.demo.doc.total": {
+    "message": "Total, año 1"
+  },
+  "agents.demo.doc.sources": {
+    "message": "Fuentes"
+  },
+  "agents.demo.doc.sourcesName": {
+    "message": "Catálogo de servicios"
+  },
+  "agents.demo.caption": {
+    "message": "Las empresas son ficticias. La petición, las cifras y el número de propuesta provienen de una prueba real."
+  },
+  "agents.demo.replay": {
+    "message": "Repetir"
+  },
+  "agents.tools.link": {
+    "message": "Todas las herramientas, con sus entradas"
+  },
+  "developers.ways.mcp.name": {
+    "message": "Servidor MCP"
+  },
+  "developers.ways.mcp.desc": {
+    "message": "Para Claude Code, Cursor, VS Code / GitHub Copilot, Claude Desktop y cualquier cliente MCP. Un comando, y el agente ve las herramientas de Deal Desk."
+  },
+  "developers.ways.mcp.link": {
+    "message": "Servidor MCP y herramientas"
+  },
+  "developers.ways.api.name": {
+    "message": "API REST"
+  },
+  "developers.ways.api.desc": {
+    "message": "Para su propio código. JSON por HTTPS en /api/v1, descrito en un documento OpenAPI."
+  },
+  "developers.ways.api.link": {
+    "message": "Referencia de la API REST"
+  },
+  "developers.ways.cli.name": {
+    "message": "Herramienta de línea de comandos dealdesk"
+  },
+  "developers.ways.cli.desc": {
+    "message": "Para su terminal y sus scripts. Inicia sesión desde el navegador, así que no hay ninguna clave que pegar."
+  },
+  "developers.ways.cli.link": {
+    "message": "Línea de comandos"
+  },
+  "developers.scopes.read": {
+    "message": "Buscar en la biblioteca, listar datos y leer propuestas y respuestas a RFP. Todas las claves lo tienen."
+  },
+  "developers.scopes.write": {
+    "message": "Añadir documentos, enseñar datos, redactar propuestas y respuestas, y editar y aprobar respuestas."
+  },
+  "developers.scopes.send": {
+    "message": "Enviar una propuesta para firma electrónica, que se factura igual que un envío desde la aplicación. Solo si marca Permitir enviar a firma."
+  },
+  "developers.security.hash.name": {
+    "message": "Con hash, se muestra una vez"
+  },
+  "developers.security.hash.desc": {
+    "message": "Deal Desk guarda solo un hash SHA-256 de cada clave, lo compara en tiempo constante y registra las solicitudes por el id de la clave, nunca por la clave. Revocar una la detiene al instante."
+  },
+  "developers.security.account.name": {
+    "message": "Limitado a su cuenta"
+  },
+  "developers.security.account.desc": {
+    "message": "Cada llamada pasa por los mismos controles que la aplicación, solo para la cuenta de la propia clave. Su biblioteca se queda en Deal Desk; los agentes reciben solo los pasajes que una pregunta necesita."
+  },
+  "developers.security.private.name": {
+    "message": "Lo privado sigue siendo privado"
+  },
+  "developers.security.private.desc": {
+    "message": "Junto a un servidor de memoria privada como Gnarl, los dos almacenes nunca se mezclan. Una clave de solo lectura impide que un agente copie notas privadas en la biblioteca de la empresa."
+  },
+  "developers.docs.quickstart": {
+    "message": "Introducción e inicio rápido"
+  },
+  "developers.docs.auth": {
+    "message": "Claves de API y ámbitos"
+  },
+  "developers.docs.mcp": {
+    "message": "Servidor MCP, configuración de clientes y herramientas"
+  },
+  "developers.docs.clients": {
+    "message": "Qué clientes pueden conectarse"
+  },
+  "developers.docs.api": {
+    "message": "Referencia de la API REST"
+  },
+  "developers.docs.cli": {
+    "message": "Línea de comandos"
+  },
+  "developers.docs.openapi": {
+    "message": "Documento OpenAPI (JSON)"
+  },
+  "developers.meta.title": {
+    "message": "Desarrolladores"
+  },
+  "developers.meta.description": {
+    "message": "Deal Desk es el motor de propuestas y la biblioteca de la empresa detrás de su agente: un servidor MCP remoto, una API REST y una herramienta de línea de comandos, todo con una sola clave de API."
+  },
+  "developers.title": {
+    "message": "El motor de propuestas detrás de su agente."
+  },
+  "developers.lede": {
+    "message": "Su agente redacta. Deal Desk responde por la empresa: datos con citas de su biblioteca, propuestas con precios y los totales calculados, documentos y firma electrónica. Una clave de API, tres formas de entrar."
+  },
+  "developers.cta.quickstart": {
+    "message": "Lea el inicio rápido"
+  },
+  "developers.cta.api": {
+    "message": "Referencia de la API"
+  },
+  "developers.ways.heading": {
+    "message": "Tres formas de entrar, una sola clave"
+  },
+  "developers.ways.note": {
+    "message": "Cree la clave en Deal Desk, en Desarrolladores, dentro del menú de la cuenta. Se muestra una sola vez."
+  },
+  "developers.scopes.heading": {
+    "message": "Claves y ámbitos"
+  },
+  "developers.scopes.note": {
+    "message": "Una clave por agente o por ordenador, para que revocar una no detenga las demás."
+  },
+  "developers.clients.heading": {
+    "message": "Clientes"
+  },
+  "developers.clients.note": {
+    "message": "El servidor MCP remoto está en app.dealdesk.studio/mcp."
+  },
+  "developers.security.heading": {
+    "message": "Seguridad"
+  },
+  "developers.price.heading": {
+    "message": "Incluido desde Starter"
+  },
+  "developers.price.desc": {
+    "message": "Starter, Pro y Team. Redactar por la API es gratis; un envío cuenta como un negocio enviado, igual que en la aplicación. La biblioteca, los datos y las herramientas de RFP requieren el complemento Respuesta a licitaciones."
+  },
+  "developers.docs.heading": {
+    "message": "Documentación"
+  },
+  "developers.close.heading": {
+    "message": "Haga la primera llamada hoy."
+  },
+  "developers.close.note": {
+    "message": "Cree su cuenta, elija Starter o un plan superior y cree una clave en Desarrolladores."
+  },
+  "developers.close.agents": {
+    "message": "Lo que verá su equipo"
+  },
+  "home.caps.5.t": {
+    "message": "Funciona con su IA"
+  },
+  "home.caps.5.d.oauth": {
+    "message": "Úselo desde ChatGPT, Claude, Copilot y más."
+  },
+  "home.caps.5.d": {
+    "message": "Úselo desde Claude, Copilot, Cursor y más."
+  },
+  "home.ai.heading": {
+    "message": "Use Deal Desk desde la IA que ya usa"
+  },
+  "home.ai.names.oauth": {
+    "message": "ChatGPT, Claude, Copilot, Cursor y cualquier agente compatible con MCP."
+  },
+  "home.ai.names": {
+    "message": "Claude, Copilot, Cursor y cualquier agente compatible con MCP."
+  },
+  "home.ai.p": {
+    "message": "Pídale una propuesta a su asistente y la recibirá con sus precios reales y los datos de su empresa, con sus fuentes, lista para firmar."
+  },
+  "home.ai.developers": {
+    "message": "Para desarrolladores"
+  },
+  "pricing.developer.docs": {
+    "message": "Documentación para desarrolladores"
+  },
+  "clients.chatgpt.name": {
+    "message": "ChatGPT"
+  },
+  "clients.chatgpt.how": {
+    "message": "Añada Deal Desk como conector, inicie sesión con Deal Desk y apruebe."
+  },
+  "clients.claudeCode.how": {
+    "message": "Un comando en el terminal, con una clave de API."
+  },
+  "clients.claudeDesktop.how": {
+    "message": "Una entrada en su archivo de configuración, con una clave de API."
+  },
+  "clients.connectors.name": {
+    "message": "Conectores de claude.ai y Claude Desktop"
+  },
+  "clients.connectors.how": {
+    "message": "Añada un conector personalizado con la dirección de Deal Desk e inicie sesión con Deal Desk."
+  },
+  "clients.cursor.how": {
+    "message": "Unas líneas en su configuración MCP, con una clave de API."
+  },
+  "clients.vscode.how": {
+    "message": "Unas líneas en .vscode/mcp.json, y luego Copilot Chat en modo agente."
+  },
+  "clients.any.name": {
+    "message": "Cualquier agente compatible con MCP"
+  },
+  "clients.any.how": {
+    "message": "El servidor MCP remoto, o la API REST para su propio código, con una clave de API."
+  },
+  "clients.status.available": {
+    "message": "Disponible"
+  },
+  "clients.status.soon": {
+    "message": "Próximamente"
+  },
+  "clients.col.client": {
+    "message": "Cliente"
+  },
+  "clients.col.how": {
+    "message": "Cómo se conecta"
+  },
+  "clients.col.status": {
+    "message": "Hoy"
+  }
+}

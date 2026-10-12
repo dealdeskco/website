@@ -108,8 +108,8 @@ export default function HowItWorks(): React.ReactElement {
         <div className={styles.sheet}>
           <p className={styles.lede}>
             <Translate id="howItWorks.lede">
-              Deal Desk does not try to replace your judgement about the price. It removes the ninety
-              minutes of typing between deciding the price and the customer seeing it.
+              You set the price. Deal Desk turns it into a finished proposal your customer can read
+              and sign, in minutes instead of hours.
             </Translate>
           </p>
         </div>

@@ -25,6 +25,13 @@ const SIGNUP = `${APP}/login?signup=1`;
 // it is listed once rather than presented as something a higher tier buys.
 const DEV = translate({id: 'pricing.plan.developer', message: 'Developer: API, MCP, CLI'});
 const LIBRARY = translate({id: 'pricing.plan.library', message: 'Company library, with citations'});
+// Connected drives (SharePoint, OneDrive, Google Drive) are built (app PR #11) and wait on the
+// Microsoft and Google app approvals. Flip to 'available' when they are live in the app.
+const DRIVES_STATUS: 'soon' | 'available' = 'soon';
+const DRIVES = DRIVES_STATUS === 'available'
+  ? translate({id: 'pricing.plan.drives', message: 'SharePoint and Google Drive'})
+  : translate({id: 'pricing.plan.drives.soon', message: 'SharePoint and Google Drive (coming soon)'});
+const SYNC = translate({id: 'pricing.plan.sync.soon', message: 'Automatic folder sync (coming soon)'});
 
 const PLANS = [
   {
@@ -63,6 +70,7 @@ const PLANS = [
       translate({id: 'pricing.plan.pro.sends', message: '200 sent deals a month'}),
       LIBRARY,
       DEV,
+      DRIVES,
     ],
     cta: translate({id: 'pricing.plan.pro.cta', message: 'Start Pro'}),
     pick: false,
@@ -77,6 +85,8 @@ const PLANS = [
       translate({id: 'pricing.plan.team.sends', message: '1,000 sent deals a month'}),
       LIBRARY,
       DEV,
+      DRIVES,
+      SYNC,
     ],
     cta: translate({id: 'pricing.plan.team.cta', message: 'Start Team'}),
     pick: false,
@@ -135,6 +145,10 @@ const FAQ = [
   {
     q: translate({id: 'pricing.faq.library.q', message: 'Which plans include the company library?'}),
     a: translate({id: 'pricing.faq.library.a', message: 'Every paid plan, from Starter: What we know, the facts you teach Deal Desk, and search with citations, in the app and from your AI agent. The RFP responder add-on adds RFP responses on top; it is not needed for the library.'}),
+  },
+  {
+    q: translate({id: 'pricing.faq.drives.q', message: 'Does Deal Desk work with SharePoint or Google Drive?'}),
+    a: translate({id: 'pricing.faq.drives.a', message: 'On Pro and Team. Add past proposals and RFPs straight from SharePoint, OneDrive or Google Drive, and every signed document is saved to the folder you choose, in a folder for each customer. Deal Desk only opens the files your team picks. Team will also keep a folder in sync, so the library updates itself when someone edits a file.'}),
   },
   {
     q: translate({id: 'pricing.faq.switch.q', message: 'Can I switch plans later?'}),
@@ -211,7 +225,9 @@ export default function Pricing(): React.ReactElement {
             ))}
           </div>
           <p className={styles.terms} style={{marginTop: '1.1rem'}}>
-            <Translate id="pricing.plans.terms">Prices in USD. Taxes may apply.</Translate>
+            <Translate id="pricing.plans.terms">Prices in USD. Taxes may apply.</Translate>{' '}
+            <Translate id="pricing.plans.enterprise">Need single sign-on, a security review or custom terms?</Translate>{' '}
+            <Link to="/contact"><Translate id="pricing.plans.enterprise.link">Talk to us</Translate></Link>
           </p>
         </div>
       </section>
@@ -222,8 +238,8 @@ export default function Pricing(): React.ReactElement {
             <h2 className={styles.h2}><Translate id="pricing.everyPlan.heading">On every plan</Translate></h2>
             <p className={styles.note}>
               <Translate id="pricing.everyPlan.note">
-                Plans differ in users, sent deals, the company library and developer access.
-                Everything else is on all of them, Free included.
+                Plans differ in users, sent deals, the company library, developer access and
+                connected drives. Everything else is on all of them, Free included.
               </Translate>
             </p>
           </div>
@@ -280,6 +296,47 @@ export default function Pricing(): React.ReactElement {
               </div>
               <div className={styles.itemCol}>
                 <Translate id="pricing.developer.col">Starter, Pro, Team</Translate>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.section} id="drives">
+        <div className={styles.sheet}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}><Translate id="pricing.drives.heading">From Pro up</Translate></h2>
+            <p className={styles.note}>
+              <Translate id="pricing.drives.note">
+                For teams whose documents already live in a shared drive.
+              </Translate>
+            </p>
+          </div>
+          <div className={styles.items}>
+            <div className={styles.item}>
+              <div className={styles.itemName}>{DRIVES}</div>
+              <div className={styles.itemDesc}>
+                <Translate id="pricing.drives.desc">
+                  Add past proposals, capability statements and RFPs straight from SharePoint,
+                  OneDrive or Google Drive. Every signed document is saved back to the folder you
+                  choose, in a folder for each customer. Deal Desk only opens the files your team
+                  picks.
+                </Translate>
+              </div>
+              <div className={styles.itemCol}>
+                <Translate id="pricing.drives.col">Pro, Team</Translate>
+              </div>
+            </div>
+            <div className={styles.item}>
+              <div className={styles.itemName}>{SYNC}</div>
+              <div className={styles.itemDesc}>
+                <Translate id="pricing.sync.desc">
+                  Point the company library at a folder and Deal Desk keeps up with it: new files are
+                  added and edited ones re-read, without anyone picking them again.
+                </Translate>
+              </div>
+              <div className={styles.itemCol}>
+                <Translate id="pricing.sync.col">Team</Translate>
               </div>
             </div>
           </div>

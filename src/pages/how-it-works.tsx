@@ -66,7 +66,7 @@ export default function HowItWorks(): React.ReactElement {
         <meta property="og:image" content={og} />
         <meta name="twitter:image" content={og} />
       </Head>
-      <header className={styles.masthead}>
+      <header className={`${styles.masthead} ${styles.mastShort}`}>
         <div className={styles.sheet}>
           <div className={styles.mastGrid}>
             <h1 className={styles.title}>
@@ -81,6 +81,28 @@ export default function HowItWorks(): React.ReactElement {
           <div className={styles.rule} />
         </div>
       </header>
+
+      <section className={styles.flowTop}>
+        <div className={styles.sheet}>
+          {/* The four stages below, shown working on one job: the one moment of motion here, first thing
+              after the title so the page shows the whole flow before it explains it. */}
+          <div className={styles.flowDemoTop}>
+            <ProposalFlow />
+            <noscript>
+              <img
+                src={gif}
+                width={888}
+                height={627}
+                style={{display: 'block', width: '100%', height: 'auto', border: '1px solid var(--rule)'}}
+                alt={translate({
+                  id: 'flow.gif.alt',
+                  message: 'Notes from a site visit become a priced proposal for Harbor & Vine Weddings, total $21,960, signed by Maya Torres and sealed.',
+                })}
+              />
+            </noscript>
+          </div>
+        </div>
+      </section>
 
       <section className={styles.intro}>
         <div className={styles.sheet}>
@@ -104,22 +126,6 @@ export default function HowItWorks(): React.ReactElement {
                 </div>
               </div>
             ))}
-          </div>
-          {/* The four stages above, shown working on one job: the one moment of motion here. */}
-          <div className={styles.flowDemo}>
-            <ProposalFlow />
-            <noscript>
-              <img
-                src={gif}
-                width={888}
-                height={627}
-                style={{display: 'block', width: '100%', height: 'auto', border: '1px solid var(--rule)'}}
-                alt={translate({
-                  id: 'flow.gif.alt',
-                  message: 'Notes from a site visit become a priced proposal for Harbor & Vine Weddings, total $21,960, signed by Maya Torres and sealed.',
-                })}
-              />
-            </noscript>
           </div>
         </div>
       </section>

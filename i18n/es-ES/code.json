@@ -254,6 +254,12 @@
   "home.caps.4.d": {
     "message": "A prueba de alteraciones, con registro de auditoría."
   },
+  "home.caps.6.t": {
+    "message": "Cifrado en reposo"
+  },
+  "home.caps.6.d": {
+    "message": "Sus propuestas y documentos se guardan cifrados en disco."
+  },
   "home.flow.1.t": {
     "message": "Capturar"
   },

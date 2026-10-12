@@ -657,7 +657,7 @@
     "message": "En todos los planes"
   },
   "pricing.everyPlan.note": {
-    "message": "Los planes difieren en usuarios, negocios enviados, la biblioteca de la empresa y el acceso para desarrolladores. Todo lo demás está en todos, incluido Gratis."
+    "message": "Los planes difieren en usuarios, negocios enviados, la biblioteca de la empresa, el acceso para desarrolladores y las unidades conectadas. Todo lo demás está en todos, incluido Gratis."
   },
   "pricing.addon.heading": {
     "message": "Complemento"
@@ -1861,5 +1861,44 @@
   },
   "flow.gif.alt": {
     "message": "Las notas de una visita se convierten en una propuesta con precios para Harbor & Vine Weddings, con un total de $21,960, firmada por Maya Torres y sellada."
+  },
+  "pricing.plan.drives": {
+    "message": "SharePoint y Google Drive"
+  },
+  "pricing.plan.drives.soon": {
+    "message": "SharePoint y Google Drive (próximamente)"
+  },
+  "pricing.plan.sync.soon": {
+    "message": "Sincronización automática de carpetas (próximamente)"
+  },
+  "pricing.faq.drives.q": {
+    "message": "¿Deal Desk funciona con SharePoint o Google Drive?"
+  },
+  "pricing.faq.drives.a": {
+    "message": "En Pro y Team. Añada propuestas anteriores y RFP directamente desde SharePoint, OneDrive o Google Drive, y cada documento firmado se guarda en la carpeta que usted elija, en una carpeta por cliente. Deal Desk solo abre los archivos que su equipo elige. Team además mantendrá una carpeta sincronizada, para que la biblioteca se actualice sola cuando alguien edita un archivo."
+  },
+  "pricing.plans.enterprise": {
+    "message": "¿Necesita inicio de sesión único, una revisión de seguridad o condiciones a medida?"
+  },
+  "pricing.plans.enterprise.link": {
+    "message": "Hable con nosotros"
+  },
+  "pricing.drives.heading": {
+    "message": "Desde Pro"
+  },
+  "pricing.drives.note": {
+    "message": "Para equipos cuyos documentos ya están en una unidad compartida."
+  },
+  "pricing.drives.desc": {
+    "message": "Añada propuestas anteriores, declaraciones de capacidades y RFP directamente desde SharePoint, OneDrive o Google Drive. Cada documento firmado se guarda en la carpeta que usted elija, en una carpeta por cliente. Deal Desk solo abre los archivos que su equipo elige."
+  },
+  "pricing.drives.col": {
+    "message": "Pro, Team"
+  },
+  "pricing.sync.desc": {
+    "message": "Vincule la biblioteca de la empresa a una carpeta y Deal Desk la mantiene al día: añade los archivos nuevos y vuelve a leer los editados, sin que nadie tenga que elegirlos de nuevo."
+  },
+  "pricing.sync.col": {
+    "message": "Team"
   }
 }

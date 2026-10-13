@@ -1862,11 +1862,11 @@
   "flow.gif.alt": {
     "message": "Las notas de una visita se convierten en una propuesta con precios para Harbor & Vine Weddings, con un total de $21,960, firmada por Maya Torres y sellada."
   },
-  "pricing.plan.drives": {
-    "message": "SharePoint y Google Drive"
+  "pricing.plan.drives.all": {
+    "message": "SharePoint, OneDrive y Google Drive"
   },
-  "pricing.plan.drives.soon": {
-    "message": "SharePoint y Google Drive (próximamente)"
+  "pricing.plan.drives.ms": {
+    "message": "SharePoint y OneDrive (Google Drive próximamente)"
   },
   "pricing.plan.sync.soon": {
     "message": "Sincronización automática de carpetas (próximamente)"

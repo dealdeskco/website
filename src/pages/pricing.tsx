@@ -25,12 +25,12 @@ const SIGNUP = `${APP}/login?signup=1`;
 // it is listed once rather than presented as something a higher tier buys.
 const DEV = translate({id: 'pricing.plan.developer', message: 'Developer: API, MCP, CLI'});
 const LIBRARY = translate({id: 'pricing.plan.library', message: 'Company library, with citations'});
-// Connected drives (SharePoint, OneDrive, Google Drive) are built (app PR #11) and wait on the
-// Microsoft and Google app approvals. Flip to 'available' when they are live in the app.
-const DRIVES_STATUS: 'soon' | 'available' = 'soon';
-const DRIVES = DRIVES_STATUS === 'available'
-  ? translate({id: 'pricing.plan.drives', message: 'SharePoint and Google Drive'})
-  : translate({id: 'pricing.plan.drives.soon', message: 'SharePoint and Google Drive (coming soon)'});
+// Connected drives, per provider. Microsoft (SharePoint and OneDrive) is live in the app; Google
+// Drive waits on Google's app approval. Flip GOOGLE_DRIVE to 'available' when it is live.
+const GOOGLE_DRIVE: 'soon' | 'available' = 'soon';
+const DRIVES = GOOGLE_DRIVE === 'available'
+  ? translate({id: 'pricing.plan.drives.all', message: 'SharePoint, OneDrive and Google Drive'})
+  : translate({id: 'pricing.plan.drives.ms', message: 'SharePoint and OneDrive (Google Drive coming soon)'});
 const SYNC = translate({id: 'pricing.plan.sync.soon', message: 'Automatic folder sync (coming soon)'});
 
 const PLANS = [

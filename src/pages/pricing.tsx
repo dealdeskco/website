@@ -155,6 +155,10 @@ const FAQ = [
     a: translate({id: 'pricing.faq.match.a', message: 'Today, every new US federal notice on SAM.gov (requests for information, solicitations and presolicitations) and federal contracts that end in the next two years, so you see a rebid coming before it is posted. State and local portals that publish their bids openly come next, then international tenders, and you will be able to forward the bid emails you already get from any portal. Bid matching is part of the RFP responder add-on.'}),
   },
   {
+    q: translate({id: 'pricing.faq.meaning.q', message: 'How does bid matching decide what fits?'}),
+    a: translate({id: 'pricing.faq.meaning.a', message: 'It compares each notice with your bid profile and the documents in your library by meaning as well as by words, so a notice written in the buyer’s vocabulary still finds you. A notice that mentions your kind of work only in passing does not. When a match rests on meaning alone, it quotes the line in the notice that asks for your kind of work.'}),
+  },
+  {
     q: translate({id: 'pricing.faq.switch.q', message: 'Can I switch plans later?'}),
     a: translate({id: 'pricing.faq.switch.a', message: 'Yes, in either direction. Upgrades take effect immediately, and the prorated difference for the rest of the month is charged then. Downgrades take effect at the end of the month you have already paid for.'}),
   },
@@ -387,7 +391,8 @@ export default function Pricing(): React.ReactElement {
                 <Translate id="pricing.addon.match.desc">
                   Every morning Deal Desk reads new federal bids and the contracts coming up for
                   rebid, and shows the ones that fit the work your company has actually done and
-                  play to its strengths, with the reasons. Get the best matches by email if you
+                  play to its strengths, with the reasons. It matches on what a notice asks for, not
+                  only the words in it. Get the best matches by email if you
                   like, and start a response in one click. State, local and international bids are
                   coming.
                 </Translate>

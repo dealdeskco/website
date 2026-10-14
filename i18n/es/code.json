@@ -1905,7 +1905,7 @@
     "message": "Búsqueda de licitaciones"
   },
   "pricing.addon.match.desc": {
-    "message": "Cada mañana Deal Desk lee las nuevas licitaciones federales y los contratos que están por volver a licitarse, y le muestra los que encajan con el trabajo que su empresa realmente ha hecho y aprovechan sus fortalezas, con los motivos. Reciba las mejores coincidencias por correo si lo desea, y comience una respuesta con un clic. Pronto llegarán las licitaciones estatales, locales e internacionales."
+    "message": "Cada mañana Deal Desk lee las nuevas licitaciones federales y los contratos que están por volver a licitarse, y le muestra los que encajan con el trabajo que su empresa realmente ha hecho y aprovechan sus fortalezas, con los motivos. Compara lo que pide cada aviso, no solo las palabras que usa. Reciba las mejores coincidencias por correo si lo desea, y comience una respuesta con un clic. Pronto llegarán las licitaciones estatales, locales e internacionales."
   },
   "pricing.addon.match.col": {
     "message": "Incluido en Respuesta a licitaciones"
@@ -1920,6 +1920,12 @@
     "message": "Encuentre las licitaciones que vale la pena responder"
   },
   "rfp.stage.find.p": {
-    "message": "La búsqueda de licitaciones lee cada mañana todos los avisos federales nuevos en SAM.gov, y los contratos que están por volver a licitarse, y le muestra los que encajan con su empresa: por qué, con las palabras del propio aviso, y qué se interpone, como una reserva que usted no tiene. Responder lo trae directamente aquí. Pronto llegarán las licitaciones estatales, locales e internacionales."
+    "message": "La búsqueda de licitaciones lee cada mañana todos los avisos federales nuevos en SAM.gov, y los contratos que están por volver a licitarse, y le muestra los que encajan con su empresa. Compara por significado, no solo por sus palabras: un aviso de “descubrimiento de conocimiento y recuperación de información” llega a una empresa de búsqueda que nunca escribió esas palabras. Cada coincidencia dice por qué, con las palabras del propio aviso, y qué se interpone, como una reserva que usted no tiene. Responder lo trae directamente aquí. Pronto llegarán las licitaciones estatales, locales e internacionales."
+  },
+  "pricing.faq.meaning.q": {
+    "message": "¿Cómo decide la búsqueda de licitaciones qué encaja?"
+  },
+  "pricing.faq.meaning.a": {
+    "message": "Compara cada aviso con su perfil de licitaciones y los documentos de su biblioteca por significado además de por palabras, así que un aviso escrito con el vocabulario del comprador también le encuentra. Un aviso que solo menciona su tipo de trabajo de pasada, no. Cuando una coincidencia se basa solo en el significado, cita la línea del aviso que pide su tipo de trabajo."
   }
 }

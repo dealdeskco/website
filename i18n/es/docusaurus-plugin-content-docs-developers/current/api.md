@@ -115,7 +115,7 @@ Cualquier ámbito. Revoca la clave que hace la solicitud. Es lo que usa `dealdes
 
 ## Biblioteca
 
-La biblioteca, **Lo que sabemos** en la aplicación, está incluida en todos los planes de pago, desde
+La **Biblioteca de la empresa** está incluida en todos los planes de pago, desde
 Starter.
 
 ### `POST /library/search`

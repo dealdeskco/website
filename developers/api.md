@@ -112,7 +112,7 @@ Any scope. Revoke the key making the request. `dealdesk logout` uses it.
 
 ## Library
 
-The library, **What we know** in the app, is included on every paid plan, from Starter.
+The **Company library** is included on every paid plan, from Starter.
 
 ### `POST /library/search`
 

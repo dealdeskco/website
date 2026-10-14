@@ -16,9 +16,9 @@ Viene con el complemento **Respuesta a licitaciones**: $49 al mes en cualquier p
 documentos al mes incluidos y $10 por cada documento adicional. Un documento solo cuenta cuando se
 lee correctamente. Los socios de diseño tienen el complemento incluido.
 
-## 1. Complete Lo que sabemos
+## 1. Complete la biblioteca de su empresa
 
-Abra **Lo que sabemos** y añada los documentos de los que deben salir sus respuestas: propuestas
+Abra la **Biblioteca de la empresa** y añada los documentos de los que deben salir sus respuestas: propuestas
 anteriores, una declaración de capacidades, currículums, su certificado de seguro. Los borradores se
 redactan a partir de estas fuentes y citan los pasajes que usaron, así que cuanto más añada, menos
 tendrá que escribir después.
@@ -76,7 +76,7 @@ aparecen en el margen, junto a la respuesta:
 
 | Hallazgo | Qué significa |
 | --- | --- |
-| **Necesita un dato de usted** | La respuesta necesita un dato real (un nombre, una fecha, una cifra, una referencia) que no está en Lo que sabemos. El borrador lo pide en lugar de inventarlo. |
+| **Necesita un dato de usted** | La respuesta necesita un dato real (un nombre, una fecha, una cifra, una referencia) que no está en la biblioteca de su empresa. El borrador lo pide en lugar de inventarlo. |
 | **No está en sus fuentes** | Una cifra, fecha o nombre de la respuesta que no está en las fuentes de las que se redactó. Revíselo antes de enviar. |
 | **No dice nada que su empresa haya dicho** | La respuesta solo repite el requisito, así que el evaluador no tiene nada que calificar. |
 | **Requiere prueba** | Una afirmación, como un superlativo, que un evaluador cuestionará a menos que usted pueda respaldarla. |
@@ -92,7 +92,7 @@ pocas preguntas**. Unas pocas preguntas piden solo los datos que faltan. Escriba
 **Escríbalo aquí**, o pulse el micrófono y dicte, y luego pulse
 **Guardar y volver a redactar**.
 
-Sus respuestas se guardan en Lo que sabemos, así que la próxima RFP ya las tiene.
+Sus respuestas se guardan en la biblioteca de su empresa, así que la próxima RFP ya las tiene.
 
 ## 8. Exporte
 

@@ -17,7 +17,7 @@ const STAGES = [
     p: translate({
       id: 'rfp.stage.find.p',
       message:
-        'Bid matching reads every new federal notice on SAM.gov each morning, and the contracts coming up for rebid, and shows the ones that fit your company: why, in the notice’s own words, and what stands in the way, such as a set-aside you do not hold. Respond brings one straight in. State, local and international bids are coming.',
+        'Bid matching reads every new federal notice on SAM.gov each morning, and the contracts coming up for rebid, and shows the ones that fit your company. It matches on meaning, not only on your words: a notice for “knowledge discovery and information retrieval” reaches a search company that never wrote those words. Each match says why, in the notice’s own words, and what stands in the way, such as a set-aside you do not hold. Respond brings one straight in. State, local and international bids are coming.',
     }),
   },
   {

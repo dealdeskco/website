@@ -1128,7 +1128,7 @@
     "message": "En el orden en que usted trabaja"
   },
   "rfp.stages.note": {
-    "message": "Desde que el documento llega a su bandeja de entrada hasta la matriz que entrega con él."
+    "message": "Desde encontrar la licitación hasta la matriz que entrega con ella."
   },
   "rfp.notes.heading": {
     "message": "Conviene saber antes"
@@ -1902,10 +1902,10 @@
     "message": "Team"
   },
   "pricing.addon.match.name": {
-    "message": "Búsqueda de licitaciones (próximamente)"
+    "message": "Búsqueda de licitaciones"
   },
   "pricing.addon.match.desc": {
-    "message": "Deal Desk revisa los nuevos avisos de licitación federales, estatales y locales, e internacionales, y le muestra los que encajan con el trabajo que su empresa realmente ha hecho, con el motivo. Reciba las mejores coincidencias por correo si lo desea, y comience una respuesta con un clic."
+    "message": "Cada mañana Deal Desk lee las nuevas licitaciones federales y los contratos que están por volver a licitarse, y le muestra los que encajan con el trabajo que su empresa realmente ha hecho y aprovechan sus fortalezas, con los motivos. Reciba las mejores coincidencias por correo si lo desea, y comience una respuesta con un clic. Pronto llegarán las licitaciones estatales, locales e internacionales."
   },
   "pricing.addon.match.col": {
     "message": "Incluido en Respuesta a licitaciones"
@@ -1914,6 +1914,12 @@
     "message": "¿Qué licitaciones encontrará la búsqueda de licitaciones?"
   },
   "pricing.faq.match.a": {
-    "message": "La búsqueda de licitaciones llegará pronto, como parte del complemento Respuesta a licitaciones. Primero los avisos federales de EE. UU., incluidos los contratos que están por volver a licitarse; después los portales estatales y locales que publican sus licitaciones abiertamente; y luego las licitaciones internacionales. También podrá reenviar los correos de licitaciones que ya recibe de cualquier portal, y Deal Desk también los evaluará."
+    "message": "Hoy, todos los avisos federales nuevos de EE. UU. en SAM.gov (solicitudes de información, solicitudes y avisos previos) y los contratos federales que terminan en los próximos dos años, para que vea venir una nueva licitación antes de que se publique. Después llegarán los portales estatales y locales que publican sus licitaciones abiertamente, luego las licitaciones internacionales, y podrá reenviar los correos de licitaciones que ya recibe de cualquier portal. La búsqueda de licitaciones es parte del complemento Respuesta a licitaciones."
+  },
+  "rfp.stage.find.h": {
+    "message": "Encuentre las licitaciones que vale la pena responder"
+  },
+  "rfp.stage.find.p": {
+    "message": "La búsqueda de licitaciones lee cada mañana todos los avisos federales nuevos en SAM.gov, y los contratos que están por volver a licitarse, y le muestra los que encajan con su empresa: por qué, con las palabras del propio aviso, y qué se interpone, como una reserva que usted no tiene. Responder lo trae directamente aquí. Pronto llegarán las licitaciones estatales, locales e internacionales."
   }
 }

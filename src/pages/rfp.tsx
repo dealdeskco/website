@@ -13,6 +13,14 @@ const SIGNUP = 'https://app.dealdesk.studio/login?signup=1';
 // something the RFP responses mode does today; the labels in quotes are the app's own.
 const STAGES = [
   {
+    h: translate({id: 'rfp.stage.find.h', message: 'Find the bids worth answering'}),
+    p: translate({
+      id: 'rfp.stage.find.p',
+      message:
+        'Bid matching reads every new federal notice on SAM.gov each morning, and the contracts coming up for rebid, and shows the ones that fit your company: why, in the notice’s own words, and what stands in the way, such as a set-aside you do not hold. Respond brings one straight in. State, local and international bids are coming.',
+    }),
+  },
+  {
     h: translate({id: 'rfp.stage.upload.h', message: 'Upload the document'}),
     p: translate({
       id: 'rfp.stage.upload.p',
@@ -166,7 +174,7 @@ export default function Rfp(): React.ReactElement {
             </h2>
             <p className={styles.note}>
               <Translate id="rfp.stages.note">
-                From the document landing in your inbox to the matrix you submit with it.
+                From finding the bid to the matrix you submit with it.
               </Translate>
             </p>
           </div>

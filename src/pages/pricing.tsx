@@ -152,7 +152,7 @@ const FAQ = [
   },
   {
     q: translate({id: 'pricing.faq.match.q', message: 'Which bids will bid matching find?'}),
-    a: translate({id: 'pricing.faq.match.a', message: 'Bid matching is coming soon, as part of the RFP responder add-on. US federal notices come first, including contracts coming up for rebid, then state and local portals that publish their bids openly, then international tenders. You will also be able to forward the bid emails you already get from any portal, and Deal Desk will match those too.'}),
+    a: translate({id: 'pricing.faq.match.a', message: 'Today, every new US federal notice on SAM.gov (requests for information, solicitations and presolicitations) and federal contracts that end in the next two years, so you see a rebid coming before it is posted. State and local portals that publish their bids openly come next, then international tenders, and you will be able to forward the bid emails you already get from any portal. Bid matching is part of the RFP responder add-on.'}),
   },
   {
     q: translate({id: 'pricing.faq.switch.q', message: 'Can I switch plans later?'}),
@@ -381,14 +381,15 @@ export default function Pricing(): React.ReactElement {
             </div>
             <div className={styles.item}>
               <div className={styles.itemName}>
-                <Translate id="pricing.addon.match.name">Bid matching (coming soon)</Translate>
+                <Translate id="pricing.addon.match.name">Bid matching</Translate>
               </div>
               <div className={styles.itemDesc}>
                 <Translate id="pricing.addon.match.desc">
-                  Deal Desk watches new federal, state and local, and international bid notices, and
-                  shows you the ones that fit the work your company has actually done, with the
-                  reason. Get the best matches by email if you like, and start a response in one
-                  click.
+                  Every morning Deal Desk reads new federal bids and the contracts coming up for
+                  rebid, and shows the ones that fit the work your company has actually done and
+                  play to its strengths, with the reasons. Get the best matches by email if you
+                  like, and start a response in one click. State, local and international bids are
+                  coming.
                 </Translate>
               </div>
               <div className={styles.itemCol}>

@@ -75,7 +75,7 @@ la envía. Redactar nunca cuenta como un envío.
 
 :::tip
 Si la biblioteca no respalda una afirmación, el agente tiene la indicación de preguntarle a usted
-en lugar de adivinar. Cuanto más agregue a **Lo que sabemos**, menos tendrá que preguntar.
+en lugar de adivinar. Cuanto más agregue a la **Biblioteca de la empresa**, menos tendrá que preguntar.
 :::
 
 ## Claves y seguridad

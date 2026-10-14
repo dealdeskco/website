@@ -1065,7 +1065,7 @@
     "message": "Redacte cada respuesta con lo que ya sabe"
   },
   "rfp.stage.draft.p": {
-    "message": "Añada propuestas anteriores, declaraciones de capacidades y currículums a Lo que sabemos, la biblioteca de su empresa. Redactar todo escribe cada respuesta en segundo plano a partir de ella, y cada borrador cita los pasajes que usó como [1], [2]."
+    "message": "Añada propuestas anteriores, declaraciones de capacidades y currículums a la biblioteca de su empresa. Redactar todo escribe cada respuesta en segundo plano a partir de ella, y cada borrador cita los pasajes que usó como [1], [2]."
   },
   "rfp.stage.check.h": {
     "message": "Lea las revisiones en el margen"
@@ -1077,7 +1077,7 @@
     "message": "Resuelva los pocos elementos abiertos"
   },
   "rfp.stage.ask.p": {
-    "message": "Unas pocas preguntas piden solo los datos que faltan. Escriba o dicte cada uno y luego elija Guardar y volver a redactar. Sus respuestas se guardan en Lo que sabemos, así que la próxima RFP ya las tiene."
+    "message": "Unas pocas preguntas piden solo los datos que faltan. Escriba o dicte cada uno y luego elija Guardar y volver a redactar. Sus respuestas se guardan en la biblioteca de su empresa, así que la próxima RFP ya las tiene."
   },
   "rfp.stage.export.h": {
     "message": "Expórtelo"
@@ -1101,7 +1101,7 @@
     "message": "Una biblioteca, no un repositorio de documentos"
   },
   "rfp.note.library.desc": {
-    "message": "Lo que sabemos es un lugar donde soltar documentos y una lista de lo que contiene. Todas las personas de su cuenta la comparten, y las respuestas que usted aprueba se añaden a ella."
+    "message": "La biblioteca de la empresa es un lugar donde soltar documentos y una lista de lo que contiene. Todas las personas de su cuenta la comparten, y las respuestas que usted aprueba se añaden a ella."
   },
   "rfp.note.deal.name": {
     "message": "Vinculado al negocio"
@@ -1824,10 +1824,10 @@
     "message": "¿Qué planes incluyen la biblioteca de la empresa?"
   },
   "pricing.faq.library.a": {
-    "message": "Todos los planes de pago, desde Starter: Lo que sabemos, los datos que le enseña a Deal Desk y la búsqueda con citas, en la aplicación y desde su agente de IA. El complemento Respuesta a licitaciones añade las respuestas a RFP; no hace falta para la biblioteca."
+    "message": "Todos los planes de pago, desde Starter: la biblioteca de la empresa, los datos que le enseña a Deal Desk y la búsqueda con citas, en la aplicación y desde su agente de IA. El complemento Respuesta a licitaciones añade las respuestas a RFP; no hace falta para la biblioteca."
   },
   "pricing.library.desc": {
-    "message": "Lo que sabemos: sus propuestas anteriores, declaraciones de capacidades y los datos que le enseña a Deal Desk, con búsqueda y citas. Los borradores, en la aplicación y desde su agente, se redactan a partir de ella, así que llevan sus datos reales en lugar de datos inventados."
+    "message": "Biblioteca de la empresa: sus propuestas anteriores, declaraciones de capacidades y los datos que le enseña a Deal Desk, con búsqueda y citas. Los borradores, en la aplicación y desde su agente, se redactan a partir de ella, así que llevan sus datos reales en lugar de datos inventados."
   },
   "flow.notes": {
     "message": "Recorrí el patio con Maya Torres (propietaria, Harbor & Vine Weddings). Rediseño del césped de ceremonias, fase uno: diseño + instalación $18k, riego e iluminación de caminos $6400. 10% de descuento si firma este mes. Quiere la propuesta para el viernes."

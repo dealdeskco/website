@@ -144,7 +144,7 @@ const FAQ = [
   },
   {
     q: translate({id: 'pricing.faq.library.q', message: 'Which plans include the company library?'}),
-    a: translate({id: 'pricing.faq.library.a', message: 'Every paid plan, from Starter: What we know, the facts you teach Deal Desk, and search with citations, in the app and from your AI agent. The RFP responder add-on adds RFP responses on top; it is not needed for the library.'}),
+    a: translate({id: 'pricing.faq.library.a', message: 'Every paid plan, from Starter: the company library, the facts you teach Deal Desk, and search with citations, in the app and from your AI agent. The RFP responder add-on adds RFP responses on top; it is not needed for the library.'}),
   },
   {
     q: translate({id: 'pricing.faq.drives.q', message: 'Does Deal Desk work with SharePoint or Google Drive?'}),
@@ -276,7 +276,7 @@ export default function Pricing(): React.ReactElement {
               <div className={styles.itemName}>{LIBRARY}</div>
               <div className={styles.itemDesc}>
                 <Translate id="pricing.library.desc">
-                  What we know: your past proposals, capability statements and the facts you teach
+                  Company library: your past proposals, capability statements and the facts you teach
                   Deal Desk, searched with citations. Drafts in the app and from your agent are
                   written from it, so they carry your real facts instead of invented ones.
                 </Translate>

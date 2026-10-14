@@ -15,9 +15,9 @@ It comes with the **RFP responder** add-on: $49 a month on any paid plan, with 5
 included and $10 for each one after that. A document counts only once it has been read
 successfully. Design partners have the add-on included.
 
-## 1. Fill in What we know
+## 1. Fill in your company library
 
-Open **What we know** and drop in the documents your answers should come from: past proposals, a
+Open **Company library** and drop in the documents your answers should come from: past proposals, a
 capability statement, résumés, your insurance certificate. Drafts are written from these and cite
 the passages they used, so the more you add, the less you have to type later.
 
@@ -56,7 +56,7 @@ requirement has a **A strong answer includes** checklist for its type.
 
 ## 5. Draft all
 
-Press **Draft all**. Every open requirement is drafted in the background from What we know, and
+Press **Draft all**. Every open requirement is drafted in the background from your company library, and
 each draft cites its sources as [1], [2] so you can check where a statement came from.
 
 :::caution
@@ -71,7 +71,7 @@ margin beside the answer:
 
 | Finding | What it means |
 | --- | --- |
-| **Needs a fact from you** | The answer needs a real fact (a name, a date, a figure, a reference) that is not in What we know. The draft asks for it rather than inventing one. |
+| **Needs a fact from you** | The answer needs a real fact (a name, a date, a figure, a reference) that is not in your company library. The draft asks for it rather than inventing one. |
 | **Not in your sources** | A figure, date or name in the answer that is not in the sources it was drafted from. Check it before you send. |
 | **Says nothing your company said** | The answer only repeats the requirement back, so an evaluator has nothing to score. |
 | **Needs proof** | A claim, such as a superlative, that an evaluator will challenge unless you can back it up. |
@@ -86,7 +86,7 @@ When requirements are waiting on you, press **Answer N open items in a few quest
 of questions asks only for the missing facts. Type into **Type it here**, or press the microphone
 and dictate, then press **Save and redraft**.
 
-Your answers are saved to What we know, so the next RFP already has them.
+Your answers are saved to your company library, so the next RFP already has them.
 
 ## 8. Export
 

@@ -49,7 +49,7 @@ const STAGES = [
     p: translate({
       id: 'rfp.stage.draft.p',
       message:
-        'Put past proposals, capability statements and résumés in What we know, your firm’s library. Draft all writes every answer in the background from it, and each draft cites the passages it used as [1], [2].',
+        'Put past proposals, capability statements and résumés in your company library. Draft all writes every answer in the background from it, and each draft cites the passages it used as [1], [2].',
     }),
   },
   {
@@ -65,7 +65,7 @@ const STAGES = [
     p: translate({
       id: 'rfp.stage.ask.p',
       message:
-        'A short set of questions asks only for the missing facts. Type or dictate each one, then Save and redraft. Your answers are saved to What we know, so the next RFP already has them.',
+        'A short set of questions asks only for the missing facts. Type or dictate each one, then Save and redraft. Your answers are saved to your company library, so the next RFP already has them.',
     }),
   },
   {
@@ -100,7 +100,7 @@ const NOTES = [
     desc: translate({
       id: 'rfp.note.library.desc',
       message:
-        'What we know is one place to drop documents and a list of what is there. Everyone on your account shares it, and answers you approve are added to it.',
+        'The company library is one place to drop documents and a list of what is there. Everyone on your account shares it, and answers you approve are added to it.',
     }),
   },
   {

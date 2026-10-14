@@ -111,7 +111,7 @@ function rows(): Row[] {
   ];
 }
 
-// Citation marks per row: the passages in "What we know" each draft was written from.
+// Citation marks per row: the passages in the company library each draft was written from.
 const CITES = ['[1][2]', '[2]', '[1]', '[1]', '[4]', '[2][4]'];
 // The order rows are marked Answered after review, L.3 having been answered by the interview.
 const REVIEW_ORDER = [0, 1, 3, 4, 5];

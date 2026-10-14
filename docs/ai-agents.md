@@ -74,7 +74,7 @@ Drafting never counts as a send.
 
 :::tip
 If the library does not support a claim, the agent is told to ask you rather than guess. The more
-you put in **What we know**, the less it has to ask.
+you put in your **Company library**, the less it has to ask.
 :::
 
 ## Keys and security

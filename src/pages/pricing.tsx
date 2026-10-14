@@ -151,6 +151,10 @@ const FAQ = [
     a: translate({id: 'pricing.faq.drives.a', message: 'On Pro and Team. Add past proposals and RFPs straight from SharePoint, OneDrive or Google Drive, and every signed document is saved to the folder you choose, in a folder for each customer. Deal Desk only opens the files your team picks. Team will also keep a folder in sync, so the library updates itself when someone edits a file.'}),
   },
   {
+    q: translate({id: 'pricing.faq.match.q', message: 'Which bids will bid matching find?'}),
+    a: translate({id: 'pricing.faq.match.a', message: 'Bid matching is coming soon, as part of the RFP responder add-on. US federal notices come first, including contracts coming up for rebid, then state and local portals that publish their bids openly, then international tenders. You will also be able to forward the bid emails you already get from any portal, and Deal Desk will match those too.'}),
+  },
+  {
     q: translate({id: 'pricing.faq.switch.q', message: 'Can I switch plans later?'}),
     a: translate({id: 'pricing.faq.switch.a', message: 'Yes, in either direction. Upgrades take effect immediately, and the prorated difference for the rest of the month is charged then. Downgrades take effect at the end of the month you have already paid for.'}),
   },
@@ -373,6 +377,22 @@ export default function Pricing(): React.ReactElement {
               </div>
               <div className={styles.itemCol}>
                 <Translate id="pricing.addon.price">+$49/month</Translate>
+              </div>
+            </div>
+            <div className={styles.item}>
+              <div className={styles.itemName}>
+                <Translate id="pricing.addon.match.name">Bid matching (coming soon)</Translate>
+              </div>
+              <div className={styles.itemDesc}>
+                <Translate id="pricing.addon.match.desc">
+                  Deal Desk watches new federal, state and local, and international bid notices, and
+                  shows you the ones that fit the work your company has actually done, with the
+                  reason. Get the best matches by email if you like, and start a response in one
+                  click.
+                </Translate>
+              </div>
+              <div className={styles.itemCol}>
+                <Translate id="pricing.addon.match.col">Included in RFP responder</Translate>
               </div>
             </div>
           </div>

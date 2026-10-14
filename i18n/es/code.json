@@ -1900,5 +1900,20 @@
   },
   "pricing.sync.col": {
     "message": "Team"
+  },
+  "pricing.addon.match.name": {
+    "message": "Búsqueda de licitaciones (próximamente)"
+  },
+  "pricing.addon.match.desc": {
+    "message": "Deal Desk revisa los nuevos avisos de licitación federales, estatales y locales, e internacionales, y le muestra los que encajan con el trabajo que su empresa realmente ha hecho, con el motivo. Reciba las mejores coincidencias por correo si lo desea, y comience una respuesta con un clic."
+  },
+  "pricing.addon.match.col": {
+    "message": "Incluido en Respuesta a licitaciones"
+  },
+  "pricing.faq.match.q": {
+    "message": "¿Qué licitaciones encontrará la búsqueda de licitaciones?"
+  },
+  "pricing.faq.match.a": {
+    "message": "La búsqueda de licitaciones llegará pronto, como parte del complemento Respuesta a licitaciones. Primero los avisos federales de EE. UU., incluidos los contratos que están por volver a licitarse; después los portales estatales y locales que publican sus licitaciones abiertamente; y luego las licitaciones internacionales. También podrá reenviar los correos de licitaciones que ya recibe de cualquier portal, y Deal Desk también los evaluará."
   }
 }

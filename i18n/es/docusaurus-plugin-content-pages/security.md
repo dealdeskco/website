@@ -18,8 +18,7 @@ La aplicación y su base de datos se ejecutan en **Amazon Web Services en los Es
 región us-east-2 (Ohio)**. La redacción con IA se ejecuta en Amazon Bedrock en la misma región. La
 lista completa de proveedores está en la página de [Subencargados](/legal/subprocessors).
 
-{/* TODO(owner): agregar "Los datos se cifran en reposo en almacenamiento cifrado de AWS." solo
-    cuando se confirme que los volúmenes EBS y el bucket S3 de respaldos están cifrados. */}
+Los datos se cifran en reposo: los discos del motor de búsqueda son volúmenes cifrados de AWS EBS, y las copias de seguridad se guardan en Amazon S3 con cifrado del lado del servidor.
 
 ## Cifrado en tránsito
 

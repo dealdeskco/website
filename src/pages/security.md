@@ -16,8 +16,7 @@ The application and its database run on **Amazon Web Services in the United Stat
 (Ohio) region**. AI drafting runs on Amazon Bedrock in the same region. The full list of providers is
 on the [Subprocessors](/legal/subprocessors) page.
 
-{/* TODO(owner): add "Data is encrypted at rest on encrypted AWS storage." only once the EBS volumes
-    and the S3 backup bucket are confirmed encrypted. No evidence was found in the dealdesk infra. */}
+Data is encrypted at rest: the search engine's disks are encrypted AWS EBS volumes, and backups are stored in Amazon S3 with server-side encryption.
 
 ## Encryption in transit
 

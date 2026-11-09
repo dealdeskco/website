@@ -8,7 +8,7 @@ description: The terms under which Deal Desk Studio is provided.
 _Last updated 8 November 2026._
 
 These terms govern your use of Deal Desk Studio ("the Service"). They are an agreement between you
-(and the business you act for) and Deal Desk Inc., of 548 Market St, San Francisco, CA 94104 ("we", "us"). By
+(and the business you act for) and Deal Desk Inc., a Texas corporation, of 548 Market St, San Francisco, CA 94104 ("we", "us"). By
 creating an account you agree to them; we record when you accepted them and which version they
 were.
 
@@ -136,9 +136,9 @@ lost profits, lost business, or indirect or consequential damages.
 
 ## Governing law
 
-These terms are governed by the laws of the State of Delaware, United States,
+These terms are governed by the laws of the State of Texas, United States,
 without regard to its conflict-of-laws rules. Any dispute is to be brought in the state or federal
-courts located in the State of Delaware, and both of us agree to their jurisdiction.
+courts located in Collin County, Texas, and both of us agree to their jurisdiction.
 
 ## Changes
 

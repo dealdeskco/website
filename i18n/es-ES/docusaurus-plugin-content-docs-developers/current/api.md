@@ -42,6 +42,7 @@ máquinas está en [`/api/v1/openapi.json`](https://app.dealdesk.studio/api/v1/o
 | `PATCH` | [`/proposals/{number}`](#patch-proposalsnumber) | `write` | Cambia los campos, las partidas o los descuentos de una propuesta |
 | `GET` | [`/proposals/{number}/pdf`](#get-proposalsnumberpdf) | `read` | La propuesta en PDF |
 | `POST` | [`/proposals/{number}/send`](#post-proposalsnumbersend) | `send` | La envía a firma electrónica; se factura como un negocio enviado |
+| `DELETE` | [`/proposals/{number}`](#delete-proposalsnumber) | `write` | Elimina una propuesta; una copia firmada y su registro de verificación se conservan |
 | `GET` | [`/rfps`](#get-rfps) | `read` | Los documentos que se están respondiendo |
 | `POST` | [`/rfps`](#post-rfps) | `write` | Sube un documento para responderlo |
 | `DELETE` | [`/rfps/{id}`](#delete-rfpsid) | `write` | Elimina una respuesta |
@@ -283,6 +284,23 @@ el correo no se ha podido entregar. `mail_status` es `sent`, `failed` o `not_con
 { "status": "sent",
   "signing": { "emailed": true, "mail_status": "sent", "one_time_code": true, "expires_in_hours": 72,
                "link": "https://app.dealdesk.studio/sign/..." } }
+```
+
+### `DELETE /proposals/{number}`
+
+Alcance `write`. Elimina la propuesta y los enlaces de firma que nunca se usaron. Solo un administrador
+de la cuenta o la persona que creó la propuesta puede eliminarla (si no, `403`). Si la propuesta se
+firmó, la copia firmada y su registro de verificación se conservan, para que la firma pueda seguir
+demostrándose; la respuesta lo indica. La eliminación es definitiva y se puede repetir sin riesgo: una
+segunda llamada devuelve `404`.
+
+```bash
+curl -X DELETE https://app.dealdesk.studio/api/v1/proposals/DD-2026-0042 -H "Authorization: Bearer $DEALDESK_API_KEY"
+```
+
+```js
+// 200
+{ "deleted": "DD-2026-0042", "signing_links_removed": 1, "signed_copy_kept": false }
 ```
 
 ## Respuestas a RFP

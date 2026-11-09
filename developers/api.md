@@ -40,6 +40,7 @@ except file downloads. The machine-readable description is at
 | `PATCH` | [`/proposals/{number}`](#patch-proposalsnumber) | `write` | Change a proposal's fields, line items or discounts |
 | `GET` | [`/proposals/{number}/pdf`](#get-proposalsnumberpdf) | `read` | The proposal as a PDF |
 | `POST` | [`/proposals/{number}/send`](#post-proposalsnumbersend) | `send` | Send for e-signature; billed as a sent deal |
+| `DELETE` | [`/proposals/{number}`](#delete-proposalsnumber) | `write` | Delete a proposal; a signed copy and its verification record are kept |
 | `GET` | [`/rfps`](#get-rfps) | `read` | Documents being answered |
 | `POST` | [`/rfps`](#post-rfps) | `write` | Upload a document to answer |
 | `DELETE` | [`/rfps/{id}`](#delete-rfpsid) | `write` | Delete a response |
@@ -277,6 +278,22 @@ if the email could not be delivered. `mail_status` is `sent`, `failed` or `not_c
 { "status": "sent",
   "signing": { "emailed": true, "mail_status": "sent", "one_time_code": true, "expires_in_hours": 72,
                "link": "https://app.dealdesk.studio/sign/..." } }
+```
+
+### `DELETE /proposals/{number}`
+
+Scope `write`. Deletes the proposal and any signing links that were never used. Only an account admin
+or the person who made the proposal can delete it (`403` otherwise). If the proposal was signed, the
+signed copy and its verification record are kept, so the signature can still be proven; the
+response says so. Deleting is permanent and safe to repeat: a second call returns `404`.
+
+```bash
+curl -X DELETE https://app.dealdesk.studio/api/v1/proposals/DD-2026-0042 -H "Authorization: Bearer $DEALDESK_API_KEY"
+```
+
+```js
+// 200
+{ "deleted": "DD-2026-0042", "signing_links_removed": 1, "signed_copy_kept": false }
 ```
 
 ## RFP responses

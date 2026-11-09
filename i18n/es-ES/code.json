@@ -21,7 +21,7 @@
     "message": "Preguntas sobre precios, si se adapta a su sector o qué ocurre con un documento después de firmarse: envíelas aquí y le responderá una persona."
   },
   "contact.existing": {
-    "message": "¿Ya usa Deal Desk y necesita ayuda con un negocio en curso? Responda cualquier correo electrónico que le haya enviado el producto: así nos llega más rápido."
+    "message": "¿Ya usa Deal Desk y necesita ayuda con un negocio en curso? Responda cualquier correo electrónico que le haya enviado el producto: así nos llega más rápido. Respondemos en un día laborable."
   },
   "contact.sent.heading": {
     "message": "Gracias, hemos recibido su mensaje."
@@ -1865,17 +1865,11 @@
   "pricing.plan.drives.all": {
     "message": "SharePoint, OneDrive y Google Drive"
   },
-  "pricing.plan.drives.ms": {
-    "message": "SharePoint y OneDrive (Google Drive próximamente)"
-  },
-  "pricing.plan.sync.soon": {
-    "message": "Sincronización automática de carpetas (próximamente)"
-  },
   "pricing.faq.drives.q": {
     "message": "¿Deal Desk funciona con SharePoint o Google Drive?"
   },
   "pricing.faq.drives.a": {
-    "message": "En Pro y Team. Añada propuestas anteriores y RFP directamente desde SharePoint, OneDrive o Google Drive, y cada documento firmado se guarda en la carpeta que usted elija, en una carpeta por cliente. Deal Desk solo abre los archivos que su equipo elige. Team además mantendrá una carpeta sincronizada, para que la biblioteca se actualice sola cuando alguien edita un archivo."
+    "message": "En Pro y Team. Añada propuestas anteriores y RFP directamente desde SharePoint, OneDrive o Google Drive, y cada documento firmado se guarda en la carpeta que usted elija, en una carpeta por cliente. Deal Desk solo lee los archivos y las carpetas que su equipo añade."
   },
   "pricing.plans.enterprise": {
     "message": "¿Necesita inicio de sesión único, una revisión de seguridad o condiciones a medida?"
@@ -1890,16 +1884,10 @@
     "message": "Para equipos cuyos documentos ya están en una unidad compartida."
   },
   "pricing.drives.desc": {
-    "message": "Añada propuestas anteriores, declaraciones de capacidades y RFP directamente desde SharePoint, OneDrive o Google Drive. Cada documento firmado se guarda en la carpeta que usted elija, en una carpeta por cliente. Deal Desk solo abre los archivos que su equipo elige."
+    "message": "Añada propuestas anteriores, declaraciones de capacidades y RFP directamente desde SharePoint, OneDrive o Google Drive. Cada documento firmado se guarda en la carpeta que usted elija, en una carpeta por cliente. Deal Desk solo lee los archivos y las carpetas que su equipo añade."
   },
   "pricing.drives.col": {
     "message": "Pro, Team"
-  },
-  "pricing.sync.desc": {
-    "message": "Vincule la biblioteca de la empresa a una carpeta y Deal Desk la mantiene al día: añade los archivos nuevos y vuelve a leer los editados, sin que nadie tenga que elegirlos de nuevo."
-  },
-  "pricing.sync.col": {
-    "message": "Team"
   },
   "pricing.addon.match.name": {
     "message": "Búsqueda de licitaciones"

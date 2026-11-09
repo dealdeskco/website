@@ -96,12 +96,21 @@ Sus respuestas se guardan en la biblioteca de su empresa, así que la próxima R
 
 ## 8. Exporte
 
+- **⤓ Propuesta** escribe sus respuestas como una sola propuesta, con la fuente, los márgenes y el
+  tamaño de página que pide el documento. Es un PDF, o un Word **.docx** cuando el documento pide
+  Word. Deal Desk cuenta las páginas frente a cualquier límite y le indica qué elementos
+  obligatorios siguen sin respuesta.
+- **⤓ Documento completado** (o **⤓ Hoja de cálculo completada**) aparece cuando usted subió un
+  archivo de Word **.docx** o de Excel **.xlsx**: descarga el archivo original del cliente con sus
+  respuestas ya escritas.
+- Cuando una convocatoria se responde con un solo **documento técnico (white paper)**, su página
+  ofrece el PDF y una versión en Word del texto, el formulario completado (**.xlsx**) por cada
+  formulario que incluye la convocatoria, y la entrega completa (**.zip**), que reúne el texto y
+  todos los formularios completados en una sola descarga.
 - **⤓ Matriz de cumplimiento** descarga la matriz como CSV.
-- **⤓ Documento completado** aparece cuando usted ha subido un archivo de Word **.docx**: descarga el
-  archivo original del cliente con sus respuestas ya escritas.
 
 ## Créditos
 
 La orientación para evaluadores (qué incluye una respuesta sólida y cómo se califica cada tipo de
 documento) se basa en el proyecto
-[federal-proposal-copilot](https://github.com/chakmarebel/federal-proposal-copilot), con licencia MIT.
+[federal-proposal-copilot](https://github.com/spatialgis-co/federal-proposal-copilot), con licencia MIT.

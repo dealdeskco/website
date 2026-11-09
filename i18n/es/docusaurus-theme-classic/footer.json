@@ -39,6 +39,18 @@
     "message": "Privacidad",
     "description": "The label of footer link with label=Privacy linking to /legal/privacy"
   },
+  "link.item.label.Subprocessors": {
+    "message": "Subencargados",
+    "description": "The label of footer link with label=Subprocessors linking to /legal/subprocessors"
+  },
+  "link.item.label.Data Processing Addendum": {
+    "message": "Anexo de tratamiento de datos",
+    "description": "The label of footer link with label=Data Processing Addendum linking to /legal/dpa"
+  },
+  "link.item.label.Security": {
+    "message": "Seguridad",
+    "description": "The label of footer link with label=Security linking to /security"
+  },
   "link.item.label.Terms": {
     "message": "Términos",
     "description": "The label of footer link with label=Terms linking to /legal/terms"

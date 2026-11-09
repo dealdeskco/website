@@ -10,7 +10,7 @@ _Esta traducción se ofrece para su comodidad; si difiere de la [versión en ing
 _Última actualización: 8 de noviembre de 2026._
 
 Este Anexo de tratamiento de datos («Anexo») forma parte de los [Términos del servicio](/legal/terms)
-entre Deal Desk Inc («nosotros») y el cliente empresarial que usa Deal Desk Studio («usted»).
+entre Deal Desk Inc. («nosotros») y el cliente empresarial que usa Deal Desk Studio («usted»).
 Se aplica cuando tratamos datos personales por cuenta de usted al prestar el Servicio. Entra en vigor
 cuando usted acepta los Términos del servicio, sin necesidad de una firma aparte. Si necesita una
 copia firmada por ambas partes, escriba a **legal@dealdesk.studio**.

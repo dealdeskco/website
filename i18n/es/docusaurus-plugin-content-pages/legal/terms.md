@@ -10,8 +10,8 @@ _Esta traducción se ofrece para su comodidad; si difiere de la [versión en ing
 _Última actualización: 8 de noviembre de 2026._
 
 Estos términos rigen el uso que usted haga de Deal Desk Studio ("el Servicio"). Son un acuerdo
-entre usted (y la empresa en cuyo nombre actúa) y Deal Desk Inc., con domicilio en
-548 Market St, San Francisco, CA 94104 ("nosotros"). Al crear una cuenta, usted los acepta; registramos cuándo los
+entre usted (y la empresa en cuyo nombre actúa) y Deal Desk Studio Inc., una sociedad de Texas
+("nosotros"). Al crear una cuenta, usted los acepta; registramos cuándo los
 aceptó y qué versión aceptó.
 
 ## El Servicio
@@ -146,9 +146,9 @@ consecuentes.
 
 ## Ley aplicable
 
-Estos términos se rigen por las leyes del Estado de Delaware, Estados Unidos, sin
+Estos términos se rigen por las leyes del Estado de Texas, Estados Unidos, sin
 tener en cuenta sus normas sobre conflicto de leyes. Cualquier controversia se presentará ante los
-tribunales estatales o federales ubicados en el Estado de Delaware, y ambas partes aceptan su jurisdicción.
+tribunales estatales o federales ubicados en el condado de Collin, Texas, y ambas partes aceptan su jurisdicción.
 
 ## Cambios
 
@@ -162,4 +162,4 @@ versión en inglés, prevalece la versión en inglés.
 
 ## Contacto
 
-**legal@dealdesk.studio** · Deal Desk Inc., 548 Market St, San Francisco, CA 94104
+**legal@dealdesk.studio** · Deal Desk Studio Inc.

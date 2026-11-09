@@ -25,13 +25,8 @@ const SIGNUP = `${APP}/login?signup=1`;
 // it is listed once rather than presented as something a higher tier buys.
 const DEV = translate({id: 'pricing.plan.developer', message: 'Developer: API, MCP, CLI'});
 const LIBRARY = translate({id: 'pricing.plan.library', message: 'Company library, with citations'});
-// Connected drives, per provider. Microsoft (SharePoint and OneDrive) is live in the app; Google
-// Drive waits on Google's app approval. Flip GOOGLE_DRIVE to 'available' when it is live.
-const GOOGLE_DRIVE: 'soon' | 'available' = 'soon';
-const DRIVES = GOOGLE_DRIVE === 'available'
-  ? translate({id: 'pricing.plan.drives.all', message: 'SharePoint, OneDrive and Google Drive'})
-  : translate({id: 'pricing.plan.drives.ms', message: 'SharePoint and OneDrive (Google Drive coming soon)'});
-const SYNC = translate({id: 'pricing.plan.sync.soon', message: 'Automatic folder sync (coming soon)'});
+// Connected drives: SharePoint, OneDrive and Google Drive are all live in the app.
+const DRIVES = translate({id: 'pricing.plan.drives.all', message: 'SharePoint, OneDrive and Google Drive'});
 
 const PLANS = [
   {
@@ -86,7 +81,6 @@ const PLANS = [
       LIBRARY,
       DEV,
       DRIVES,
-      SYNC,
     ],
     cta: translate({id: 'pricing.plan.team.cta', message: 'Start Team'}),
     pick: false,
@@ -148,7 +142,7 @@ const FAQ = [
   },
   {
     q: translate({id: 'pricing.faq.drives.q', message: 'Does Deal Desk work with SharePoint or Google Drive?'}),
-    a: translate({id: 'pricing.faq.drives.a', message: 'On Pro and Team. Add past proposals and RFPs straight from SharePoint, OneDrive or Google Drive, and every signed document is saved to the folder you choose, in a folder for each customer. Deal Desk only opens the files your team picks. Team will also keep a folder in sync, so the library updates itself when someone edits a file.'}),
+    a: translate({id: 'pricing.faq.drives.a', message: 'On Pro and Team. Add past proposals and RFPs straight from SharePoint, OneDrive or Google Drive, and every signed document is saved to the folder you choose, in a folder for each customer. Deal Desk only reads the files and folders your team adds.'}),
   },
   {
     q: translate({id: 'pricing.faq.match.q', message: 'Which bids will bid matching find?'}),
@@ -327,24 +321,12 @@ export default function Pricing(): React.ReactElement {
                 <Translate id="pricing.drives.desc">
                   Add past proposals, capability statements and RFPs straight from SharePoint,
                   OneDrive or Google Drive. Every signed document is saved back to the folder you
-                  choose, in a folder for each customer. Deal Desk only opens the files your team
-                  picks.
+                  choose, in a folder for each customer. Deal Desk only reads the files and folders
+                  your team adds.
                 </Translate>
               </div>
               <div className={styles.itemCol}>
                 <Translate id="pricing.drives.col">Pro, Team</Translate>
-              </div>
-            </div>
-            <div className={styles.item}>
-              <div className={styles.itemName}>{SYNC}</div>
-              <div className={styles.itemDesc}>
-                <Translate id="pricing.sync.desc">
-                  Point the company library at a folder and Deal Desk keeps up with it: new files are
-                  added and edited ones re-read, without anyone picking them again.
-                </Translate>
-              </div>
-              <div className={styles.itemCol}>
-                <Translate id="pricing.sync.col">Team</Translate>
               </div>
             </div>
           </div>

@@ -90,12 +90,19 @@ Your answers are saved to your company library, so the next RFP already has them
 
 ## 8. Export
 
+- **⤓ Proposal** writes your answers as one proposal, in the font, margins and page size the
+  document asks for. It is a PDF, or a Word **.docx** when the document asks for Word. Deal Desk
+  counts the pages against any page limit and tells you which required items are still unanswered.
+- **⤓ Filled document** (or **⤓ Filled spreadsheet**) is there when you uploaded a Word **.docx**
+  or an Excel **.xlsx**: it downloads the customer's original file with your answers written in.
+- When a call is answered with one **white paper**, its page has **Download PDF** and a **Word
+  version** of the narrative, **Download the filled form (.xlsx)** for each form the call includes,
+  and **Download the submission (.zip)**, which holds the narrative and every filled form in one
+  download.
 - **⤓ Compliance matrix** downloads the matrix as a CSV.
-- **⤓ Filled document** is there when you uploaded a Word **.docx**: it downloads the customer's
-  original file with your answers written in.
 
 ## Credit
 
 The evaluator guidance (what a strong answer includes and how each kind of document is scored)
 draws on the MIT-licensed
-[federal-proposal-copilot](https://github.com/chakmarebel/federal-proposal-copilot) project.
+[federal-proposal-copilot](https://github.com/spatialgis-co/federal-proposal-copilot) project.

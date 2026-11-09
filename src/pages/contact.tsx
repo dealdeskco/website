@@ -69,7 +69,7 @@ export default function Contact(): React.ReactElement {
             <p className={styles.small}>
               <Translate id="contact.existing">
                 Already using Deal Desk and need help with a live deal? Reply to any email the
-                product sent you — those reach us faster.
+                product sent you — those reach us faster. We reply within one business day.
               </Translate>
             </p>
           </div>

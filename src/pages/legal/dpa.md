@@ -8,7 +8,7 @@ description: How Deal Desk Studio processes personal data on behalf of its busin
 _Last updated 8 November 2026._
 
 This Data Processing Addendum ("DPA") forms part of the [Terms of Service](/legal/terms) between
-Deal Desk Inc. ("we", "us") and the business customer that uses Deal Desk Studio ("you"). It
+Deal Desk Studio Inc. ("we", "us") and the business customer that uses Deal Desk Studio ("you"). It
 applies when we process personal data on your behalf in providing the Service. It takes effect when
 you accept the Terms of Service, with no separate signature needed. If you need a countersigned
 copy, email **legal@dealdesk.studio**.

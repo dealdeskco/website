@@ -8,7 +8,7 @@ description: The terms under which Deal Desk Studio is provided.
 _Last updated 8 November 2026._
 
 These terms govern your use of Deal Desk Studio ("the Service"). They are an agreement between you
-(and the business you act for) and Deal Desk Inc., a Texas corporation, of 548 Market St, San Francisco, CA 94104 ("we", "us"). By
+(and the business you act for) and Deal Desk Studio Inc., a Texas corporation, of [TEXAS ADDRESS] ("we", "us"). By
 creating an account you agree to them; we record when you accepted them and which version they
 were.
 
@@ -152,4 +152,4 @@ English version, the English version governs.
 
 ## Contact
 
-**legal@dealdesk.studio** · Deal Desk Inc., 548 Market St, San Francisco, CA 94104
+**legal@dealdesk.studio** · Deal Desk Studio Inc., [TEXAS ADDRESS]

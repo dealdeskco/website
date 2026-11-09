@@ -10,7 +10,7 @@ _Esta traducción se ofrece para su comodidad; si difiere de la [versión en ing
 _Última actualización: 8 de noviembre de 2026._
 
 Estos términos rigen el uso que usted haga de Deal Desk Studio ("el Servicio"). Son un acuerdo
-entre usted (y la empresa en cuyo nombre actúa) y `{{LEGAL_ENTITY}}`, con domicilio en
+entre usted (y la empresa en cuyo nombre actúa) y Deal Desk Inc, con domicilio en
 `{{LEGAL_ADDRESS}}` ("nosotros"). Al crear una cuenta, usted los acepta; registramos cuándo los
 aceptó y qué versión aceptó.
 
@@ -162,4 +162,4 @@ versión en inglés, prevalece la versión en inglés.
 
 ## Contacto
 
-**legal@dealdesk.studio** · `{{LEGAL_ENTITY}}`, `{{LEGAL_ADDRESS}}`
+**legal@dealdesk.studio** · Deal Desk Inc, `{{LEGAL_ADDRESS}}`

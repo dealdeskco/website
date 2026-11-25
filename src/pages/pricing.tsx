@@ -89,14 +89,14 @@ const PLANS = [
 
 // Enterprise is sold by contract and invoiced (plans.mjs `enterprise`, enterprise.mjs in the app), so
 // it has no price here. Each line is something the app does for an Enterprise account today; nothing
-// planned is listed. The allowance and the seats are numbers in each contract, so none is printed.
+// planned is listed: pilot features stay off the card until a shipped feature is gated by them. The
+// allowance and the seats are numbers in each contract, so none is printed.
 const ENTERPRISE = [
   translate({id: 'pricing.enterprise.team', message: 'Everything in Team'}),
   translate({id: 'pricing.enterprise.rfp', message: 'RFP responder and bid matching included'}),
   translate({id: 'pricing.enterprise.responses', message: 'A monthly allowance of RFP responses, set in your contract'}),
   translate({id: 'pricing.enterprise.users', message: 'Users set in your contract, or unlimited'}),
   translate({id: 'pricing.enterprise.support', message: 'Priority support from inside the app'}),
-  translate({id: 'pricing.enterprise.pilot', message: 'Early access to features in pilot'}),
   translate({id: 'pricing.enterprise.usage', message: 'A monthly usage report to check each invoice against'}),
 ];
 

@@ -5,7 +5,7 @@ description: What Deal Desk Studio collects, why, who else sees it, how long we 
 
 # Privacy
 
-_Last updated 8 November 2026._
+_Last updated November 24, 2026._
 
 Deal Desk Studio is a tool businesses use to write and send proposals and to answer RFPs. This page
 describes what we hold and why, in plain terms. It covers the application at app.dealdesk.studio
@@ -137,8 +137,10 @@ that document and nothing else — no list, no newsletter, no later marketing.
 - **While your account is open**, we keep your account data so the Service works.
 - **Delete a deal** and it is removed from your account; signed copies and their verification
   records are kept as legal records.
-- **Close your account** and we delete your account data within 30 days. Copies in our backups
-  roll off within 35 days.
+- **Close your account**: when you close your account we delete your content within 30 days.
+  Copies in our backups roll off within 35 days. We keep billing records (account name, contract
+  terms, and the dates and counts of billable responses) for seven years as accounting records,
+  then delete them.
 - **Signed records** — a sealed document, its certificate of completion and its verification
   record — are kept as legal records after a deal or an account is deleted, because deleting them
   would break a counterparty's ability to verify a contract they hold. Tell us if you need a

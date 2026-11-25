@@ -96,7 +96,7 @@ const ENTERPRISE = [
   translate({id: 'pricing.enterprise.rfp', message: 'RFP responder and bid matching included'}),
   translate({id: 'pricing.enterprise.responses', message: 'A monthly allowance of RFP responses, set in your contract'}),
   translate({id: 'pricing.enterprise.users', message: 'Users set in your contract, or unlimited'}),
-  translate({id: 'pricing.enterprise.support', message: 'Priority support from inside the app'}),
+  translate({id: 'pricing.enterprise.support', message: 'Priority support from inside the app, with replies within one business day'}),
   translate({id: 'pricing.enterprise.usage', message: 'A monthly usage report to check each invoice against'}),
 ];
 

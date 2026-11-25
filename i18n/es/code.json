@@ -1874,6 +1874,45 @@
   "pricing.plans.enterprise": {
     "message": "¿Necesita inicio de sesión único, una revisión de seguridad o condiciones a medida?"
   },
+  "pricing.enterprise.team": {
+    "message": "Todo lo de Team"
+  },
+  "pricing.enterprise.rfp": {
+    "message": "Respuesta a licitaciones y búsqueda de licitaciones incluidas"
+  },
+  "pricing.enterprise.responses": {
+    "message": "Una cantidad mensual de respuestas a RFP, fijada en su contrato"
+  },
+  "pricing.enterprise.users": {
+    "message": "Usuarios fijados en su contrato, o ilimitados"
+  },
+  "pricing.enterprise.support": {
+    "message": "Soporte prioritario desde la aplicación"
+  },
+  "pricing.enterprise.pilot": {
+    "message": "Acceso anticipado a funciones en piloto"
+  },
+  "pricing.enterprise.usage": {
+    "message": "Un informe mensual de uso para cotejar cada factura"
+  },
+  "pricing.enterprise.name": {
+    "message": "Enterprise"
+  },
+  "pricing.enterprise.price": {
+    "message": "Hable con nosotros"
+  },
+  "pricing.enterprise.rate": {
+    "message": "Facturado según su contrato"
+  },
+  "pricing.enterprise.blurb": {
+    "message": "Para organizaciones que responden RFP cada mes y compran por medio de adquisiciones: un contrato y una factura, no una tarjeta."
+  },
+  "pricing.enterprise.cta": {
+    "message": "Hable con nosotros"
+  },
+  "pricing.enterprise.email": {
+    "message": "o escriba a"
+  },
   "pricing.plans.enterprise.link": {
     "message": "Hable con nosotros"
   },

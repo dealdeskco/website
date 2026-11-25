@@ -280,6 +280,25 @@
 .planList li svg { flex: none; width: 1.05rem; height: 1.05rem; margin-top: 0.15rem; color: var(--ink-sig); }
 .planList li.planLead { display: block; color: var(--ink-faint); font-size: 0.95rem; }
 .plan .planCta { margin-top: auto; width: 100%; text-align: center; }
+/* Enterprise: the same flat card, one row across the full width under the four plans -- its terms,
+   what it includes, and the way to buy it, left to right. Stacks like the others on a narrow page. */
+.planWide {
+  display: grid;
+  grid-template-columns: minmax(14rem, 1fr) minmax(0, 1.6fr) minmax(12rem, 0.7fr);
+  gap: 1.1rem 2rem;
+  align-items: start;
+  margin-top: 1.1rem;
+}
+.planWide .planList { margin: 0; padding: 0; border-top: 0; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); column-gap: 1.5rem; }
+.planWide .planBlurb { margin-bottom: 0; }
+/* A word where the others have a figure: the same weight, smaller, so it does not outshout the prices. */
+.planFigWord b { font-size: 2.1rem; }
+.planWideCta { display: grid; gap: 0.6rem; justify-items: stretch; }
+.planWideCta .planCta { margin-top: 0; }
+@media (max-width: 900px) {
+  .planWide { grid-template-columns: minmax(0, 1fr); }
+  .planWide .planList { padding-top: 1rem; border-top: 1px solid var(--rule); }
+}
 
 /* ============================= signature block =============================
    The one bold moment, and the only motion: the mark draws itself once on view. */

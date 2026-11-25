@@ -11,9 +11,12 @@ request for proposals, a request for information, or a customer's own form. You 
 Desk lists every requirement in it, drafts the answers from what your company already knows, and
 checks each answer before you send it.
 
-It comes with the **RFP responder** add-on: $49 a month on any paid plan, with 5 documents a month
-included and $10 for each one after that. A document counts only once it has been read
-successfully. Design partners have the add-on included.
+It comes with the RFP responder add-on, on any paid plan, in two tiers: **RFP Responder**, $99 a
+month or $990 a year, with 3 responses a month included and $39 for each one after that; and **RFP
+Responder Pro**, $299 a month or $2,990 a year, with 10 included and $35 after that. A response is
+one RFI, RFP or sources-sought document, and it counts only once it has been read successfully.
+Design partners have the add-on included, and accounts on the earlier $49 add-on keep it until they
+change it.
 
 ## 1. Fill in your company library
 

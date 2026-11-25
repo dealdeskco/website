@@ -665,6 +665,45 @@
   "pricing.addon.note": {
     "message": "Para empresas que responden solicitudes de propuestas. Disponible en cualquier plan de pago."
   },
+  "pricing.addon.std.name": {
+    "message": "Respuesta a licitaciones"
+  },
+  "pricing.addon.std.usage": {
+    "message": "3 respuestas al mes incluidas, luego $39 cada una. Incluye la búsqueda de licitaciones en SAM.gov y los recordatorios de plazos."
+  },
+  "pricing.addon.std.price": {
+    "message": "+$99/mes o $990/año"
+  },
+  "pricing.addon.pro.name": {
+    "message": "Respuesta a licitaciones Pro"
+  },
+  "pricing.addon.pro.usage": {
+    "message": "Todo lo de Respuesta a licitaciones, con 10 respuestas al mes incluidas, luego $35 cada una. Para equipos que responden varias convocatorias al mes."
+  },
+  "pricing.addon.pro.price": {
+    "message": "+$299/mes o $2,990/año"
+  },
+  "pricing.addon.unit.name": {
+    "message": "Qué cuenta como una respuesta"
+  },
+  "pricing.addon.unit.desc": {
+    "message": "Un documento de RFI, RFP o sondeo de mercado (sources sought), que cuenta una vez cuando se lee correctamente. Redactar, volver a redactar y editar sus respuestas nunca cuenta de nuevo. Los usuarios vienen de su plan. Los socios de diseño tienen la respuesta a licitaciones incluida, y las cuentas con el complemento anterior de $49 lo conservan hasta que lo cambien."
+  },
+  "pricing.addon.match.col.both": {
+    "message": "Incluida en ambos niveles"
+  },
+  "home.rfp.terms.tiers": {
+    "message": "Un complemento para cualquier plan de pago, desde $99 al mes."
+  },
+  "rfp.hero.terms.tiers": {
+    "message": "La respuesta a licitaciones es un complemento para cualquier plan de pago, desde $99 al mes."
+  },
+  "rfp.price.desc.tiers": {
+    "message": "Una respuesta es un documento de RFI, RFP o sondeo de mercado (sources sought), que cuenta una vez cuando se lee correctamente. Los socios de diseño lo tienen incluido."
+  },
+  "agents.plan.rfp.price": {
+    "message": "Desde $99/mes"
+  },
   "pricing.addon.name": {
     "message": "Respuesta a licitaciones"
   },

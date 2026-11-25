@@ -59,7 +59,7 @@ máquinas está en [`/api/v1/openapi.json`](https://app.dealdesk.studio/api/v1/o
 Todos los errores tienen la misma forma:
 
 ```json
-{ "error": { "code": "payment_required", "message": "Responding to a document is part of the RFP responder add-on. …", "billing_required": true, "required_addon": "rfp" } }
+{ "error": { "code": "payment_required", "message": "Responding to a document is part of the RFP responder add-on. …", "billing_required": true, "required_addon": "rfp_std" } }
 ```
 
 El objeto `error` lleva `code` y `message`, y cuando corresponde `billing_required`,

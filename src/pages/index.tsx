@@ -475,7 +475,7 @@ export default function Home(): React.ReactElement {
                 </Link>
               </p>
               <p className={styles.terms}>
-                <Translate id="home.rfp.terms">An add-on to any paid plan: $49 a month.</Translate>
+                <Translate id="home.rfp.terms.tiers">An add-on to any paid plan, from $99 a month.</Translate>
               </p>
             </div>
             <RfpMatrix />

@@ -58,7 +58,7 @@ sección Desarrolladores se ve, pero no se pueden crear claves, y las que ya exi
   cuenta como un negocio enviado de su plan, una sola vez, aunque se reenvíe varias veces.
 - La biblioteca de la empresa y los datos están incluidos en todos los planes de pago, desde
   Starter. Las respuestas a RFP requieren el complemento **Respuesta a licitaciones**, igual que en
-  la aplicación; sin él, esas llamadas responden `402` con `"required_addon": "rfp"`.
+  la aplicación; sin él, esas llamadas responden `402` con `"required_addon": "rfp_std"` (el nivel de entrada del complemento, Respuesta a licitaciones).
 
 Consulte [Precios](/pricing) para ver los planes, y [Deal Desk para su agente de IA](/agents) para
 ver cómo se ve esto desde el lado del agente.

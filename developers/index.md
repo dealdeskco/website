@@ -57,7 +57,7 @@ visible but keys cannot be created, and existing keys answer `402`.
   deal on your plan, once, however many times it is re-sent.
 - The company library and facts are included on every paid plan, from Starter. RFP responses need
   the **RFP responder** add-on, as in the app; without it those calls answer `402` with
-  `"required_addon": "rfp"`.
+  `"required_addon": "rfp_std"` (the add-on's entry tier, RFP Responder).
 
 See [Pricing](/pricing) for the plans, and [Deal Desk for your AI agent](/agents) for what this
 looks like from the agent's side.

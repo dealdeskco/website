@@ -409,7 +409,7 @@ export default function Agents(): React.ReactElement {
                 </Link>
               </div>
               <div className={styles.itemCol}>
-                <Translate id="pricing.addon.price">+$49/month</Translate>
+                <Translate id="agents.plan.rfp.price">From $99/month</Translate>
               </div>
             </div>
             <div className={styles.item}>

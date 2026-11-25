@@ -669,7 +669,7 @@
     "message": "Respuesta a licitaciones"
   },
   "pricing.addon.std.usage": {
-    "message": "3 respuestas al mes incluidas, luego $39 cada una. Incluye la búsqueda de licitaciones en SAM.gov y los recordatorios de plazos."
+    "message": "3 respuestas al mes incluidas, luego $39 cada una. Incluye la búsqueda de licitaciones (SAM.gov, el ESBD de Texas, contratos federales que se vuelven a licitar y las alertas de licitaciones que reenvía desde otros portales) y los recordatorios de plazos."
   },
   "pricing.addon.std.price": {
     "message": "+$99/mes o $990/año"

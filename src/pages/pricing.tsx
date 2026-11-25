@@ -403,8 +403,9 @@ export default function Pricing(): React.ReactElement {
                   the way an evaluator would.
                 </Translate>{' '}
                 <Translate id="pricing.addon.std.usage">
-                  3 responses a month included, then $39 each. Includes SAM.gov bid matching and
-                  deadline reminders.
+                  3 responses a month included, then $39 each. Includes bid matching (SAM.gov, the
+                  Texas ESBD, federal contracts coming up for rebid, and bid alerts you forward from
+                  other portals) and deadline reminders.
                 </Translate>{' '}
                 <Link to="/rfp">
                   <Translate id="pricing.addon.link">How it works</Translate>

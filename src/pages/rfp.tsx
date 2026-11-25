@@ -237,8 +237,9 @@ export default function Rfp(): React.ReactElement {
               </div>
               <div className={styles.itemDesc}>
                 <Translate id="pricing.addon.std.usage">
-                  3 responses a month included, then $39 each. Includes SAM.gov bid matching and
-                  deadline reminders.
+                  3 responses a month included, then $39 each. Includes bid matching (SAM.gov, the
+                  Texas ESBD, federal contracts coming up for rebid, and bid alerts you forward from
+                  other portals) and deadline reminders.
                 </Translate>
               </div>
               <div className={styles.itemCol}>

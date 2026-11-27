@@ -87,6 +87,19 @@ const PLANS = [
   },
 ];
 
+// Enterprise is sold by contract and invoiced (plans.mjs `enterprise`, enterprise.mjs in the app), so
+// it has no price here. Each line is something the app does for an Enterprise account today; nothing
+// planned is listed: pilot features stay off the card until a shipped feature is gated by them. The
+// allowance and the seats are numbers in each contract, so none is printed.
+const ENTERPRISE = [
+  translate({id: 'pricing.enterprise.team', message: 'Everything in Team'}),
+  translate({id: 'pricing.enterprise.rfp', message: 'RFP responder and bid matching included'}),
+  translate({id: 'pricing.enterprise.responses', message: 'A monthly allowance of RFP responses, set in your contract'}),
+  translate({id: 'pricing.enterprise.users', message: 'Users set in your contract, or unlimited'}),
+  translate({id: 'pricing.enterprise.support', message: 'Priority support from inside the app, with replies within one business day'}),
+  translate({id: 'pricing.enterprise.usage', message: 'A monthly usage report to check each invoice against'}),
+];
+
 const EVERY_PLAN = [
   translate({id: 'pricing.everyPlan.documents', message: 'Quotes, proposals and contracts'}),
   translate({id: 'pricing.everyPlan.ai', message: 'AI drafting from your notes'}),
@@ -225,6 +238,39 @@ export default function Pricing(): React.ReactElement {
                 </Link>
               </div>
             ))}
+          </div>
+          {/* The fifth plan, across the full width under the four: it is bought differently (a contract
+              and an invoice, not a card), so it is not one more column to compare prices in. */}
+          <div className={`${styles.plan} ${styles.planWide}`} id="enterprise">
+            <div>
+              <h3 className={styles.planName}><Translate id="pricing.enterprise.name">Enterprise</Translate></h3>
+              <div className={`${styles.planFig} ${styles.planFigWord}`}>
+                <b><Translate id="pricing.enterprise.price">Contact us</Translate></b>
+              </div>
+              <div className={styles.planRate}>
+                <Translate id="pricing.enterprise.rate">Billed by invoice under your contract</Translate>
+              </div>
+              <p className={styles.planBlurb}>
+                <Translate id="pricing.enterprise.blurb">
+                  For organizations that answer RFPs every month and buy through procurement: a
+                  contract and an invoice, not a card.
+                </Translate>
+              </p>
+            </div>
+            <ul className={styles.planList}>
+              {ENTERPRISE.map((f) => (
+                <li key={f}><Tick />{f}</li>
+              ))}
+            </ul>
+            <div className={styles.planWideCta}>
+              <Link className={`${styles.alt} ${styles.planCta}`} to="/contact">
+                <Translate id="pricing.enterprise.cta">Contact us</Translate>
+              </Link>
+              <span className={styles.terms}>
+                <Translate id="pricing.enterprise.email">or email</Translate>{' '}
+                <a href="mailto:info@dealdesk.studio?subject=Enterprise">info@dealdesk.studio</a>
+              </span>
+            </div>
           </div>
           <p className={styles.terms} style={{marginTop: '1.1rem'}}>
             <Translate id="pricing.plans.terms">Prices in USD. Taxes may apply.</Translate>{' '}

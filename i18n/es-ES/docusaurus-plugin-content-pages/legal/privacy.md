@@ -7,7 +7,7 @@ description: Qué recopila Deal Desk Studio, para qué, quién más lo ve, cuán
 
 _Esta traducción se ofrece para su comodidad; si difiere de la [versión en inglés](pathname:///legal/privacy), prevalece la versión en inglés._
 
-_Última actualización: 8 de noviembre de 2026._
+_Última actualización: 24 de noviembre de 2026._
 
 Deal Desk Studio es una herramienta que las empresas usan para redactar y enviar propuestas y para
 responder RFP. Esta página describe, en términos sencillos, qué datos conservamos y por qué. Cubre
@@ -153,8 +153,10 @@ marketing posterior.
   funcione.
 - **Si elimina un negocio**, se quita de su cuenta; las copias firmadas y sus registros de
   verificación se conservan como registros legales.
-- **Si cierra su cuenta**, eliminamos los datos de su cuenta en un plazo de 30 días. Lo que quede en
-  nuestras copias de seguridad se elimina en un plazo de 35 días.
+- **Si cierra su cuenta**, eliminamos su contenido en un plazo de 30 días. Lo que quede en
+  nuestras copias de seguridad se elimina en un plazo de 35 días. Conservamos los registros de
+  facturación (nombre de la cuenta, condiciones del contrato y las fechas y cantidades de respuestas
+  facturables) durante siete años como registros contables y luego los eliminamos.
 - **Los registros de firma** —un documento sellado, su certificado de finalización y su registro de
   verificación— se conservan como registros legales después de eliminar un negocio o una cuenta,
   porque eliminarlos impediría que una contraparte verifique un contrato que tiene en su poder.

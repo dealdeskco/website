@@ -389,10 +389,12 @@ export default function Pricing(): React.ReactElement {
               </Translate>
             </p>
           </div>
+          {/* Mirrors plans.mjs ADDONS in the application (rfp_std, rfp_pro). A response is one
+              RFI, RFP or sources-sought document, counted once. */}
           <div className={styles.items}>
             <div className={styles.item}>
               <div className={styles.itemName}>
-                <Translate id="pricing.addon.name">RFP responder</Translate>
+                <Translate id="pricing.addon.std.name">RFP Responder</Translate>
               </div>
               <div className={styles.itemDesc}>
                 <Translate id="pricing.addon.desc">
@@ -400,16 +402,46 @@ export default function Pricing(): React.ReactElement {
                   requirement, drafts answers from what your company already knows, and checks them
                   the way an evaluator would.
                 </Translate>{' '}
-                <Translate id="pricing.addon.usage">
-                  5 documents a month included, then $10 each. Design partners have it included.
+                <Translate id="pricing.addon.std.usage">
+                  3 responses a month included, then $39 each. Includes bid matching (SAM.gov, the
+                  Texas ESBD, federal contracts coming up for rebid, and bid alerts you forward from
+                  other portals) and deadline reminders.
                 </Translate>{' '}
                 <Link to="/rfp">
                   <Translate id="pricing.addon.link">How it works</Translate>
                 </Link>
               </div>
               <div className={styles.itemCol}>
-                <Translate id="pricing.addon.price">+$49/month</Translate>
+                <Translate id="pricing.addon.std.price">+$99/month or $990/year</Translate>
               </div>
+            </div>
+            <div className={styles.item}>
+              <div className={styles.itemName}>
+                <Translate id="pricing.addon.pro.name">RFP Responder Pro</Translate>
+              </div>
+              <div className={styles.itemDesc}>
+                <Translate id="pricing.addon.pro.usage">
+                  Everything in RFP Responder, with 10 responses a month included, then $35 each.
+                  For teams answering several calls a month.
+                </Translate>
+              </div>
+              <div className={styles.itemCol}>
+                <Translate id="pricing.addon.pro.price">+$299/month or $2,990/year</Translate>
+              </div>
+            </div>
+            <div className={styles.item}>
+              <div className={styles.itemName}>
+                <Translate id="pricing.addon.unit.name">What counts as a response</Translate>
+              </div>
+              <div className={styles.itemDesc}>
+                <Translate id="pricing.addon.unit.desc">
+                  One RFI, RFP or sources-sought document, counted once it has been read
+                  successfully. Drafting, redrafting and editing its answers never count again.
+                  Users come from your plan. Design partners have the RFP responder included, and
+                  accounts on the earlier $49 add-on keep it until they change it.
+                </Translate>
+              </div>
+              <div className={styles.itemCol} />
             </div>
             <div className={styles.item}>
               <div className={styles.itemName}>
@@ -426,7 +458,7 @@ export default function Pricing(): React.ReactElement {
                 </Translate>
               </div>
               <div className={styles.itemCol}>
-                <Translate id="pricing.addon.match.col">Included in RFP responder</Translate>
+                <Translate id="pricing.addon.match.col.both">Included in both tiers</Translate>
               </div>
             </div>
           </div>

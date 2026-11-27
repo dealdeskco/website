@@ -448,6 +448,7 @@
     "needs_force",
     "required_addon",
     "required_scope",
+    "required_tier",
     "retry_after"
    ]
   },

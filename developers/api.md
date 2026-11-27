@@ -57,11 +57,11 @@ except file downloads. The machine-readable description is at
 Every error has one shape:
 
 ```json
-{ "error": { "code": "payment_required", "message": "Responding to a document is part of the RFP responder add-on. …", "billing_required": true, "required_addon": "rfp" } }
+{ "error": { "code": "payment_required", "message": "Responding to a document is part of the RFP responder add-on. …", "billing_required": true, "required_addon": "rfp", "required_tier": "rfp_std" } }
 ```
 
 The `error` object carries `code` and `message`, and where they apply `billing_required`,
-`required_addon`, `feature`, `required_scope`, `retry_after` and `needs_force`.
+`required_addon`, `required_tier`, `feature`, `required_scope`, `retry_after` and `needs_force`.
 
 | Status | code | Meaning |
 | --- | --- | --- |

@@ -12,9 +12,13 @@ propio del cliente. Usted lo carga, Deal Desk enumera cada requisito que contien
 respuestas a partir de lo que su empresa ya sabe y revisa cada respuesta antes de que usted la
 envíe.
 
-Viene con el complemento **Respuesta a licitaciones**: $49 al mes en cualquier plan de pago, con 5
-documentos al mes incluidos y $10 por cada documento adicional. Un documento solo cuenta cuando se
-lee correctamente. Los socios de diseño tienen el complemento incluido.
+Viene con el complemento de respuesta a licitaciones, en cualquier plan de pago, en dos niveles:
+**Respuesta a licitaciones**, $99 al mes o $990 al año, con 3 respuestas al mes incluidas y $39 por
+cada respuesta adicional; y **Respuesta a licitaciones Pro**, $299 al mes o $2,990 al año, con 10
+incluidas y $35 por cada adicional. Una respuesta es un documento de RFI, RFP o sondeo de mercado
+(sources sought), y solo cuenta cuando se lee correctamente. Los socios de diseño tienen el
+complemento incluido, y las cuentas con el complemento anterior de $49 lo conservan hasta que lo
+cambien.
 
 ## 1. Complete la biblioteca de su empresa
 
